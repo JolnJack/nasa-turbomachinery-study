@@ -1,0 +1,342 @@
+1                                   NASA RADIAL INFLOW TURBINE COMPUTER PROGRAM
+                                    12.62-CM DIA TURBINE                            
+                                    100 PERCENT SPEED                               
+K GAMMA     1.6667        P0,    0.17237E+06    A1    0.38008E-02  ALPHA-1     72.470     BETA-4    -56.860       PD     0.0000    
+      R     99.198        T0,     1144.4        A3    0.39789E-02      BL1    0.95168        BL4    0.93718        K     0.0000    
+     D3     12.624         A0    0.12018E-01    A5    0.44543E-02       U3     237.95      U4/U3    0.56776       ZZ     22.000    
+             PD   0.987836    
+              K   0.286839    
+ DESIGN WT-FLOW   0.338790    
+   DESIGN ETA-T   0.913000    
+ DESIGN P0,/P5,    1.74000    
+
+                                                  VELOCITIES AND ANGLES
+ V/VCR)1      0.60480     ALPHA-1       72.470     V/VCR)3      0.62055     W/WCR)4      0.42154     W/WCR)5      0.41351    
+ VU/VCR)1     0.57671     ALPHA-2       73.290     VU/VCR)3     0.59389     WU/WCR)4    -0.35297     WX/WCR)5     0.21541    
+ VR/VCR)1     0.18217     ALPHA-3       73.142     VR/VCR)3     0.17996     WX/WCR)4     0.23045     V/VCR)5      0.22205    
+ V/VCR)0      0.49333E-01 BETA-3       -11.855     W/WCR)3      0.19253     BETA-4       -56.860     VU/VCR)5     0.37859E-01
+ V/VCR)2      0.60214     I-3           5.6760     WU/WCR)3    -0.39554E-01 BETA-5       -58.606     VX/VCR)5     0.21880    
+ VR/VCR)2     0.17314     VCR)3         376.71     WR/WCR)3     0.18842     VCR)5         340.82     ALPHA-5       9.8166    
+                                                  OVERALL PERFORMANCE
+ EQ-W         0.22000     EQ-P0,/P5     1.6889     P0,/P5        1.7948     WT/P         0.66492     W            0.33879    
+ EQ-DEL-H      35013.     ETA-S        0.86975     NU           0.69152     DEL-H/T       44.993     DEL-H         51492.    
+ EQ-N          494.76     ETA-T        0.91298     NS           0.97688E-02 N/T           17.736     W.F.         0.90941    
+ EQ-TOR        148.67     EQ-P0,/P5,    1.6445     P0,/P5,       1.7400     TOR/P         1610.8     TOR           277.64    
+ N             600.00     P             17.445     WN/DEL        108.85     T5,           936.80     P5,           99064.    
+1                                   NASA RADIAL INFLOW TURBINE COMPUTER PROGRAM
+                        DESIGN COEFFICIENTS RETAINED INTERNALLY                     
+                        100 PERCENT SPEED - LONG OUTPUT                             
+K GAMMA     1.6667        P0,    0.17237E+06    A1    0.38008E-02  ALPHA-1     72.470     BETA-4    -56.860       PD    0.98784    
+      R     99.198        T0,     1144.4        A3    0.39789E-02      BL1    0.95168        BL4    0.93718        K    0.28684    
+     D3     12.624         A0    0.12018E-01    A5    0.44543E-02       U3     237.95      U4/U3    0.56776       ZZ     22.000    
+
+                                                  VELOCITIES AND ANGLES
+ V/VCR)1      0.30000     ALPHA-1       72.470     V/VCR)3      0.30765     W/WCR)4      0.18127     W/WCR)5      0.17792    
+ VU/VCR)1     0.28607     ALPHA-2       73.273     VU/VCR)3     0.29459     WU/WCR)4    -0.15179     WX/WCR)5     0.92832E-01
+ VR/VCR)1     0.90362E-01 ALPHA-3       73.240     VR/VCR)3     0.88714E-01 WX/WCR)4     0.99100E-01 V/VCR)5      0.23649    
+ V/VCR)0      0.27291E-01 BETA-3       -75.255     W/WCR)3      0.34739     BETA-4       -56.860     VU/VCR)5     0.21762    
+ V/VCR)2      0.29871     I-3          -42.602     WU/WCR)3    -0.33595     BETA-5       -58.550     VX/VCR)5     0.92548E-01
+ VR/VCR)2     0.85970E-01 VCR)3         376.71     WR/WCR)3     0.88418E-01 VCR)5         366.18     ALPHA-5       66.962    
+                                                  OVERALL PERFORMANCE
+ EQ-W         0.12178     EQ-P0,/P5     1.2530     P0,/P5        1.2786     WT/P         0.36807     W            0.18754    
+ EQ-DEL-H      10635.     ETA-S        0.58860     NU            1.0322     DEL-H/T       13.666     DEL-H         15640.    
+ EQ-N          494.76     ETA-T        0.68226     NS           0.12937E-01 N/T           17.736     W.F.         0.27622    
+ EQ-TOR        24.997     EQ-P0,/P5,    1.2138     P0,/P5,       1.2344     TOR/P         270.82     TOR           46.681    
+ N             600.00     P             2.9331     WN/DEL        60.254     T5,           1081.4     P5,          0.13964E+06
+
+                                                  VELOCITIES AND ANGLES
+ V/VCR)1      0.35000     ALPHA-1       72.470     V/VCR)3      0.35895     W/WCR)4      0.21500     W/WCR)5      0.21102    
+ VU/VCR)1     0.33375     ALPHA-2       73.275     VU/VCR)3     0.34368     WU/WCR)4    -0.18003     WX/WCR)5     0.11009    
+ VR/VCR)1     0.10542     ALPHA-3       73.230     VR/VCR)3     0.10357     WX/WCR)4     0.11754     V/VCR)5      0.22218    
+ V/VCR)0      0.31446E-01 BETA-3       -70.219     W/WCR)3      0.30739     BETA-4       -56.860     VU/VCR)5     0.19303    
+ V/VCR)2      0.34849     I-3          -41.457     WU/WCR)3    -0.28926     BETA-5       -58.555     VX/VCR)5     0.11002    
+ VR/VCR)2     0.10029     VCR)3         376.71     WR/WCR)3     0.10403     VCR)5         362.25     ALPHA-5       60.318    
+                                                  OVERALL PERFORMANCE
+ EQ-W         0.14031     EQ-P0,/P5     1.2994     P0,/P5        1.3313     WT/P         0.42407     W            0.21607    
+ EQ-DEL-H      14525.     ETA-S        0.69588     NU           0.96036     DEL-H/T       18.665     DEL-H         21360.    
+ EQ-N          494.76     ETA-T        0.77581     NS           0.12228E-01 N/T           17.736     W.F.         0.37725    
+ EQ-TOR        39.334     EQ-P0,/P5,    1.2637     P0,/P5,       1.2906     TOR/P         426.16     TOR           73.456    
+ N             600.00     P             4.6154     WN/DEL        69.421     T5,           1058.3     P5,          0.13356E+06
+
+                                                  VELOCITIES AND ANGLES
+ V/VCR)1      0.40000     ALPHA-1       72.470     V/VCR)3      0.41026     W/WCR)4      0.25008     W/WCR)5      0.24544    
+ VU/VCR)1     0.38142     ALPHA-2       73.277     VU/VCR)3     0.39278     WU/WCR)4    -0.20941     WX/WCR)5     0.12802    
+ VR/VCR)1     0.12048     ALPHA-3       73.217     VR/VCR)3     0.11846     WX/WCR)4     0.13672     V/VCR)5      0.21080    
+ V/VCR)0      0.35422E-01 BETA-3       -63.624     W/WCR)3      0.26994     BETA-4       -56.860     VU/VCR)5     0.16728    
+ V/VCR)2      0.39827     I-3          -37.987     WU/WCR)3    -0.24184     BETA-5       -58.561     VX/VCR)5     0.12827    
+ VR/VCR)2     0.11460     VCR)3         376.71     WR/WCR)3     0.11993     VCR)5         358.26     ALPHA-5       52.518    
+                                                  OVERALL PERFORMANCE
+ EQ-W         0.15804     EQ-P0,/P5     1.3520     P0,/P5        1.3917     WT/P         0.47763     W            0.24337    
+ EQ-DEL-H      18436.     ETA-S        0.77129     NU           0.89744     DEL-H/T       23.690     DEL-H         27112.    
+ EQ-N          494.76     ETA-T        0.83787     NS           0.11633E-01 N/T           17.736     W.F.         0.47883    
+ EQ-TOR        56.232     EQ-P0,/P5,    1.3187     P0,/P5,       1.3534     TOR/P         609.23     TOR           105.01    
+ N             600.00     P             6.5981     WN/DEL        78.190     T5,           1035.1     P5,          0.12736E+06
+
+                                                  VELOCITIES AND ANGLES
+ V/VCR)1      0.45000     ALPHA-1       72.470     V/VCR)3      0.46157     W/WCR)4      0.28700     W/WCR)5      0.28165    
+ VU/VCR)1     0.42910     ALPHA-2       73.280     VU/VCR)3     0.44188     WU/WCR)4    -0.24032     WX/WCR)5     0.14687    
+ VR/VCR)1     0.13554     ALPHA-3       73.203     VR/VCR)3     0.13339     WX/WCR)4     0.15690     V/VCR)5      0.20339    
+ V/VCR)0      0.39194E-01 BETA-3       -54.899     W/WCR)3      0.23673     BETA-4       -56.860     VU/VCR)5     0.13996    
+ V/VCR)2      0.44805     I-3          -31.815     WU/WCR)3    -0.19368     BETA-5       -58.568     VX/VCR)5     0.14758    
+ VR/VCR)2     0.12890     VCR)3         376.71     WR/WCR)3     0.13613     VCR)5         354.19     ALPHA-5       43.481    
+                                                  OVERALL PERFORMANCE
+ EQ-W         0.17485     EQ-P0,/P5     1.4132     P0,/P5        1.4628     WT/P         0.52844     W            0.26925    
+ EQ-DEL-H      22380.     ETA-S        0.82169     NU           0.84072     DEL-H/T       28.758     DEL-H         32912.    
+ EQ-N          494.76     ETA-T        0.87750     NS           0.11106E-01 N/T           17.736     W.F.         0.58127    
+ EQ-TOR        75.523     EQ-P0,/P5,    1.3810     P0,/P5,       1.4253     TOR/P         818.23     TOR           141.04    
+ N             600.00     P             8.8617     WN/DEL        86.508     T5,           1011.7     P5,          0.12094E+06
+
+                                                  VELOCITIES AND ANGLES
+ V/VCR)1      0.50000     ALPHA-1       72.470     V/VCR)3      0.51290     W/WCR)4      0.32641     W/WCR)5      0.32028    
+ VU/VCR)1     0.47678     ALPHA-2       73.282     VU/VCR)3     0.49098     WU/WCR)4    -0.27331     WX/WCR)5     0.16698    
+ VR/VCR)1     0.15060     ALPHA-3       73.186     VR/VCR)3     0.14837     WX/WCR)4     0.17844     V/VCR)5      0.20133    
+ V/VCR)0      0.42740E-01 BETA-3       -43.478     W/WCR)3      0.21037     BETA-4       -56.860     VU/VCR)5     0.11050    
+ V/VCR)2      0.49782     I-3          -22.513     WU/WCR)3    -0.14475     BETA-5       -58.578     VX/VCR)5     0.16830    
+ VR/VCR)2     0.14320     VCR)3         376.71     WR/WCR)3     0.15265     VCR)5         350.02     ALPHA-5       33.288    
+                                                  OVERALL PERFORMANCE
+ EQ-W         0.19064     EQ-P0,/P5     1.4853     P0,/P5        1.5478     WT/P         0.57618     W            0.29357    
+ EQ-DEL-H      26373.     ETA-S        0.85235     NU           0.78877     DEL-H/T       33.890     DEL-H         38785.    
+ EQ-N          494.76     ETA-T        0.90064     NS           0.10630E-01 N/T           17.736     W.F.         0.68499    
+ EQ-TOR        97.039     EQ-P0,/P5,    1.4525     P0,/P5,       1.5089     TOR/P         1051.3     TOR           181.22    
+ N             600.00     P             11.386     WN/DEL        94.322     T5,           988.04     P5,          0.11423E+06
+
+                                                  VELOCITIES AND ANGLES
+ V/VCR)1      0.55000     ALPHA-1       72.470     V/VCR)3      0.56425     W/WCR)4      0.36920     W/WCR)5      0.36223    
+ VU/VCR)1     0.52446     ALPHA-2       73.286     VU/VCR)3     0.54007     WU/WCR)4    -0.30915     WX/WCR)5     0.18879    
+ VR/VCR)1     0.16566     ALPHA-3       73.166     VR/VCR)3     0.16340     WX/WCR)4     0.20184     V/VCR)5      0.20629    
+ V/VCR)0      0.46035E-01 BETA-3       -29.271     W/WCR)3      0.19433     BETA-4       -56.860     VU/VCR)5     0.78106E-01
+ V/VCR)2      0.54759     I-3          -10.088     WU/WCR)3    -0.95016E-01 BETA-5       -58.589     VX/VCR)5     0.19094    
+ VR/VCR)2     0.15749     VCR)3         376.71     WR/WCR)3     0.16952     VCR)5         345.72     ALPHA-5       22.248    
+                                                  OVERALL PERFORMANCE
+ EQ-W         0.20532     EQ-P0,/P5     1.5719     P0,/P5        1.6516     WT/P         0.62053     W            0.31617    
+ EQ-DEL-H      30438.     ETA-S        0.86735     NU           0.74065     DEL-H/T       39.114     DEL-H         44763.    
+ EQ-N          494.76     ETA-T        0.91145     NS           0.10196E-01 N/T           17.736     W.F.         0.79057    
+ EQ-TOR        120.62     EQ-P0,/P5,    1.5357     P0,/P5,       1.6080     TOR/P         1306.8     TOR           225.25    
+ N             600.00     P             14.153     WN/DEL        101.58     T5,           963.93     P5,          0.10719E+06
+
+                                                  VELOCITIES AND ANGLES
+ V/VCR)1      0.60000     ALPHA-1       72.470     V/VCR)3      0.61562     W/WCR)4      0.41670     W/WCR)5      0.40877    
+ VU/VCR)1     0.57214     ALPHA-2       73.289     VU/VCR)3     0.58917     WU/WCR)4    -0.34892     WX/WCR)5     0.21295    
+ VR/VCR)1     0.18072     ALPHA-3       73.144     VR/VCR)3     0.17851     WX/WCR)4     0.22780     V/VCR)5      0.22018    
+ V/VCR)0      0.49058E-01 BETA-3       -13.390     W/WCR)3      0.19197     BETA-4       -56.860     VU/VCR)5     0.41611E-01
+ V/VCR)2      0.59736     I-3           4.2757     WU/WCR)3    -0.44454E-01 BETA-5       -58.604     VX/VCR)5     0.21622    
+ VR/VCR)2     0.17177     VCR)3         376.71     WR/WCR)3     0.18675     VCR)5         341.26     ALPHA-5       10.893    
+                                                  OVERALL PERFORMANCE
+ EQ-W         0.21878     EQ-P0,/P5     1.6776     P0,/P5        1.7808     WT/P         0.66122     W            0.33690    
+ EQ-DEL-H      34607.     ETA-S        0.86996     NU           0.69565     DEL-H/T       44.471     DEL-H         50894.    
+ EQ-N          494.76     ETA-T        0.91311     NS           0.98037E-02 N/T           17.736     W.F.         0.89885    
+ EQ-TOR        146.13     EQ-P0,/P5,    1.6342     P0,/P5,       1.7274     TOR/P         1583.2     TOR           272.89    
+ N             600.00     P             17.146     WN/DEL        108.24     T5,           939.21     P5,           99788.    
+
+                                                  VELOCITIES AND ANGLES
+ V/VCR)1      0.65000     ALPHA-1       72.470     V/VCR)3      0.66701     W/WCR)4      0.47009     W/WCR)5      0.46104    
+ VU/VCR)1     0.61981     ALPHA-2       73.293     VU/VCR)3     0.63827     WU/WCR)4    -0.39362     WX/WCR)5     0.24004    
+ VR/VCR)1     0.19578     ALPHA-3       73.119     VR/VCR)3     0.19369     WX/WCR)4     0.25699     V/VCR)5      0.24483    
+ V/VCR)0      0.51789E-01 BETA-3        1.9532     W/WCR)3      0.20449     BETA-4       -56.860     VU/VCR)5    -0.10118E-03
+ V/VCR)2      0.64713     I-3           18.311     WU/WCR)3     0.69699E-02 BETA-5       -58.624     VX/VCR)5     0.24483    
+ VR/VCR)2     0.18603     VCR)3         376.71     WR/WCR)3     0.20437     VCR)5         336.60     ALPHA-5     -0.23678E-01
+                                                  OVERALL PERFORMANCE
+ EQ-W         0.23093     EQ-P0,/P5     1.8067     P0,/P5        1.9425     WT/P         0.69795     W            0.35562    
+ EQ-DEL-H      38907.     ETA-S        0.86434     NU           0.65396     DEL-H/T       49.997     DEL-H         57218.    
+ EQ-N          494.76     ETA-T        0.90984     NS           0.94640E-02 N/T           17.736     W.F.          1.0105    
+ EQ-TOR        173.41     EQ-P0,/P5,    1.7497     P0,/P5,       1.8705     TOR/P         1878.8     TOR           323.85    
+ N             600.00     P             20.348     WN/DEL        114.26     T5,           913.71     P5,           92149.    
+
+                                                  VELOCITIES AND ANGLES
+ V/VCR)1      0.70000     ALPHA-1       72.470     V/VCR)3      0.71843     W/WCR)4      0.53358     W/WCR)5      0.52315    
+ VU/VCR)1     0.66749     ALPHA-2       73.298     VU/VCR)3     0.68737     WU/WCR)4    -0.44679     WX/WCR)5     0.27216    
+ VR/VCR)1     0.21084     ALPHA-3       73.091     VR/VCR)3     0.20896     WX/WCR)4     0.29170     V/VCR)5      0.28372    
+ V/VCR)0      0.54207E-01 BETA-3        14.927     W/WCR)3      0.23018     BETA-4       -56.860     VU/VCR)5    -0.50806E-01
+ V/VCR)2      0.69689     I-3           30.146     WU/WCR)3     0.59290E-01 BETA-5       -58.652     VX/VCR)5     0.27913    
+ VR/VCR)2     0.20028     VCR)3         376.71     WR/WCR)3     0.22242     VCR)5         331.60     ALPHA-5      -10.316    
+                                                  OVERALL PERFORMANCE
+ EQ-W         0.24169     EQ-P0,/P5     1.9746     P0,/P5        2.1592     WT/P         0.73046     W            0.37219    
+ EQ-DEL-H      43444.     ETA-S        0.84947     NU           0.61352     DEL-H/T       55.827     DEL-H         63891.    
+ EQ-N          494.76     ETA-T        0.90078     NS           0.91646E-02 N/T           17.736     W.F.          1.1284    
+ EQ-TOR        202.66     EQ-P0,/P5,    1.8924     P0,/P5,       2.0522     TOR/P         2195.6     TOR           378.46    
+ N             600.00     P             23.779     WN/DEL        119.58     T5,           886.80     P5,           83993.    
+
+                                                  VELOCITIES AND ANGLES
+ V/VCR)1      0.75000     ALPHA-1       72.470     V/VCR)3      0.76988     W/WCR)4      0.61819     W/WCR)5      0.60581    
+ VU/VCR)1     0.71517     ALPHA-2       73.303     VU/VCR)3     0.73647     WU/WCR)4    -0.51763     WX/WCR)5     0.31475    
+ VR/VCR)1     0.22590     ALPHA-3       73.058     VR/VCR)3     0.22434     WX/WCR)4     0.33796     V/VCR)5      0.34684    
+ V/VCR)0      0.56293E-01 BETA-3        25.040     W/WCR)3      0.26590     BETA-4       -56.860     VU/VCR)5    -0.12044    
+ V/VCR)2      0.74665     I-3           39.260     WU/WCR)3     0.11254     BETA-5       -58.698     VX/VCR)5     0.32526    
+ VR/VCR)2     0.21452     VCR)3         376.71     WR/WCR)3     0.24091     VCR)5         325.96     ALPHA-5      -20.320    
+                                                  OVERALL PERFORMANCE
+ EQ-W         0.25097     EQ-P0,/P5     2.2208     P0,/P5        2.4902     WT/P         0.75852     W            0.38648    
+ EQ-DEL-H      48496.     ETA-S        0.82184     NU           0.57117     DEL-H/T       62.318     DEL-H         71319.    
+ EQ-N          494.76     ETA-T        0.88408     NS           0.89057E-02 N/T           17.736     W.F.          1.2596    
+ EQ-TOR        234.91     EQ-P0,/P5,    2.0862     P0,/P5,       2.3072     TOR/P         2545.0     TOR           438.69    
+ N             600.00     P             27.564     WN/DEL        124.17     T5,           856.85     P5,           74710.    
+
+                                                  VELOCITIES AND ANGLES
+ V/VCR)1      0.79767     ALPHA-1       72.470     V/VCR)3      0.81897     W/WCR)4      0.81977     W/WCR)5      0.80190    
+ VU/VCR)1     0.76063     ALPHA-2       73.309     VU/VCR)3     0.78328     WU/WCR)4    -0.68642     WX/WCR)5     0.41458    
+ VR/VCR)1     0.24026     ALPHA-3       73.023     VR/VCR)3     0.23912     WX/WCR)4     0.44816     V/VCR)5      0.52768    
+ V/VCR)0      0.57959E-01 BETA-3        32.377     W/WCR)3      0.30668     BETA-4       -56.860     VU/VCR)5    -0.29648    
+ V/VCR)2      0.79409     I-3           45.750     WU/WCR)3     0.16422     BETA-5       -58.869     VX/VCR)5     0.43651    
+ VR/VCR)2     0.22807     VCR)3         376.71     WR/WCR)3     0.25901     VCR)5         316.94     ALPHA-5      -34.184    
+                                                  OVERALL PERFORMANCE
+ EQ-W         0.25838     EQ-P0,/P5     2.8939     P0,/P5        3.4804     WT/P         0.78090     W            0.39788    
+ EQ-DEL-H      56375.     ETA-S        0.74373     NU           0.50395     DEL-H/T       72.443     DEL-H         82907.    
+ EQ-N          494.76     ETA-T        0.84101     NS           0.87530E-02 N/T           17.736     W.F.          1.4642    
+ EQ-TOR        281.13     EQ-P0,/P5,    2.5140     P0,/P5,       2.9059     TOR/P         3045.8     TOR           525.01    
+ N             600.00     P             32.987     WN/DEL        127.84     T5,           810.12     P5,           59316.    
+
+                                                  VELOCITIES AND ANGLES
+ V/VCR)1      0.79767     ALPHA-1       72.470     V/VCR)3      0.81897     W/WCR)4      0.86977     W/WCR)5      0.85003    
+ VU/VCR)1     0.76063     ALPHA-2       73.309     VU/VCR)3     0.78328     WU/WCR)4    -0.72678     WX/WCR)5     0.44083    
+ VR/VCR)1     0.24026     ALPHA-3       73.023     VR/VCR)3     0.23912     WX/WCR)4     0.47779     V/VCR)5      0.57738    
+ V/VCR)0      0.57959E-01 BETA-3        32.377     W/WCR)3      0.30668     BETA-4       -56.679     VU/VCR)5    -0.34052    
+ V/VCR)2      0.79409     I-3           45.750     WU/WCR)3     0.16422     BETA-5       -58.761     VX/VCR)5     0.46627    
+ VR/VCR)2     0.22807     VCR)3         376.71     WR/WCR)3     0.25901     VCR)5         315.50     ALPHA-5      -36.141    
+                                                  OVERALL PERFORMANCE
+ EQ-W         0.25838     EQ-P0,/P5     3.0884     P0,/P5        3.7906     WT/P         0.78090     W            0.39788    
+ EQ-DEL-H      57612.     ETA-S        0.72255     NU           0.49136     DEL-H/T       74.033     DEL-H         84727.    
+ EQ-N          494.76     ETA-T        0.82970     NS           0.87904E-02 N/T           17.736     W.F.          1.4964    
+ EQ-TOR        287.30     EQ-P0,/P5,    2.6115     P0,/P5,       3.0495     TOR/P         3112.7     TOR           536.53    
+ N             600.00     P             33.711     WN/DEL        127.84     T5,           802.78     P5,           56525.    
+
+                                                  VELOCITIES AND ANGLES
+ V/VCR)1      0.79767     ALPHA-1       72.470     V/VCR)3      0.81897     W/WCR)4      0.91977     W/WCR)5      0.89736    
+ VU/VCR)1     0.76063     ALPHA-2       73.309     VU/VCR)3     0.78328     WU/WCR)4    -0.76355     WX/WCR)5     0.47143    
+ VR/VCR)1     0.24026     ALPHA-3       73.023     VR/VCR)3     0.23912     WX/WCR)4     0.51280     V/VCR)5      0.62919    
+ V/VCR)0      0.57959E-01 BETA-3        32.377     W/WCR)3      0.30668     BETA-4       -56.115     VU/VCR)5    -0.38100    
+ V/VCR)2      0.79409     I-3           45.750     WU/WCR)3     0.16422     BETA-5       -58.308     VX/VCR)5     0.50072    
+ VR/VCR)2     0.22807     VCR)3         376.71     WR/WCR)3     0.25901     VCR)5         314.19     ALPHA-5      -37.268    
+                                                  OVERALL PERFORMANCE
+ EQ-W         0.25838     EQ-P0,/P5     3.3105     P0,/P5        4.1586     WT/P         0.78090     W            0.39788    
+ EQ-DEL-H      58740.     ETA-S        0.70049     NU           0.47914     DEL-H/T       75.482     DEL-H         86384.    
+ EQ-N          494.76     ETA-T        0.81733     NS           0.88588E-02 N/T           17.736     W.F.          1.5256    
+ EQ-TOR        292.92     EQ-P0,/P5,    2.7150     P0,/P5,       3.2047     TOR/P         3173.6     TOR           547.03    
+ N             600.00     P             34.371     WN/DEL        127.84     T5,           796.10     P5,           53786.    
+
+                                                  VELOCITIES AND ANGLES
+ V/VCR)1      0.79767     ALPHA-1       72.470     V/VCR)3      0.81897     W/WCR)4      0.96977     W/WCR)5      0.94347    
+ VU/VCR)1     0.76063     ALPHA-2       73.309     VU/VCR)3     0.78328     WU/WCR)4    -0.79559     WX/WCR)5     0.50712    
+ VR/VCR)1     0.24026     ALPHA-3       73.023     VR/VCR)3     0.23912     WX/WCR)4     0.55451     V/VCR)5      0.68248    
+ V/VCR)0      0.57959E-01 BETA-3        32.377     W/WCR)3      0.30668     BETA-4       -55.124     VU/VCR)5    -0.41656    
+ V/VCR)2      0.79409     I-3           45.750     WU/WCR)3     0.16422     BETA-5       -57.486     VX/VCR)5     0.54061    
+ VR/VCR)2     0.22807     VCR)3         376.71     WR/WCR)3     0.25901     VCR)5         313.04     ALPHA-5      -37.616    
+                                                  OVERALL PERFORMANCE
+ EQ-W         0.25838     EQ-P0,/P5     3.5631     P0,/P5        4.5955     WT/P         0.78090     W            0.39788    
+ EQ-DEL-H      59722.     ETA-S        0.67765     NU           0.46737     DEL-H/T       76.744     DEL-H         87829.    
+ EQ-N          494.76     ETA-T        0.80367     NS           0.89605E-02 N/T           17.736     W.F.          1.5512    
+ EQ-TOR        297.82     EQ-P0,/P5,    2.8244     P0,/P5,       3.3722     TOR/P         3226.7     TOR           556.18    
+ N             600.00     P             34.946     WN/DEL        127.84     T5,           790.27     P5,           51115.    
+
+                                                  VELOCITIES AND ANGLES
+ V/VCR)1      0.79767     ALPHA-1       72.470     V/VCR)3      0.81897     W/WCR)4       1.0198     W/WCR)5      0.98756    
+ VU/VCR)1     0.76063     ALPHA-2       73.309     VU/VCR)3     0.78328     WU/WCR)4    -0.82113     WX/WCR)5     0.54864    
+ VR/VCR)1     0.24026     ALPHA-3       73.023     VR/VCR)3     0.23912     WX/WCR)4     0.60470     V/VCR)5      0.73635    
+ V/VCR)0      0.57959E-01 BETA-3        32.377     W/WCR)3      0.30668     BETA-4       -53.631     VU/VCR)5    -0.44510    
+ V/VCR)2      0.79409     I-3           45.750     WU/WCR)3     0.16422     BETA-5       -56.251     VX/VCR)5     0.58660    
+ VR/VCR)2     0.22807     VCR)3         376.71     WR/WCR)3     0.25901     VCR)5         312.12     ALPHA-5      -37.190    
+                                                  OVERALL PERFORMANCE
+ EQ-W         0.25838     EQ-P0,/P5     3.8476     P0,/P5        5.1117     WT/P         0.78090     W            0.39788    
+ EQ-DEL-H      60505.     ETA-S        0.65409     NU           0.45619     DEL-H/T       77.750     DEL-H         88980.    
+ EQ-N          494.76     ETA-T        0.78839     NS           0.90976E-02 N/T           17.736     W.F.          1.5715    
+ EQ-TOR        301.73     EQ-P0,/P5,    2.9391     P0,/P5,       3.5515     TOR/P         3269.0     TOR           563.47    
+ N             600.00     P             35.404     WN/DEL        127.84     T5,           785.63     P5,           48534.    
+
+                                                  VELOCITIES AND ANGLES
+ V/VCR)1      0.79767     ALPHA-1       72.470     V/VCR)3      0.81897     W/WCR)4       1.0698     W/WCR)5       1.0279    
+ VU/VCR)1     0.76063     ALPHA-2       73.309     VU/VCR)3     0.78328     WU/WCR)4    -0.83731     WX/WCR)5     0.59630    
+ VR/VCR)1     0.24026     ALPHA-3       73.023     VR/VCR)3     0.23912     WX/WCR)4     0.66582     V/VCR)5      0.78906    
+ V/VCR)0      0.57959E-01 BETA-3        32.377     W/WCR)3      0.30668     BETA-4       -51.508     VU/VCR)5    -0.46326    
+ V/VCR)2      0.79409     I-3           45.750     WU/WCR)3     0.16422     BETA-5       -54.543     VX/VCR)5     0.63875    
+ VR/VCR)2     0.22807     VCR)3         376.71     WR/WCR)3     0.25901     VCR)5         311.53     ALPHA-5      -35.952    
+                                                  OVERALL PERFORMANCE
+ EQ-W         0.25838     EQ-P0,/P5     4.1602     P0,/P5        5.7094     WT/P         0.78090     W            0.39788    
+ EQ-DEL-H      61001.     ETA-S        0.62985     NU           0.44584     DEL-H/T       78.387     DEL-H         89710.    
+ EQ-N          494.76     ETA-T        0.77092     NS           0.92695E-02 N/T           17.736     W.F.          1.5844    
+ EQ-TOR        304.20     EQ-P0,/P5,    3.0573     P0,/P5,       3.7402     TOR/P         3295.8     TOR           568.09    
+ N             600.00     P             35.694     WN/DEL        127.84     T5,           782.69     P5,           46086.    
+
+                                                  VELOCITIES AND ANGLES
+ V/VCR)1      0.79767     ALPHA-1       72.470     V/VCR)3      0.81897     W/WCR)4       1.1198     W/WCR)5       1.0606    
+ VU/VCR)1     0.76063     ALPHA-2       73.309     VU/VCR)3     0.78328     WU/WCR)4    -0.83925     WX/WCR)5     0.64853    
+ VR/VCR)1     0.24026     ALPHA-3       73.023     VR/VCR)3     0.23912     WX/WCR)4     0.74131     V/VCR)5      0.83634    
+ V/VCR)0      0.57959E-01 BETA-3        32.377     W/WCR)3      0.30668     BETA-4       -48.546     VU/VCR)5    -0.46545    
+ V/VCR)2      0.79409     I-3           45.750     WU/WCR)3     0.16422     BETA-5       -52.305     VX/VCR)5     0.69486    
+ VR/VCR)2     0.22807     VCR)3         376.71     WR/WCR)3     0.25901     VCR)5         311.46     ALPHA-5      -33.816    
+                                                  OVERALL PERFORMANCE
+ EQ-W         0.25838     EQ-P0,/P5     4.4809     P0,/P5        6.3569     WT/P         0.78090     W            0.39788    
+ EQ-DEL-H      61060.     ETA-S        0.60520     NU           0.43681     DEL-H/T       78.464     DEL-H         89797.    
+ EQ-N          494.76     ETA-T        0.75035     NS           0.94658E-02 N/T           17.736     W.F.          1.5859    
+ EQ-TOR        304.50     EQ-P0,/P5,    3.1745     P0,/P5,       3.9315     TOR/P         3299.0     TOR           568.64    
+ N             600.00     P             35.729     WN/DEL        127.84     T5,           782.33     P5,           43843.    
+
+                                                  VELOCITIES AND ANGLES
+ V/VCR)1      0.79767     ALPHA-1       72.470     V/VCR)3      0.81897     W/WCR)4       1.1698     W/WCR)5       1.0749    
+ VU/VCR)1     0.76063     ALPHA-2       73.309     VU/VCR)3     0.78328     WU/WCR)4    -0.81808     WX/WCR)5     0.69730    
+ VR/VCR)1     0.24026     ALPHA-3       73.023     VR/VCR)3     0.23912     WX/WCR)4     0.83613     V/VCR)5      0.86633    
+ V/VCR)0      0.57959E-01 BETA-3        32.377     W/WCR)3      0.30668     BETA-4       -44.375     VU/VCR)5    -0.44167    
+ V/VCR)2      0.79409     I-3           45.750     WU/WCR)3     0.16422     BETA-5       -49.557     VX/VCR)5     0.74529    
+ VR/VCR)2     0.22807     VCR)3         376.71     WR/WCR)3     0.25901     VCR)5         312.23     ALPHA-5      -30.652    
+                                                  OVERALL PERFORMANCE
+ EQ-W         0.25838     EQ-P0,/P5     4.7408     P0,/P5        6.9085     WT/P         0.78090     W            0.39788    
+ EQ-DEL-H      60411.     ETA-S        0.58139     NU           0.43043     DEL-H/T       77.630     DEL-H         88842.    
+ EQ-N          494.76     ETA-T        0.72494     NS           0.96420E-02 N/T           17.736     W.F.          1.5691    
+ EQ-TOR        301.26     EQ-P0,/P5,    3.2812     P0,/P5,       4.1092     TOR/P         3263.9     TOR           562.60    
+ N             600.00     P             35.349     WN/DEL        127.84     T5,           786.18     P5,           41947.    
+
+                                                  VELOCITIES AND ANGLES
+ V/VCR)1      0.79767     ALPHA-1       72.470     V/VCR)3      0.81897     W/WCR)4       1.2198     W/WCR)5       1.0429    
+ VU/VCR)1     0.76063     ALPHA-2       73.309     VU/VCR)3     0.78328     WU/WCR)4    -0.75542     WX/WCR)5     0.71907    
+ VR/VCR)1     0.24026     ALPHA-3       73.023     VR/VCR)3     0.23912     WX/WCR)4     0.95769     V/VCR)5      0.84890    
+ V/VCR)0      0.57959E-01 BETA-3        32.377     W/WCR)3      0.30668     BETA-4       -38.266     VU/VCR)5    -0.37202    
+ V/VCR)2      0.79409     I-3           45.750     WU/WCR)3     0.16422     BETA-5       -46.412     VX/VCR)5     0.76305    
+ VR/VCR)2     0.22807     VCR)3         376.71     WR/WCR)3     0.25901     VCR)5         314.48     ALPHA-5      -25.991    
+                                                  OVERALL PERFORMANCE
+ EQ-W         0.25838     EQ-P0,/P5     4.7638     P0,/P5        6.9584     WT/P         0.78090     W            0.39788    
+ EQ-DEL-H      58490.     ETA-S        0.56152     NU           0.42990     DEL-H/T       75.161     DEL-H         86018.    
+ EQ-N          494.76     ETA-T        0.69101     NS           0.96773E-02 N/T           17.736     W.F.          1.5192    
+ EQ-TOR        291.68     EQ-P0,/P5,    3.3554     P0,/P5,       4.2348     TOR/P         3160.1     TOR           544.71    
+ N             600.00     P             34.225     WN/DEL        127.84     T5,           797.58     P5,           40703.    
+
+                                                  VELOCITIES AND ANGLES
+ V/VCR)1      0.79767     ALPHA-1       72.470     V/VCR)3      0.81897     W/WCR)4       1.2298     W/WCR)5       1.0268    
+ VU/VCR)1     0.76063     ALPHA-2       73.309     VU/VCR)3     0.78328     WU/WCR)4    -0.73477     WX/WCR)5     0.71724    
+ VR/VCR)1     0.24026     ALPHA-3       73.023     VR/VCR)3     0.23912     WX/WCR)4     0.98613     V/VCR)5      0.83580    
+ V/VCR)0      0.57959E-01 BETA-3        32.377     W/WCR)3      0.30668     BETA-4       -36.690     VU/VCR)5    -0.34928    
+ V/VCR)2      0.79409     I-3           45.750     WU/WCR)3     0.16422     BETA-5       -45.691     VX/VCR)5     0.75932    
+ VR/VCR)2     0.22807     VCR)3         376.71     WR/WCR)3     0.25901     VCR)5         315.22     ALPHA-5      -24.702    
+                                                  OVERALL PERFORMANCE
+ EQ-W         0.25838     EQ-P0,/P5     4.7193     P0,/P5        6.8620     WT/P         0.78090     W            0.39788    
+ EQ-DEL-H      57857.     ETA-S        0.55811     NU           0.43093     DEL-H/T       74.348     DEL-H         85086.    
+ EQ-N          494.76     ETA-T        0.68254     NS           0.96545E-02 N/T           17.736     W.F.          1.5027    
+ EQ-TOR        288.52     EQ-P0,/P5,    3.3624     P0,/P5,       4.2467     TOR/P         3125.9     TOR           538.81    
+ N             600.00     P             33.855     WN/DEL        127.84     T5,           801.33     P5,           40589.    
+
+          LAST CASE IS APPROXIMATE LIMITING LOADING
+1                                   NASA RADIAL INFLOW TURBINE COMPUTER PROGRAM
+                        DESIGN COEFFICIENTS RETAINED INTERNALLY                     
+                        100 PERCENT SPEED - SHORT OUTPUT                            
+K GAMMA     1.6667        P0,    0.17237E+06    A1    0.38008E-02  ALPHA-1     72.470     BETA-4    -56.860       PD    0.98784    
+      R     99.198        T0,     1144.4        A3    0.39789E-02      BL1    0.95168        BL4    0.93718        K    0.28684    
+     D3     12.624         A0    0.12018E-01    A5    0.44543E-02       U3     237.95      U4/U3    0.56776       ZZ     22.000    
+K V1VC1        NS           EQ-P5/P0,    NU           ETAT         ETAS         DHTCR        WTHODE       EQ-P0,/P5    EQ-P0,/P5,
+  0.30000      0.12937E-01  0.79806       1.0322      0.68226      0.58860       10635.      0.12178       1.2530       1.2138    
+  0.35000      0.12228E-01  0.76957      0.96036      0.77581      0.69588       14525.      0.14031       1.2994       1.2637    
+  0.40000      0.11633E-01  0.73962      0.89744      0.83787      0.77129       18436.      0.15804       1.3520       1.3187    
+  0.45000      0.11106E-01  0.70763      0.84072      0.87750      0.82169       22380.      0.17485       1.4132       1.3810    
+  0.50000      0.10630E-01  0.67325      0.78877      0.90064      0.85235       26373.      0.19064       1.4853       1.4525    
+  0.55000      0.10196E-01  0.63616      0.74065      0.91145      0.86735       30438.      0.20532       1.5719       1.5357    
+  0.60000      0.98037E-02  0.59608      0.69565      0.91311      0.86996       34607.      0.21878       1.6776       1.6342    
+  0.65000      0.94640E-02  0.55348      0.65396      0.90984      0.86434       38907.      0.23093       1.8067       1.7497    
+  0.70000      0.91646E-02  0.50642      0.61352      0.90078      0.84947       43444.      0.24169       1.9746       1.8924    
+  0.75000      0.89057E-02  0.45030      0.57117      0.88408      0.82184       48496.      0.25097       2.2208       2.0862    
+  0.79767      0.87530E-02  0.34555      0.50395      0.84101      0.74373       56375.      0.25838       2.8939       2.5140    
+  0.79767      0.87904E-02  0.32379      0.49136      0.82970      0.72255       57612.      0.25838       3.0884       2.6115    
+  0.79767      0.88588E-02  0.30207      0.47914      0.81733      0.70049       58740.      0.25838       3.3105       2.7150    
+  0.79767      0.89605E-02  0.28066      0.46737      0.80367      0.67765       59722.      0.25838       3.5631       2.8244    
+  0.79767      0.90976E-02  0.25990      0.45619      0.78839      0.65409       60505.      0.25838       3.8476       2.9391    
+  0.79767      0.92695E-02  0.24037      0.44584      0.77092      0.62985       61001.      0.25838       4.1602       3.0573    
+  0.79767      0.94658E-02  0.22317      0.43681      0.75035      0.60520       61060.      0.25838       4.4809       3.1745    
+  0.79767      0.96420E-02  0.21093      0.43043      0.72494      0.58139       60411.      0.25838       4.7408       3.2812    
+  0.79767      0.96773E-02  0.20992      0.42990      0.69101      0.56152       58490.      0.25838       4.7638       3.3554    
+  0.79767      0.96545E-02  0.21189      0.43093      0.68254      0.55811       57857.      0.25838       4.7193       3.3624    
+
+          LAST CASE IS APPROXIMATE LIMITING LOADING

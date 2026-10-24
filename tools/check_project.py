@@ -32,8 +32,9 @@ def main():
             errors.append('Location-map hash differs from baseline: ' + name)
 
     docs = [ROOT / 'README.md', ROOT / 'audit/README.md', ROOT / 'originals/README.md',
-            ROOT / 'reports/README.md', *sorted((ROOT / 'docs').glob('*.md')),
+            ROOT / 'reports/README.md', *sorted((ROOT / 'docs').rglob('*.md')),
             *sorted((ROOT / 'restored').glob('*.md')),
+            ROOT / 'audit/tutorial-revision-2026-10-23/README.md',
             ROOT / 'audit/2026-10-23/restoration/ARCHIVED.md']
     links = 0
     for path in docs:
@@ -42,12 +43,23 @@ def main():
             continue
         for raw in re.findall(r'\[[^\]]*\]\(([^)]+)\)', path.read_text()):
             target = urlsplit(raw.strip('<>'))
+            if target.scheme == 'file':
+                errors.append('Nonportable file URL in ' + str(path.relative_to(ROOT)) + ': ' + raw)
+                continue
             if target.scheme or not target.path:
                 continue
             links += 1
             resolved = (path.parent / unquote(target.path)).resolve()
             if not resolved.is_relative_to(ROOT) or not resolved.exists():
                 errors.append('Broken local link in ' + str(path.relative_to(ROOT)) + ': ' + raw)
+                continue
+            anchor = re.fullmatch(r'L(\d+)(?:-L(\d+))?', target.fragment)
+            if anchor and resolved.is_file():
+                first = int(anchor[1])
+                last = int(anchor[2] or anchor[1])
+                if not 1 <= first <= last <= len(resolved.read_text().splitlines()):
+                    errors.append('Invalid source line anchor in '
+                                  + str(path.relative_to(ROOT)) + ': ' + raw)
 
     scripts = [*sorted((ROOT / 'tools').glob('*.py')),
                *sorted((ROOT / 'restored/tests').glob('*.py')),

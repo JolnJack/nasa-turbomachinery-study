@@ -1,0 +1,33 @@
+           12.62-CM DIA TURBINE
+           100 PERCENT SPEED
+&IN
+MODE=2,           ! 2 = SI 单位制设计模式 (5 = 美制设计模式)
+ITEST=2,          ! 2 = 匹配总效率 ETAD 与总-总压比 PDSGN (1 = 匹配静效率与总-静压比)
+ETAD=.913,        ! 设计点目标效率 (0.913)
+PDSGN=1.74,       ! 设计点目标压比 (p0'/p5' = 1.74)
+WD=.33879,        ! 设计点质量流量 w, kg/s
+G=1.6667,         ! 比热比 gamma (本例给定值，不能据此识别气体组分)
+R=99.1976,        ! 气体常数 R, J/(kg*K)
+P0=172368.9,      ! 进口总压 p0', Pa
+T0=1144.44,       ! 进口总温 T0', K
+A0=.0120176,      ! 蜗壳进口面积 A0, m^2
+A1=.0038008,      ! 静叶出口内侧面积 A1, m^2
+A3=.0039789,      ! 转子进口外侧面积 A3, m^2
+A5=.0044543,      ! 转子出口外侧面积 A5, m^2
+D2=12.9997,       ! 静叶出口直径 D2, cm (注意单位是厘米!)
+D3=12.6238,       ! 转子进口直径 D3, cm (注意单位是厘米!)
+AL1=72.47,        ! 静叶出口叶片角 alpha_1, 度
+B4=-56.86,        ! 转子出口叶片角 beta_4, 度 (反向旋转方向为负!)
+BL1=.95168,       ! 静叶尾缘堵塞因子 B1 (通道内面积/通道外面积)
+BL4=.93718,       ! 转子尾缘堵塞因子 B4 (通道内面积/通道外面积)
+ZZ=22.,           ! 转子进口叶片数 ZZ
+U3=237.9524,      ! 转子进口叶尖线速度 U3, m/s
+U4U3=.567765,     ! 转子出口平均半径与进口半径之比 U4 / U3
+V1=.30, DELV=.05, VMAX=.80, DELY=.05, YMAX=1.40
+&END
+DESIGN COEFFICIENTS RETAINED INTERNALLY
+100 PERCENT SPEED - LONG OUTPUT
+ &IN MODE=0 &END
+DESIGN COEFFICIENTS RETAINED INTERNALLY
+100 PERCENT SPEED - SHORT OUTPUT
+ &IN MODE=1 &END

@@ -9,7 +9,7 @@
     },
     {
       "original_name": "NASA叶轮机械FORTRAN程序完全解析与使用指南.md",
-      "path": "docs/tutorials/NASA叶轮机械FORTRAN程序完全解析与使用指南.md",
+      "path": "originals/tutorials/NASA叶轮机械FORTRAN程序完全解析与使用指南.md",
       "sha256": "181f415e071b831e2caace31a1fb3cd2a88da3e8ca3a33b541650b1180a4cb90"
     },
     {
@@ -59,12 +59,12 @@
     },
     {
       "original_name": "向心透平程序_零基础全符号与概念详解.md",
-      "path": "docs/tutorials/向心透平程序_零基础全符号与概念详解.md",
+      "path": "originals/tutorials/向心透平程序_零基础全符号与概念详解.md",
       "sha256": "0d78f03eb04b848ed8cdd2082adcece19f7c760f7bed86ce1bb668c517f6ceb0"
     },
     {
       "original_name": "离心压气机程序_零基础全符号与概念详解.md",
-      "path": "docs/tutorials/离心压气机程序_零基础全符号与概念详解.md",
+      "path": "originals/tutorials/离心压气机程序_零基础全符号与概念详解.md",
       "sha256": "029f5700af32da57634f62ed830f4e68c1a6610cc889fd9e0701734c70aa256e"
     },
     {

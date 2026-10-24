@@ -26,4 +26,6 @@ make test-functional
 
 本次整理不改变科学验收状态。现代透平严格原表对照的已知失败仍须如实保留。
 
+2026-10-24 教程修订补充：三份早期教程原文保存到 `originals/tutorials/`，`originals/manifest.json` 相应更新位置、保留原 SHA-256；`docs/tutorials/` 作为日常修订版本。没有重建已删除的历史归档，也未改变 Fortran 计算源或参考数据。本轮教学修改和实际核验见 [教程修订记录](../audit/tutorial-revision-2026-10-23/README.md)。
+
 干净目录重建结果见 [verification.json](../audit/organization-2026-10-23/verification.json)，原始标准输出、错误输出及各项检查摘要保存在同目录。严格参考表失败作为预期的未通过项单列，不计为软件整体通过。

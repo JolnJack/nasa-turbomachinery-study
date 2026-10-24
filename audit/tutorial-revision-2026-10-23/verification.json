@@ -1,0 +1,80 @@
+{
+  "date": "2026-10-23",
+  "scope": "Tutorial examples and dimensional checks; not a new full scientific acceptance",
+  "runs": [
+    {
+      "name": "compressor",
+      "executable": "restored/build/modern64/compressor_tn_d7487",
+      "input": "restored/examples/compressor_original.inp",
+      "exit": 0,
+      "stdout_bytes": 24430,
+      "stderr_bytes": 0
+    },
+    {
+      "name": "turbine",
+      "executable": "restored/build/modern64/turbine_tn_d8063",
+      "input": "restored/examples/turbine_design_then_offdesign.inp",
+      "exit": 0,
+      "stdout_bytes": 37058,
+      "stderr_bytes": 0
+    },
+    {
+      "name": "embedded-compressor",
+      "exit": 0,
+      "stderr": "",
+      "performance_blocks": 12
+    },
+    {
+      "name": "embedded-turbine",
+      "exit": 0,
+      "stderr": "",
+      "performance_blocks": 21
+    }
+  ],
+  "unchanged_calculation_sources": {
+    "restored/compressor_tn_d7487.f": "dc2a7564c29bf75c4c0b98e9b18885d06468d4cfa56b784d32cd59e4b7360f01",
+    "restored/turbine_tn_d8063.f": "80bd0b4604e726fb44614d720a08ddc6db8cf0a11605f53b7801234da8d98fed",
+    "restored/read_namelist_cards.f90": "3eb3c92ee8c9c00b759d1721c32d9f9c668eef59dc356da64424784e3e505831"
+  },
+  "independent_calculations": {
+    "omega_rad_s": 3769.9012975490746,
+    "rpm": 35999.90558840912,
+    "torque_Nm_from_rounded_power": 4.627442106068272,
+    "cp": 1004.675,
+    "compressor_tip_speed": 306.4937792842202,
+    "compressor_vcr": 310.6429361018853,
+    "compressor_last_radius_ratio": 1.126
+  },
+  "completed_date": "2026-10-24",
+  "design_solver": {
+    "input": "restored/examples/turbine_known_root_design.inp",
+    "model": "compat27",
+    "status": "matched",
+    "evaluations": 7,
+    "replay_backend": "forward-full",
+    "full_output_replay": {
+      "exit": 0,
+      "errors": [
+        2.884657757107334e-08,
+        1.4081597328186035e-06,
+        1.1560142263444817e-06
+      ]
+    }
+  },
+  "checks": {
+    "compressor_loss_sum": 0.23195,
+    "turbine_power_W_from_printed_values": 17444.97468,
+    "all_3_calculation_sources_unchanged_from_start": true
+  },
+  "tutorial_hashes": {
+    "docs/tutorials/向心透平程序_零基础全符号与概念详解.md": "c87319c39a0536f88b8d3720653403396c4d9f365c73976d97917378895b1f5c",
+    "docs/tutorials/离心压气机程序_零基础全符号与概念详解.md": "2e7be37a6db3d5715483e831328b66d99f33982069ec37a3e922c3680297c110",
+    "docs/tutorials/NASA叶轮机械FORTRAN程序完全解析与使用指南.md": "574e8529ca77758270e84f6c6a0247ba0db7cd08059529c44a77f570cfc26f38"
+  },
+  "project_check": {
+    "command": "make check",
+    "exit": 0,
+    "log": "project-check.txt"
+  },
+  "start_commit": "0eeb9359e3b547c5a82d7fa8d61a2d8ad2daceea"
+}
