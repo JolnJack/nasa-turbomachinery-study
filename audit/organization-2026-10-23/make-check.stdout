@@ -1,0 +1,5 @@
+python3 tools/check_project.py
+PASS: 14 original locations, 14 baseline copies, 45 local navigation links, 21 Python scripts
+/Library/Developer/CommandLineTools/usr/bin/make -C restored test-integrity
+python3 tests/verify_integrity.py
+PASS: 14 originals, 14 baseline copies, both generated programs and original example inputs

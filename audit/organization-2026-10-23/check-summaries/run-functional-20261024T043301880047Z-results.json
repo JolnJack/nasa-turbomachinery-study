@@ -1,0 +1,805 @@
+{
+  "source": "/private/var/folders/ph/m54dxbz97jb6qp2ht_bls0440000gn/T/nasa-clean-check-e16yen29/restored",
+  "compiler": "GNU Fortran (Homebrew GCC 16.2.0) 16.2.0",
+  "flags": [
+    "-std=legacy",
+    "-fno-automatic",
+    "-fcheck=all",
+    "-ffpe-trap=invalid,zero,overflow",
+    "-fbacktrace",
+    "-g",
+    "-fdefault-real-16",
+    "-ffree-line-length-none"
+  ],
+  "builds": {
+    "compressor_tn_d7487": {
+      "command": [
+        "/opt/homebrew/bin/gfortran",
+        "-std=legacy",
+        "-fno-automatic",
+        "-fcheck=all",
+        "-ffpe-trap=invalid,zero,overflow",
+        "-fbacktrace",
+        "-g",
+        "-fdefault-real-16",
+        "-ffree-line-length-none",
+        "/private/var/folders/ph/m54dxbz97jb6qp2ht_bls0440000gn/T/nasa-clean-check-e16yen29/restored/compat27/compressor_tn_d7487.f90",
+        "/private/var/folders/ph/m54dxbz97jb6qp2ht_bls0440000gn/T/nasa-clean-check-e16yen29/restored/read_namelist_cards.f90",
+        "-o",
+        "/private/var/folders/ph/m54dxbz97jb6qp2ht_bls0440000gn/T/nasa-clean-check-e16yen29/audit/2026-10-23/restoration/run-functional-20261024T043301880047Z/compressor_tn_d7487"
+      ],
+      "exit": 0,
+      "sha256": "d3c503f56810d94724a97011295ec9a400270a02e340a9094ce15493a214338b"
+    },
+    "turbine_tn_d8063": {
+      "command": [
+        "/opt/homebrew/bin/gfortran",
+        "-std=legacy",
+        "-fno-automatic",
+        "-fcheck=all",
+        "-ffpe-trap=invalid,zero,overflow",
+        "-fbacktrace",
+        "-g",
+        "-fdefault-real-16",
+        "-ffree-line-length-none",
+        "/private/var/folders/ph/m54dxbz97jb6qp2ht_bls0440000gn/T/nasa-clean-check-e16yen29/restored/compat27/turbine_tn_d8063.f90",
+        "/private/var/folders/ph/m54dxbz97jb6qp2ht_bls0440000gn/T/nasa-clean-check-e16yen29/restored/read_namelist_cards.f90",
+        "-o",
+        "/private/var/folders/ph/m54dxbz97jb6qp2ht_bls0440000gn/T/nasa-clean-check-e16yen29/audit/2026-10-23/restoration/run-functional-20261024T043301880047Z/turbine_tn_d8063"
+      ],
+      "exit": 0,
+      "sha256": "809866bf4706ee136cf1f7eb5b1da1c25addae37a2b6fb32f8f3eafa4e49dcde"
+    }
+  },
+  "checks": [
+    {
+      "name": "compressor 100 safe completion",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "compressor 100 reference triples",
+      "pass": true,
+      "detail": {
+        "expected": 12,
+        "actual": 12,
+        "differences": []
+      }
+    },
+    {
+      "name": "compressor 90 safe completion",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "compressor 90 reference triples",
+      "pass": true,
+      "detail": {
+        "expected": 12,
+        "actual": 12,
+        "differences": []
+      }
+    },
+    {
+      "name": "compressor 80 safe completion",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "compressor 80 reference triples",
+      "pass": true,
+      "detail": {
+        "expected": 9,
+        "actual": 9,
+        "differences": []
+      }
+    },
+    {
+      "name": "compressor 60 safe completion",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "compressor 60 reference triples",
+      "pass": true,
+      "detail": {
+        "expected": 9,
+        "actual": 9,
+        "differences": []
+      }
+    },
+    {
+      "name": "AR node continuity 1.2",
+      "pass": true,
+      "detail": [
+        [
+          5.75,
+          0.707
+        ],
+        [
+          5.75,
+          0.707
+        ],
+        [
+          5.749,
+          0.707
+        ]
+      ]
+    },
+    {
+      "name": "AR node continuity 2.0",
+      "pass": true,
+      "detail": [
+        [
+          6.417,
+          0.763
+        ],
+        [
+          6.417,
+          0.762
+        ],
+        [
+          6.417,
+          0.762
+        ]
+      ]
+    },
+    {
+      "name": "AR node continuity 3.0",
+      "pass": true,
+      "detail": [
+        [
+          6.55,
+          0.774
+        ],
+        [
+          6.55,
+          0.774
+        ],
+        [
+          6.55,
+          0.774
+        ]
+      ]
+    },
+    {
+      "name": "AR node continuity 4.0",
+      "pass": true,
+      "detail": [
+        [
+          6.582,
+          0.776
+        ],
+        [
+          6.582,
+          0.776
+        ],
+        [
+          6.582,
+          0.776
+        ]
+      ]
+    },
+    {
+      "name": "AR node continuity 5.0",
+      "pass": true,
+      "detail": [
+        [
+          6.58,
+          0.776
+        ],
+        [
+          6.58,
+          0.776
+        ],
+        [
+          6.58,
+          0.776
+        ]
+      ]
+    },
+    {
+      "name": "turbine 0 safe completion",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "turbine 0 intact titles",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "turbine 0 complete choking scan",
+      "pass": true,
+      "detail": 20
+    },
+    {
+      "name": "turbine 1 safe completion",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "turbine 1 intact titles",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "turbine 1 complete choking scan",
+      "pass": true,
+      "detail": 20
+    },
+    {
+      "name": "turbine 2 safe completion",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "turbine 2 intact titles",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "compressor_tn_d7487 empty EOF",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "compressor_tn_d7487 malformed input fails",
+      "pass": true,
+      "detail": " INVALID COMPRESSOR NAMELIST\nSTOP 1\n"
+    },
+    {
+      "name": "turbine_tn_d8063 empty EOF",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "turbine_tn_d8063 malformed input fails",
+      "pass": true,
+      "detail": " INVALID OR TRUNCATED TURBINE INPUT\nSTOP 1\n"
+    },
+    {
+      "name": "compressor_tn_d7487 rejects truncated",
+      "pass": true,
+      "detail": " INVALID COMPRESSOR NAMELIST\nSTOP 1\n"
+    },
+    {
+      "name": "compressor_tn_d7487 rejects garbage",
+      "pass": true,
+      "detail": " INVALID COMPRESSOR NAMELIST\nSTOP 1\n"
+    },
+    {
+      "name": "compressor_tn_d7487 rejects wrong-group",
+      "pass": true,
+      "detail": " INVALID COMPRESSOR NAMELIST\nSTOP 1\n"
+    },
+    {
+      "name": "turbine_tn_d8063 rejects truncated",
+      "pass": true,
+      "detail": " INVALID OR TRUNCATED TURBINE INPUT\nSTOP 1\n"
+    },
+    {
+      "name": "turbine_tn_d8063 rejects garbage",
+      "pass": true,
+      "detail": " INVALID OR TRUNCATED TURBINE INPUT\nSTOP 1\n"
+    },
+    {
+      "name": "turbine_tn_d8063 rejects wrong-group",
+      "pass": true,
+      "detail": " INVALID OR TRUNCATED TURBINE INPUT\nSTOP 1\n"
+    },
+    {
+      "name": "compressor feature SPLT",
+      "pass": true,
+      "detail": {
+        "points": 12,
+        "exit": 0
+      }
+    },
+    {
+      "name": "compressor readable SPLT",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "compressor feature CURVH",
+      "pass": true,
+      "detail": {
+        "points": 12,
+        "exit": 0
+      }
+    },
+    {
+      "name": "compressor readable CURVH",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "compressor feature AL1MF",
+      "pass": true,
+      "detail": {
+        "points": 10,
+        "exit": 0
+      }
+    },
+    {
+      "name": "compressor readable AL1MF",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "compressor partial namelist keeps geometry",
+      "pass": true,
+      "detail": {
+        "full": 18,
+        "partial": 18
+      }
+    },
+    {
+      "name": "turbine US mode 3",
+      "pass": true,
+      "detail": {
+        "points": 20,
+        "exit": 0
+      }
+    },
+    {
+      "name": "turbine US mode 4",
+      "pass": true,
+      "detail": {
+        "points": 20,
+        "exit": 0
+      }
+    },
+    {
+      "name": "turbine SI US dimensionless agreement",
+      "pass": true,
+      "detail": {
+        "max_relative_difference": 4.719429892873661e-05,
+        "rule": "1e-4 reflects printed 5 significant digits and published unit constants, not NASA reference tolerance"
+      }
+    },
+    {
+      "name": "turbine US mode 5",
+      "pass": true,
+      "detail": {
+        "points": 1,
+        "exit": 0
+      }
+    },
+    {
+      "name": "turbine static design",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "namelist syntax lowercase",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "namelist syntax slash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "namelist syntax dollar",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "namelist syntax comment",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "compressor rejects NVOVCR",
+      "pass": true,
+      "detail": {
+        "exit": 1,
+        "stderr": " INVALID COMPRESSOR INPUT DOMAIN\nSTOP 1\n"
+      }
+    },
+    {
+      "name": "compressor rejects GAM",
+      "pass": true,
+      "detail": {
+        "exit": 1,
+        "stderr": " INVALID COMPRESSOR INPUT DOMAIN\nSTOP 1\n"
+      }
+    },
+    {
+      "name": "compressor rejects VLDRR",
+      "pass": true,
+      "detail": {
+        "exit": 1,
+        "stderr": " INVALID COMPRESSOR INPUT DOMAIN\nSTOP 1\n"
+      }
+    },
+    {
+      "name": "compressor rejects AR",
+      "pass": true,
+      "detail": {
+        "exit": 1,
+        "stderr": " INVALID COMPRESSOR INPUT DOMAIN\nSTOP 1\n"
+      }
+    },
+    {
+      "name": "turbine rejects MODE",
+      "pass": true,
+      "detail": {
+        "exit": 1,
+        "stderr": " INVALID TURBINE INPUT DOMAIN\nSTOP 1\n"
+      }
+    },
+    {
+      "name": "turbine rejects DELV",
+      "pass": true,
+      "detail": {
+        "exit": 1,
+        "stderr": " INVALID TURBINE INPUT DOMAIN\nSTOP 1\n"
+      }
+    },
+    {
+      "name": "turbine rejects G",
+      "pass": true,
+      "detail": {
+        "exit": 1,
+        "stderr": " INVALID TURBINE INPUT DOMAIN\nSTOP 1\n"
+      }
+    },
+    {
+      "name": "turbine rejects A1",
+      "pass": true,
+      "detail": {
+        "exit": 1,
+        "stderr": " INVALID TURBINE INPUT DOMAIN\nSTOP 1\n"
+      }
+    },
+    {
+      "name": "turbine infeasible design reports failure",
+      "pass": true,
+      "detail": {
+        "exit": 2,
+        "stderr": " DESIGN FLOW EXCEEDS STATOR CAPACITY\nSTOP 2\n"
+      }
+    },
+    {
+      "name": "failed turbine design stops before inherited off-design",
+      "pass": true,
+      "detail": {
+        "exit": 2,
+        "performance_blocks": 0,
+        "stderr": " TURBINE DESIGN TARGETS NOT ACHIEVED\nSTOP 2\n"
+      }
+    },
+    {
+      "name": "compressor rejects negative diffuser losses",
+      "pass": true,
+      "detail": {
+        "exit": 2,
+        "stderr": " NONPHYSICAL COMPRESSOR PERFORMANCE\nSTOP 2\n"
+      }
+    },
+    {
+      "name": "turbine rejects undefined positive-work parameters",
+      "pass": true,
+      "detail": {
+        "exit": 2,
+        "stderr": " TURBINE POINT OUTSIDE POSITIVE-WORK DOMAIN\nSTOP 2\n"
+      }
+    },
+    {
+      "name": "legacy turbine search has a finite iteration budget",
+      "pass": true,
+      "detail": {
+        "exit": 2,
+        "stderr": " TURBINE ITERATION BUDGET EXCEEDED          31\nSTOP 2\n"
+      }
+    },
+    {
+      "name": "supersonic stator start has nonzero inlet flow",
+      "pass": true,
+      "detail": {
+        "exit": 0,
+        "V0VC0": [
+          0.061208,
+          0.061208
+        ],
+        "stderr": ""
+      }
+    }
+  ],
+  "cases": {
+    "compressor-100": {
+      "exit": 0,
+      "stderr": "",
+      "input_sha256": "79cc4dde15ecf081f7a20a4adc59e8c051ee970fefff23334666427991dfdd5c"
+    },
+    "compressor-90": {
+      "exit": 0,
+      "stderr": "",
+      "input_sha256": "9a3bcbe7ef9681cfb6a55c46fa81ab946cb48a73c31a1c182b58a483d2e43825"
+    },
+    "compressor-80": {
+      "exit": 0,
+      "stderr": "",
+      "input_sha256": "5544c02eb7e4676655f1578544cd9f2660f6a19c47b2bbf288950793e0b85655"
+    },
+    "compressor-60": {
+      "exit": 0,
+      "stderr": "",
+      "input_sha256": "37b8160ba174ac81848446a8d711029fbb582b6b9808edc765bff971b05d5f40"
+    },
+    "ar-1.2": {
+      "exit": 0,
+      "stderr": "",
+      "input_sha256": "c38c8277bdad8587e0a3f16d1eea8dc4e3c9dee6fbeebf8b36b19fac418ef75f"
+    },
+    "ar-1.2001": {
+      "exit": 0,
+      "stderr": "",
+      "input_sha256": "406dcdaf38b2a4a30194e3ef5f13ff6d1cb2eda11956b4cf836ad01aca595a37"
+    },
+    "ar-1.9999": {
+      "exit": 0,
+      "stderr": "",
+      "input_sha256": "0b863a70fa943e48685126339fadee2e2d3dd39783f239bc15823b8001472513"
+    },
+    "ar-2.0": {
+      "exit": 0,
+      "stderr": "",
+      "input_sha256": "fa55c1b014eeed500253ca26eff32329ec2de39ae6f6ba54bde916c399b6ab65"
+    },
+    "ar-2.0001": {
+      "exit": 0,
+      "stderr": "",
+      "input_sha256": "8959e202c9f329b405a7dbf33fae6bec5d4fdb2008968ea3f291e24eab90f0d0"
+    },
+    "ar-2.9999": {
+      "exit": 0,
+      "stderr": "",
+      "input_sha256": "d2e330e2b43f627138bc8e93579c4f92f43c261efb595e705c4872101971b9b7"
+    },
+    "ar-3.0": {
+      "exit": 0,
+      "stderr": "",
+      "input_sha256": "9348535551c8343c32bb378eea5ea11b393c09032dfda26b168ef409f647ec28"
+    },
+    "ar-3.0001": {
+      "exit": 0,
+      "stderr": "",
+      "input_sha256": "34e21696c3f155277abdfc00570666f8eaedb4ce85a67ebf650419655fc43f8d"
+    },
+    "ar-3.9999": {
+      "exit": 0,
+      "stderr": "",
+      "input_sha256": "d8a8dff8da92a75af5c29cfcfc3819d78c2950dc84f493c4def41c5e3345e2e7"
+    },
+    "ar-4.0": {
+      "exit": 0,
+      "stderr": "",
+      "input_sha256": "429d7f6f7bd2df3c4aaee07763f1e48fa7fb97bf5b4307c38bee9042877f047d"
+    },
+    "ar-4.0001": {
+      "exit": 0,
+      "stderr": "",
+      "input_sha256": "3f11ec6cb129e1157b39b25b982e5982c3b7da3b4606666bcefd8756f059c116"
+    },
+    "ar-4.9999": {
+      "exit": 0,
+      "stderr": "",
+      "input_sha256": "f1af6d81e9f134f6da1ad1aaaa74cba4fd2516c2455c347058d68b443596596e"
+    },
+    "ar-5.0": {
+      "exit": 0,
+      "stderr": "",
+      "input_sha256": "e176ad4cad5c416cf45f8133e0a989b6035e0badb1f3c77471cf92f197b3fbb6"
+    },
+    "turbine-0": {
+      "exit": 0,
+      "stderr": "",
+      "input_sha256": "fd7d33e238fe28a154dce762175400e19664d47cb0c34b49db2256debe1753c6"
+    },
+    "turbine-1": {
+      "exit": 0,
+      "stderr": "",
+      "input_sha256": "c69c8c4a1c2efae828f3a22b007e0451f8206e55c72f3481d47ce56255ef0e3c"
+    },
+    "turbine-2": {
+      "exit": 0,
+      "stderr": "",
+      "input_sha256": "5bf81ae251cab422ec1b6be63661a12e360611546f48a3454454987fd6fbba6d"
+    },
+    "compressor_tn_d7487-empty": {
+      "exit": 0,
+      "stderr": "",
+      "input_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "compressor_tn_d7487-malformed": {
+      "exit": 1,
+      "stderr": " INVALID COMPRESSOR NAMELIST\nSTOP 1\n",
+      "input_sha256": "c389e818d69f4ad0f679236c0458c937b204f1afb8b2be56ae3c2042c87bb1c2"
+    },
+    "turbine_tn_d8063-empty": {
+      "exit": 0,
+      "stderr": "",
+      "input_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "turbine_tn_d8063-malformed": {
+      "exit": 1,
+      "stderr": " INVALID OR TRUNCATED TURBINE INPUT\nSTOP 1\n",
+      "input_sha256": "142611a133f8c7849c06da4b767f5f97125a2efcc1920ab4604336bc518ea34f"
+    },
+    "compressor_tn_d7487-truncated": {
+      "exit": 1,
+      "stderr": " INVALID COMPRESSOR NAMELIST\nSTOP 1\n",
+      "input_sha256": "0a37559dc1e4d3244602263a9c9016cd8aa65dd8875f3e508119cc895e8fe8ab"
+    },
+    "compressor_tn_d7487-garbage": {
+      "exit": 1,
+      "stderr": " INVALID COMPRESSOR NAMELIST\nSTOP 1\n",
+      "input_sha256": "233d4809807d21d1b24ae54639eede42f519dcbe35ca71d51bd051bca59c6a68"
+    },
+    "compressor_tn_d7487-wrong-group": {
+      "exit": 1,
+      "stderr": " INVALID COMPRESSOR NAMELIST\nSTOP 1\n",
+      "input_sha256": "8ce463dad597d1df8b6c4f4ceaadb4c878c2305f487facd7f8fbea184864c708"
+    },
+    "turbine_tn_d8063-truncated": {
+      "exit": 1,
+      "stderr": " INVALID OR TRUNCATED TURBINE INPUT\nSTOP 1\n",
+      "input_sha256": "6f308ed097e732db99562b29ec8fbcc55078c4105812002cdef903cd123d1d35"
+    },
+    "turbine_tn_d8063-garbage": {
+      "exit": 1,
+      "stderr": " INVALID OR TRUNCATED TURBINE INPUT\nSTOP 1\n",
+      "input_sha256": "3b2b462493cf6c540da78acd6430b0dd38fcdd8c98444bb54bc49d4d7f921580"
+    },
+    "turbine_tn_d8063-wrong-group": {
+      "exit": 1,
+      "stderr": " INVALID OR TRUNCATED TURBINE INPUT\nSTOP 1\n",
+      "input_sha256": "d1cec4593ad771bcd4684849cc97eb97c8f57db0e9cb82e829068e41987cb2f3"
+    },
+    "feature-SPLT": {
+      "exit": 0,
+      "stderr": "",
+      "input_sha256": "3e13a8c064dd2e4bb040d54e47088fb8e2b9b4ed32aeb4a6972c19377ed0c2e4"
+    },
+    "feature-CURVH": {
+      "exit": 0,
+      "stderr": "",
+      "input_sha256": "6d4f687c7ba5a14d3969a37ee8a83cf7d3fe3bee4847c7f5f361adfce334dce0"
+    },
+    "feature-AL1MF": {
+      "exit": 0,
+      "stderr": "",
+      "input_sha256": "38c37ce0cff1951367ad28c23a983c9af901515bcfaaee7bf4d18709267407b5"
+    },
+    "two-full-inputs": {
+      "exit": 0,
+      "stderr": "",
+      "input_sha256": "29e92a8210cc62782669192bd8216b38777d80ee16cee736c2edb4524d69168e"
+    },
+    "partial-second-input": {
+      "exit": 0,
+      "stderr": "",
+      "input_sha256": "4de70be6396004d99549000cbcb77a0daca6226c89b9d8e644464bbfe1f26db1"
+    },
+    "mode-3": {
+      "exit": 0,
+      "stderr": "",
+      "input_sha256": "f1f8e5f979f764770dcd18b004630e391155ec4408b24a5aa7290cef2e168c7e"
+    },
+    "mode-4": {
+      "exit": 0,
+      "stderr": "",
+      "input_sha256": "8243497becfa72a91e8e3ec32ec4df1a068fe400fca38ec2dfeeff282dbd762e"
+    },
+    "units-si": {
+      "exit": 0,
+      "stderr": "",
+      "input_sha256": "c69c8c4a1c2efae828f3a22b007e0451f8206e55c72f3481d47ce56255ef0e3c"
+    },
+    "mode-5": {
+      "exit": 0,
+      "stderr": "",
+      "input_sha256": "39d7bb635ce0baab59e04a0e74b1157b6ce84733d2075a32b567a819c155ece6"
+    },
+    "static-design": {
+      "exit": 0,
+      "stderr": "",
+      "input_sha256": "f88e05d0f9267dbfa4db3cb84ffc9adba42dd841c24fdf667b16149c14fb526c"
+    },
+    "cards-lowercase": {
+      "exit": 0,
+      "stderr": "",
+      "input_sha256": "d3eafd822b8701575450e61f9b252760213bec090946d9aebe0f201a3bba6a46"
+    },
+    "cards-slash": {
+      "exit": 0,
+      "stderr": "",
+      "input_sha256": "e6a2f98a155b68a97e92314955795944077dddacb47cafe7814806e62bd0e185"
+    },
+    "cards-dollar": {
+      "exit": 0,
+      "stderr": "",
+      "input_sha256": "82ca984f9da10209b09696905d022703835d2b6a9c5a2e22df38486f46d160d2"
+    },
+    "cards-comment": {
+      "exit": 0,
+      "stderr": "",
+      "input_sha256": "f6eb1e10b183f7723d782793f0ca1645bce736d849e140a823eb9b41f69bcfd5"
+    },
+    "invalid-NVOVCR": {
+      "exit": 1,
+      "stderr": " INVALID COMPRESSOR INPUT DOMAIN\nSTOP 1\n",
+      "input_sha256": "f8565bd5da3b1581e1bd3f6826361651410998aa0a7d439eed9f43506e78dbc1"
+    },
+    "invalid-GAM": {
+      "exit": 1,
+      "stderr": " INVALID COMPRESSOR INPUT DOMAIN\nSTOP 1\n",
+      "input_sha256": "1be4f2bd310f39a910ffb8b8eaa00baa1cea075a6c42f4eccefbc597e44a4310"
+    },
+    "invalid-VLDRR": {
+      "exit": 1,
+      "stderr": " INVALID COMPRESSOR INPUT DOMAIN\nSTOP 1\n",
+      "input_sha256": "13c5fdfdbb8e6b5f9ff555d6b005aa0e6480c0ccfe0105d69deac6e6b2af00ab"
+    },
+    "invalid-AR": {
+      "exit": 1,
+      "stderr": " INVALID COMPRESSOR INPUT DOMAIN\nSTOP 1\n",
+      "input_sha256": "0f1499b652e05bfbb5a4cba581ecac2ad0bb2b058d430d9c82b1779148304c5a"
+    },
+    "invalid-MODE": {
+      "exit": 1,
+      "stderr": " INVALID TURBINE INPUT DOMAIN\nSTOP 1\n",
+      "input_sha256": "77ebdddfd1fce135ec5ce612344b53312c99eb64c3392ee69b9996f81d6ae2a1"
+    },
+    "invalid-DELV": {
+      "exit": 1,
+      "stderr": " INVALID TURBINE INPUT DOMAIN\nSTOP 1\n",
+      "input_sha256": "e9dc2fbda8295abb752f9437e8c9c35e2a744f2c7c9086c81e77416ac0ed949f"
+    },
+    "invalid-G": {
+      "exit": 1,
+      "stderr": " INVALID TURBINE INPUT DOMAIN\nSTOP 1\n",
+      "input_sha256": "81bd792774c8d57df867330b56a9dbcfd916b129f4ab0302132f0bb1f37af5bd"
+    },
+    "invalid-A1": {
+      "exit": 1,
+      "stderr": " INVALID TURBINE INPUT DOMAIN\nSTOP 1\n",
+      "input_sha256": "2214a98ed28424d337c408639bf202cbeff3331cb6c79930fd4182c870b2167c"
+    },
+    "infeasible-design": {
+      "exit": 2,
+      "stderr": " DESIGN FLOW EXCEEDS STATOR CAPACITY\nSTOP 2\n",
+      "input_sha256": "21e554efa0e43de7400185319c32421f5b5784582358c8039a4e704aa3b38a02"
+    },
+    "failed-design-followed-by-offdesign": {
+      "exit": 2,
+      "stderr": " TURBINE DESIGN TARGETS NOT ACHIEVED\nSTOP 2\n",
+      "input_sha256": "9ff23148d78d41ca66b591c21fef9c86267bd24972d28ddce0ea6045560c6ab7"
+    },
+    "nonphysical-compressor-diffuser": {
+      "exit": 2,
+      "stderr": " NONPHYSICAL COMPRESSOR PERFORMANCE\nSTOP 2\n",
+      "input_sha256": "ab6276b3ec004548825d4a8c18ece7e388bc685f367a0165df1c5293ce4a0348"
+    },
+    "nonpositive-turbine-work": {
+      "exit": 2,
+      "stderr": " TURBINE POINT OUTSIDE POSITIVE-WORK DOMAIN\nSTOP 2\n",
+      "input_sha256": "858832a24d3ed4585207bbdc605ae64c99a91400ca019a2058c7768ca2e88b53"
+    },
+    "bounded-legacy-design": {
+      "exit": 2,
+      "stderr": " TURBINE ITERATION BUDGET EXCEEDED          31\nSTOP 2\n",
+      "input_sha256": "7a211b9e666a7416f3d5a83bb8f7e4a8f452203d09838c1fdf41fb01e6970930"
+    },
+    "supersonic-stator-start": {
+      "exit": 0,
+      "stderr": "",
+      "input_sha256": "cd45b69e871077deede9a590102a9fc72d8f47c637c31e45767f042c3c161529"
+    }
+  }
+}

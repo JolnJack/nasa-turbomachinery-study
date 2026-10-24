@@ -38,11 +38,11 @@
 ## 复跑
 
 ```sh
-make -C /Users/ikunsredemptionmac/Downloads/NASA/restored test-new-data
+make -C restored test-new-data
 ```
 
 每次在 `audit/2026-10-23/restoration/new-data-时间戳/` 生成独立的 `compressor.inp`、`turbine.inp`、`results.json` 和原始输出。这些输入可作为继续更换数据的示例；不要覆盖原始 NASA 输入。
 
-本次最终[结果记录](/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/new-data-20261023T121321259138Z/results.json)已保留；便于复用的输入副本为[压气机新输入](/Users/ikunsredemptionmac/Downloads/NASA/restored/examples/compressor_new_data.inp)和[透平新输入](/Users/ikunsredemptionmac/Downloads/NASA/restored/examples/turbine_new_data.inp)。`test-new-data` 重跑的是脚本定义的固定试验；手动修改输入副本后，应将该副本交给对应程序运行并重新核查结果。
+该轮完整记录已随外部归档删除；[现存证据范围](../audit/README.md#历史证据的可用范围)另列说明。便于复用的输入副本为[压气机新输入](examples/compressor_new_data.inp)和[透平新输入](examples/turbine_new_data.inp)。`test-new-data` 重跑的是脚本定义的固定试验；手动修改输入副本后，应将该副本交给对应程序运行并重新核查结果。
 
 修复后原有检查重新运行：现代功能58/58通过，原有算术/子程序/守恒检查通过，压气机参考仍470/470；现代透平严格参考比较仍失败。历史后端27项检查通过，标准参考仍424/425，唯一原表差异E1按既定公式优先口径处理。整套软件的最终验收状态没有因此改为“全部通过”。

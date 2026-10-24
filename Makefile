@@ -1,18 +1,19 @@
-FC = /opt/homebrew/bin/gfortran
-FFLAGS = -std=legacy -fno-automatic -w
+.DEFAULT_GOAL := help
+PYTHON ?= python3
 
-.PHONY: all run clean
-all: compressor_tn_d7487 turbine_tn_d8063
+.PHONY: help all modern native run check test test-functional test-reference test-arithmetic test-subprograms test-conservation test-design test-design-scan scan historical test-historical run-historical test-new-data
+help:
+	@echo 'NASA 两份报告学习与程序复原项目'
+	@echo 'make modern          构建64位工程候选版'
+	@echo 'make run             构建27位兼容版并运行公开样例'
+	@echo 'make check           核查目录、原件哈希和生成源'
+	@echo 'make test-functional 运行功能回归'
+	@echo 'make test            完整严格检查（透平原表对照仍有已知失败）'
+	@echo '其他目标和使用边界见 README.md、restored/README.md'
 
-compressor_tn_d7487: compressor_tn_d7487.f
-	$(FC) $(FFLAGS) $< -o $@
-
-turbine_tn_d8063: turbine_tn_d8063.f
-	$(FC) $(FFLAGS) $< -o $@
-
-run: all
-	./compressor_tn_d7487 < compressor_tn_d7487.inp > compressor_tn_d7487.out 2>/dev/null || true
-	./turbine_tn_d8063 < turbine_tn_d8063.inp > turbine_tn_d8063.out 2>/dev/null || true
-
-clean:
-	rm -f compressor_tn_d7487 turbine_tn_d8063
+all: modern
+check:
+	$(PYTHON) tools/check_project.py
+	$(MAKE) -C restored test-integrity
+modern native run test test-functional test-reference test-arithmetic test-subprograms test-conservation test-design test-design-scan scan historical test-historical run-historical test-new-data:
+	$(MAKE) -C restored $@

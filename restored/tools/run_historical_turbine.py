@@ -39,7 +39,7 @@ def main():
     run = KIT.parent / ("smoke-" if a.smoke else "turbine-")
     run = run.with_name(run.name + stamp)
     run.mkdir()
-    source = (ROOT / "turbine_tn_d8063.f").read_text()
+    source = (ROOT / "originals/turbine_tn_d8063.f").read_text()
     original_source_hash = hashlib.sha256(source.encode()).hexdigest()
     if a.portable_formats:
         formats = {

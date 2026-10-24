@@ -1,0 +1,97 @@
+{
+  "created_utc": "2026-10-24T04:29:55.179621+00:00",
+  "before_commit": "13781e3e1e9ce577a771f5080e001d04af904f80",
+  "scope": "File organization and path/documentation changes only; no changes to Fortran equations or reference data.",
+  "moves": [
+    {
+      "old_path": "Makefile",
+      "path": "originals/Makefile",
+      "sha256": "c87b828f25fde82132de07b4c3d686c299c4269d73f30e221230b5bb2ad2033f",
+      "bytes": 513
+    },
+    {
+      "old_path": "NASA叶轮机械FORTRAN程序完全解析与使用指南.md",
+      "path": "docs/tutorials/NASA叶轮机械FORTRAN程序完全解析与使用指南.md",
+      "sha256": "181f415e071b831e2caace31a1fb3cd2a88da3e8ca3a33b541650b1180a4cb90",
+      "bytes": 43028
+    },
+    {
+      "old_path": "compressor_tn_d7487",
+      "path": "originals/compressor_tn_d7487",
+      "sha256": "5a0e235946ed9a7f5b00b7ba5e669046814717a4fdf263019d24add6a04b008b",
+      "bytes": 90832
+    },
+    {
+      "old_path": "compressor_tn_d7487.f",
+      "path": "originals/compressor_tn_d7487.f",
+      "sha256": "8e4236aa8e25373cf2060ca435fd1e46e05210bef4632506e1f5912ebb6634e7",
+      "bytes": 15717
+    },
+    {
+      "old_path": "compressor_tn_d7487.inp",
+      "path": "originals/compressor_tn_d7487.inp",
+      "sha256": "be56d958ea2261930bc4f0442652e290a6d35708cb91bcb8b5666b8a7b4c27fd",
+      "bytes": 1354
+    },
+    {
+      "old_path": "compressor_tn_d7487.out",
+      "path": "originals/compressor_tn_d7487.out",
+      "sha256": "b9d290f4dd44f7820d95cd2b4ff5f15f2aae3cb335b3a2b420c1fff237537e0e",
+      "bytes": 24430
+    },
+    {
+      "old_path": "turbine_tn_d8063",
+      "path": "originals/turbine_tn_d8063",
+      "sha256": "c00771b337b334b2bf709b95ebe9203d15e320d3f3c6530c2f20abf9d840524f",
+      "bytes": 57056
+    },
+    {
+      "old_path": "turbine_tn_d8063.f",
+      "path": "originals/turbine_tn_d8063.f",
+      "sha256": "de5bb490d8ac5a2be99b20d82f09c4a57484f46d0d3db8476363148507821293",
+      "bytes": 16960
+    },
+    {
+      "old_path": "turbine_tn_d8063.inp",
+      "path": "originals/turbine_tn_d8063.inp",
+      "sha256": "d1ab293ac84ff266dc58b44997c1f6816660660626948ede80d3a3cd91c36a34",
+      "bytes": 1111
+    },
+    {
+      "old_path": "turbine_tn_d8063.out",
+      "path": "originals/turbine_tn_d8063.out",
+      "sha256": "103cc9eaeb3b34529829abcaf809bab1246ee8991642a98398816aa23189a86a",
+      "bytes": 97946
+    },
+    {
+      "old_path": "压气机程序 (Compressor Program).pdf",
+      "path": "reports/压气机程序 (Compressor Program).pdf",
+      "sha256": "c8d58a4319eb544957453180d437eb3b2c5f637280a111358c216aa5705e6b84",
+      "bytes": 1759538
+    },
+    {
+      "old_path": "向心透平程序_零基础全符号与概念详解.md",
+      "path": "docs/tutorials/向心透平程序_零基础全符号与概念详解.md",
+      "sha256": "0d78f03eb04b848ed8cdd2082adcece19f7c760f7bed86ce1bb668c517f6ceb0",
+      "bytes": 38515
+    },
+    {
+      "old_path": "离心压气机程序_零基础全符号与概念详解.md",
+      "path": "docs/tutorials/离心压气机程序_零基础全符号与概念详解.md",
+      "sha256": "029f5700af32da57634f62ed830f4e68c1a6610cc889fd9e0701734c70aa256e",
+      "bytes": 37156
+    },
+    {
+      "old_path": "透平程序 (Turbine Program).pdf",
+      "path": "reports/透平程序 (Turbine Program).pdf",
+      "sha256": "40ad3ba37d5a74acc6b233ce635396324cf6523ef79c3f32f0e18bd844e4f36e",
+      "bytes": 2323410
+    },
+    {
+      "old_path": "RESTORATION_STATUS.md",
+      "path": "docs/STATUS.md",
+      "sha256": "dfab005d72cf809f73c9215f37732176d1dfd26c59ff9b7bfa43b88f1d6883fc",
+      "bytes": 1951
+    }
+  ]
+}

@@ -149,7 +149,7 @@ if match and p.returncode==0:
     result["cases"]["turbine-historical"]["conservation"] = values
     check("turbine historical independent conservation",all(v["mass_relative_residual"]<=3e-5 and max(v["euler_relative_residual"],v["thermal_relative_residual"])<=5e-6 for v in values))
 
-result["production_identity"]={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in [SRC/"compressor_tn_d7487.f",SRC/"turbine_tn_d8063.f",ROOT/"turbine_tn_d8063.f",SRC/"tools/generate_compat27.py"]}
+result["production_identity"]={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in [SRC/"compressor_tn_d7487.f",SRC/"turbine_tn_d8063.f",ROOT / "originals/turbine_tn_d8063.f",SRC/"tools/generate_compat27.py"]}
 result["pass"] = all(row["pass"] for row in result["checks"])
 (RUN/"results.json").write_text(json.dumps(result,indent=2)+'\n')
 print("RESULTS",RUN)

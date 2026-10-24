@@ -1,10 +1,10 @@
 # 两程序扩展扫描报告
 
-2026-10-23。已逐页核过已刊程序清单，并完成事先列定离散网格的全部运行。**扫描完成不等于全域无缺陷，拒绝、无输出、残差失败均未统计为性能通过。** 原根目录14文件和14份基线继续保留。
+2026-10-23。已逐页核过已刊程序清单，并完成事先列定离散网格的全部运行。**扫描完成不等于全域无缺陷，拒绝、无输出、残差失败均未统计为性能通过。** 原14文件按 originals/manifest.json 分布保存，14份基线继续保留。
 
 ## 实际范围
 
-范围和原定判据见 [SCAN_PLAN.md](/Users/ikunsredemptionmac/Downloads/NASA/restored/SCAN_PLAN.md)。最终对1664组输入分别使用原生32位、27位兼容、64位工程计算，共4992次进程运行，数组和浮点异常检查开启，每次2秒外部超时。修复前3328次及中间重跑也完整保留；这些不是独立实验数量。
+范围和原定判据见 [SCAN_PLAN.md](SCAN_PLAN.md)。最终对1664组输入分别使用原生32位、27位兼容、64位工程计算，共4992次进程运行，数组和浮点异常检查开启，每次2秒外部超时。修复前3328次及中间重跑的现存摘要保留；部分历史明细已随外部归档删除，详见 ../audit/README.md；这些不是独立实验数量。
 
 | 程序／算术 | 有输出且通过原定检查 | 明确拒绝 | 无性能输出 | 守恒残差超界 |
 | --- | ---: | ---: | ---: | ---: |
@@ -46,14 +46,14 @@
 ## 重跑与证据
 
 ```sh
-make -C /Users/ikunsredemptionmac/Downloads/NASA/restored scan
-make -C /Users/ikunsredemptionmac/Downloads/NASA/restored test-design-scan
-make -C /Users/ikunsredemptionmac/Downloads/NASA/restored test
-make -C /Users/ikunsredemptionmac/Downloads/NASA/restored test-historical
+make -C restored scan
+make -C restored test-design-scan
+make -C restored test
+make -C restored test-historical
 ```
 
 `scan`返回0只说明所有任务执行并形成分类，不能当作全部性能通过。`test-design-scan`有任意未达标目标就非零退出。
 
-最终运行索引：[delivery-scan-index.json](/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/delivery-scan-index.json)。每批保存输入、构建源、哈希、全部结果、stdout/stderr压缩原文或完整求解轨迹。综合索引：[wide-delivery-index.json](/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/wide-delivery-index.json)。
+最终运行索引：[delivery-scan-index.json](../audit/2026-10-23/restoration/delivery-scan-index.json)。历史运行曾保存输入、构建源、哈希及完整输出；当前仅能保证仓库中实际保留的文件可用，已删除归档中的明细不再具备本地恢复副本。综合索引：[wide-delivery-index.json](../audit/2026-10-23/restoration/wide-delivery-index.json)。
 
 仍未证明：连续输入域无缺陷、全部几何/超音速/多解分支、精确静叶容量边界、全部实验图相同、任意编译平台相同，以及与未取得的NASA分发文件逐字符相同。当前交付是保留历史对照的可审计复原版及独立工程改进，不是上述事项已全部验收。

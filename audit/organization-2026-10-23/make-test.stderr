@@ -1,0 +1,2 @@
+make[1]: *** [test-reference] Error 1
+make: *** [test] Error 2

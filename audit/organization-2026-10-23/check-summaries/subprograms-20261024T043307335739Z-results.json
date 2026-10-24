@@ -1,0 +1,20 @@
+{
+  "command": [
+    "/opt/homebrew/bin/gfortran",
+    "-std=legacy",
+    "-fno-automatic",
+    "-fcheck=all",
+    "-ffpe-trap=invalid,zero,overflow",
+    "/private/var/folders/ph/m54dxbz97jb6qp2ht_bls0440000gn/T/nasa-clean-check-e16yen29/restored/tests/subprograms.f",
+    "/private/var/folders/ph/m54dxbz97jb6qp2ht_bls0440000gn/T/nasa-clean-check-e16yen29/audit/2026-10-23/restoration/subprograms-20261024T043307335739Z/compressor_tn_d7487-subprograms.f",
+    "/private/var/folders/ph/m54dxbz97jb6qp2ht_bls0440000gn/T/nasa-clean-check-e16yen29/audit/2026-10-23/restoration/subprograms-20261024T043307335739Z/turbine_tn_d8063-subprograms.f",
+    "-o",
+    "/private/var/folders/ph/m54dxbz97jb6qp2ht_bls0440000gn/T/nasa-clean-check-e16yen29/audit/2026-10-23/restoration/subprograms-20261024T043307335739Z/check"
+  ],
+  "exit": 0,
+  "source_sha256": {
+    "turbine_tn_d8063.f": "80bd0b4604e726fb44614d720a08ddc6db8cf0a11605f53b7801234da8d98fed",
+    "compressor_tn_d7487.f": "dc2a7564c29bf75c4c0b98e9b18885d06468d4cfa56b784d32cd59e4b7360f01"
+  },
+  "scope": "FNTGRL degree 0..2, 18 lengths, all nodes; LININT bilinear surface; PABC quadratic; GETK/SEEKPR affine roots; CONTIN two roots/choking"
+}

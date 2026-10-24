@@ -1,0 +1,121 @@
+{
+  "created_utc": "2026-10-24T04:33:15.300305+00:00",
+  "clean_checkout": "/var/folders/ph/m54dxbz97jb6qp2ht_bls0440000gn/T/nasa-clean-check-e16yen29",
+  "commands": [
+    {
+      "command": [
+        "make",
+        "check"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "matches_expected_exit": true,
+      "stdout": "make-check.stdout",
+      "stderr": "make-check.stderr"
+    },
+    {
+      "command": [
+        "make",
+        "modern"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "matches_expected_exit": true,
+      "stdout": "make-modern.stdout",
+      "stderr": "make-modern.stderr"
+    },
+    {
+      "command": [
+        "make",
+        "run"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "matches_expected_exit": true,
+      "stdout": "make-run.stdout",
+      "stderr": "make-run.stderr"
+    },
+    {
+      "command": [
+        "make",
+        "test"
+      ],
+      "exit": 2,
+      "expected_exit": 2,
+      "matches_expected_exit": true,
+      "stdout": "make-test.stdout",
+      "stderr": "make-test.stderr"
+    },
+    {
+      "command": [
+        "make",
+        "test-design"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "matches_expected_exit": true,
+      "stdout": "make-test-design.stdout",
+      "stderr": "make-test-design.stderr"
+    }
+  ],
+  "sample_output_comparison": {
+    "compressor": {
+      "byte_identical": true,
+      "sha256": "415cdb693e6b86bf79c98192fe3e5b9e61e8fa9c04c4f09c8c95e9b00285d522"
+    },
+    "turbine": {
+      "byte_identical": true,
+      "sha256": "a07426795583c76d472fd15bd95653f3c51073172a5215c57ce5aba3f8bd7a58"
+    }
+  },
+  "full_test_known_failure": "Modern turbine strict printed-reference comparison remains nonzero; not repaired or waived by organization.",
+  "passed_organization_checks": true,
+  "retained_check_summaries": [
+    "audit/organization-2026-10-23/check-summaries/arithmetic-20261024T043306883614Z-results.json",
+    "audit/organization-2026-10-23/check-summaries/conservation-20261024T043308456995Z-results.json",
+    "audit/organization-2026-10-23/check-summaries/design-interface-20261024T043311717152Z-results.json",
+    "audit/organization-2026-10-23/check-summaries/reference-20261024T043309893000Z-comparison.json",
+    "audit/organization-2026-10-23/check-summaries/run-functional-20261024T043301880047Z-results.json",
+    "audit/organization-2026-10-23/check-summaries/subprograms-20261024T043307335739Z-results.json",
+    "audit/organization-2026-10-23/check-summaries/subprograms-20261024T043307846947Z-results.json"
+  ],
+  "functional_checks": {
+    "passed": 61,
+    "total": 61
+  },
+  "arithmetic_exact_operations": 4000,
+  "design_interface_checks": {
+    "passed": 12,
+    "total": 12
+  },
+  "compressor_reference": {
+    "exact": 470,
+    "total": 470
+  },
+  "strict_reference_known_failure_confirmed": true,
+  "tested_source_sha256": {
+    "restored/turbine_tn_d8063.f": "80bd0b4604e726fb44614d720a08ddc6db8cf0a11605f53b7801234da8d98fed",
+    "restored/compressor_tn_d7487.f": "dc2a7564c29bf75c4c0b98e9b18885d06468d4cfa56b784d32cd59e4b7360f01",
+    "restored/read_namelist_cards.f90": "3eb3c92ee8c9c00b759d1721c32d9f9c668eef59dc356da64424784e3e505831",
+    "restored/tests/check_historical.py": "73c2d6a40af0cb37301ec897d8bf648c1de0d2683026c1433e076a93f7fbf0b9",
+    "restored/tests/check_conservation.py": "30617ef59fcace74fb0b3faea4870e5c5cb523ba0220e7a1e9c9374bd58ca4f5",
+    "restored/tests/regression.py": "a189484c13c876f08f0899fd09caafbe21dd729bd0c69c89aa7a9cea50d3c261",
+    "restored/tests/systematic_scan.py": "2eed3564507479f41277c677cfe7d0d80f94e8dd57b309865d082b6652029a13",
+    "restored/tests/check_design_interface.py": "da87386c928733d997a6e782e32a5b3c072ad3b3291fbcf0c86c1fe3022072af",
+    "restored/tests/check_design_solver.py": "17788b3ae0f8f1812cc8e694aa0a6cb324453b82c230301c9494fbc394b1c596",
+    "restored/tests/check_arithmetic.py": "f93d238c59cc2a5948e3249c4d10904dab3277dbbe744a7310c3c2c9fc8215f3",
+    "restored/tests/reference_full.py": "eac393ce1a49771b93dd41792b1bb65cb446b55749a849d7b7a46ebce5e54d1a",
+    "restored/tests/verify_integrity.py": "976157262f626c8ce4a2f4da302d58e70a66e26413958e5d4f35fbce53ba1b7b",
+    "restored/tests/compare_full.py": "18100eee7b7e3a0642e06f0c2b0301d21bbf1772c52400464ec06b6e65e01a6e",
+    "restored/tests/try_new_data.py": "4ee7149f60cbea3954b7d37a95c60ec85d00b1adce81b51e30b6be79a136d0cf",
+    "restored/tests/scan_inverse.py": "c89a6bed56b95f4d57cb71e16d2ceb9febb535bb47870bb05fa99c536d677805",
+    "restored/tests/check_subprograms.py": "57a7e219b4cc4ef90f55998c431424e4e607f218570d05ffdd8f07658da6fc0d",
+    "restored/tools/trace_turbine.py": "dfe2dfc5daf70d06f7bb25570990650f81e5283fb829d94d67d286b04f954b61",
+    "restored/tools/turbine_design_solver.py": "f9569d0a28356e328174092dc3552c038c1631e0d7a5921bae50fa1813fed547",
+    "restored/tools/compare_historical_turbine.py": "a7245b0e3bfaf91cc906c2cac8fe07b896859484aa36066b7d5f66410ee11725",
+    "restored/tools/run_historical_turbine.py": "002cacebb8f8d715d6bf3db7c8c24a1899ca500d75e1865f90a7b4807334fd30",
+    "restored/tools/plot_validation.py": "ff70b5dccc241776dde60746370bf4096c06cd364998304ca9ad8badf9530074",
+    "restored/tools/prepare_historical.py": "dec782c6e23effdd27144b08a73201d850b4b841b56151f3d553acde71140f38",
+    "restored/tools/generate_compat27.py": "1702d585f8fae57989ab453c8bc4ed8a52d8095ca2fa1c56240841300f5b7eb5"
+  }
+}

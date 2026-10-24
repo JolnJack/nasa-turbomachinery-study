@@ -16,7 +16,7 @@ for model in ['native32','compat27']:
  if model=='compat27':flags+=['-fdefault-real-16','-ffree-line-length-none']
  cmd=[shutil.which('gfortran'),*flags,str(path),str(SRC/'read_namelist_cards.f90'),'-o',str(run/model)]
  b=subprocess.run(cmd,capture_output=True);(run/(model+'.build.stderr')).write_bytes(b.stderr);assert b.returncode==0,b.stderr
- inp=(ROOT/'turbine_tn_d8063.inp').read_bytes();r=subprocess.run([str(run/model)],input=inp,capture_output=True,timeout=8)
+ inp=(ROOT / 'originals/turbine_tn_d8063.inp').read_bytes();r=subprocess.run([str(run/model)],input=inp,capture_output=True,timeout=8)
  (run/(model+'.stdout')).write_bytes(r.stdout);(run/(model+'.stderr')).write_bytes(r.stderr)
  observations=[]
  for line in r.stderr.decode().splitlines():

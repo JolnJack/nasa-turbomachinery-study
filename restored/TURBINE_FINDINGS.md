@@ -15,7 +15,7 @@
 
 最后一行合计原始打印参考 **424/425**；唯一差异为表 V、V1VC1=.7 的 ETAT：原表 .90378，程序 .90078。按用户选定的“公式和清单优先，保留原表单列勘误”口径，这一组参考算例通过检查。没有把原表改成 425/425。
 
-历史后端直接使用根目录保留的透平程序清单，源哈希 `de5bb490d8ac5a2be99b20d82f09c4a57484f46d0d3db8476363148507821293`。根目录原件未改动。
+历史后端直接使用originals/ 保留的透平程序清单，源哈希 `de5bb490d8ac5a2be99b20d82f09c4a57484f46d0d3db8476363148507821293`。原件内容未改动。
 
 ## 原因证据
 
@@ -38,11 +38,11 @@
 ## 可重复运行
 
 ```sh
-make -C /Users/ikunsredemptionmac/Downloads/NASA/restored test-historical
-make -C /Users/ikunsredemptionmac/Downloads/NASA/restored run-historical
+make -C restored test-historical
+make -C restored run-historical
 ```
 
-已在本机 Apple Silicon/macOS 编译运行；准备阶段需要 C 编译器、make 和支持安全 tar 提取的 Python。两份档案已保留在项目审计目录。若缺少则下载并核对固定哈希，不静默接受变化。没有认证其他平台。
+已在本机 Apple Silicon/macOS 编译运行；准备阶段需要 C 编译器、make 和支持安全 tar 提取的 Python。此前下载的两份档案已随外部归档删除；重新准备时下载并核对固定哈希，不静默接受变化。没有认证其他平台。
 
 `test-historical` 原25项检查通过；新数据试跑后增加无解诊断返回失败的回归，目前27项通过。最新记录为 `audit/2026-10-23/restoration/historical-check-20261023T121148634455Z/results.json`；复跑会产生新的独立目录。它分别保存原表 II、舍入系数、内部系数继承对照，并检查六种模式和完整扫描。`run-historical` 运行设计→长输出→短输出示例，打印实际作业目录；其中 `computed-output.txt` 是去除编译清单的计算输出，`listing.txt`、`job.txt`、磁带和 `run.json` 是完整证据。
 

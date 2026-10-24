@@ -61,7 +61,7 @@ def override(text, name, value):
     return text.replace("&END", name + "=" + str(value) + " &END")
 
 
-original = (ROOT / "turbine_tn_d8063.inp").read_text()
+original = (ROOT / "originals/turbine_tn_d8063.inp").read_text()
 cases = [s.lstrip("\n") + "&END\n" for s in original.split("&END") if s.strip()]
 longtext = execute("design-carry-long", cases[0] + "INHERIT FULL DESIGN COEFFICIENTS\n100 PERCENT SPEED\n &IN MODE=0 &END\n")
 shorttext = execute("design-carry-short", cases[0] + "INHERIT FULL DESIGN COEFFICIENTS\n100 PERCENT SPEED\n &IN MODE=1 &END\n")
@@ -113,7 +113,7 @@ result["raw_reference_exact"] = sum(x["exact_cells"] for key, x in result["compa
 result["raw_reference_total"] = 425
 result["formula_first_acceptance"] = all(x["pass"] for x in result["checks"])
 result["raw_reference_acceptance"] = result["raw_reference_exact"] == 425
-result["identity"] = {str(p.relative_to(ROOT)): hashlib.sha256(p.read_bytes()).hexdigest() for p in [ROOT / "turbine_tn_d8063.f", ROOT / "turbine_tn_d8063.inp", HERE / "reference_full.json", HERE.parent / "tools/run_historical_turbine.py", HERE.parent / "tools/compare_historical_turbine.py", Path(__file__)]}
+result["identity"] = {str(p.relative_to(ROOT)): hashlib.sha256(p.read_bytes()).hexdigest() for p in [ROOT / "originals/turbine_tn_d8063.f", ROOT / "originals/turbine_tn_d8063.inp", HERE / "reference_full.json", HERE.parent / "tools/run_historical_turbine.py", HERE.parent / "tools/compare_historical_turbine.py", Path(__file__)]}
 (run / "results.json").write_text(json.dumps(result, indent=2) + "\n")
 print("RAW PRINTED REFERENCE", result["raw_reference_exact"], "/ 425; formula-first acceptance", result["formula_first_acceptance"])
 print("RESULTS", run)

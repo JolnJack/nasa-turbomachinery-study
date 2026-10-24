@@ -1,0 +1,22 @@
+{
+  "baseline_commit": "13781e3",
+  "unchanged_paths": [
+    "restored/compat27/compressor_tn_d7487.f90",
+    "restored/compat27/generation.json",
+    "restored/compat27/turbine_tn_d8063.f90",
+    "restored/compressor_tn_d7487.f",
+    "restored/read_namelist_cards.f90",
+    "restored/tests/fixtures/turbine_known_roots.json",
+    "restored/tests/fixtures/turbine_known_roots.provenance.json",
+    "restored/tests/fixtures/turbine_slow_design.inp",
+    "restored/tests/reference_full.json",
+    "restored/tests/subprograms.f",
+    "restored/turbine_tn_d8063.f"
+  ],
+  "mismatches": [],
+  "removed_finder_metadata": [
+    ".DS_Store",
+    "restored/.DS_Store",
+    "audit/.DS_Store"
+  ]
+}
