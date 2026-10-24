@@ -1,0 +1,19 @@
+RESULTS /Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/engineering-inverse-20261023T155545114710Z
+PLANNED 4
+{
+  "planned": 4,
+  "completed": 4,
+  "counts": {
+    "compat27": {
+      "matched": 1,
+      "unresolved-search": 1
+    },
+    "native32": {
+      "unresolved-search": 2
+    }
+  },
+  "source_cases": "audit/2026-10-23/restoration/inverse-near-choke-regression.json",
+  "max_evaluations": 240,
+  "mean_evaluations": 172.75,
+  "known_root_coefficients_used_as_seeds": false
+}

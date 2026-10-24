@@ -1,0 +1,14 @@
+{
+  "grid": {
+    "path": "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/systematic-20261023T161237132350Z",
+    "exit": 0
+  },
+  "legacy_inverse": {
+    "path": "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/inverse-scan-20261023T161257215839Z",
+    "exit": 0
+  },
+  "engineering_inverse": {
+    "path": "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/engineering-inverse-20261023T161311443744Z",
+    "exit": 0
+  }
+}

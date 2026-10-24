@@ -1,0 +1,56 @@
+/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-22/baseline/turbine_tn_d8063.f:385:36:
+
+  385 |   200 FORMAT(1H1,35X,43HNASA RADIAL INFLOW TURBINE COMPUTER PROGRAM/
+      |                                    1
+Warning: The H format specifier at (1) is a Fortran 95 deleted feature
+/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-22/baseline/turbine_tn_d8063.f:387:30:
+
+  387 |   300 FORMAT(/10X,54HNO SOLUTION FOR THIS CASE - CHECK A1,BL1,AL1 OR B4,
+      |                              1
+Warning: The H format specifier at (1) is a Fortran 95 deleted feature
+/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-22/baseline/turbine_tn_d8063.f:394:0:
+
+  394 |      57H     U3,2X,G13.5,7H  U4/U3,2X,G13.5,5H   ZZ,2X,G13.5 )
+Warning: The H format specifier at (1) is a Fortran 95 deleted feature
+/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-22/baseline/turbine_tn_d8063.f:407:0:
+
+  407 |      AG13.5,1X,11HVCR)5      ,G13.5,1X,11HALPHA-5    ,G13.5)
+Warning: The H format specifier at (1) is a Fortran 95 deleted feature
+/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-22/baseline/turbine_tn_d8063.f:418:0:
+
+  418 |      BG13.5,1X,11HT5,        ,G13.5,1X,11HP5,        ,G13.5)
+Warning: The H format specifier at (1) is a Fortran 95 deleted feature
+/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-22/baseline/turbine_tn_d8063.f:420:84:
+
+  420 |   509 FORMAT(13X,2HPD,G15.6/14X,1HK,G15.6/1X,14HDESIGN WT-FLOW,G15.6)
+      |                                                                                    1
+Warning: The H format specifier at (1) is a Fortran 95 deleted feature
+/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-22/baseline/turbine_tn_d8063.f:421:78:
+
+  421 |   525 FORMAT(3X,12HDESIGN ETA-S ,G15.6/2X,13HDESIGN P0,/P5,G15.6)
+      |                                                                              1
+Warning: The H format specifier at (1) is a Fortran 95 deleted feature
+/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-22/baseline/turbine_tn_d8063.f:422:78:
+
+  422 |   526 FORMAT(3X,12HDESIGN ETA-T ,G15.6/1X,14HDESIGN P0,/P5,,G15.6)
+      |                                                                              1
+Warning: The H format specifier at (1) is a Fortran 95 deleted feature
+/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-22/baseline/turbine_tn_d8063.f:423:30:
+
+  423 |   600 FORMAT(/10X,41HLAST CASE IS APPROXIMATE LIMITING LOADING)
+      |                              1
+Warning: The H format specifier at (1) is a Fortran 95 deleted feature
+/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-22/baseline/turbine_tn_d8063.f:425:0:
+
+  425 |      14HETAS,9X,5HDHTCR,8X,6HWTHODE,7X,9HEQ-P0,/P5,4X,10HEQ-P0,/P5, )
+Warning: The H format specifier at (1) is a Fortran 95 deleted feature
+/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-22/baseline/turbine_tn_d8063.f:426:28:
+
+  426 |  2040 FORMAT(10X,44HNO SOLUTION COULD BE FOUND IN 100 ITERATIONS)
+      |                            1
+Warning: The H format specifier at (1) is a Fortran 95 deleted feature
+/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-22/baseline/turbine_tn_d8063.f:428:116:
+
+  428 |      1ATIVE TEMPERATURE/15X,67HRESTART PROCEDURE WAS ABORTED AFTER 1000
+      |                                                                                                                    1
+Warning: The H format specifier at (1) is a Fortran 95 deleted feature

@@ -1,0 +1,11 @@
+At line 178 of file /Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-22/baseline/compressor_tn_d7487.f
+Fortran runtime error: Index '9' of dimension 1 of array 'mwrms' above upper bound of 8
+
+Error termination. Backtrace:
+#0  0x10300f2f3 in ???
+#1  0x10300fef7 in ???
+#2  0x103010287 in ???
+#3  0x102c14abb in MAIN__
+	at /Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-22/baseline/compressor_tn_d7487.f:178
+#4  0x102c192b7 in main
+	at /Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-22/baseline/compressor_tn_d7487.f:446

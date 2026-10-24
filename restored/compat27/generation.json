@@ -1,0 +1,4201 @@
+{
+  "model": "Generate an explicit 27-bit truncating arithmetic compatibility build.\n\nThis implements a specified arithmetic model, NOT an IBM CPU/compiler emulator.\nInteger arithmetic, transcendental approximations, accumulator/MQ registers and\nhistorical compiler evaluation order are not reconstructed. Sources remain the\nreviewable fixed-form files. Each real expression operation is visible as QBIT.\nReport-style G13 fields use five digits below 1 and six in fixed notation >=1,\nmatching the observed report presentation, without claiming historical ABI identity.\n",
+  "bits": 27,
+  "rounding": "toward zero",
+  "sources": {
+    "compressor_tn_d7487": {
+      "sha256": "dc2a7564c29bf75c4c0b98e9b18885d06468d4cfa56b784d32cd59e4b7360f01",
+      "generated_sha256": "d3c503f56810d94724a97011295ec9a400270a02e340a9094ce15493a214338b",
+      "real_binary_operations": 835,
+      "transformations": [
+        {
+          "label": "",
+          "original": "DATA(AMT(I),I=1,4)/.2,.4,.6,.8/",
+          "generated": "DATA(AMT(I),I=1,4)/0.1999999992549419403076171875D0,0.399999998509883880615234375D0,0.5999999940395355224609375D0,0.79999999701976776123046875D0/"
+        },
+        {
+          "label": "",
+          "original": "DATA(BARR(I),I=1,6)/.02,.04,.06,.08,.10,.12/",
+          "generated": "DATA(BARR(I),I=1,6)/0.01999999978579580783843994140625D0,0.0399999995715916156768798828125D0,0.059999999590218067169189453125D0,0.079999999143183231353759765625D0,0.09999999962747097015380859375D0,0.11999999918043613433837890625D0/"
+        },
+        {
+          "label": "",
+          "original": "DATA((PREC1(I,J),I=1,4),J=1,6)/.234,.244,.257,.269,.215,.224,.233,.243,.207,.215,.223,.232,.193,.199,.206,.212,.183,.190,.196,.202,.169,.176,.182,.188/",
+          "generated": "DATA((PREC1(I,J),I=1,4),J=1,6)/0.23399999924004077911376953125D0,0.2439999990165233612060546875D0,0.2569999992847442626953125D0,0.2689999975264072418212890625D0,0.2149999998509883880615234375D0,0.223999999463558197021484375D0,0.2329999990761280059814453125D0,0.24299999885261058807373046875D0,0.2069999985396862030029296875D0,0.2149999998509883880615234375D0,0.22299999929964542388916015625D0,0.23199999891221523284912109375D0,0.1929999999701976776123046875D0,0.19899999909102916717529296875D0,0.20599999837577342987060546875D0,0.21199999935925006866455078125D0,0.1829999983310699462890625D0,0.18999999947845935821533203125D0,0.1959999985992908477783203125D0,0.201999999582767486572265625D0,0.1689999997615814208984375D0,0.17599999904632568359375D0,0.18199999816715717315673828125D0,0.18799999915063381195068359375D0/"
+        },
+        {
+          "label": "",
+          "original": "DATA((PREC2(I,J),I=1,4),J=1,6)/.644,.670,.696,.722,.620,.638,.656,.674,.590,.606,.623,.639,.562,.576,.590,.605,.538,.551,.564,.578,.510,.524,.538,.552/",
+          "generated": "DATA((PREC2(I,J),I=1,4),J=1,6)/0.643999993801116943359375D0,0.669999994337558746337890625D0,0.69599999487400054931640625D0,0.721999995410442352294921875D0,0.619999997317790985107421875D0,0.63799999654293060302734375D0,0.655999995768070220947265625D0,0.6739999949932098388671875D0,0.589999996125698089599609375D0,0.605999998748302459716796875D0,0.6229999959468841552734375D0,0.638999998569488525390625D0,0.561999998986721038818359375D0,0.575999997556209564208984375D0,0.589999996125698089599609375D0,0.604999996721744537353515625D0,0.537999995052814483642578125D0,0.55099999904632568359375D0,0.56399999558925628662109375D0,0.57799999415874481201171875D0,0.509999997913837432861328125D0,0.523999996483325958251953125D0,0.537999995052814483642578125D0,0.551999993622303009033203125D0/"
+        },
+        {
+          "label": "",
+          "original": "DATA((PREC3(I,J),I=1,4),J=1,6)/.782,.789,.796,.802,.750,.756,.762,.768,.708,.716,.724,.732,.672,.680,.687,.695,.652,.648,.654,.660,.604,.612,.619,.626/",
+          "generated": "DATA((PREC3(I,J),I=1,4),J=1,6)/0.781999997794628143310546875D0,0.788999997079372406005859375D0,0.795999996364116668701171875D0,0.801999993622303009033203125D0,0.75D0,0.75599999725818634033203125D0,0.7619999945163726806640625D0,0.767999999225139617919921875D0,0.707999996840953826904296875D0,0.715999998152256011962890625D0,0.723999999463558197021484375D0,0.73199999332427978515625D0,0.671999998390674591064453125D0,0.679999999701976776123046875D0,0.686999998986721038818359375D0,0.694999992847442626953125D0,0.65199999511241912841796875D0,0.647999994456768035888671875D0,0.65399999916553497314453125D0,0.6599999964237213134765625D0,0.603999994695186614990234375D0,0.611999996006488800048828125D0,0.618999995291233062744140625D0,0.625999994575977325439453125D0/"
+        },
+        {
+          "label": "",
+          "original": "DATA((PREC4(I,J),I=1,4),J=1,6)/.842,.838,.833,.828,.8,.8,.8,.8,.752,.756,.760,.763,.710,.713,.716,.719,.675,.678,.680,.683,.630,.635,.640,.646/",
+          "generated": "DATA((PREC4(I,J),I=1,4),J=1,6)/0.84199999272823333740234375D0,0.837999999523162841796875D0,0.832999996840953826904296875D0,0.82799999415874481201171875D0,0.79999999701976776123046875D0,0.79999999701976776123046875D0,0.79999999701976776123046875D0,0.79999999701976776123046875D0,0.751999996602535247802734375D0,0.75599999725818634033203125D0,0.759999997913837432861328125D0,0.76299999654293060302734375D0,0.70999999344348907470703125D0,0.712999999523162841796875D0,0.715999998152256011962890625D0,0.71899999678134918212890625D0,0.67499999701976776123046875D0,0.677999995648860931396484375D0,0.679999999701976776123046875D0,0.6829999983310699462890625D0,0.62999999523162841796875D0,0.634999997913837432861328125D0,0.639999993145465850830078125D0,0.6459999978542327880859375D0/"
+        },
+        {
+          "label": "",
+          "original": "DATA((PREC5(I,J),I=1,4),J=1,6)/.878,.865,.852,.838,.832,.825,.818,.812,.78,.78,.78,.78,.736,.735,.735,.734,.692,.694,.695,.696,.644,.647,.650,.652/",
+          "generated": "DATA((PREC5(I,J),I=1,4),J=1,6)/0.877999998629093170166015625D0,0.86499999463558197021484375D0,0.8519999980926513671875D0,0.837999999523162841796875D0,0.831999994814395904541015625D0,0.824999995529651641845703125D0,0.817999996244907379150390625D0,0.811999998986721038818359375D0,0.779999993741512298583984375D0,0.779999993741512298583984375D0,0.779999993741512298583984375D0,0.779999993741512298583984375D0,0.735999993979930877685546875D0,0.73499999940395355224609375D0,0.73499999940395355224609375D0,0.7339999973773956298828125D0,0.691999994218349456787109375D0,0.693999998271465301513671875D0,0.694999992847442626953125D0,0.69599999487400054931640625D0,0.643999993801116943359375D0,0.64699999988079071044921875D0,0.649999998509883880615234375D0,0.65199999511241912841796875D0/"
+        },
+        {
+          "label": "",
+          "original": "DATA(CINC60(I),I=1,8)/-10.5,-5.,-2.,1.5,2.5,4.,5.,5./",
+          "generated": "DATA(CINC60(I),I=1,8)/-10.5D0,-5D0,-2D0,1.5D0,2.5D0,4D0,5D0,5D0/"
+        },
+        {
+          "label": "",
+          "original": "DATA(CINC50(I),I=1,8)/-15.,-7.5,-3.,1.5,4.,6.5,9.,11./",
+          "generated": "DATA(CINC50(I),I=1,8)/-15D0,-7.5D0,-3D0,1.5D0,4D0,6.5D0,9D0,11D0/"
+        },
+        {
+          "label": "",
+          "original": "DATA(CINC40(I),I=1,8)/-20.,-12.,-5.,1.5,5.,8.,11.5,14.5/",
+          "generated": "DATA(CINC40(I),I=1,8)/-20D0,-12D0,-5D0,1.5D0,5D0,8D0,11.5D0,14.5D0/"
+        },
+        {
+          "label": "",
+          "original": "DATA(MWRMS(I),I=1,8)/.5,.6,.7,.8,.9,1.,1.1,1.2/",
+          "generated": "DATA(MWRMS(I),I=1,8)/0.5D0,0.5999999940395355224609375D0,0.699999995529651641845703125D0,0.79999999701976776123046875D0,0.899999998509883880615234375D0,1D0,1.0999999940395355224609375D0,1.199999988079071044921875D0/"
+        },
+        {
+          "label": "",
+          "original": "DATA(DIFLEM(I),I=1,7)/.4,.5,.6,.7,.8,.9,1./",
+          "generated": "DATA(DIFLEM(I),I=1,7)/0.399999998509883880615234375D0,0.5D0,0.5999999940395355224609375D0,0.699999995529651641845703125D0,0.79999999701976776123046875D0,0.899999998509883880615234375D0,1D0/"
+        },
+        {
+          "label": "",
+          "original": "DATA(FLRNG(I),I=1,7)/.48,.56,.64,.72,.79,.84,.89/",
+          "generated": "DATA(FLRNG(I),I=1,7)/0.479999996721744537353515625D0,0.559999994933605194091796875D0,0.639999993145465850830078125D0,0.7199999988079071044921875D0,0.789999999105930328369140625D0,0.839999996125698089599609375D0,0.889999993145465850830078125D0/"
+        },
+        {
+          "label": "",
+          "original": "DATA GAM,POP,TOP,N/0.,0.,0.,0./",
+          "generated": "DATA GAM,POP,TOP,N/0D0,0D0,0D0,0D0/"
+        },
+        {
+          "label": "",
+          "original": "DATA DIT,MUO,CF,RGAS/0.,0.,0.,0./",
+          "generated": "DATA DIT,MUO,CF,RGAS/0D0,0D0,0D0,0D0/"
+        },
+        {
+          "label": "",
+          "original": "DATA DRAT,LAMX,B2X,Z/0.,0.,0.,0./",
+          "generated": "DATA DRAT,LAMX,B2X,Z/0D0,0D0,0D0,0D0/"
+        },
+        {
+          "label": "",
+          "original": "DATA VLDRR,B2,B1MFB,AR/0.,0.,0.,0./",
+          "generated": "DATA VLDRR,B2,B1MFB,AR/0D0,0D0,0D0,0D0/"
+        },
+        {
+          "label": "",
+          "original": "DATA BLOCK,AL3,ADTH,NONDES/0.,0.,0.,0./",
+          "generated": "DATA BLOCK,AL3,ADTH,NONDES/0D0,0D0,0D0,0D0/"
+        },
+        {
+          "label": "",
+          "original": "DATA AL1MF,CHIH,CHIT,CURVH/0.,0.,0.,0./",
+          "generated": "DATA AL1MF,CHIH,CHIT,CURVH/0D0,0D0,0D0,0D0/"
+        },
+        {
+          "label": "",
+          "original": "DATA CURVT/0./",
+          "generated": "DATA CURVT/0D0/"
+        },
+        {
+          "label": "",
+          "original": "DATA NVOVCR,SPLT/-1,-1/,VOVCR/15*0./",
+          "generated": "DATA NVOVCR,SPLT/-1,-1/,VOVCR/15*0D0/"
+        },
+        {
+          "label": "1",
+          "original": "IF(ICASE.GT.0) THEN",
+          "generated": "IF((ICASE.GT.0)) THEN"
+        },
+        {
+          "label": "",
+          "original": "B1MFB=B1SAV",
+          "generated": "B1MFB=QBIT(B1SAV)"
+        },
+        {
+          "label": "",
+          "original": "B2X=B2SAV",
+          "generated": "B2X=QBIT(B2SAV)"
+        },
+        {
+          "label": "",
+          "original": "AL3=AL3SAV",
+          "generated": "AL3=QBIT(AL3SAV)"
+        },
+        {
+          "label": "",
+          "original": "AL1MF=AL1SAV",
+          "generated": "AL1MF=QBIT(AL1SAV)"
+        },
+        {
+          "label": "",
+          "original": "CHIH=CHHSAV",
+          "generated": "CHIH=QBIT(CHHSAV)"
+        },
+        {
+          "label": "",
+          "original": "CHIT=CHTSAV",
+          "generated": "CHIT=QBIT(CHTSAV)"
+        },
+        {
+          "label": "",
+          "original": "IF(IOS.LT.0) GO TO 900",
+          "generated": "IF((IOS.LT.0)) GO TO 900"
+        },
+        {
+          "label": "",
+          "original": "IF(IOS.NE.0) GO TO 901",
+          "generated": "IF((IOS.NE.0)) GO TO 901"
+        },
+        {
+          "label": "",
+          "original": "IF(IOS.NE.0) GO TO 901",
+          "generated": "IF((IOS.NE.0)) GO TO 901"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(GAM)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(GAM))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(POP)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(POP))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(TOP)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(TOP))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(N)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(N))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(DIT)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(DIT))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(MUO)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(MUO))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(CF)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(CF))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(RGAS)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(RGAS))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(DRAT)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(DRAT))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(LAMX)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(LAMX))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(B2X)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(B2X))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(Z)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(Z))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(VLDRR)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(VLDRR))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(B2)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(B2))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(B1MFB)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(B1MFB))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(AR)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(AR))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(BLOCK)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(BLOCK))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(AL3)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(AL3))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(ADTH)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(ADTH))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(NONDES)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(NONDES))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(AL1MF)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(AL1MF))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(CHIH)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(CHIH))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(CHIT)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(CHIT))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(CURVH)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(CURVH))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(CURVT)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(CURVT))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(NVOVCR.LT.1.OR.NVOVCR.GT.15) GO TO 902",
+          "generated": "IF((((NVOVCR.LT.1)).OR.((NVOVCR.GT.15)))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(GAM.LE.1..OR.RGAS.LE.0..OR.TOP.LE.0.) GO TO 902",
+          "generated": "IF((((GAM.LE.QBIT(1.0D0))).OR.((RGAS.LE.QBIT(0.0D0))).OR.((TOP.LE.QBIT(0.0D0))))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(POP.LE.0..OR.MUO.LE.0..OR.N.LE.0.) GO TO 902",
+          "generated": "IF((((POP.LE.QBIT(0.0D0))).OR.((MUO.LE.QBIT(0.0D0))).OR.((N.LE.QBIT(0.0D0))))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(DIT.LE.0..OR.B2.LE.0..OR.DRAT.LE.0.) GO TO 902",
+          "generated": "IF((((DIT.LE.QBIT(0.0D0))).OR.((B2.LE.QBIT(0.0D0))).OR.((DRAT.LE.QBIT(0.0D0))))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(LAMX.LE.0..OR.LAMX.GE.1..OR.Z.LE.0.) GO TO 902",
+          "generated": "IF((((LAMX.LE.QBIT(0.0D0))).OR.((LAMX.GE.QBIT(1.0D0))).OR.((Z.LE.QBIT(0.0D0))))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(AR.LT.1.2.OR.AR.GT.5..OR.VLDRR.LE.1.) GO TO 902",
+          "generated": "IF((((AR.LT.QBIT(1.2D0))).OR.((AR.GT.QBIT(5.0D0))).OR.((VLDRR.LE.QBIT(1.0D0))))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(ADTH.LE.0..OR.NONDES.LE.0..OR.CF.LT.0.) GO TO 902",
+          "generated": "IF((((ADTH.LE.QBIT(0.0D0))).OR.((NONDES.LE.QBIT(0.0D0))).OR.((CF.LT.QBIT(0.0D0))))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(BLOCK.LE.0..OR.BLOCK.GT.1.) GO TO 902",
+          "generated": "IF((((BLOCK.LE.QBIT(0.0D0))).OR.((BLOCK.GT.QBIT(1.0D0))))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(SPLT.NE.0.AND.SPLT.NE.1) GO TO 902",
+          "generated": "IF((((SPLT.NE.0)).AND.((SPLT.NE.1)))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "ICASE=ICASE+1",
+          "generated": "ICASE=(ICASE+1)"
+        },
+        {
+          "label": "",
+          "original": "B1SAV=B1MFB",
+          "generated": "B1SAV=QBIT(B1MFB)"
+        },
+        {
+          "label": "",
+          "original": "B2SAV=B2X",
+          "generated": "B2SAV=QBIT(B2X)"
+        },
+        {
+          "label": "",
+          "original": "AL3SAV=AL3",
+          "generated": "AL3SAV=QBIT(AL3)"
+        },
+        {
+          "label": "",
+          "original": "AL1SAV=AL1MF",
+          "generated": "AL1SAV=QBIT(AL1MF)"
+        },
+        {
+          "label": "",
+          "original": "CHHSAV=CHIH",
+          "generated": "CHHSAV=QBIT(CHIH)"
+        },
+        {
+          "label": "",
+          "original": "CHTSAV=CHIT",
+          "generated": "CHTSAV=QBIT(CHIT)"
+        },
+        {
+          "label": "",
+          "original": "PERDS=NONDES*100.",
+          "generated": "PERDS=QBIT(QBIT((NONDES*QBIT(100.0D0))))"
+        },
+        {
+          "label": "",
+          "original": "G1=GAM+1.",
+          "generated": "G1=QBIT(QBIT((GAM+QBIT(1.0D0))))"
+        },
+        {
+          "label": "",
+          "original": "G2=GAM-1.",
+          "generated": "G2=QBIT(QBIT((GAM-QBIT(1.0D0))))"
+        },
+        {
+          "label": "",
+          "original": "CP =GAM*RGAS/G2",
+          "generated": "CP=QBIT(QBIT((QBIT((GAM*RGAS))/G2)))"
+        },
+        {
+          "label": "",
+          "original": "B2X=.01745*B2X",
+          "generated": "B2X=QBIT(QBIT((QBIT(0.01745D0)*B2X)))"
+        },
+        {
+          "label": "",
+          "original": "AL3=AL3*.01745",
+          "generated": "AL3=QBIT(QBIT((AL3*QBIT(0.01745D0))))"
+        },
+        {
+          "label": "",
+          "original": "AL1MF=.01745*AL1MF",
+          "generated": "AL1MF=QBIT(QBIT((QBIT(0.01745D0)*AL1MF)))"
+        },
+        {
+          "label": "",
+          "original": "CHIH=.01745*CHIH",
+          "generated": "CHIH=QBIT(QBIT((QBIT(0.01745D0)*CHIH)))"
+        },
+        {
+          "label": "",
+          "original": "CHIT=.01745*CHIT",
+          "generated": "CHIT=QBIT(QBIT((QBIT(0.01745D0)*CHIT)))"
+        },
+        {
+          "label": "",
+          "original": "FLFUNC=SQRT(GAM/RGAS*(2./G1)**(G1/G2))",
+          "generated": "FLFUNC=QBIT(QBIT(SQRT(QBIT((QBIT((GAM/RGAS))*QBIT((QBIT((QBIT(2.0D0)/G1))**QBIT((G1/G2)))))))))"
+        },
+        {
+          "label": "",
+          "original": "ROP=POP/RGAS/TOP",
+          "generated": "ROP=QBIT(QBIT((QBIT((POP/RGAS))/TOP)))"
+        },
+        {
+          "label": "",
+          "original": "VCR=SQRT(2.*GAM/G1*RGAS*TOP)",
+          "generated": "VCR=QBIT(QBIT(SQRT(QBIT((QBIT((QBIT((QBIT((QBIT(2.0D0)*GAM))/G1))*RGAS))*TOP)))))"
+        },
+        {
+          "label": "",
+          "original": "U1T=3.14159*N*NONDES*DIT/60.",
+          "generated": "U1T=QBIT(QBIT((QBIT((QBIT((QBIT((QBIT(3.14159D0)*N))*NONDES))*DIT))/QBIT(60.0D0))))"
+        },
+        {
+          "label": "",
+          "original": "B1MFB=.01745*B1MFB",
+          "generated": "B1MFB=QBIT(QBIT((QBIT(0.01745D0)*B1MFB)))"
+        },
+        {
+          "label": "",
+          "original": "VU1T=0.",
+          "generated": "VU1T=QBIT(QBIT(0.0D0))"
+        },
+        {
+          "label": "",
+          "original": "VU1MF=0.",
+          "generated": "VU1MF=QBIT(QBIT(0.0D0))"
+        },
+        {
+          "label": "",
+          "original": "VU1H=0.",
+          "generated": "VU1H=QBIT(QBIT(0.0D0))"
+        },
+        {
+          "label": "",
+          "original": "VM1H=VOVCR(J)*VCR",
+          "generated": "VM1H=QBIT(QBIT((QBIT(VOVCR(J))*VCR)))"
+        },
+        {
+          "label": "",
+          "original": "U2=U1T/DRAT",
+          "generated": "U2=QBIT(QBIT((U1T/DRAT)))"
+        },
+        {
+          "label": "",
+          "original": "D2=DIT/DRAT",
+          "generated": "D2=QBIT(QBIT((DIT/DRAT)))"
+        },
+        {
+          "label": "",
+          "original": "U1H=U1T*LAMX",
+          "generated": "U1H=QBIT(QBIT((U1T*LAMX)))"
+        },
+        {
+          "label": "",
+          "original": "D1H=DIT*LAMX",
+          "generated": "D1H=QBIT(QBIT((DIT*LAMX)))"
+        },
+        {
+          "label": "",
+          "original": "DMF=SQRT(DIT**2*(1.+LAMX**2)/2.)",
+          "generated": "DMF=QBIT(QBIT(SQRT(QBIT((QBIT((QBIT((DIT**2))*QBIT((QBIT(1.0D0)+QBIT((LAMX**2))))))/QBIT(2.0D0))))))"
+        },
+        {
+          "label": "",
+          "original": "U1MF=U1T*DMF/DIT",
+          "generated": "U1MF=QBIT(QBIT((QBIT((U1T*DMF))/DIT)))"
+        },
+        {
+          "label": "",
+          "original": "CHIMF=(CHIT-CHIH)*(DMF-D1H)/(DIT-D1H)+CHIH",
+          "generated": "CHIMF=QBIT(QBIT((QBIT((QBIT((QBIT((CHIT-CHIH))*QBIT((DMF-D1H))))/QBIT((DIT-D1H))))+CHIH)))"
+        },
+        {
+          "label": "",
+          "original": "CURVMF=(CURVT-CURVH)*(DMF-D1H)/(DIT-D1H)+CURVH",
+          "generated": "CURVMF=QBIT(QBIT((QBIT((QBIT((QBIT((CURVT-CURVH))*QBIT((DMF-D1H))))/QBIT((DIT-D1H))))+CURVH)))"
+        },
+        {
+          "label": "",
+          "original": "HO=(DMF-D1H)/2.",
+          "generated": "HO=QBIT(QBIT((QBIT((DMF-D1H))/QBIT(2.0D0))))"
+        },
+        {
+          "label": "",
+          "original": "H1=(DIT-DMF)/2.",
+          "generated": "H1=QBIT(QBIT((QBIT((DIT-DMF))/QBIT(2.0D0))))"
+        },
+        {
+          "label": "",
+          "original": "FINT=HO/2.*(CURVH+CURVMF)",
+          "generated": "FINT=QBIT(QBIT((QBIT((HO/QBIT(2.0D0)))*QBIT((CURVH+CURVMF)))))"
+        },
+        {
+          "label": "",
+          "original": "AMULT=EXP(FINT)",
+          "generated": "AMULT=QBIT(QBIT(EXP(FINT)))"
+        },
+        {
+          "label": "",
+          "original": "VM1MF=AMULT*VM1H",
+          "generated": "VM1MF=QBIT(QBIT((AMULT*VM1H)))"
+        },
+        {
+          "label": "",
+          "original": "GINT=(HO+H1) /6.*((2.-H1/HO)*CURVH+(HO+H1)**2/HO/H1*CURVMF+(2.-HO/H1)*CURVT)",
+          "generated": "GINT=QBIT(QBIT((QBIT((QBIT((HO+H1))/QBIT(6.0D0)))*QBIT((QBIT((QBIT((QBIT((QBIT(2.0D0)-QBIT((H1/HO))))*CURVH))+QBIT((QBIT((QBIT((QBIT((QBIT((HO+H1))**2))/HO))/H1))*CURVMF))))+QBIT((QBIT((QBIT(2.0D0)-QBIT((HO/H1))))*CURVT)))))))"
+        },
+        {
+          "label": "",
+          "original": "BMULT=EXP(GINT)",
+          "generated": "BMULT=QBIT(QBIT(EXP(GINT)))"
+        },
+        {
+          "label": "",
+          "original": "VM1T=BMULT*VM1H",
+          "generated": "VM1T=QBIT(QBIT((BMULT*VM1H)))"
+        },
+        {
+          "label": "",
+          "original": "VM1HN=VM1H*COS(CHIH)",
+          "generated": "VM1HN=QBIT(QBIT((VM1H*QBIT(COS(CHIH)))))"
+        },
+        {
+          "label": "",
+          "original": "VM1MFN=VM1MF*COS(CHIMF)",
+          "generated": "VM1MFN=QBIT(QBIT((VM1MF*QBIT(COS(CHIMF)))))"
+        },
+        {
+          "label": "",
+          "original": "VM1TN=VM1T*COS(CHIT)",
+          "generated": "VM1TN=QBIT(QBIT((VM1T*QBIT(COS(CHIT)))))"
+        },
+        {
+          "label": "",
+          "original": "RHOH=ROP*(1.-VM1H**2/2./CP/TOP)**(1./G2)",
+          "generated": "RHOH=QBIT(QBIT((ROP*QBIT((QBIT((QBIT(1.0D0)-QBIT((QBIT((QBIT((QBIT((VM1H**2))/QBIT(2.0D0)))/CP))/TOP))))**QBIT((QBIT(1.0D0)/G2)))))))"
+        },
+        {
+          "label": "",
+          "original": "RHOMF=ROP*(1.-VM1MF**2/2./CP/TOP)**(1./G2)",
+          "generated": "RHOMF=QBIT(QBIT((ROP*QBIT((QBIT((QBIT(1.0D0)-QBIT((QBIT((QBIT((QBIT((VM1MF**2))/QBIT(2.0D0)))/CP))/TOP))))**QBIT((QBIT(1.0D0)/G2)))))))"
+        },
+        {
+          "label": "",
+          "original": "RHOT=ROP*(1.-VM1T**2/2./CP/TOP)**(1./G2)",
+          "generated": "RHOT=QBIT(QBIT((ROP*QBIT((QBIT((QBIT(1.0D0)-QBIT((QBIT((QBIT((QBIT((VM1T**2))/QBIT(2.0D0)))/CP))/TOP))))**QBIT((QBIT(1.0D0)/G2)))))))"
+        },
+        {
+          "label": "",
+          "original": "FCN1=RHOH*VM1HN*D1H/2.",
+          "generated": "FCN1=QBIT(QBIT((QBIT((QBIT((RHOH*VM1HN))*D1H))/QBIT(2.0D0))))"
+        },
+        {
+          "label": "",
+          "original": "FCN2=RHOMF*VM1MFN*DMF/2.",
+          "generated": "FCN2=QBIT(QBIT((QBIT((QBIT((RHOMF*VM1MFN))*DMF))/QBIT(2.0D0))))"
+        },
+        {
+          "label": "",
+          "original": "FCN3=RHOT*VM1TN*DIT/2.",
+          "generated": "FCN3=QBIT(QBIT((QBIT((QBIT((RHOT*VM1TN))*DIT))/QBIT(2.0D0))))"
+        },
+        {
+          "label": "",
+          "original": "SW=(HO+H1) /6.*((2.-H1/HO)*FCN1+(HO+H1)**2/HO/H1*FCN2+(2.-HO/H1)*FCN3)*6.28318",
+          "generated": "SW=QBIT(QBIT((QBIT((QBIT((QBIT((HO+H1))/QBIT(6.0D0)))*QBIT((QBIT((QBIT((QBIT((QBIT(2.0D0)-QBIT((H1/HO))))*FCN1))+QBIT((QBIT((QBIT((QBIT((QBIT((HO+H1))**2))/HO))/H1))*FCN2))))+QBIT((QBIT((QBIT(2.0D0)-QBIT((HO/H1))))*FCN3))))))*QBIT(6.28318D0))))"
+        },
+        {
+          "label": "",
+          "original": "DHIGV=0.",
+          "generated": "DHIGV=QBIT(QBIT(0.0D0))"
+        },
+        {
+          "label": "",
+          "original": "V1MF=SQRT(VM1MF**2+VU1MF**2)",
+          "generated": "V1MF=QBIT(QBIT(SQRT(QBIT((QBIT((VM1MF**2))+QBIT((VU1MF**2)))))))"
+        },
+        {
+          "label": "",
+          "original": "T1=TOP-V1MF**2/2./CP",
+          "generated": "T1=QBIT(QBIT((TOP-QBIT((QBIT((QBIT((V1MF**2))/QBIT(2.0D0)))/CP)))))"
+        },
+        {
+          "label": "",
+          "original": "P1P=POP",
+          "generated": "P1P=QBIT(POP)"
+        },
+        {
+          "label": "",
+          "original": "POPP1=(1.-V1MF**2/2./CP/TOP)**(GAM/G2)",
+          "generated": "POPP1=QBIT(QBIT((QBIT((QBIT(1.0D0)-QBIT((QBIT((QBIT((QBIT((V1MF**2))/QBIT(2.0D0)))/CP))/TOP))))**QBIT((GAM/G2)))))"
+        },
+        {
+          "label": "",
+          "original": "P1=P1P*POPP1",
+          "generated": "P1=QBIT(QBIT((P1P*POPP1)))"
+        },
+        {
+          "label": "",
+          "original": "R1P=P1P/RGAS/TOP",
+          "generated": "R1P=QBIT(QBIT((QBIT((P1P/RGAS))/TOP)))"
+        },
+        {
+          "label": "",
+          "original": "R1 = R1P*(P1/P1P)**(1./GAM)",
+          "generated": "R1=QBIT(QBIT((R1P*QBIT((QBIT((P1/P1P))**QBIT((QBIT(1.0D0)/GAM)))))))"
+        },
+        {
+          "label": "",
+          "original": "RE=U2*D2/MUO*ROP",
+          "generated": "RE=QBIT(QBIT((QBIT((QBIT((U2*D2))/MUO))*ROP)))"
+        },
+        {
+          "label": "",
+          "original": "ALSTAG=AL1MF/2.",
+          "generated": "ALSTAG=QBIT(QBIT((AL1MF/QBIT(2.0D0))))"
+        },
+        {
+          "label": "",
+          "original": "ES=0.0076/(COS(AL1MF)-.025)*(1.+COS(ALSTAG)/0.7)",
+          "generated": "ES=QBIT(QBIT((QBIT((QBIT(0.0076D0)/QBIT((QBIT(COS(AL1MF))-QBIT(0.025D0)))))*QBIT((QBIT(1.0D0)+QBIT((QBIT(COS(ALSTAG))/QBIT(0.7D0))))))))"
+        },
+        {
+          "label": "",
+          "original": "VOVCR1=VOVCR(J)",
+          "generated": "VOVCR1=QBIT(QBIT(VOVCR(J)))"
+        },
+        {
+          "label": "",
+          "original": "IF(AL1MF.LT.0.001) GO TO 36",
+          "generated": "IF((AL1MF.LT.QBIT(0.001D0))) GO TO 36"
+        },
+        {
+          "label": "9",
+          "original": "VOVCR1=VOVCR1+.001",
+          "generated": "VOVCR1=QBIT(QBIT((VOVCR1+QBIT(0.001D0))))"
+        },
+        {
+          "label": "",
+          "original": "AKE=(VOVCR1*VCR)**2/2.",
+          "generated": "AKE=QBIT(QBIT((QBIT((QBIT((VOVCR1*VCR))**2))/QBIT(2.0D0))))"
+        },
+        {
+          "label": "",
+          "original": "POPP1=(1.-AKE/CP/TOP)**(GAM/G2)",
+          "generated": "POPP1=QBIT(QBIT((QBIT((QBIT(1.0D0)-QBIT((QBIT((AKE/CP))/TOP))))**QBIT((GAM/G2)))))"
+        },
+        {
+          "label": "",
+          "original": "AKEID=AKE/(1.-ES)",
+          "generated": "AKEID=QBIT(QBIT((AKE/QBIT((QBIT(1.0D0)-ES)))))"
+        },
+        {
+          "label": "",
+          "original": "P1OPP0=(1.-AKEID/CP/TOP)**(GAM/G2)",
+          "generated": "P1OPP0=QBIT(QBIT((QBIT((QBIT(1.0D0)-QBIT((QBIT((AKEID/CP))/TOP))))**QBIT((GAM/G2)))))"
+        },
+        {
+          "label": "",
+          "original": "P1P=POP*P1OPP0/POPP1",
+          "generated": "P1P=QBIT(QBIT((QBIT((POP*P1OPP0))/POPP1)))"
+        },
+        {
+          "label": "",
+          "original": "R1P=P1P/RGAS/TOP",
+          "generated": "R1P=QBIT(QBIT((QBIT((P1P/RGAS))/TOP)))"
+        },
+        {
+          "label": "",
+          "original": "P1=P1P*POPP1",
+          "generated": "P1=QBIT(QBIT((P1P*POPP1)))"
+        },
+        {
+          "label": "",
+          "original": "R1=R1P*(POPP1)**(1./GAM)",
+          "generated": "R1=QBIT(QBIT((R1P*QBIT((POPP1**QBIT((QBIT(1.0D0)/GAM)))))))"
+        },
+        {
+          "label": "",
+          "original": "Q1=3.14159*DIT**2*(1.-LAMX**2)*VOVCR1*VCR*COS(AL1MF)/4.",
+          "generated": "Q1=QBIT(QBIT((QBIT((QBIT((QBIT((QBIT((QBIT((QBIT(3.14159D0)*QBIT((DIT**2))))*QBIT((QBIT(1.0D0)-QBIT((LAMX**2))))))*VOVCR1))*VCR))*QBIT(COS(AL1MF))))/QBIT(4.0D0))))"
+        },
+        {
+          "label": "",
+          "original": "WTCHK=Q1*R1",
+          "generated": "WTCHK=QBIT(QBIT((Q1*R1)))"
+        },
+        {
+          "label": "",
+          "original": "IF(WTCHK.LT.SW) GO TO 9",
+          "generated": "IF((WTCHK.LT.SW)) GO TO 9"
+        },
+        {
+          "label": "",
+          "original": "VU1MF=VOVCR1*VCR*SIN(AL1MF)",
+          "generated": "VU1MF=QBIT(QBIT((QBIT((VOVCR1*VCR))*QBIT(SIN(AL1MF)))))"
+        },
+        {
+          "label": "",
+          "original": "VM1MF=VOVCR1*VCR*COS(AL1MF)",
+          "generated": "VM1MF=QBIT(QBIT((QBIT((VOVCR1*VCR))*QBIT(COS(AL1MF)))))"
+        },
+        {
+          "label": "",
+          "original": "V1MF=SQRT(VU1MF**2+VM1MF**2)",
+          "generated": "V1MF=QBIT(QBIT(SQRT(QBIT((QBIT((VU1MF**2))+QBIT((VM1MF**2)))))))"
+        },
+        {
+          "label": "",
+          "original": "T1=TOP-V1MF**2/2./CP",
+          "generated": "T1=QBIT(QBIT((TOP-QBIT((QBIT((QBIT((V1MF**2))/QBIT(2.0D0)))/CP)))))"
+        },
+        {
+          "label": "",
+          "original": "XK=VU1MF**2+2.*VM1MF**2",
+          "generated": "XK=QBIT(QBIT((QBIT((VU1MF**2))+QBIT((QBIT(2.0D0)*QBIT((VM1MF**2)))))))"
+        },
+        {
+          "label": "",
+          "original": "XC=VU1MF/DMF*2.",
+          "generated": "XC=QBIT(QBIT((QBIT((VU1MF/DMF))*QBIT(2.0D0))))"
+        },
+        {
+          "label": "",
+          "original": "VU1T=XC*DIT/2.",
+          "generated": "VU1T=QBIT(QBIT((QBIT((XC*DIT))/QBIT(2.0D0))))"
+        },
+        {
+          "label": "",
+          "original": "VU1H=XC*D1H/2.",
+          "generated": "VU1H=QBIT(QBIT((QBIT((XC*D1H))/QBIT(2.0D0))))"
+        },
+        {
+          "label": "",
+          "original": "VM1T=SQRT(XK-2.*VU1T**2)",
+          "generated": "VM1T=QBIT(QBIT(SQRT(QBIT((XK-QBIT((QBIT(2.0D0)*QBIT((VU1T**2)))))))))"
+        },
+        {
+          "label": "",
+          "original": "VM1H=SQRT(XK-2.*VU1H**2)",
+          "generated": "VM1H=QBIT(QBIT(SQRT(QBIT((XK-QBIT((QBIT(2.0D0)*QBIT((VU1H**2)))))))))"
+        },
+        {
+          "label": "",
+          "original": "DHIGV=ES*AKEID",
+          "generated": "DHIGV=QBIT(QBIT((ES*AKEID)))"
+        },
+        {
+          "label": "36",
+          "original": "V1T=SQRT(VM1T**2+VU1T**2)",
+          "generated": "V1T=QBIT(QBIT(SQRT(QBIT((QBIT((VM1T**2))+QBIT((VU1T**2)))))))"
+        },
+        {
+          "label": "",
+          "original": "AL1=ARSIN(VU1T/V1T)",
+          "generated": "AL1=QBIT(QBIT(ARSIN(QBIT((VU1T/V1T)))))"
+        },
+        {
+          "label": "",
+          "original": "WU1T=U1T-VU1T",
+          "generated": "WU1T=QBIT(QBIT((U1T-VU1T)))"
+        },
+        {
+          "label": "",
+          "original": "B1=ATAN(WU1T/VM1T)",
+          "generated": "B1=QBIT(QBIT(ATAN(QBIT((WU1T/VM1T)))))"
+        },
+        {
+          "label": "",
+          "original": "W1T=SQRT(VM1T**2+WU1T**2)",
+          "generated": "W1T=QBIT(QBIT(SQRT(QBIT((QBIT((VM1T**2))+QBIT((WU1T**2)))))))"
+        },
+        {
+          "label": "",
+          "original": "WU1H=U1H-VU1H",
+          "generated": "WU1H=QBIT(QBIT((U1H-VU1H)))"
+        },
+        {
+          "label": "",
+          "original": "B1H=ATAN(WU1H/VM1H)",
+          "generated": "B1H=QBIT(QBIT(ATAN(QBIT((WU1H/VM1H)))))"
+        },
+        {
+          "label": "",
+          "original": "W1H=SQRT(VM1H**2+WU1H**2)",
+          "generated": "W1H=QBIT(QBIT(SQRT(QBIT((QBIT((VM1H**2))+QBIT((WU1H**2)))))))"
+        },
+        {
+          "label": "",
+          "original": "A1=SQRT(GAM*RGAS*T1)",
+          "generated": "A1=QBIT(QBIT(SQRT(QBIT((QBIT((GAM*RGAS))*T1)))))"
+        },
+        {
+          "label": "",
+          "original": "WU1MF=U1MF-VU1MF",
+          "generated": "WU1MF=QBIT(QBIT((U1MF-VU1MF)))"
+        },
+        {
+          "label": "",
+          "original": "W1MF=SQRT(VM1MF**2+WU1MF**2)",
+          "generated": "W1MF=QBIT(QBIT(SQRT(QBIT((QBIT((VM1MF**2))+QBIT((WU1MF**2)))))))"
+        },
+        {
+          "label": "",
+          "original": "RMRMS=W1MF/A1",
+          "generated": "RMRMS=QBIT(QBIT((W1MF/A1)))"
+        },
+        {
+          "label": "",
+          "original": "B1MF=ATAN(WU1MF/VM1MF)",
+          "generated": "B1MF=QBIT(QBIT(ATAN(QBIT((WU1MF/VM1MF)))))"
+        },
+        {
+          "label": "",
+          "original": "INC=(B1MF-B1MFB)*57.29577",
+          "generated": "INC=QBIT(QBIT((QBIT((B1MF-B1MFB))*QBIT(57.29577D0))))"
+        },
+        {
+          "label": "",
+          "original": "EPS=ATAN((1.-BLOCK)*TAN(B1MF)/(1.+BLOCK*(TAN(B1MF))**2))",
+          "generated": "EPS=QBIT(QBIT(ATAN(QBIT((QBIT((QBIT((QBIT(1.0D0)-BLOCK))*QBIT(TAN(B1MF))))/QBIT((QBIT(1.0D0)+QBIT((BLOCK*QBIT((QBIT(TAN(B1MF))**2)))))))))))"
+        },
+        {
+          "label": "",
+          "original": "BOPT=B1MF-EPS",
+          "generated": "BOPT=QBIT(QBIT((B1MF-EPS)))"
+        },
+        {
+          "label": "",
+          "original": "T1PP=T1+W1MF**2/2./CP",
+          "generated": "T1PP=QBIT(QBIT((T1+QBIT((QBIT((QBIT((W1MF**2))/QBIT(2.0D0)))/CP)))))"
+        },
+        {
+          "label": "",
+          "original": "WCR=SQRT(2.*GAM/G1*RGAS*T1PP)",
+          "generated": "WCR=QBIT(QBIT(SQRT(QBIT((QBIT((QBIT((QBIT((QBIT(2.0D0)*GAM))/G1))*RGAS))*T1PP)))))"
+        },
+        {
+          "label": "",
+          "original": "TOTO=1.-G2/G1*(W1MF/WCR)**2",
+          "generated": "TOTO=QBIT(QBIT((QBIT(1.0D0)-QBIT((QBIT((G2/G1))*QBIT((QBIT((W1MF/WCR))**2)))))))"
+        },
+        {
+          "label": "",
+          "original": "W1MFEF=W1MF*COS(BOPT-B1MFB)",
+          "generated": "W1MFEF=QBIT(QBIT((W1MF*QBIT(COS(QBIT((BOPT-B1MFB)))))))"
+        },
+        {
+          "label": "",
+          "original": "TOT1=1.-G2/G1*(W1MFEF/WCR)**2",
+          "generated": "TOT1=QBIT(QBIT((QBIT(1.0D0)-QBIT((QBIT((G2/G1))*QBIT((QBIT((W1MFEF/WCR))**2)))))))"
+        },
+        {
+          "label": "",
+          "original": "T1=T1PP*TOT1",
+          "generated": "T1=QBIT(QBIT((T1PP*TOT1)))"
+        },
+        {
+          "label": "",
+          "original": "WL=W1MF*SIN(ABS(BOPT-B1MF))",
+          "generated": "WL=QBIT(QBIT((W1MF*QBIT(SIN(QBIT(ABS(QBIT((BOPT-B1MF)))))))))"
+        },
+        {
+          "label": "",
+          "original": "DHINC=WL**2/2.",
+          "generated": "DHINC=QBIT(QBIT((QBIT((WL**2))/QBIT(2.0D0))))"
+        },
+        {
+          "label": "",
+          "original": "PIPMF=P1P*EXP(-DHINC/T1/RGAS)",
+          "generated": "PIPMF=QBIT(QBIT((P1P*QBIT(EXP(QBIT((QBIT((-(DHINC)/T1))/RGAS)))))))"
+        },
+        {
+          "label": "",
+          "original": "DELTA=POP/101325.35",
+          "generated": "DELTA=QBIT(QBIT((POP/QBIT(101325.35D0))))"
+        },
+        {
+          "label": "",
+          "original": "THETA=TOP/288.15",
+          "generated": "THETA=QBIT(QBIT((TOP/QBIT(288.15D0))))"
+        },
+        {
+          "label": "",
+          "original": "EWF=SW*SQRT(THETA)/DELTA",
+          "generated": "EWF=QBIT(QBIT((QBIT((SW*QBIT(SQRT(THETA))))/DELTA)))"
+        },
+        {
+          "label": "",
+          "original": "B1MFB=B1MFB*57.29577",
+          "generated": "B1MFB=QBIT(QBIT((B1MFB*QBIT(57.29577D0))))"
+        },
+        {
+          "label": "",
+          "original": "IF(B1MFB.GE.40..AND.B1MFB.LE.50.) GO TO 71",
+          "generated": "IF((((B1MFB.GE.QBIT(40.0D0))).AND.((B1MFB.LE.QBIT(50.0D0))))) GO TO 71"
+        },
+        {
+          "label": "81",
+          "original": "IF(RMRMS.LE.MWRMS(I).OR.I.EQ.8) GO TO 80",
+          "generated": "IF((((RMRMS.LE.QBIT(MWRMS(I)))).OR.((I.EQ.8)))) GO TO 80"
+        },
+        {
+          "label": "",
+          "original": "I=I+1",
+          "generated": "I=(I+1)"
+        },
+        {
+          "label": "80",
+          "original": "CINC1=(RMRMS-MWRMS(I-1))/(MWRMS(I)-MWRMS(I-1))*(CINC60(I)-CINC60(I-1))+CINC60(I-1)",
+          "generated": "CINC1=QBIT(QBIT((QBIT((QBIT((QBIT((RMRMS-QBIT(MWRMS((I-1)))))/QBIT((QBIT(MWRMS(I))-QBIT(MWRMS((I-1)))))))*QBIT((QBIT(CINC60(I))-QBIT(CINC60((I-1)))))))+QBIT(CINC60((I-1))))))"
+        },
+        {
+          "label": "",
+          "original": "CINC2=(RMRMS-MWRMS(I-1))/(MWRMS(I)-MWRMS(I-1))*(CINC50(I)-CINC50(I-1))+CINC50(I-1)",
+          "generated": "CINC2=QBIT(QBIT((QBIT((QBIT((QBIT((RMRMS-QBIT(MWRMS((I-1)))))/QBIT((QBIT(MWRMS(I))-QBIT(MWRMS((I-1)))))))*QBIT((QBIT(CINC50(I))-QBIT(CINC50((I-1)))))))+QBIT(CINC50((I-1))))))"
+        },
+        {
+          "label": "",
+          "original": "CINC=CINC1+(60.-B1MFB)/10.*(CINC2-CINC1)",
+          "generated": "CINC=QBIT(QBIT((CINC1+QBIT((QBIT((QBIT((QBIT(60.0D0)-B1MFB))/QBIT(10.0D0)))*QBIT((CINC2-CINC1)))))))"
+        },
+        {
+          "label": "",
+          "original": "IF(INC.LE.CINC) K=1",
+          "generated": "IF((INC.LE.CINC)) K=1"
+        },
+        {
+          "label": "72",
+          "original": "IF(RMRMS.LE.MWRMS(I).OR.I.EQ.8) GO TO 73",
+          "generated": "IF((((RMRMS.LE.QBIT(MWRMS(I)))).OR.((I.EQ.8)))) GO TO 73"
+        },
+        {
+          "label": "",
+          "original": "I=I+1",
+          "generated": "I=(I+1)"
+        },
+        {
+          "label": "73",
+          "original": "CINC1=(RMRMS-MWRMS(I-1))/(MWRMS(I)-MWRMS(I-1))*(CINC50(I)-CINC50(I-1))+CINC50(I-1)",
+          "generated": "CINC1=QBIT(QBIT((QBIT((QBIT((QBIT((RMRMS-QBIT(MWRMS((I-1)))))/QBIT((QBIT(MWRMS(I))-QBIT(MWRMS((I-1)))))))*QBIT((QBIT(CINC50(I))-QBIT(CINC50((I-1)))))))+QBIT(CINC50((I-1))))))"
+        },
+        {
+          "label": "",
+          "original": "CINC2=(RMRMS-MWRMS(I-1))/(MWRMS(I)-MWRMS(I-1))*(CINC40(I)-CINC40(I-1))+CINC40(I-1)",
+          "generated": "CINC2=QBIT(QBIT((QBIT((QBIT((QBIT((RMRMS-QBIT(MWRMS((I-1)))))/QBIT((QBIT(MWRMS(I))-QBIT(MWRMS((I-1)))))))*QBIT((QBIT(CINC40(I))-QBIT(CINC40((I-1)))))))+QBIT(CINC40((I-1))))))"
+        },
+        {
+          "label": "",
+          "original": "CINC=CINC1+(50.-B1MFB)/10.*(CINC2-CINC1)",
+          "generated": "CINC=QBIT(QBIT((CINC1+QBIT((QBIT((QBIT((QBIT(50.0D0)-B1MFB))/QBIT(10.0D0)))*QBIT((CINC2-CINC1)))))))"
+        },
+        {
+          "label": "",
+          "original": "IF(INC.LE.CINC) K=1",
+          "generated": "IF((INC.LE.CINC)) K=1"
+        },
+        {
+          "label": "",
+          "original": "IF(K.EQ.1.AND.J.EQ.1) GO TO 202",
+          "generated": "IF((((K.EQ.1)).AND.((J.EQ.1)))) GO TO 202"
+        },
+        {
+          "label": "",
+          "original": "IF(K.EQ.1.AND.L.EQ.1) GO TO 18",
+          "generated": "IF((((K.EQ.1)).AND.((L.EQ.1)))) GO TO 18"
+        },
+        {
+          "label": "",
+          "original": "T2PP=T1PP+(U2**2-U1MF**2)/2./CP",
+          "generated": "T2PP=QBIT(QBIT((T1PP+QBIT((QBIT((QBIT((QBIT((U2**2))-QBIT((U1MF**2))))/QBIT(2.0D0)))/CP)))))"
+        },
+        {
+          "label": "",
+          "original": "PHI=VM1MF/U2",
+          "generated": "PHI=QBIT(QBIT((VM1MF/U2)))"
+        },
+        {
+          "label": "",
+          "original": "EPSLIM=1./EXP(8.16*COS(B2X)/Z)",
+          "generated": "EPSLIM=QBIT(QBIT((QBIT(1.0D0)/QBIT(EXP(QBIT((QBIT((QBIT(8.16D0)*QBIT(COS(B2X))))/Z)))))))"
+        },
+        {
+          "label": "",
+          "original": "VSL=SQRT(COS(B2X))*U2/Z**.7",
+          "generated": "VSL=QBIT(QBIT((QBIT((QBIT(SQRT(QBIT(COS(B2X))))*U2))/QBIT((Z**QBIT(0.7D0))))))"
+        },
+        {
+          "label": "",
+          "original": "IF((DMF/D2).GT.EPSLIM) VSL=U2*(SQRT(COS(B2X))/Z**.7)*(1.-((DMF/D2-EPSLIM)/(1.-EPSLIM))**3)+U2*((DMF/D2-EPSLIM)/(1.-EPSLIM))**3",
+          "generated": "IF((QBIT((DMF/D2)).GT.EPSLIM)) VSL=QBIT(QBIT((QBIT((QBIT((U2*QBIT((QBIT(SQRT(QBIT(COS(B2X))))/QBIT((Z**QBIT(0.7D0)))))))*QBIT((QBIT(1.0D0)-QBIT((QBIT((QBIT((QBIT((DMF/D2))-EPSLIM))/QBIT((QBIT(1.0D0)-EPSLIM))))**3))))))+QBIT((U2*QBIT((QBIT((QBIT((QBIT((DMF/D2))-EPSLIM))/QBIT((QBIT(1.0D0)-EPSLIM))))**3)))))))"
+        },
+        {
+          "label": "",
+          "original": "DHEST=U2**2",
+          "generated": "DHEST=QBIT(QBIT((U2**2)))"
+        },
+        {
+          "label": "",
+          "original": "T2PEST=(DHEST/CP/TOP+1.)*TOP",
+          "generated": "T2PEST=QBIT(QBIT((QBIT((QBIT((QBIT((DHEST/CP))/TOP))+QBIT(1.0D0)))*TOP)))"
+        },
+        {
+          "label": "",
+          "original": "R2G=R1*(T2PEST/TOP)**(1./G2)",
+          "generated": "R2G=QBIT(QBIT((R1*QBIT((QBIT((T2PEST/TOP))**QBIT((QBIT(1.0D0)/G2)))))))"
+        },
+        {
+          "label": "4",
+          "original": "RHO2=R2G",
+          "generated": "RHO2=QBIT(R2G)"
+        },
+        {
+          "label": "",
+          "original": "VM2=SW/(3.14159*RHO2*D2*B2)",
+          "generated": "VM2=QBIT(QBIT((SW/QBIT((QBIT((QBIT((QBIT(3.14159D0)*RHO2))*D2))*B2)))))"
+        },
+        {
+          "label": "",
+          "original": "VU2=U2-VM2*TAN(B2X)-VSL",
+          "generated": "VU2=QBIT(QBIT((QBIT((U2-QBIT((VM2*QBIT(TAN(B2X))))))-VSL)))"
+        },
+        {
+          "label": "",
+          "original": "IF(VM2.LT.0..AND.L.EQ.2) GO TO 200",
+          "generated": "IF((((VM2.LT.QBIT(0.0D0))).AND.((L.EQ.2)))) GO TO 200"
+        },
+        {
+          "label": "",
+          "original": "IF(VM2.LT.0.) GO TO 17",
+          "generated": "IF((VM2.LT.QBIT(0.0D0))) GO TO 17"
+        },
+        {
+          "label": "",
+          "original": "IF(VU2.LT.0..AND.L.EQ.2) GO TO 201",
+          "generated": "IF((((VU2.LT.QBIT(0.0D0))).AND.((L.EQ.2)))) GO TO 201"
+        },
+        {
+          "label": "",
+          "original": "IF(VU2.LT.0.) GO TO 17",
+          "generated": "IF((VU2.LT.QBIT(0.0D0))) GO TO 17"
+        },
+        {
+          "label": "",
+          "original": "WU2=U2-VU2",
+          "generated": "WU2=QBIT(QBIT((U2-VU2)))"
+        },
+        {
+          "label": "",
+          "original": "W2=SQRT(WU2**2+VM2**2)",
+          "generated": "W2=QBIT(QBIT(SQRT(QBIT((QBIT((WU2**2))+QBIT((VM2**2)))))))"
+        },
+        {
+          "label": "",
+          "original": "IF((VSL*COS(B2X)/W2).GT.1..AND.L.EQ.2) GO TO 202",
+          "generated": "IF((((QBIT((QBIT((VSL*QBIT(COS(B2X))))/W2)).GT.QBIT(1.0D0))).AND.((L.EQ.2)))) GO TO 202"
+        },
+        {
+          "label": "",
+          "original": "IF((VSL*COS(B2X)/W2).GT.1.) GO TO 17",
+          "generated": "IF((QBIT((QBIT((VSL*QBIT(COS(B2X))))/W2)).GT.QBIT(1.0D0))) GO TO 17"
+        },
+        {
+          "label": "",
+          "original": "T2=T2PP-W2**2/2./CP",
+          "generated": "T2=QBIT(QBIT((T2PP-QBIT((QBIT((QBIT((W2**2))/QBIT(2.0D0)))/CP)))))"
+        },
+        {
+          "label": "",
+          "original": "A2=SQRT(GAM*RGAS*T2)",
+          "generated": "A2=QBIT(QBIT(SQRT(QBIT((QBIT((GAM*RGAS))*T2)))))"
+        },
+        {
+          "label": "",
+          "original": "W2OW1T=W2/W1T",
+          "generated": "W2OW1T=QBIT(QBIT((W2/W1T)))"
+        },
+        {
+          "label": "",
+          "original": "WOU2=(PHI**2+(DMF/D2)**2+W2OW1T**2*(PHI**2+DRAT**2))/2.",
+          "generated": "WOU2=QBIT(QBIT((QBIT((QBIT((QBIT((PHI**2))+QBIT((QBIT((DMF/D2))**2))))+QBIT((QBIT((W2OW1T**2))*QBIT((QBIT((PHI**2))+QBIT((DRAT**2))))))))/QBIT(2.0D0))))"
+        },
+        {
+          "label": "",
+          "original": "AL2=ATAN(VU2/VM2)",
+          "generated": "AL2=QBIT(QBIT(ATAN(QBIT((VU2/VM2)))))"
+        },
+        {
+          "label": "",
+          "original": "V2=SQRT(VU2**2+VM2**2)",
+          "generated": "V2=QBIT(QBIT(SQRT(QBIT((QBIT((VU2**2))+QBIT((VM2**2)))))))"
+        },
+        {
+          "label": "",
+          "original": "T2P=T2+V2**2/2./CP",
+          "generated": "T2P=QBIT(QBIT((T2+QBIT((QBIT((QBIT((V2**2))/QBIT(2.0D0)))/CP)))))"
+        },
+        {
+          "label": "",
+          "original": "DHAERO=CP*TOP*(T2P/TOP-1.)",
+          "generated": "DHAERO=QBIT(QBIT((QBIT((CP*TOP))*QBIT((QBIT((T2P/TOP))-QBIT(1.0D0))))))"
+        },
+        {
+          "label": "",
+          "original": "QAERO=DHAERO/U2**2",
+          "generated": "QAERO=QBIT(QBIT((DHAERO/QBIT((U2**2)))))"
+        },
+        {
+          "label": "",
+          "original": "DF= W1T/U2*(Z/3.14159*(1.-DIT/D2)+2.*DIT/D2)",
+          "generated": "DF=QBIT(QBIT((QBIT((W1T/U2))*QBIT((QBIT((QBIT((Z/QBIT(3.14159D0)))*QBIT((QBIT(1.0D0)-QBIT((DIT/D2))))))+QBIT((QBIT((QBIT(2.0D0)*DIT))/D2)))))))"
+        },
+        {
+          "label": "",
+          "original": "CONST1=0.75",
+          "generated": "CONST1=QBIT(QBIT(0.75D0))"
+        },
+        {
+          "label": "",
+          "original": "IF(SPLT.EQ.1) CONST1=0.6",
+          "generated": "IF((SPLT.EQ.1)) CONST1=QBIT(QBIT(0.6D0))"
+        },
+        {
+          "label": "",
+          "original": "DF=1.-W2OW1T+CONST1*QAERO/DF",
+          "generated": "DF=QBIT(QBIT((QBIT((QBIT(1.0D0)-W2OW1T))+QBIT((QBIT((CONST1*QAERO))/DF)))))"
+        },
+        {
+          "label": "",
+          "original": "DHBL=0.05*DF**2*U2**2",
+          "generated": "DHBL=QBIT(QBIT((QBIT((QBIT(0.05D0)*QBIT((DF**2))))*QBIT((U2**2)))))"
+        },
+        {
+          "label": "",
+          "original": "LOD=(1.-DMF/.3048)/COS(B2X)/2.",
+          "generated": "LOD=QBIT(QBIT((QBIT((QBIT((QBIT(1.0D0)-QBIT((DMF/QBIT(0.3048D0)))))/QBIT(COS(B2X))))/QBIT(2.0D0))))"
+        },
+        {
+          "label": "",
+          "original": "DHDF=.01356*RHO2*U2**3*D2**2/SW/RE**.2",
+          "generated": "DHDF=QBIT(QBIT((QBIT((QBIT((QBIT((QBIT((QBIT(0.01356D0)*RHO2))*QBIT((U2**3))))*QBIT((D2**2))))/SW))/QBIT((RE**QBIT(0.2D0))))))"
+        },
+        {
+          "label": "",
+          "original": "DHYD=Z/3.14159/COS(B2X)+D2/B2",
+          "generated": "DHYD=QBIT(QBIT((QBIT((QBIT((Z/QBIT(3.14159D0)))/QBIT(COS(B2X))))+QBIT((D2/B2)))))"
+        },
+        {
+          "label": "",
+          "original": "DHYD=1./DHYD+DIT/D2/(2./(1.-LAMX)+2.*Z/3.14159/(1.+LAMX)*SQRT(1.+(1.+LAMX**2)/2.*(TAN(B1))**2))",
+          "generated": "DHYD=QBIT(QBIT((QBIT((QBIT(1.0D0)/DHYD))+QBIT((QBIT((DIT/D2))/QBIT((QBIT((QBIT(2.0D0)/QBIT((QBIT(1.0D0)-LAMX))))+QBIT((QBIT((QBIT((QBIT((QBIT(2.0D0)*Z))/QBIT(3.14159D0)))/QBIT((QBIT(1.0D0)+LAMX))))*QBIT(SQRT(QBIT((QBIT(1.0D0)+QBIT((QBIT((QBIT((QBIT(1.0D0)+QBIT((LAMX**2))))/QBIT(2.0D0)))*QBIT((QBIT(TAN(B1))**2)))))))))))))))))"
+        },
+        {
+          "label": "",
+          "original": "DHRC=0.02*SQRT(TAN(AL2))*DF**2*U2**2",
+          "generated": "DHRC=QBIT(QBIT((QBIT((QBIT((QBIT(0.02D0)*QBIT(SQRT(QBIT(TAN(AL2))))))*QBIT((DF**2))))*QBIT((U2**2)))))"
+        },
+        {
+          "label": "",
+          "original": "CONST2=5.6",
+          "generated": "CONST2=QBIT(QBIT(5.6D0))"
+        },
+        {
+          "label": "",
+          "original": "IF(SPLT.EQ.1) CONST2=7.0",
+          "generated": "IF((SPLT.EQ.1)) CONST2=QBIT(QBIT(7.0D0))"
+        },
+        {
+          "label": "",
+          "original": "DHSF=CONST2*CF*LOD/DHYD*WOU2*U2**2",
+          "generated": "DHSF=QBIT(QBIT((QBIT((QBIT((QBIT((QBIT((CONST2*CF))*LOD))/DHYD))*WOU2))*QBIT((U2**2)))))"
+        },
+        {
+          "label": "",
+          "original": "DHACT=DHAERO+DHDF+DHRC",
+          "generated": "DHACT=QBIT(QBIT((QBIT((DHAERO+DHDF))+DHRC)))"
+        },
+        {
+          "label": "",
+          "original": "HIS=DHAERO-DHBL-DHSF-DHIGV-DHINC",
+          "generated": "HIS=QBIT(QBIT((QBIT((QBIT((QBIT((DHAERO-DHBL))-DHSF))-DHIGV))-DHINC)))"
+        },
+        {
+          "label": "",
+          "original": "ETAR=HIS/DHAERO",
+          "generated": "ETAR=QBIT(QBIT((HIS/DHAERO)))"
+        },
+        {
+          "label": "",
+          "original": "TX=ETAR*DHAERO/CP/TOP+1.",
+          "generated": "TX=QBIT(QBIT((QBIT((QBIT((QBIT((ETAR*DHAERO))/CP))/TOP))+QBIT(1.0D0))))"
+        },
+        {
+          "label": "51",
+          "original": "P2P=TX**(GAM/G2)*PIPMF",
+          "generated": "P2P=QBIT(QBIT((QBIT((TX**QBIT((GAM/G2))))*PIPMF)))"
+        },
+        {
+          "label": "",
+          "original": "P2=P2P*(T2P/T2)**(-GAM/G2)",
+          "generated": "P2=QBIT(QBIT((P2P*QBIT((QBIT((T2P/T2))**QBIT((-(GAM)/G2)))))))"
+        },
+        {
+          "label": "",
+          "original": "R2G=P2/RGAS/T2",
+          "generated": "R2G=QBIT(QBIT((QBIT((P2/RGAS))/T2)))"
+        },
+        {
+          "label": "",
+          "original": "IF(ABS((RHO2-R2G)/RHO2).GT.0.001) GO TO 4",
+          "generated": "IF((QBIT(ABS(QBIT((QBIT((RHO2-R2G))/RHO2)))).GT.QBIT(0.001D0))) GO TO 4"
+        },
+        {
+          "label": "",
+          "original": "XM2= V2/A2",
+          "generated": "XM2=QBIT(QBIT((V2/A2)))"
+        },
+        {
+          "label": "",
+          "original": "R2=D2/2.",
+          "generated": "R2=QBIT(QBIT((D2/QBIT(2.0D0))))"
+        },
+        {
+          "label": "",
+          "original": "AMU=1.4579E-6*T2**1.5/(T2+110.4)",
+          "generated": "AMU=QBIT(QBIT((QBIT((QBIT(1.4579D-06)*QBIT((T2**QBIT(1.5D0)))))/QBIT((T2+QBIT(110.4D0))))))"
+        },
+        {
+          "label": "",
+          "original": "ANU=AMU/R2G",
+          "generated": "ANU=QBIT(QBIT((AMU/R2G)))"
+        },
+        {
+          "label": "",
+          "original": "BO=1.",
+          "generated": "BO=QBIT(QBIT(1.0D0))"
+        },
+        {
+          "label": "",
+          "original": "XM=XM2",
+          "generated": "XM=QBIT(XM2)"
+        },
+        {
+          "label": "",
+          "original": "ALPHA=AL2",
+          "generated": "ALPHA=QBIT(AL2)"
+        },
+        {
+          "label": "",
+          "original": "R=1.0",
+          "generated": "R=QBIT(QBIT(1.0D0))"
+        },
+        {
+          "label": "",
+          "original": "F(1)=XM2**3/(1.+G2/2.*XM2**2)**(G1/2./G2)",
+          "generated": "F(1)=QBIT(QBIT((QBIT((XM2**3))/QBIT((QBIT((QBIT(1.0D0)+QBIT((QBIT((G2/QBIT(2.0D0)))*QBIT((XM2**2))))))**QBIT((QBIT((G1/QBIT(2.0D0)))/G2)))))))"
+        },
+        {
+          "label": "",
+          "original": "P3P(1)=P2P",
+          "generated": "P3P(1)=QBIT(P2P)"
+        },
+        {
+          "label": "",
+          "original": "XMARR(1)=XM2",
+          "generated": "XMARR(1)=QBIT(XM2)"
+        },
+        {
+          "label": "",
+          "original": "DELTAR=(VLDRR-1.)/10.",
+          "generated": "DELTAR=QBIT(QBIT((QBIT((VLDRR-QBIT(1.0D0)))/QBIT(10.0D0))))"
+        },
+        {
+          "label": "",
+          "original": "ZETA=CF*R2/B2",
+          "generated": "ZETA=QBIT(QBIT((QBIT((CF*R2))/B2)))"
+        },
+        {
+          "label": "",
+          "original": "AS=0.",
+          "generated": "AS=QBIT(QBIT(0.0D0))"
+        },
+        {
+          "label": "",
+          "original": "XM1=XM",
+          "generated": "XM1=QBIT(XM)"
+        },
+        {
+          "label": "",
+          "original": "ALPH1=ALPHA",
+          "generated": "ALPH1=QBIT(ALPHA)"
+        },
+        {
+          "label": "",
+          "original": "DS=DELTAR*R2/COS(ALPHA)",
+          "generated": "DS=QBIT(QBIT((QBIT((DELTAR*R2))/QBIT(COS(ALPHA)))))"
+        },
+        {
+          "label": "",
+          "original": "AS=AS+DS",
+          "generated": "AS=QBIT(QBIT((AS+DS)))"
+        },
+        {
+          "label": "",
+          "original": "DELTAS=.037*AS**(-.2)*(V2/ANU)**(-.2)*DS",
+          "generated": "DELTAS=QBIT(QBIT((QBIT((QBIT((QBIT(0.037D0)*QBIT((AS**-(QBIT(0.2D0))))))*QBIT((QBIT((V2/ANU))**-(QBIT(0.2D0))))))*DS)))"
+        },
+        {
+          "label": "",
+          "original": "B=BO-2.*DELTAS/B2",
+          "generated": "B=QBIT(QBIT((BO-QBIT((QBIT((QBIT(2.0D0)*DELTAS))/B2)))))"
+        },
+        {
+          "label": "",
+          "original": "DELTAB=BO-B",
+          "generated": "DELTAB=QBIT(QBIT((BO-B)))"
+        },
+        {
+          "label": "",
+          "original": "VARM=-2.*(1.+G2/2.*XM**2)/(XM**2-1./COS(ALPHA)**2)*((GAM*XM**2-TAN(ALPHA)**2)*ZETA/BO/COS(ALPHA)+1./BO*DELTAB/DELTAR-1./COS(ALPHA)**2/R)*XM**2*DELTAR",
+          "generated": "VARM=QBIT(QBIT((QBIT((QBIT((QBIT((QBIT((-(QBIT(2.0D0))*QBIT((QBIT(1.0D0)+QBIT((QBIT((G2/QBIT(2.0D0)))*QBIT((XM**2))))))))/QBIT((QBIT((XM**2))-QBIT((QBIT(1.0D0)/QBIT((QBIT(COS(ALPHA))**2))))))))*QBIT((QBIT((QBIT((QBIT((QBIT((QBIT((QBIT((GAM*QBIT((XM**2))))-QBIT((QBIT(TAN(ALPHA))**2))))*ZETA))/BO))/QBIT(COS(ALPHA))))+QBIT((QBIT((QBIT((QBIT(1.0D0)/BO))*DELTAB))/DELTAR))))-QBIT((QBIT((QBIT(1.0D0)/QBIT((QBIT(COS(ALPHA))**2))))/R))))))*QBIT((XM**2))))*DELTAR)))"
+        },
+        {
+          "label": "",
+          "original": "VARAL=1./COS(ALPHA)**2/(XM**2-(1./COS(ALPHA))**2)*((1.+G2   *XM**2)*ZETA/BO/COS(ALPHA)+1./BO*DELTAB/DELTAR-XM**2/R)*TAN(ALPHA)*DELTAR",
+          "generated": "VARAL=QBIT(QBIT((QBIT((QBIT((QBIT((QBIT((QBIT(1.0D0)/QBIT((QBIT(COS(ALPHA))**2))))/QBIT((QBIT((XM**2))-QBIT((QBIT((QBIT(1.0D0)/QBIT(COS(ALPHA))))**2))))))*QBIT((QBIT((QBIT((QBIT((QBIT((QBIT((QBIT(1.0D0)+QBIT((G2*QBIT((XM**2))))))*ZETA))/BO))/QBIT(COS(ALPHA))))+QBIT((QBIT((QBIT((QBIT(1.0D0)/BO))*DELTAB))/DELTAR))))-QBIT((QBIT((XM**2))/R))))))*QBIT(TAN(ALPHA))))*DELTAR)))"
+        },
+        {
+          "label": "",
+          "original": "VARM1=VARM",
+          "generated": "VARM1=QBIT(VARM)"
+        },
+        {
+          "label": "",
+          "original": "VARAL1=VARAL",
+          "generated": "VARAL1=QBIT(VARAL)"
+        },
+        {
+          "label": "",
+          "original": "B1=B",
+          "generated": "B1=QBIT(B)"
+        },
+        {
+          "label": "",
+          "original": "B=BO",
+          "generated": "B=QBIT(BO)"
+        },
+        {
+          "label": "",
+          "original": "AS=AS-DS",
+          "generated": "AS=QBIT(QBIT((AS-DS)))"
+        },
+        {
+          "label": "",
+          "original": "XM=XM1**2+VARM",
+          "generated": "XM=QBIT(QBIT((QBIT((XM1**2))+VARM)))"
+        },
+        {
+          "label": "",
+          "original": "XM=SQRT(XM)",
+          "generated": "XM=QBIT(QBIT(SQRT(XM)))"
+        },
+        {
+          "label": "",
+          "original": "TALPH=TAN(ALPH1)+VARAL1",
+          "generated": "TALPH=QBIT(QBIT((QBIT(TAN(ALPH1))+VARAL1)))"
+        },
+        {
+          "label": "",
+          "original": "ALPHA=ATAN(TALPH)",
+          "generated": "ALPHA=QBIT(QBIT(ATAN(TALPH)))"
+        },
+        {
+          "label": "",
+          "original": "DS=DELTAR*R2/COS(ALPHA)",
+          "generated": "DS=QBIT(QBIT((QBIT((DELTAR*R2))/QBIT(COS(ALPHA)))))"
+        },
+        {
+          "label": "",
+          "original": "R=R+DELTAR",
+          "generated": "R=QBIT(QBIT((R+DELTAR)))"
+        },
+        {
+          "label": "",
+          "original": "AS=AS+DS",
+          "generated": "AS=QBIT(QBIT((AS+DS)))"
+        },
+        {
+          "label": "",
+          "original": "DELTAS=.037*AS**(-.2)*(V2/ANU)**(-.2)*DS",
+          "generated": "DELTAS=QBIT(QBIT((QBIT((QBIT((QBIT(0.037D0)*QBIT((AS**-(QBIT(0.2D0))))))*QBIT((QBIT((V2/ANU))**-(QBIT(0.2D0))))))*DS)))"
+        },
+        {
+          "label": "",
+          "original": "B=BO-2.*DELTAS/B2",
+          "generated": "B=QBIT(QBIT((BO-QBIT((QBIT((QBIT(2.0D0)*DELTAS))/B2)))))"
+        },
+        {
+          "label": "",
+          "original": "DELTAB=BO-B",
+          "generated": "DELTAB=QBIT(QBIT((BO-B)))"
+        },
+        {
+          "label": "",
+          "original": "VARM=-2.*(1.+G2/2.*XM**2)/(XM**2-1./COS(ALPHA)**2)*((GAM*XM**2-TAN(ALPHA)**2)*ZETA/BO/COS(ALPHA)+1./BO*DELTAB/DELTAR-1./COS(ALPHA)**2/R)*XM**2*DELTAR",
+          "generated": "VARM=QBIT(QBIT((QBIT((QBIT((QBIT((QBIT((-(QBIT(2.0D0))*QBIT((QBIT(1.0D0)+QBIT((QBIT((G2/QBIT(2.0D0)))*QBIT((XM**2))))))))/QBIT((QBIT((XM**2))-QBIT((QBIT(1.0D0)/QBIT((QBIT(COS(ALPHA))**2))))))))*QBIT((QBIT((QBIT((QBIT((QBIT((QBIT((QBIT((GAM*QBIT((XM**2))))-QBIT((QBIT(TAN(ALPHA))**2))))*ZETA))/BO))/QBIT(COS(ALPHA))))+QBIT((QBIT((QBIT((QBIT(1.0D0)/BO))*DELTAB))/DELTAR))))-QBIT((QBIT((QBIT(1.0D0)/QBIT((QBIT(COS(ALPHA))**2))))/R))))))*QBIT((XM**2))))*DELTAR)))"
+        },
+        {
+          "label": "",
+          "original": "VARAL=1./COS(ALPHA)**2/(XM**2-(1./COS(ALPHA))**2)*((1.+G2   *XM**2)*ZETA/BO/COS(ALPHA)+1./BO*DELTAB/DELTAR-XM**2/R)*TAN(ALPHA)*DELTAR",
+          "generated": "VARAL=QBIT(QBIT((QBIT((QBIT((QBIT((QBIT((QBIT(1.0D0)/QBIT((QBIT(COS(ALPHA))**2))))/QBIT((QBIT((XM**2))-QBIT((QBIT((QBIT(1.0D0)/QBIT(COS(ALPHA))))**2))))))*QBIT((QBIT((QBIT((QBIT((QBIT((QBIT((QBIT(1.0D0)+QBIT((G2*QBIT((XM**2))))))*ZETA))/BO))/QBIT(COS(ALPHA))))+QBIT((QBIT((QBIT((QBIT(1.0D0)/BO))*DELTAB))/DELTAR))))-QBIT((QBIT((XM**2))/R))))))*QBIT(TAN(ALPHA))))*DELTAR)))"
+        },
+        {
+          "label": "",
+          "original": "VARM=(VARM1+VARM)/2.",
+          "generated": "VARM=QBIT(QBIT((QBIT((VARM1+VARM))/QBIT(2.0D0))))"
+        },
+        {
+          "label": "7",
+          "original": "VARAL=(VARAL1+VARAL)/2.",
+          "generated": "VARAL=QBIT(QBIT((QBIT((VARAL1+VARAL))/QBIT(2.0D0))))"
+        },
+        {
+          "label": "",
+          "original": "B=(B+B1)/2.",
+          "generated": "B=QBIT(QBIT((QBIT((B+B1))/QBIT(2.0D0))))"
+        },
+        {
+          "label": "",
+          "original": "XM=XM1**2+VARM",
+          "generated": "XM=QBIT(QBIT((QBIT((XM1**2))+VARM)))"
+        },
+        {
+          "label": "",
+          "original": "XM=SQRT(XM)",
+          "generated": "XM=QBIT(QBIT(SQRT(XM)))"
+        },
+        {
+          "label": "",
+          "original": "TALPH=TAN(ALPH1)+VARAL",
+          "generated": "TALPH=QBIT(QBIT((QBIT(TAN(ALPH1))+VARAL)))"
+        },
+        {
+          "label": "",
+          "original": "ALPHA=ATAN(TALPH)",
+          "generated": "ALPHA=QBIT(QBIT(ATAN(TALPH)))"
+        },
+        {
+          "label": "",
+          "original": "BO=B",
+          "generated": "BO=QBIT(B)"
+        },
+        {
+          "label": "",
+          "original": "ACOUSR=SQRT(1./(1.+G2/2.*XM**2))",
+          "generated": "ACOUSR=QBIT(QBIT(SQRT(QBIT((QBIT(1.0D0)/QBIT((QBIT(1.0D0)+QBIT((QBIT((G2/QBIT(2.0D0)))*QBIT((XM**2)))))))))))"
+        },
+        {
+          "label": "",
+          "original": "RHOR=1./(1.+G2/2.*XM**2)**(1./G2)",
+          "generated": "RHOR=QBIT(QBIT((QBIT(1.0D0)/QBIT((QBIT((QBIT(1.0D0)+QBIT((QBIT((G2/QBIT(2.0D0)))*QBIT((XM**2))))))**QBIT((QBIT(1.0D0)/G2)))))))"
+        },
+        {
+          "label": "",
+          "original": "F(NO)=XM**3*ACOUSR*RHOR*R",
+          "generated": "F(NO)=QBIT(QBIT((QBIT((QBIT((QBIT((XM**3))*ACOUSR))*RHOR))*R)))"
+        },
+        {
+          "label": "",
+          "original": "IF(NO.EQ.2) S(NO)=(F(NO)+F(NO-1))*0.5*DELTAR",
+          "generated": "IF((NO.EQ.2)) S(NO)=QBIT(QBIT((QBIT((QBIT((QBIT(F(NO))+QBIT(F((NO-1)))))*QBIT(0.5D0)))*DELTAR)))"
+        },
+        {
+          "label": "",
+          "original": "IF(NO.EQ.2) GO TO 8",
+          "generated": "IF((NO.EQ.2)) GO TO 8"
+        },
+        {
+          "label": "8",
+          "original": "TPL=1./(1.+GAM*CF*R2*S(NO)/COS(AL2)/B2/XM2*(1.+G2/2.*XM2**2)**(G1/2./G2))",
+          "generated": "TPL=QBIT(QBIT((QBIT(1.0D0)/QBIT((QBIT(1.0D0)+QBIT((QBIT((QBIT((QBIT((QBIT((QBIT((QBIT((GAM*CF))*R2))*QBIT(S(NO))))/QBIT(COS(AL2))))/B2))/XM2))*QBIT((QBIT((QBIT(1.0D0)+QBIT((QBIT((G2/QBIT(2.0D0)))*QBIT((XM2**2))))))**QBIT((QBIT((G1/QBIT(2.0D0)))/G2)))))))))))"
+        },
+        {
+          "label": "",
+          "original": "PP=TPL*P2P",
+          "generated": "PP=QBIT(QBIT((TPL*P2P)))"
+        },
+        {
+          "label": "",
+          "original": "P3P(NO)=PP",
+          "generated": "P3P(NO)=QBIT(PP)"
+        },
+        {
+          "label": "",
+          "original": "XMARR(NO)=XM",
+          "generated": "XMARR(NO)=QBIT(XM)"
+        },
+        {
+          "label": "",
+          "original": "XMACH=XMARR(NO)",
+          "generated": "XMACH=QBIT(QBIT(XMARR(NO)))"
+        },
+        {
+          "label": "1000",
+          "original": "PTHP=P3P(NO)",
+          "generated": "PTHP=QBIT(QBIT(P3P(NO)))"
+        },
+        {
+          "label": "",
+          "original": "IF(L.EQ.1) GO TO 30",
+          "generated": "IF((L.EQ.1)) GO TO 30"
+        },
+        {
+          "label": "21",
+          "original": "IF(XMACH.LE.DIFLEM(M).OR.M.EQ.7) GO TO 22",
+          "generated": "IF((((XMACH.LE.QBIT(DIFLEM(M)))).OR.((M.EQ.7)))) GO TO 22"
+        },
+        {
+          "label": "",
+          "original": "M=M+1",
+          "generated": "M=(M+1)"
+        },
+        {
+          "label": "22",
+          "original": "RANGE=(XMACH-DIFLEM(M-1))/(DIFLEM(M)-DIFLEM(M-1))*(FLRNG(M)-FLRNG(M-1))+FLRNG(M-1)",
+          "generated": "RANGE=QBIT(QBIT((QBIT((QBIT((QBIT((XMACH-QBIT(DIFLEM((M-1)))))/QBIT((QBIT(DIFLEM(M))-QBIT(DIFLEM((M-1)))))))*QBIT((QBIT(FLRNG(M))-QBIT(FLRNG((M-1)))))))+QBIT(FLRNG((M-1))))))"
+        },
+        {
+          "label": "",
+          "original": "WSURGE=RANGE*WCHK",
+          "generated": "WSURGE=QBIT(QBIT((RANGE*WCHK)))"
+        },
+        {
+          "label": "",
+          "original": "IF(EWF.LT.WSURGE) GO TO 203",
+          "generated": "IF((EWF.LT.WSURGE)) GO TO 203"
+        },
+        {
+          "label": "",
+          "original": "PTH=PTHP/(1.+G2/2.*XMACH**2)**(GAM/G2)",
+          "generated": "PTH=QBIT(QBIT((PTHP/QBIT((QBIT((QBIT(1.0D0)+QBIT((QBIT((G2/QBIT(2.0D0)))*QBIT((XMACH**2))))))**QBIT((GAM/G2)))))))"
+        },
+        {
+          "label": "",
+          "original": "DHVLD=CP*T2P*((PTH/PTHP)**(G2/GAM)-(PTH/P2P)**(G2/GAM))",
+          "generated": "DHVLD=QBIT(QBIT((QBIT((CP*T2P))*QBIT((QBIT((QBIT((PTH/PTHP))**QBIT((G2/GAM))))-QBIT((QBIT((PTH/P2P))**QBIT((G2/GAM)))))))))"
+        },
+        {
+          "label": "",
+          "original": "BT=1.-B",
+          "generated": "BT=QBIT(QBIT((QBIT(1.0D0)-B)))"
+        },
+        {
+          "label": "",
+          "original": "XMACH=XMACH*COS(ABS(ALPHA-AL3))",
+          "generated": "XMACH=QBIT(QBIT((XMACH*QBIT(COS(QBIT(ABS(QBIT((ALPHA-AL3)))))))))"
+        },
+        {
+          "label": "",
+          "original": "PTHP=PTH*(1.+G2/2.*XMACH**2)**(GAM/G2)",
+          "generated": "PTHP=QBIT(QBIT((PTH*QBIT((QBIT((QBIT(1.0D0)+QBIT((QBIT((G2/QBIT(2.0D0)))*QBIT((XMACH**2))))))**QBIT((GAM/G2)))))))"
+        },
+        {
+          "label": "",
+          "original": "X1=(ALPHA-AL3)*57.29577",
+          "generated": "X1=QBIT(QBIT((QBIT((ALPHA-AL3))*QBIT(57.29577D0))))"
+        },
+        {
+          "label": "",
+          "original": "WFUNC=SW*SQRT(T2P)/ADTH/PTHP/B",
+          "generated": "WFUNC=QBIT(QBIT((QBIT((QBIT((QBIT((SW*QBIT(SQRT(T2P))))/ADTH))/PTHP))/B)))"
+        },
+        {
+          "label": "",
+          "original": "IF(WFUNC.GE.FLFUNC) CPSTAR=0.",
+          "generated": "IF((WFUNC.GE.FLFUNC)) CPSTAR=QBIT(QBIT(0.0D0))"
+        },
+        {
+          "label": "",
+          "original": "IF(WFUNC.GE.FLFUNC) K=1",
+          "generated": "IF((WFUNC.GE.FLFUNC)) K=1"
+        },
+        {
+          "label": "",
+          "original": "IF(WFUNC.GE.FLFUNC) GO TO 14",
+          "generated": "IF((WFUNC.GE.FLFUNC)) GO TO 14"
+        },
+        {
+          "label": "",
+          "original": "IF(AR.LE.2.) GO TO 10",
+          "generated": "IF((AR.LE.QBIT(2.0D0))) GO TO 10"
+        },
+        {
+          "label": "",
+          "original": "IF(AR.LE.3.) GO TO 11",
+          "generated": "IF((AR.LE.QBIT(3.0D0))) GO TO 11"
+        },
+        {
+          "label": "",
+          "original": "IF(AR.LE.4.) GO TO 12",
+          "generated": "IF((AR.LE.QBIT(4.0D0))) GO TO 12"
+        },
+        {
+          "label": "",
+          "original": "CPSTAR=(AR-1.2)/.8*(F2-F1)+F1",
+          "generated": "CPSTAR=QBIT(QBIT((QBIT((QBIT((QBIT((AR-QBIT(1.2D0)))/QBIT(0.8D0)))*QBIT((F2-F1))))+F1)))"
+        },
+        {
+          "label": "",
+          "original": "CPSTAR=(AR-2.)*(F3-F2)+F2",
+          "generated": "CPSTAR=QBIT(QBIT((QBIT((QBIT((AR-QBIT(2.0D0)))*QBIT((F3-F2))))+F2)))"
+        },
+        {
+          "label": "",
+          "original": "CPSTAR=(AR-3.)*(F4-F3)+F3",
+          "generated": "CPSTAR=QBIT(QBIT((QBIT((QBIT((AR-QBIT(3.0D0)))*QBIT((F4-F3))))+F3)))"
+        },
+        {
+          "label": "",
+          "original": "CPSTAR=(AR-4.)*(F5-F4)+F4",
+          "generated": "CPSTAR=QBIT(QBIT((QBIT((QBIT((AR-QBIT(4.0D0)))*QBIT((F5-F4))))+F4)))"
+        },
+        {
+          "label": "",
+          "original": "IF(K.EQ.1.AND.J.EQ.1) GO TO 202",
+          "generated": "IF((((K.EQ.1)).AND.((J.EQ.1)))) GO TO 202"
+        },
+        {
+          "label": "",
+          "original": "IF(K.EQ.1.AND.L.EQ.1) GO TO 18",
+          "generated": "IF((((K.EQ.1)).AND.((L.EQ.1)))) GO TO 18"
+        },
+        {
+          "label": "",
+          "original": "IF(K.NE.1.AND.J.EQ.NVOVCR) GO TO 204",
+          "generated": "IF((((K.NE.1)).AND.((J.EQ.NVOVCR)))) GO TO 204"
+        },
+        {
+          "label": "",
+          "original": "PEXIT=CPSTAR*(PTHP-PTH)+PTH",
+          "generated": "PEXIT=QBIT(QBIT((QBIT((CPSTAR*QBIT((PTHP-PTH))))+PTH)))"
+        },
+        {
+          "label": "",
+          "original": "RTHP=PTHP/RGAS/T2P",
+          "generated": "RTHP=QBIT(QBIT((QBIT((PTHP/RGAS))/T2P)))"
+        },
+        {
+          "label": "",
+          "original": "VCRTH=SQRT(2.*GAM/G1*RGAS*T2P)",
+          "generated": "VCRTH=QBIT(QBIT(SQRT(QBIT((QBIT((QBIT((QBIT((QBIT(2.0D0)*GAM))/G1))*RGAS))*T2P)))))"
+        },
+        {
+          "label": "",
+          "original": "RVRVTH=SW/RTHP/VCRTH/ADTH/B",
+          "generated": "RVRVTH=QBIT(QBIT((QBIT((QBIT((QBIT((SW/RTHP))/VCRTH))/ADTH))/B)))"
+        },
+        {
+          "label": "",
+          "original": "VOVCR4=.020",
+          "generated": "VOVCR4=QBIT(QBIT(0.02D0))"
+        },
+        {
+          "label": "100",
+          "original": "P4PL=PEXIT/(1.-G2/G1*VOVCR4**2)**(GAM/G2)",
+          "generated": "P4PL=QBIT(QBIT((PEXIT/QBIT((QBIT((QBIT(1.0D0)-QBIT((QBIT((G2/G1))*QBIT((VOVCR4**2))))))**QBIT((GAM/G2)))))))"
+        },
+        {
+          "label": "",
+          "original": "RVRVC4=(1.-G2/G1*VOVCR4**2)**(1./G2)*VOVCR4",
+          "generated": "RVRVC4=QBIT(QBIT((QBIT((QBIT((QBIT(1.0D0)-QBIT((QBIT((G2/G1))*QBIT((VOVCR4**2))))))**QBIT((QBIT(1.0D0)/G2))))*VOVCR4)))"
+        },
+        {
+          "label": "",
+          "original": "P4PG=RVRVTH*PTHP/AR/RVRVC4",
+          "generated": "P4PG=QBIT(QBIT((QBIT((QBIT((RVRVTH*PTHP))/AR))/RVRVC4)))"
+        },
+        {
+          "label": "",
+          "original": "VOVCR4=VOVCR4+.001",
+          "generated": "VOVCR4=QBIT(QBIT((VOVCR4+QBIT(0.001D0))))"
+        },
+        {
+          "label": "",
+          "original": "IF(P4PL.LT.P4PG) GO TO 100",
+          "generated": "IF((P4PL.LT.P4PG)) GO TO 100"
+        },
+        {
+          "label": "",
+          "original": "PPEXIT=P4PG",
+          "generated": "PPEXIT=QBIT(P4PG)"
+        },
+        {
+          "label": "15",
+          "original": "DHDIF=T2P*CP*((PEXIT/PPEXIT)**(G2/GAM)-(PEXIT/PTHP)**(G2/GAM))",
+          "generated": "DHDIF=QBIT(QBIT((QBIT((T2P*CP))*QBIT((QBIT((QBIT((PEXIT/PPEXIT))**QBIT((G2/GAM))))-QBIT((QBIT((PEXIT/PTHP))**QBIT((G2/GAM)))))))))"
+        },
+        {
+          "label": "",
+          "original": "PR=PPEXIT/POP",
+          "generated": "PR=QBIT(QBIT((PPEXIT/POP)))"
+        },
+        {
+          "label": "",
+          "original": "ETAD=DHAERO-DHSF-DHBL-DHVLD-DHDIF-DHIGV-DHINC",
+          "generated": "ETAD=QBIT(QBIT((QBIT((QBIT((QBIT((QBIT((QBIT((DHAERO-DHSF))-DHBL))-DHVLD))-DHDIF))-DHIGV))-DHINC)))"
+        },
+        {
+          "label": "",
+          "original": "ETAD=ETAD/DHACT",
+          "generated": "ETAD=QBIT(QBIT((ETAD/DHACT)))"
+        },
+        {
+          "label": "",
+          "original": "DEIGV=DHIGV/DHACT",
+          "generated": "DEIGV=QBIT(QBIT((DHIGV/DHACT)))"
+        },
+        {
+          "label": "",
+          "original": "DEBL=DHBL/DHACT",
+          "generated": "DEBL=QBIT(QBIT((DHBL/DHACT)))"
+        },
+        {
+          "label": "",
+          "original": "DESF=DHSF/DHACT",
+          "generated": "DESF=QBIT(QBIT((DHSF/DHACT)))"
+        },
+        {
+          "label": "",
+          "original": "DEDF=DHDF/DHACT",
+          "generated": "DEDF=QBIT(QBIT((DHDF/DHACT)))"
+        },
+        {
+          "label": "",
+          "original": "DERC=DHRC/DHACT",
+          "generated": "DERC=QBIT(QBIT((DHRC/DHACT)))"
+        },
+        {
+          "label": "",
+          "original": "DEVLD=DHVLD/DHACT",
+          "generated": "DEVLD=QBIT(QBIT((DHVLD/DHACT)))"
+        },
+        {
+          "label": "",
+          "original": "DEVD=DHDIF/DHACT",
+          "generated": "DEVD=QBIT(QBIT((DHDIF/DHACT)))"
+        },
+        {
+          "label": "",
+          "original": "DEINC=DHINC/DHACT",
+          "generated": "DEINC=QBIT(QBIT((DHINC/DHACT)))"
+        },
+        {
+          "label": "",
+          "original": "IF(L.EQ.2) GO TO 19",
+          "generated": "IF((L.EQ.2)) GO TO 19"
+        },
+        {
+          "label": "",
+          "original": "IF(L.EQ.1) GO TO 18",
+          "generated": "IF((L.EQ.1)) GO TO 18"
+        },
+        {
+          "label": "19",
+          "original": "IF(NWRITE.NE.1) GO TO 35",
+          "generated": "IF((NWRITE.NE.1)) GO TO 35"
+        },
+        {
+          "label": "",
+          "original": "NWRITE=NWRITE+1",
+          "generated": "NWRITE=(NWRITE+1)"
+        },
+        {
+          "label": "35",
+          "original": "MIN=MIN+1",
+          "generated": "MIN=(MIN+1)"
+        },
+        {
+          "label": "",
+          "original": "IF(EWF.LE.0..OR.PR.LE.1.) GO TO 903",
+          "generated": "IF((((EWF.LE.QBIT(0.0D0))).OR.((PR.LE.QBIT(1.0D0))))) GO TO 903"
+        },
+        {
+          "label": "",
+          "original": "IF(ETAD.LE.0..OR.ETAD.GT.1.) GO TO 903",
+          "generated": "IF((((ETAD.LE.QBIT(0.0D0))).OR.((ETAD.GT.QBIT(1.0D0))))) GO TO 903"
+        },
+        {
+          "label": "",
+          "original": "IF(DEIGV.LT.0..OR.DEINC.LT.0..OR.DEBL.LT.0..OR.DESF.LT.0..OR.DEDF.LT.0..OR.DERC.LT.0..OR.DEVLD.LT.0..OR.DEVD.LT.0.) GO TO 903",
+          "generated": "IF((((DEIGV.LT.QBIT(0.0D0))).OR.((DEINC.LT.QBIT(0.0D0))).OR.((DEBL.LT.QBIT(0.0D0))).OR.((DESF.LT.QBIT(0.0D0))).OR.((DEDF.LT.QBIT(0.0D0))).OR.((DERC.LT.QBIT(0.0D0))).OR.((DEVLD.LT.QBIT(0.0D0))).OR.((DEVD.LT.QBIT(0.0D0))))) GO TO 903"
+        },
+        {
+          "label": "",
+          "original": "IF(K.NE.1.AND.MIN.LE.NVOVCR) GO TO 2",
+          "generated": "IF((((K.NE.1)).AND.((MIN.LE.NVOVCR)))) GO TO 2"
+        },
+        {
+          "label": "",
+          "original": "IF(K.EQ.1.AND.L.EQ.2) GO TO 1",
+          "generated": "IF((((K.EQ.1)).AND.((L.EQ.2)))) GO TO 1"
+        },
+        {
+          "label": "",
+          "original": "MIN=MIN+1",
+          "generated": "MIN=(MIN+1)"
+        },
+        {
+          "label": "",
+          "original": "IF(MIN.GT.NVOVCR) GO TO 1",
+          "generated": "IF((MIN.GT.NVOVCR)) GO TO 1"
+        },
+        {
+          "label": "",
+          "original": "MIN=MIN+1",
+          "generated": "MIN=(MIN+1)"
+        },
+        {
+          "label": "",
+          "original": "IF(MIN.GT.NVOVCR) GO TO 1",
+          "generated": "IF((MIN.GT.NVOVCR)) GO TO 1"
+        },
+        {
+          "label": "",
+          "original": "MIN=MIN+1",
+          "generated": "MIN=(MIN+1)"
+        },
+        {
+          "label": "",
+          "original": "IF(MIN.GT.NVOVCR) GO TO 1",
+          "generated": "IF((MIN.GT.NVOVCR)) GO TO 1"
+        },
+        {
+          "label": "18",
+          "original": "WCHK=SW*SQRT(THETA)/DELTA",
+          "generated": "WCHK=QBIT(QBIT((QBIT((SW*QBIT(SQRT(THETA))))/DELTA)))"
+        },
+        {
+          "label": "1",
+          "original": "IF (X1.LE.X(J3)) GO TO 2",
+          "generated": "IF((X1.LE.QBIT(X(J3)))) GO TO 2"
+        },
+        {
+          "label": "3",
+          "original": "IF (Y1.LE.Y(J4)) GO TO 4",
+          "generated": "IF((Y1.LE.QBIT(Y(J4)))) GO TO 4"
+        },
+        {
+          "label": "4",
+          "original": "J1=J3-1",
+          "generated": "J1=(J3-1)"
+        },
+        {
+          "label": "",
+          "original": "J2=J4-1",
+          "generated": "J2=(J4-1)"
+        },
+        {
+          "label": "",
+          "original": "EPS1=(X1-X(J1))/(X(J3)-X(J1))",
+          "generated": "EPS1=QBIT(QBIT((QBIT((X1-QBIT(X(J1))))/QBIT((QBIT(X(J3))-QBIT(X(J1)))))))"
+        },
+        {
+          "label": "",
+          "original": "EPS2=(Y1-Y(J2))/(Y(J4)-Y(J2))",
+          "generated": "EPS2=QBIT(QBIT((QBIT((Y1-QBIT(Y(J2))))/QBIT((QBIT(Y(J4))-QBIT(Y(J2)))))))"
+        },
+        {
+          "label": "",
+          "original": "EPS3=1.-EPS1",
+          "generated": "EPS3=QBIT(QBIT((QBIT(1.0D0)-EPS1)))"
+        },
+        {
+          "label": "",
+          "original": "EPS4=1.-EPS2",
+          "generated": "EPS4=QBIT(QBIT((QBIT(1.0D0)-EPS2)))"
+        },
+        {
+          "label": "",
+          "original": "F=TN(J1,J2)*EPS3*EPS4+TN(J3,J2)*EPS1*EPS4+TN(J1,J4)*EPS2*EPS3+TN(J3,J4)*EPS1*EPS2",
+          "generated": "F=QBIT(QBIT((QBIT((QBIT((QBIT((QBIT((QBIT(TN(J1,J2))*EPS3))*EPS4))+QBIT((QBIT((QBIT(TN(J3,J2))*EPS1))*EPS4))))+QBIT((QBIT((QBIT(TN(J1,J4))*EPS2))*EPS3))))+QBIT((QBIT((QBIT(TN(J3,J4))*EPS1))*EPS2)))))"
+        },
+        {
+          "label": "",
+          "original": "S(1)=0.",
+          "generated": "S(1)=QBIT(QBIT(0.0D0))"
+        },
+        {
+          "label": "",
+          "original": "S(2)=DELTAR*(5.*F(1)+8.*F(2)-F(3))/12.",
+          "generated": "S(2)=QBIT(QBIT((QBIT((DELTAR*QBIT((QBIT((QBIT((QBIT(5.0D0)*QBIT(F(1))))+QBIT((QBIT(8.0D0)*QBIT(F(2))))))-QBIT(F(3))))))/QBIT(12.0D0))))"
+        },
+        {
+          "label": "1",
+          "original": "S(I)=S(I-1)+DELTAR*(5.*F(I)+8.*F(I-1)-F(I-2))/12.",
+          "generated": "S(I)=QBIT(QBIT((QBIT(S((I-1)))+QBIT((QBIT((DELTAR*QBIT((QBIT((QBIT((QBIT(5.0D0)*QBIT(F(I))))+QBIT((QBIT(8.0D0)*QBIT(F((I-1)))))))-QBIT(F((I-2)))))))/QBIT(12.0D0))))))"
+        },
+        {
+          "label": "",
+          "original": "ARSIN=ASIN(X)",
+          "generated": "ARSIN=QBIT(QBIT(ASIN(X)))"
+        }
+      ]
+    },
+    "turbine_tn_d8063": {
+      "sha256": "80bd0b4604e726fb44614d720a08ddc6db8cf0a11605f53b7801234da8d98fed",
+      "generated_sha256": "809866bf4706ee136cf1f7eb5b1da1c25addae37a2b6fb32f8f3eafa4e49dcde",
+      "real_binary_operations": 595,
+      "transformations": [
+        {
+          "label": "",
+          "original": "DATA G,P0,T0,A0/0.,0.,0.,0./",
+          "generated": "DATA G,P0,T0,A0/0D0,0D0,0D0,0D0/"
+        },
+        {
+          "label": "",
+          "original": "DATA A1,A3,A5,D3/0.,0.,0.,0./",
+          "generated": "DATA A1,A3,A5,D3/0D0,0D0,0D0,0D0/"
+        },
+        {
+          "label": "",
+          "original": "DATA AL1,B4,BL1,BL4/0.,0.,0.,0./",
+          "generated": "DATA AL1,B4,BL1,BL4/0D0,0D0,0D0,0D0/"
+        },
+        {
+          "label": "",
+          "original": "DATA PDSGN,U3,U4U3,R/0.,0.,0.,0./",
+          "generated": "DATA PDSGN,U3,U4U3,R/0D0,0D0,0D0,0D0/"
+        },
+        {
+          "label": "",
+          "original": "DATA V1,DELV,VMAX,XK/0.,0.,0.,0./",
+          "generated": "DATA V1,DELV,VMAX,XK/0D0,0D0,0D0,0D0/"
+        },
+        {
+          "label": "",
+          "original": "DATA WD,ZZ,PD,ETAD/0.,0.,0.,0./",
+          "generated": "DATA WD,ZZ,PD,ETAD/0D0,0D0,0D0,0D0/"
+        },
+        {
+          "label": "",
+          "original": "DATA DELY,YMAX,D2/0.,0.,0./",
+          "generated": "DATA DELY,YMAX,D2/0D0,0D0,0D0/"
+        },
+        {
+          "label": "",
+          "original": "SUBR(X,G)=(1.-(G-1.)/(G+1.)*X*X)**(1./(G-1.))*X",
+          "generated": "SUBR(X,G)=QBIT(QBIT((QBIT((QBIT((QBIT(1.0D0)-QBIT((QBIT((QBIT((QBIT((G-QBIT(1.0D0)))/QBIT((G+QBIT(1.0D0)))))*X))*X))))**QBIT((QBIT(1.0D0)/QBIT((G-QBIT(1.0D0)))))))*X)))"
+        },
+        {
+          "label": "",
+          "original": "IF(IOS.NE.0) GO TO 901",
+          "generated": "IF((IOS.NE.0)) GO TO 901"
+        },
+        {
+          "label": "",
+          "original": "IF(IOS.NE.0) GO TO 901",
+          "generated": "IF((IOS.NE.0)) GO TO 901"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(G)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(G))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(P0)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(P0))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(T0)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(T0))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(A0)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(A0))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(A1)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(A1))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(A3)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(A3))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(A5)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(A5))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(D3)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(D3))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(AL1)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(AL1))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(B4)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(B4))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(BL1)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(BL1))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(BL4)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(BL4))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(PDSGN)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(PDSGN))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(U3)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(U3))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(U4U3)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(U4U3))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(R)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(R))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(V1)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(V1))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(DELV)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(DELV))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(VMAX)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(VMAX))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(XK)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(XK))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(WD)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(WD))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(ZZ)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(ZZ))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(PD)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(PD))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(ETAD)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(ETAD))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(DELY)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(DELY))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(YMAX)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(YMAX))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(.NOT.IEEE_IS_FINITE(D2)) GO TO 902",
+          "generated": "IF(.NOT.(IEEE_IS_FINITE(D2))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(MODE.LT.0.OR.MODE.GT.5) GO TO 902",
+          "generated": "IF((((MODE.LT.0)).OR.((MODE.GT.5)))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(G.LE.1..OR.P0.LE.0..OR.T0.LE.0..OR.R.LE.0.) GO TO 902",
+          "generated": "IF((((G.LE.QBIT(1.0D0))).OR.((P0.LE.QBIT(0.0D0))).OR.((T0.LE.QBIT(0.0D0))).OR.((R.LE.QBIT(0.0D0))))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(MIN(A0,A1,A3,A5,D2,D3,U3,ZZ).LE.0.) GO TO 902",
+          "generated": "IF((QBIT(MIN(A0,A1,A3,A5,D2,D3,U3,ZZ)).LE.QBIT(0.0D0))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(BL1.LE.0..OR.BL1.GT.1.) GO TO 902",
+          "generated": "IF((((BL1.LE.QBIT(0.0D0))).OR.((BL1.GT.QBIT(1.0D0))))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(BL4.LE.0..OR.BL4.GT.1.) GO TO 902",
+          "generated": "IF((((BL4.LE.QBIT(0.0D0))).OR.((BL4.GT.QBIT(1.0D0))))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(U4U3.LE.0..OR.U4U3.GE.1.) GO TO 902",
+          "generated": "IF((((U4U3.LE.QBIT(0.0D0))).OR.((U4U3.GE.QBIT(1.0D0))))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(ABS(AL1).GE.90..OR.ABS(B4).GE.90.) GO TO 902",
+          "generated": "IF((((QBIT(ABS(AL1)).GE.QBIT(90.0D0))).OR.((QBIT(ABS(B4)).GE.QBIT(90.0D0))))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(V1.LE.0..OR.VMAX.LT.V1.OR.DELV.LE.0.) GO TO 902",
+          "generated": "IF((((V1.LE.QBIT(0.0D0))).OR.((VMAX.LT.V1)).OR.((DELV.LE.QBIT(0.0D0))))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(DELY.LE.0..OR.YMAX.LE.0.) GO TO 902",
+          "generated": "IF((((DELY.LE.QBIT(0.0D0))).OR.((YMAX.LE.QBIT(0.0D0))))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(MODE.EQ.2.OR.MODE.EQ.5) THEN",
+          "generated": "IF((((MODE.EQ.2)).OR.((MODE.EQ.5)))) THEN"
+        },
+        {
+          "label": "",
+          "original": "IF(ITEST.NE.1.AND.ITEST.NE.2) GO TO 902",
+          "generated": "IF((((ITEST.NE.1)).AND.((ITEST.NE.2)))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(WD.LE.0..OR.PDSGN.LE.1.) GO TO 902",
+          "generated": "IF((((WD.LE.QBIT(0.0D0))).OR.((PDSGN.LE.QBIT(1.0D0))))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(ETAD.LE.0..OR.ETAD.GT.1.) GO TO 902",
+          "generated": "IF((((ETAD.LE.QBIT(0.0D0))).OR.((ETAD.GT.QBIT(1.0D0))))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "IF(PD.LE.0..OR.PD.GT.1..OR.XK.LT.0.) GO TO 902",
+          "generated": "IF((((PD.LE.QBIT(0.0D0))).OR.((PD.GT.QBIT(1.0D0))).OR.((XK.LT.QBIT(0.0D0))))) GO TO 902"
+        },
+        {
+          "label": "",
+          "original": "WRITE(6,400)G,P0,A1,AL1,B4,PD,R,T0,A3,BL1,BL4,XK,D3,A0,A5,U3,U4U3,ZZ",
+          "generated": "WRITE(6,400)LEGACY_G13(G),LEGACY_G13(P0),LEGACY_G13(A1),LEGACY_G13(AL1),LEGACY_G13(B4),LEGACY_G13(PD),LEGACY_G13(R),LEGACY_G13(T0),LEGACY_G13(A3),LEGACY_G13(BL1),LEGACY_G13(BL4),LEGACY_G13(XK),LEGACY_G13(D3),LEGACY_G13(A0),LEGACY_G13(A5),LEGACY_G13(U3),LEGACY_G13(U4U3),LEGACY_G13(ZZ)"
+        },
+        {
+          "label": "",
+          "original": "IF(MODE.EQ.1.OR.MODE.EQ.4) WRITE(6,666)",
+          "generated": "IF((((MODE.EQ.1)).OR.((MODE.EQ.4)))) WRITE(6,666)"
+        },
+        {
+          "label": "",
+          "original": "DELV1= DELV",
+          "generated": "DELV1=QBIT(DELV)"
+        },
+        {
+          "label": "",
+          "original": "ALX=AL1",
+          "generated": "ALX=QBIT(AL1)"
+        },
+        {
+          "label": "",
+          "original": "B4X=B4",
+          "generated": "B4X=QBIT(B4)"
+        },
+        {
+          "label": "",
+          "original": "T=.01745329",
+          "generated": "T=QBIT(QBIT(0.01745329D0))"
+        },
+        {
+          "label": "",
+          "original": "TOL=.00001",
+          "generated": "TOL=QBIT(QBIT(1D-05))"
+        },
+        {
+          "label": "",
+          "original": "AL1=T*AL1",
+          "generated": "AL1=QBIT(QBIT((T*AL1)))"
+        },
+        {
+          "label": "",
+          "original": "B4=T*B4",
+          "generated": "B4=QBIT(QBIT((T*B4)))"
+        },
+        {
+          "label": "",
+          "original": "COSAL1=COS(AL1)",
+          "generated": "COSAL1=QBIT(QBIT(COS(AL1)))"
+        },
+        {
+          "label": "",
+          "original": "SINAL1=SIN(AL1)",
+          "generated": "SINAL1=QBIT(QBIT(SIN(AL1)))"
+        },
+        {
+          "label": "",
+          "original": "COSB4=COS(B4)",
+          "generated": "COSB4=QBIT(QBIT(COS(B4)))"
+        },
+        {
+          "label": "",
+          "original": "SINB4=SIN(B4)",
+          "generated": "SINB4=QBIT(QBIT(SIN(B4)))"
+        },
+        {
+          "label": "",
+          "original": "XJ= 778.029",
+          "generated": "XJ=QBIT(QBIT(778.029D0))"
+        },
+        {
+          "label": "",
+          "original": "GR = 32.1741",
+          "generated": "GR=QBIT(QBIT(32.1741D0))"
+        },
+        {
+          "label": "",
+          "original": "IT= 1",
+          "generated": "IT=1"
+        },
+        {
+          "label": "",
+          "original": "J= 1",
+          "generated": "J=1"
+        },
+        {
+          "label": "",
+          "original": "VX=0.",
+          "generated": "VX=QBIT(QBIT(0.0D0))"
+        },
+        {
+          "label": "",
+          "original": "XDEL=.1",
+          "generated": "XDEL=QBIT(QBIT(0.1D0))"
+        },
+        {
+          "label": "",
+          "original": "G1=G+1.",
+          "generated": "G1=QBIT(QBIT((G+QBIT(1.0D0))))"
+        },
+        {
+          "label": "",
+          "original": "G2=G-1.",
+          "generated": "G2=QBIT(QBIT((G-QBIT(1.0D0))))"
+        },
+        {
+          "label": "",
+          "original": "G3=G2/G1",
+          "generated": "G3=QBIT(QBIT((G2/G1)))"
+        },
+        {
+          "label": "",
+          "original": "G4= G/G1",
+          "generated": "G4=QBIT(QBIT((G/G1)))"
+        },
+        {
+          "label": "",
+          "original": "G5= G/G2",
+          "generated": "G5=QBIT(QBIT((G/G2)))"
+        },
+        {
+          "label": "",
+          "original": "IF(MODE.EQ.3.OR.MODE.EQ.4.OR.MODE.EQ.5) GO TO 2",
+          "generated": "IF((((MODE.EQ.3)).OR.((MODE.EQ.4)).OR.((MODE.EQ.5)))) GO TO 2"
+        },
+        {
+          "label": "",
+          "original": "VCR=SQRT(2.*G4*R*T0)",
+          "generated": "VCR=QBIT(QBIT(SQRT(QBIT((QBIT((QBIT((QBIT(2.0D0)*G4))*R))*T0)))))"
+        },
+        {
+          "label": "",
+          "original": "PVCR= P0*SQRT(2.*G4/R/T0)",
+          "generated": "PVCR=QBIT(QBIT((P0*QBIT(SQRT(QBIT((QBIT((QBIT((QBIT(2.0D0)*G4))/R))/T0)))))))"
+        },
+        {
+          "label": "2",
+          "original": "VCR= SQRT(2.*G4*GR*R*T0)",
+          "generated": "VCR=QBIT(QBIT(SQRT(QBIT((QBIT((QBIT((QBIT((QBIT(2.0D0)*G4))*GR))*R))*T0)))))"
+        },
+        {
+          "label": "",
+          "original": "PVCR= P0*SQRT(2.*G4*GR/R/T0)",
+          "generated": "PVCR=QBIT(QBIT((P0*QBIT(SQRT(QBIT((QBIT((QBIT((QBIT((QBIT(2.0D0)*G4))*GR))/R))/T0)))))))"
+        },
+        {
+          "label": "3",
+          "original": "V1VC1=V1",
+          "generated": "V1VC1=QBIT(V1)"
+        },
+        {
+          "label": "",
+          "original": "IF(V1VC1.GT.1.) GO TO 15",
+          "generated": "IF((V1VC1.GT.QBIT(1.0D0))) GO TO 15"
+        },
+        {
+          "label": "",
+          "original": "IF(MODE.EQ.0.OR.MODE.EQ.1.OR.MODE.EQ.3.OR.MODE.EQ.4) GO TO 10",
+          "generated": "IF((((MODE.EQ.0)).OR.((MODE.EQ.1)).OR.((MODE.EQ.3)).OR.((MODE.EQ.4)))) GO TO 10"
+        },
+        {
+          "label": "",
+          "original": "PD=1.0",
+          "generated": "PD=QBIT(QBIT(1.0D0))"
+        },
+        {
+          "label": "",
+          "original": "SS=WD/PVCR/A1/COSAL1/PD",
+          "generated": "SS=QBIT(QBIT((QBIT((QBIT((QBIT((WD/PVCR))/A1))/COSAL1))/PD)))"
+        },
+        {
+          "label": "",
+          "original": "IF(SS.GT.SUBR(1.,G)) THEN",
+          "generated": "IF((SS.GT.QBIT(SUBR(QBIT(1.0D0),G)))) THEN"
+        },
+        {
+          "label": "",
+          "original": "V1VC1=.5",
+          "generated": "V1VC1=QBIT(QBIT(0.5D0))"
+        },
+        {
+          "label": "",
+          "original": "X= V1VC1",
+          "generated": "X=QBIT(V1VC1)"
+        },
+        {
+          "label": "",
+          "original": "F= SUBR(X,G) -SS",
+          "generated": "F=QBIT(QBIT((QBIT(SUBR(X,G))-SS)))"
+        },
+        {
+          "label": "",
+          "original": "FP= (F+SS)/X-2.*X*X/G1*(1.-G3*X*X)**(1./G2-1.)",
+          "generated": "FP=QBIT(QBIT((QBIT((QBIT((F+SS))/X))-QBIT((QBIT((QBIT((QBIT((QBIT(2.0D0)*X))*X))/G1))*QBIT((QBIT((QBIT(1.0D0)-QBIT((QBIT((G3*X))*X))))**QBIT((QBIT((QBIT(1.0D0)/G2))-QBIT(1.0D0))))))))))"
+        },
+        {
+          "label": "",
+          "original": "V1VC1= X-F/FP",
+          "generated": "V1VC1=QBIT(QBIT((X-QBIT((F/FP)))))"
+        },
+        {
+          "label": "",
+          "original": "IF(ABS((V1VC1-X)/V1VC1).LT.TOL) GO TO 10",
+          "generated": "IF((QBIT(ABS(QBIT((QBIT((V1VC1-X))/V1VC1)))).LT.TOL)) GO TO 10"
+        },
+        {
+          "label": "15",
+          "original": "VK=1.",
+          "generated": "VK=QBIT(QBIT(1.0D0))"
+        },
+        {
+          "label": "",
+          "original": "PVK=SUBR(VK,G)",
+          "generated": "PVK=QBIT(QBIT(SUBR(VK,G)))"
+        },
+        {
+          "label": "",
+          "original": "WK=COS(ALX*T)*PVK*A1*PVCR*PD",
+          "generated": "WK=QBIT(QBIT((QBIT((QBIT((QBIT((QBIT(COS(QBIT((ALX*T))))*PVK))*A1))*PVCR))*PD)))"
+        },
+        {
+          "label": "",
+          "original": "PV1=SUBR(V1VC1,G)",
+          "generated": "PV1=QBIT(QBIT(SUBR(V1VC1,G)))"
+        },
+        {
+          "label": "",
+          "original": "COSAL1=WK/(A1*PD*PV1*PVCR)",
+          "generated": "COSAL1=QBIT(QBIT((WK/QBIT((QBIT((QBIT((A1*PD))*PV1))*PVCR)))))"
+        },
+        {
+          "label": "",
+          "original": "AL1=ACOS(COSAL1)",
+          "generated": "AL1=QBIT(QBIT(ACOS(COSAL1)))"
+        },
+        {
+          "label": "",
+          "original": "SINAL1=SIN(AL1)",
+          "generated": "SINAL1=QBIT(QBIT(SIN(AL1)))"
+        },
+        {
+          "label": "10",
+          "original": "PV1=SUBR(V1VC1,G)",
+          "generated": "PV1=QBIT(QBIT(SUBR(V1VC1,G)))"
+        },
+        {
+          "label": "",
+          "original": "W1=PV1*A1*PVCR*COSAL1*PD",
+          "generated": "W1=QBIT(QBIT((QBIT((QBIT((QBIT((PV1*A1))*PVCR))*COSAL1))*PD)))"
+        },
+        {
+          "label": "",
+          "original": "V0VC0=V1VC1/6.",
+          "generated": "V0VC0=QBIT(QBIT((V1VC1/QBIT(6.0D0))))"
+        },
+        {
+          "label": "",
+          "original": "QX=PV1*A1/A0*COSAL1*PD",
+          "generated": "QX=QBIT(QBIT((QBIT((QBIT((QBIT((PV1*A1))/A0))*COSAL1))*PD)))"
+        },
+        {
+          "label": "",
+          "original": "X= V0VC0",
+          "generated": "X=QBIT(V0VC0)"
+        },
+        {
+          "label": "",
+          "original": "F=SUBR(X,G) -QX",
+          "generated": "F=QBIT(QBIT((QBIT(SUBR(X,G))-QX)))"
+        },
+        {
+          "label": "",
+          "original": "FP= (F+QX)/X-2.*X*X/G1*(1.-G3*X*X)**(1./G2-1.)",
+          "generated": "FP=QBIT(QBIT((QBIT((QBIT((F+QX))/X))-QBIT((QBIT((QBIT((QBIT((QBIT(2.0D0)*X))*X))/G1))*QBIT((QBIT((QBIT(1.0D0)-QBIT((QBIT((G3*X))*X))))**QBIT((QBIT((QBIT(1.0D0)/G2))-QBIT(1.0D0))))))))))"
+        },
+        {
+          "label": "",
+          "original": "V0VC0= X-F/FP",
+          "generated": "V0VC0=QBIT(QBIT((X-QBIT((F/FP)))))"
+        },
+        {
+          "label": "",
+          "original": "IF(ABS((V0VC0-X)/V1VC1).LT.TOL) GO TO 13",
+          "generated": "IF((QBIT(ABS(QBIT((QBIT((V0VC0-X))/V1VC1)))).LT.TOL)) GO TO 13"
+        },
+        {
+          "label": "13",
+          "original": "VUVC1=V1VC1*SINAL1",
+          "generated": "VUVC1=QBIT(QBIT((V1VC1*SINAL1)))"
+        },
+        {
+          "label": "",
+          "original": "VRVC1=V1VC1*COSAL1",
+          "generated": "VRVC1=QBIT(QBIT((V1VC1*COSAL1)))"
+        },
+        {
+          "label": "",
+          "original": "VUVC2=VUVC1",
+          "generated": "VUVC2=QBIT(VUVC1)"
+        },
+        {
+          "label": "",
+          "original": "Q=PV1*COSAL1 *BL1",
+          "generated": "Q=QBIT(QBIT((QBIT((PV1*COSAL1))*BL1)))"
+        },
+        {
+          "label": "",
+          "original": "X=V1VC1/3.",
+          "generated": "X=QBIT(QBIT((V1VC1/QBIT(3.0D0))))"
+        },
+        {
+          "label": "",
+          "original": "F=(1.-G3*(X*X+VUVC2**2))**(1./G2)*X-Q",
+          "generated": "F=QBIT(QBIT((QBIT((QBIT((QBIT((QBIT(1.0D0)-QBIT((G3*QBIT((QBIT((X*X))+QBIT((VUVC2**2))))))))**QBIT((QBIT(1.0D0)/G2))))*X))-Q)))"
+        },
+        {
+          "label": "",
+          "original": "F1=(F+Q)/X",
+          "generated": "F1=QBIT(QBIT((QBIT((F+Q))/X)))"
+        },
+        {
+          "label": "",
+          "original": "FP=-2.*X*X/G1*F1**(1./G2-1.)+F1",
+          "generated": "FP=QBIT(QBIT((QBIT((QBIT((QBIT((QBIT((-(QBIT(2.0D0))*X))*X))/G1))*QBIT((F1**QBIT((QBIT((QBIT(1.0D0)/G2))-QBIT(1.0D0)))))))+F1)))"
+        },
+        {
+          "label": "",
+          "original": "X1=X-F/FP",
+          "generated": "X1=QBIT(QBIT((X-QBIT((F/FP)))))"
+        },
+        {
+          "label": "",
+          "original": "IF(ABS((X1-X)/X1)-TOL) 62,62,63",
+          "generated": "IF(QBIT((QBIT(ABS(QBIT((QBIT((X1-X))/X1))))-TOL))) 62,62,63"
+        },
+        {
+          "label": "63",
+          "original": "X=X1",
+          "generated": "X=QBIT(X1)"
+        },
+        {
+          "label": "62",
+          "original": "VRVC2=X",
+          "generated": "VRVC2=QBIT(X)"
+        },
+        {
+          "label": "",
+          "original": "V2VC2=SQRT(VRVC2**2+VUVC2**2)",
+          "generated": "V2VC2=QBIT(QBIT(SQRT(QBIT((QBIT((VRVC2**2))+QBIT((VUVC2**2)))))))"
+        },
+        {
+          "label": "",
+          "original": "PV2=SUBR(V2VC2,G)",
+          "generated": "PV2=QBIT(QBIT(SUBR(V2VC2,G)))"
+        },
+        {
+          "label": "",
+          "original": "COSAL2=VRVC2/V2VC2",
+          "generated": "COSAL2=QBIT(QBIT((VRVC2/V2VC2)))"
+        },
+        {
+          "label": "",
+          "original": "AL2=ACOS(COSAL2)",
+          "generated": "AL2=QBIT(QBIT(ACOS(COSAL2)))"
+        },
+        {
+          "label": "",
+          "original": "SINAL2=SIN(AL2)",
+          "generated": "SINAL2=QBIT(QBIT(SIN(AL2)))"
+        },
+        {
+          "label": "",
+          "original": "VUVC3=VUVC2*D2/D3",
+          "generated": "VUVC3=QBIT(QBIT((QBIT((VUVC2*D2))/D3)))"
+        },
+        {
+          "label": "",
+          "original": "Q= PV2*COSAL2*D2/D3",
+          "generated": "Q=QBIT(QBIT((QBIT((QBIT((PV2*COSAL2))*D2))/D3)))"
+        },
+        {
+          "label": "",
+          "original": "X=VUVC3/5.",
+          "generated": "X=QBIT(QBIT((VUVC3/QBIT(5.0D0))))"
+        },
+        {
+          "label": "",
+          "original": "F=(1.-G3*(X*X+VUVC3**2))**(1./G2)*X-Q",
+          "generated": "F=QBIT(QBIT((QBIT((QBIT((QBIT((QBIT(1.0D0)-QBIT((G3*QBIT((QBIT((X*X))+QBIT((VUVC3**2))))))))**QBIT((QBIT(1.0D0)/G2))))*X))-Q)))"
+        },
+        {
+          "label": "",
+          "original": "F1=(F+Q)/X",
+          "generated": "F1=QBIT(QBIT((QBIT((F+Q))/X)))"
+        },
+        {
+          "label": "",
+          "original": "FP=-2.*X*X/G1*F1**(1./G2-1.)+F1",
+          "generated": "FP=QBIT(QBIT((QBIT((QBIT((QBIT((QBIT((-(QBIT(2.0D0))*X))*X))/G1))*QBIT((F1**QBIT((QBIT((QBIT(1.0D0)/G2))-QBIT(1.0D0)))))))+F1)))"
+        },
+        {
+          "label": "",
+          "original": "X1=X-F/FP",
+          "generated": "X1=QBIT(QBIT((X-QBIT((F/FP)))))"
+        },
+        {
+          "label": "",
+          "original": "IF(ABS((X1-X)/X1)-TOL) 20,20,21",
+          "generated": "IF(QBIT((QBIT(ABS(QBIT((QBIT((X1-X))/X1))))-TOL))) 20,20,21"
+        },
+        {
+          "label": "21",
+          "original": "X=X1",
+          "generated": "X=QBIT(X1)"
+        },
+        {
+          "label": "20",
+          "original": "V3VC3=SQRT(VUVC3**2+X*X)",
+          "generated": "V3VC3=QBIT(QBIT(SQRT(QBIT((QBIT((VUVC3**2))+QBIT((X*X)))))))"
+        },
+        {
+          "label": "",
+          "original": "COSAL3=X/V3VC3",
+          "generated": "COSAL3=QBIT(QBIT((X/V3VC3)))"
+        },
+        {
+          "label": "",
+          "original": "AL3=ACOS(COSAL3)",
+          "generated": "AL3=QBIT(QBIT(ACOS(COSAL3)))"
+        },
+        {
+          "label": "",
+          "original": "SINAL3=SIN(AL3)",
+          "generated": "SINAL3=QBIT(QBIT(SIN(AL3)))"
+        },
+        {
+          "label": "",
+          "original": "VRVC3=X",
+          "generated": "VRVC3=QBIT(X)"
+        },
+        {
+          "label": "",
+          "original": "T3T3=(1.0-G3*(2.0*U3*VUVC3/VCR-(U3/VCR)**2))",
+          "generated": "T3T3=QBIT(QBIT((QBIT(1.0D0)-QBIT((G3*QBIT((QBIT((QBIT((QBIT((QBIT(2.0D0)*U3))*VUVC3))/VCR))-QBIT((QBIT((U3/VCR))**2)))))))))"
+        },
+        {
+          "label": "",
+          "original": "WCVC3=SQRT(T3T3)",
+          "generated": "WCVC3=QBIT(QBIT(SQRT(T3T3)))"
+        },
+        {
+          "label": "",
+          "original": "WUVC3=VUVC3-U3/VCR",
+          "generated": "WUVC3=QBIT(QBIT((VUVC3-QBIT((U3/VCR)))))"
+        },
+        {
+          "label": "",
+          "original": "WUWC3=WUVC3/WCVC3",
+          "generated": "WUWC3=QBIT(QBIT((WUVC3/WCVC3)))"
+        },
+        {
+          "label": "",
+          "original": "W3VC3=SQRT(WUVC3**2+VRVC3**2)",
+          "generated": "W3VC3=QBIT(QBIT(SQRT(QBIT((QBIT((WUVC3**2))+QBIT((VRVC3**2)))))))"
+        },
+        {
+          "label": "",
+          "original": "W3WC3=W3VC3/WCVC3",
+          "generated": "W3WC3=QBIT(QBIT((W3VC3/WCVC3)))"
+        },
+        {
+          "label": "",
+          "original": "WRWC3=SQRT(W3WC3**2-WUWC3**2)",
+          "generated": "WRWC3=QBIT(QBIT(SQRT(QBIT((QBIT((W3WC3**2))-QBIT((WUWC3**2)))))))"
+        },
+        {
+          "label": "",
+          "original": "P3P3=T3T3**(G5)",
+          "generated": "P3P3=QBIT(QBIT((T3T3**G5)))"
+        },
+        {
+          "label": "",
+          "original": "PWVC3=T3T3**(G1/2./G2)",
+          "generated": "PWVC3=QBIT(QBIT((T3T3**QBIT((QBIT((G1/QBIT(2.0D0)))/G2)))))"
+        },
+        {
+          "label": "",
+          "original": "SINB3=WUWC3/W3WC3",
+          "generated": "SINB3=QBIT(QBIT((WUWC3/W3WC3)))"
+        },
+        {
+          "label": "",
+          "original": "B3=ASIN(SINB3)",
+          "generated": "B3=QBIT(QBIT(ASIN(SINB3)))"
+        },
+        {
+          "label": "",
+          "original": "COSB3=COS(B3)",
+          "generated": "COSB3=QBIT(QBIT(COS(B3)))"
+        },
+        {
+          "label": "",
+          "original": "V3TU3=1.-1.98/ZZ",
+          "generated": "V3TU3=QBIT(QBIT((QBIT(1.0D0)-QBIT((QBIT(1.98D0)/ZZ)))))"
+        },
+        {
+          "label": "",
+          "original": "VU3T=V3TU3*U3",
+          "generated": "VU3T=QBIT(QBIT((V3TU3*U3)))"
+        },
+        {
+          "label": "",
+          "original": "WU3T=VU3T-U3",
+          "generated": "WU3T=QBIT(QBIT((VU3T-U3)))"
+        },
+        {
+          "label": "",
+          "original": "AB=ATAN((WU3T/VCR)/VRVC3)",
+          "generated": "AB=QBIT(QBIT(ATAN(QBIT((QBIT((WU3T/VCR))/VRVC3)))))"
+        },
+        {
+          "label": "",
+          "original": "XI3=B3-AB",
+          "generated": "XI3=QBIT(QBIT((B3-AB)))"
+        },
+        {
+          "label": "",
+          "original": "FS =SIN(XI3)",
+          "generated": "FS=QBIT(QBIT(SIN(XI3)))"
+        },
+        {
+          "label": "",
+          "original": "FC =COS(XI3)",
+          "generated": "FC=QBIT(QBIT(COS(XI3)))"
+        },
+        {
+          "label": "",
+          "original": "WCR3=WCVC3*VCR",
+          "generated": "WCR3=QBIT(QBIT((WCVC3*VCR)))"
+        },
+        {
+          "label": "",
+          "original": "T4T3=1.-G3*(U3/WCR3)**2*(1.-U4U3**2)",
+          "generated": "T4T3=QBIT(QBIT((QBIT(1.0D0)-QBIT((QBIT((G3*QBIT((QBIT((U3/WCR3))**2))))*QBIT((QBIT(1.0D0)-QBIT((U4U3**2)))))))))"
+        },
+        {
+          "label": "",
+          "original": "WC4WC3=SQRT(T4T3)",
+          "generated": "WC4WC3=QBIT(QBIT(SQRT(T4T3)))"
+        },
+        {
+          "label": "",
+          "original": "W3WC4=W3WC3/WC4WC3",
+          "generated": "W3WC4=QBIT(QBIT((W3WC3/WC4WC3)))"
+        },
+        {
+          "label": "",
+          "original": "PW4PW3=T4T3**(1./G3/2.)",
+          "generated": "PW4PW3=QBIT(QBIT((T4T3**QBIT((QBIT((QBIT(1.0D0)/G3))/QBIT(2.0D0))))))"
+        },
+        {
+          "label": "",
+          "original": "PWC3=SUBR(W3WC3,G)",
+          "generated": "PWC3=QBIT(QBIT(SUBR(W3WC3,G)))"
+        },
+        {
+          "label": "",
+          "original": "YGIV=PWC3*(A3/A5/BL4 )*(COSB3/COSB4)/PW4PW3",
+          "generated": "YGIV=QBIT(QBIT((QBIT((QBIT((PWC3*QBIT((QBIT((A3/A5))/BL4))))*QBIT((COSB3/COSB4))))/PW4PW3)))"
+        },
+        {
+          "label": "",
+          "original": "IF(MODE.EQ.2.OR.MODE.EQ.5) XK=.1",
+          "generated": "IF((((MODE.EQ.2)).OR.((MODE.EQ.5)))) XK=QBIT(QBIT(0.1D0))"
+        },
+        {
+          "label": "",
+          "original": "Y= .3",
+          "generated": "Y=QBIT(QBIT(0.3D0))"
+        },
+        {
+          "label": "",
+          "original": "NCOUNT=NCOUNT+1",
+          "generated": "NCOUNT=(NCOUNT+1)"
+        },
+        {
+          "label": "",
+          "original": "CX=W3WC4**2*(XK*FC**2+FS**2)",
+          "generated": "CX=QBIT(QBIT((QBIT((W3WC4**2))*QBIT((QBIT((XK*QBIT((FC**2))))+QBIT((FS**2)))))))"
+        },
+        {
+          "label": "",
+          "original": "IF(B3.GT.AB) CX=W3WC4**2*(XK*FC**2+FS**3)",
+          "generated": "IF((B3.GT.AB)) CX=QBIT(QBIT((QBIT((W3WC4**2))*QBIT((QBIT((XK*QBIT((FC**2))))+QBIT((FS**3)))))))"
+        },
+        {
+          "label": "",
+          "original": "AX= XK*Y*Y+CX",
+          "generated": "AX=QBIT(QBIT((QBIT((QBIT((XK*Y))*Y))+CX)))"
+        },
+        {
+          "label": "",
+          "original": "BX= 1.-G3*Y*Y",
+          "generated": "BX=QBIT(QBIT((QBIT(1.0D0)-QBIT((QBIT((G3*Y))*Y)))))"
+        },
+        {
+          "label": "",
+          "original": "EX= (1.-G3*(AX/BX))**G5",
+          "generated": "EX=QBIT(QBIT((QBIT((QBIT(1.0D0)-QBIT((G3*QBIT((AX/BX))))))**G5)))"
+        },
+        {
+          "label": "",
+          "original": "YCAL=SUBR(Y,G)*EX",
+          "generated": "YCAL=QBIT(QBIT((QBIT(SUBR(Y,G))*EX)))"
+        },
+        {
+          "label": "",
+          "original": "IF(IND.GE.6.AND.ABS((YCAL-YGIV)/YCAL).LE.TOL) GO TO 80",
+          "generated": "IF((((IND.GE.6)).AND.((QBIT(ABS(QBIT((QBIT((YCAL-YGIV))/YCAL)))).LE.TOL)))) GO TO 80"
+        },
+        {
+          "label": "",
+          "original": "IF(IND.LT.10) GO TO 32",
+          "generated": "IF((IND.LT.10)) GO TO 32"
+        },
+        {
+          "label": "",
+          "original": "IF(IND.EQ.10) GO TO 33",
+          "generated": "IF((IND.EQ.10)) GO TO 33"
+        },
+        {
+          "label": "",
+          "original": "IF(IND.EQ.11) WRITE(6,2040)",
+          "generated": "IF((IND.EQ.11)) WRITE(6,2040)"
+        },
+        {
+          "label": "",
+          "original": "IF(NCOUNT.GE.1000) WRITE(6,2050)",
+          "generated": "IF((NCOUNT.GE.1000)) WRITE(6,2050)"
+        },
+        {
+          "label": "33",
+          "original": "V1VC1= V1VC1-DELV",
+          "generated": "V1VC1=QBIT(QBIT((V1VC1-DELV)))"
+        },
+        {
+          "label": "34",
+          "original": "DELV= DELV/2.",
+          "generated": "DELV=QBIT(QBIT((DELV/QBIT(2.0D0))))"
+        },
+        {
+          "label": "",
+          "original": "V1VC1= V1VC1+DELV",
+          "generated": "V1VC1=QBIT(QBIT((V1VC1+DELV)))"
+        },
+        {
+          "label": "80",
+          "original": "IF(MODE.EQ.2.OR.MODE.EQ.5) GO TO 82",
+          "generated": "IF((((MODE.EQ.2)).OR.((MODE.EQ.5)))) GO TO 82"
+        },
+        {
+          "label": "",
+          "original": "IF(ABS((V1VC1-VX)/V1VC1).LT.TOL) GO TO 35",
+          "generated": "IF((QBIT(ABS(QBIT((QBIT((V1VC1-VX))/V1VC1)))).LT.TOL)) GO TO 35"
+        },
+        {
+          "label": "",
+          "original": "VX=V1VC1",
+          "generated": "VX=QBIT(V1VC1)"
+        },
+        {
+          "label": "",
+          "original": "IF(N.EQ.2) GO TO 34",
+          "generated": "IF((N.EQ.2)) GO TO 34"
+        },
+        {
+          "label": "82",
+          "original": "W4WC4= Y",
+          "generated": "W4WC4=QBIT(Y)"
+        },
+        {
+          "label": "",
+          "original": "PW4= SUBR(Y,G)",
+          "generated": "PW4=QBIT(QBIT(SUBR(Y,G)))"
+        },
+        {
+          "label": "",
+          "original": "P4P4ID=YGIV/PW4",
+          "generated": "P4P4ID=QBIT(QBIT((YGIV/PW4)))"
+        },
+        {
+          "label": "",
+          "original": "PWC4 =PVCR*PD*PWVC3*PW4PW3*P4P4ID",
+          "generated": "PWC4=QBIT(QBIT((QBIT((QBIT((QBIT((PVCR*PD))*PWVC3))*PW4PW3))*P4P4ID)))"
+        },
+        {
+          "label": "",
+          "original": "WUWC4=W4WC4*SINB4",
+          "generated": "WUWC4=QBIT(QBIT((W4WC4*SINB4)))"
+        },
+        {
+          "label": "",
+          "original": "WXWC4=W4WC4*COSB4",
+          "generated": "WXWC4=QBIT(QBIT((W4WC4*COSB4)))"
+        },
+        {
+          "label": "",
+          "original": "HA = WXWC4",
+          "generated": "HA=QBIT(WXWC4)"
+        },
+        {
+          "label": "",
+          "original": "IF(HA.GT.1.) GO TO 56",
+          "generated": "IF((HA.GT.QBIT(1.0D0))) GO TO 56"
+        },
+        {
+          "label": "",
+          "original": "Q=PW4*COSB4*BL4",
+          "generated": "Q=QBIT(QBIT((QBIT((PW4*COSB4))*BL4)))"
+        },
+        {
+          "label": "",
+          "original": "X=W4WC4/3.",
+          "generated": "X=QBIT(QBIT((W4WC4/QBIT(3.0D0))))"
+        },
+        {
+          "label": "",
+          "original": "F=(1.-G3*(X*X+WUWC4**2))**(1./G2)*X-Q",
+          "generated": "F=QBIT(QBIT((QBIT((QBIT((QBIT((QBIT(1.0D0)-QBIT((G3*QBIT((QBIT((X*X))+QBIT((WUWC4**2))))))))**QBIT((QBIT(1.0D0)/G2))))*X))-Q)))"
+        },
+        {
+          "label": "",
+          "original": "F1=(F+Q)/X",
+          "generated": "F1=QBIT(QBIT((QBIT((F+Q))/X)))"
+        },
+        {
+          "label": "",
+          "original": "FP=-2.*X/G1*F1**(2.-G)*X+F1",
+          "generated": "FP=QBIT(QBIT((QBIT((QBIT((QBIT((QBIT((-(QBIT(2.0D0))*X))/G1))*QBIT((F1**QBIT((QBIT(2.0D0)-G))))))*X))+F1)))"
+        },
+        {
+          "label": "",
+          "original": "X1=X-F/FP",
+          "generated": "X1=QBIT(QBIT((X-QBIT((F/FP)))))"
+        },
+        {
+          "label": "",
+          "original": "IF(ABS((X1-X)/X1)-TOL) 71,71,72",
+          "generated": "IF(QBIT((QBIT(ABS(QBIT((QBIT((X1-X))/X1))))-TOL))) 71,71,72"
+        },
+        {
+          "label": "72",
+          "original": "X=X1",
+          "generated": "X=QBIT(X1)"
+        },
+        {
+          "label": "71",
+          "original": "WXWC5=X",
+          "generated": "WXWC5=QBIT(X)"
+        },
+        {
+          "label": "",
+          "original": "W5WC5=X*X+WUWC4**2",
+          "generated": "W5WC5=QBIT(QBIT((QBIT((X*X))+QBIT((WUWC4**2)))))"
+        },
+        {
+          "label": "",
+          "original": "W5WC5=SQRT(W5WC5)",
+          "generated": "W5WC5=QBIT(QBIT(SQRT(W5WC5)))"
+        },
+        {
+          "label": "",
+          "original": "SINB5=WUWC4/W5WC5",
+          "generated": "SINB5=QBIT(QBIT((WUWC4/W5WC5)))"
+        },
+        {
+          "label": "",
+          "original": "VUWC4=1./WCVC3*U4U3*U3/VCR/WC4WC3+WUWC4",
+          "generated": "VUWC4=QBIT(QBIT((QBIT((QBIT((QBIT((QBIT((QBIT((QBIT(1.0D0)/WCVC3))*U4U3))*U3))/VCR))/WC4WC3))+WUWC4)))"
+        },
+        {
+          "label": "",
+          "original": "VUWC5=VUWC4",
+          "generated": "VUWC5=QBIT(VUWC4)"
+        },
+        {
+          "label": "",
+          "original": "V5WC5=VUWC5**2+X*X",
+          "generated": "V5WC5=QBIT(QBIT((QBIT((VUWC5**2))+QBIT((X*X)))))"
+        },
+        {
+          "label": "",
+          "original": "V5WC5=SQRT(V5WC5)",
+          "generated": "V5WC5=QBIT(QBIT(SQRT(V5WC5)))"
+        },
+        {
+          "label": "",
+          "original": "T4T4=1.+G3*(VUWC4**2-WUWC4**2)",
+          "generated": "T4T4=QBIT(QBIT((QBIT(1.0D0)+QBIT((G3*QBIT((QBIT((VUWC4**2))-QBIT((WUWC4**2)))))))))"
+        },
+        {
+          "label": "",
+          "original": "Q1=SQRT(T4T4)",
+          "generated": "Q1=QBIT(QBIT(SQRT(T4T4)))"
+        },
+        {
+          "label": "",
+          "original": "VXVC5=WXWC5/Q1",
+          "generated": "VXVC5=QBIT(QBIT((WXWC5/Q1)))"
+        },
+        {
+          "label": "",
+          "original": "VUVC5=VUWC5/Q1",
+          "generated": "VUVC5=QBIT(QBIT((VUWC5/Q1)))"
+        },
+        {
+          "label": "",
+          "original": "V5VC5=V5WC5/Q1",
+          "generated": "V5VC5=QBIT(QBIT((V5WC5/Q1)))"
+        },
+        {
+          "label": "",
+          "original": "AL5=1./T*ASIN(VUVC5/V5VC5)",
+          "generated": "AL5=QBIT(QBIT((QBIT((QBIT(1.0D0)/T))*QBIT(ASIN(QBIT((VUVC5/V5VC5)))))))"
+        },
+        {
+          "label": "",
+          "original": "B5=1./T*ASIN(SINB5)",
+          "generated": "B5=QBIT(QBIT((QBIT((QBIT(1.0D0)/T))*QBIT(ASIN(SINB5)))))"
+        },
+        {
+          "label": "",
+          "original": "WUWC5=WUWC4",
+          "generated": "WUWC5=QBIT(WUWC4)"
+        },
+        {
+          "label": "",
+          "original": "VU4VC3=WUWC4*WC4WC3*WCVC3+U4U3*U3/VCR",
+          "generated": "VU4VC3=QBIT(QBIT((QBIT((QBIT((WUWC4*WC4WC3))*WCVC3))+QBIT((QBIT((U4U3*U3))/VCR)))))"
+        },
+        {
+          "label": "",
+          "original": "T5T0= 1.-2.*G3/VCR*(U3*VUVC3-U4U3*U3*VU4VC3)",
+          "generated": "T5T0=QBIT(QBIT((QBIT(1.0D0)-QBIT((QBIT((QBIT((QBIT(2.0D0)*G3))/VCR))*QBIT((QBIT((U3*VUVC3))-QBIT((QBIT((U4U3*U3))*VU4VC3)))))))))"
+        },
+        {
+          "label": "",
+          "original": "T5= T0*T5T0",
+          "generated": "T5=QBIT(QBIT((T0*T5T0)))"
+        },
+        {
+          "label": "",
+          "original": "VCR5 = VCR*SQRT(T5T0)",
+          "generated": "VCR5=QBIT(QBIT((VCR*QBIT(SQRT(T5T0)))))"
+        },
+        {
+          "label": "",
+          "original": "P5P5 = T4T4**(G5)",
+          "generated": "P5P5=QBIT(QBIT((T4T4**G5)))"
+        },
+        {
+          "label": "",
+          "original": "P4P3ID = T4T3**(G5)",
+          "generated": "P4P3ID=QBIT(QBIT((T4T3**G5)))"
+        },
+        {
+          "label": "",
+          "original": "P5P0 = PD*P3P3*P4P3ID*P4P4ID*P5P5",
+          "generated": "P5P0=QBIT(QBIT((QBIT((QBIT((QBIT((PD*P3P3))*P4P3ID))*P4P4ID))*P5P5)))"
+        },
+        {
+          "label": "",
+          "original": "P5=P0*P5P0",
+          "generated": "P5=QBIT(QBIT((P0*P5P0)))"
+        },
+        {
+          "label": "",
+          "original": "P5P5P = (1.-G3*(V5VC5**2))**(G5)",
+          "generated": "P5P5P=QBIT(QBIT((QBIT((QBIT(1.0D0)-QBIT((G3*QBIT((V5VC5**2))))))**G5)))"
+        },
+        {
+          "label": "",
+          "original": "P5P0P = P5P0*P5P5P",
+          "generated": "P5P0P=QBIT(QBIT((P5P0*P5P5P)))"
+        },
+        {
+          "label": "",
+          "original": "VC5VC0 = (VCR5/VCR)**2",
+          "generated": "VC5VC0=QBIT(QBIT((QBIT((VCR5/VCR))**2)))"
+        },
+        {
+          "label": "",
+          "original": "P5P0G = P5P0**(G2/G)",
+          "generated": "P5P0G=QBIT(QBIT((P5P0**QBIT((G2/G)))))"
+        },
+        {
+          "label": "",
+          "original": "P5P0PG = P5P0P**(G2/G)",
+          "generated": "P5P0PG=QBIT(QBIT((P5P0P**QBIT((G2/G)))))"
+        },
+        {
+          "label": "",
+          "original": "Z = 1./P5P0",
+          "generated": "Z=QBIT(QBIT((QBIT(1.0D0)/P5P0)))"
+        },
+        {
+          "label": "",
+          "original": "Z1 = 1./P5P0P",
+          "generated": "Z1=QBIT(QBIT((QBIT(1.0D0)/P5P0P)))"
+        },
+        {
+          "label": "",
+          "original": "H1=1.-VC5VC0",
+          "generated": "H1=QBIT(QBIT((QBIT(1.0D0)-VC5VC0)))"
+        },
+        {
+          "label": "",
+          "original": "ETAS=H1/(1.-P5P0PG)",
+          "generated": "ETAS=QBIT(QBIT((H1/QBIT((QBIT(1.0D0)-P5P0PG)))))"
+        },
+        {
+          "label": "",
+          "original": "ETAT=H1/(1.-P5P0G)",
+          "generated": "ETAT=QBIT(QBIT((H1/QBIT((QBIT(1.0D0)-P5P0G)))))"
+        },
+        {
+          "label": "",
+          "original": "IF(MODE.EQ.0.OR.MODE.EQ.1.OR.MODE.EQ.3.OR.MODE.EQ.4) GO TO 40",
+          "generated": "IF((((MODE.EQ.0)).OR.((MODE.EQ.1)).OR.((MODE.EQ.3)).OR.((MODE.EQ.4)))) GO TO 40"
+        },
+        {
+          "label": "",
+          "original": "ET= ETAS",
+          "generated": "ET=QBIT(ETAS)"
+        },
+        {
+          "label": "",
+          "original": "IF(ITEST.EQ.2) ET= ETAT",
+          "generated": "IF((ITEST.EQ.2)) ET=QBIT(ETAT)"
+        },
+        {
+          "label": "",
+          "original": "IF(K.EQ.5) GO TO 30",
+          "generated": "IF((K.EQ.5)) GO TO 30"
+        },
+        {
+          "label": "",
+          "original": "IF((ETAD-ET).GT..1) GO TO 90",
+          "generated": "IF((QBIT((ETAD-ET)).GT.QBIT(0.1D0))) GO TO 90"
+        },
+        {
+          "label": "30",
+          "original": "PR=Z1",
+          "generated": "PR=QBIT(Z1)"
+        },
+        {
+          "label": "",
+          "original": "IF(ITEST.EQ.2) PR=Z",
+          "generated": "IF((ITEST.EQ.2)) PR=QBIT(Z)"
+        },
+        {
+          "label": "",
+          "original": "IF(L.EQ.5) GO TO 40",
+          "generated": "IF((L.EQ.5)) GO TO 40"
+        },
+        {
+          "label": "",
+          "original": "IF(H1.LE.0..OR.W1.LE.0..OR.Z.LE.1..OR.Z1.LE.1..OR.ETAT.LE.0..OR.ETAS.LE.0..OR.ETAT.GT.1..OR.ETAS.GT.1.) THEN",
+          "generated": "IF((((H1.LE.QBIT(0.0D0))).OR.((W1.LE.QBIT(0.0D0))).OR.((Z.LE.QBIT(1.0D0))).OR.((Z1.LE.QBIT(1.0D0))).OR.((ETAT.LE.QBIT(0.0D0))).OR.((ETAS.LE.QBIT(0.0D0))).OR.((ETAT.GT.QBIT(1.0D0))).OR.((ETAS.GT.QBIT(1.0D0))))) THEN"
+        },
+        {
+          "label": "",
+          "original": "IF(MODE.EQ.3.OR.MODE.EQ.4.OR.MODE.EQ.5) GO TO 41",
+          "generated": "IF((((MODE.EQ.3)).OR.((MODE.EQ.4)).OR.((MODE.EQ.5)))) GO TO 41"
+        },
+        {
+          "label": "",
+          "original": "THETCR=G4*R*T0/48247.36",
+          "generated": "THETCR=QBIT(QBIT((QBIT((QBIT((G4*R))*T0))/QBIT(48247.36D0))))"
+        },
+        {
+          "label": "",
+          "original": "STHETA = SQRT(THETCR)",
+          "generated": "STHETA=QBIT(QBIT(SQRT(THETCR)))"
+        },
+        {
+          "label": "",
+          "original": "DELTA=P0/101325.",
+          "generated": "DELTA=QBIT(QBIT((P0/QBIT(101325.0D0))))"
+        },
+        {
+          "label": "",
+          "original": "XNOTH= 100.*U3/3.14159/D3/STHETA",
+          "generated": "XNOTH=QBIT(QBIT((QBIT((QBIT((QBIT((QBIT(100.0D0)*U3))/QBIT(3.14159D0)))/D3))/STHETA)))"
+        },
+        {
+          "label": "",
+          "original": "XN= XNOTH*STHETA",
+          "generated": "XN=QBIT(QBIT((XNOTH*STHETA)))"
+        },
+        {
+          "label": "",
+          "original": "DHTCR=H1*48247.36/G3",
+          "generated": "DHTCR=QBIT(QBIT((QBIT((H1*QBIT(48247.36D0)))/G3)))"
+        },
+        {
+          "label": "",
+          "original": "DELH=DHTCR*THETCR",
+          "generated": "DELH=QBIT(QBIT((DHTCR*THETCR)))"
+        },
+        {
+          "label": "",
+          "original": "DHIDS = (1.-P5P0PG)*G5*R*T0",
+          "generated": "DHIDS=QBIT(QBIT((QBIT((QBIT((QBIT((QBIT(1.0D0)-P5P0PG))*G5))*R))*T0)))"
+        },
+        {
+          "label": "",
+          "original": "DHIDT = (1.-P5P0G)*G5*R*T0",
+          "generated": "DHIDT=QBIT(QBIT((QBIT((QBIT((QBIT((QBIT(1.0D0)-P5P0G))*G5))*R))*T0)))"
+        },
+        {
+          "label": "",
+          "original": "EQPRS = 1./(1.-DHIDS/289484.2/THETCR)**3.5",
+          "generated": "EQPRS=QBIT(QBIT((QBIT(1.0D0)/QBIT((QBIT((QBIT(1.0D0)-QBIT((QBIT((DHIDS/QBIT(289484.2D0)))/THETCR))))**QBIT(3.5D0))))))"
+        },
+        {
+          "label": "",
+          "original": "EQPRT = 1./(1.-DHIDT/289484.2/THETCR)**3.5",
+          "generated": "EQPRT=QBIT(QBIT((QBIT(1.0D0)/QBIT((QBIT((QBIT(1.0D0)-QBIT((QBIT((DHIDT/QBIT(289484.2D0)))/THETCR))))**QBIT(3.5D0))))))"
+        },
+        {
+          "label": "",
+          "original": "XNU=U3/SQRT(2.*DHIDS)",
+          "generated": "XNU=QBIT(QBIT((U3/QBIT(SQRT(QBIT((QBIT(2.0D0)*DHIDS)))))))"
+        },
+        {
+          "label": "",
+          "original": "WTOP= W1*100.**2*SQRT(T0)/P0",
+          "generated": "WTOP=QBIT(QBIT((QBIT((QBIT((W1*QBIT((QBIT(100.0D0)**2))))*QBIT(SQRT(T0))))/P0)))"
+        },
+        {
+          "label": "",
+          "original": "TOR= DELH*W1*9.549274/XN",
+          "generated": "TOR=QBIT(QBIT((QBIT((QBIT((DELH*W1))*QBIT(9.549274D0)))/XN)))"
+        },
+        {
+          "label": "",
+          "original": "TOP= TOR*1.E+06/P0",
+          "generated": "TOP=QBIT(QBIT((QBIT((TOR*QBIT(1000000.0D0)))/P0)))"
+        },
+        {
+          "label": "",
+          "original": "ELAM = DELH/U3**2",
+          "generated": "ELAM=QBIT(QBIT((DELH/QBIT((U3**2)))))"
+        },
+        {
+          "label": "",
+          "original": "RHO5P = P5P0*P0/VCR5**2*2.*G4",
+          "generated": "RHO5P=QBIT(QBIT((QBIT((QBIT((QBIT((P5P0*P0))/QBIT((VCR5**2))))*QBIT(2.0D0)))*G4)))"
+        },
+        {
+          "label": "",
+          "original": "P = DELH*W1/1000.",
+          "generated": "P=QBIT(QBIT((QBIT((DELH*W1))/QBIT(1000.0D0))))"
+        },
+        {
+          "label": "41",
+          "original": "THETCR=G4*R*T0/16141.4357",
+          "generated": "THETCR=QBIT(QBIT((QBIT((QBIT((G4*R))*T0))/QBIT(16141.4357D0))))"
+        },
+        {
+          "label": "",
+          "original": "STHETA = SQRT(THETCR)",
+          "generated": "STHETA=QBIT(QBIT(SQRT(THETCR)))"
+        },
+        {
+          "label": "",
+          "original": "DELTA=P0/2116.22",
+          "generated": "DELTA=QBIT(QBIT((P0/QBIT(2116.22D0))))"
+        },
+        {
+          "label": "",
+          "original": "XNOTH=720.*U3/3.14159/D3/STHETA",
+          "generated": "XNOTH=QBIT(QBIT((QBIT((QBIT((QBIT((QBIT(720.0D0)*U3))/QBIT(3.14159D0)))/D3))/STHETA)))"
+        },
+        {
+          "label": "",
+          "original": "XN= XNOTH*STHETA",
+          "generated": "XN=QBIT(QBIT((XNOTH*STHETA)))"
+        },
+        {
+          "label": "",
+          "original": "DHTCR=H1*16141.4357/G3/XJ",
+          "generated": "DHTCR=QBIT(QBIT((QBIT((QBIT((H1*QBIT(16141.4357D0)))/G3))/XJ)))"
+        },
+        {
+          "label": "",
+          "original": "DELH=DHTCR*THETCR",
+          "generated": "DELH=QBIT(QBIT((DHTCR*THETCR)))"
+        },
+        {
+          "label": "",
+          "original": "DHIDS = (1.-P5P0PG)*G5*R*T0/XJ",
+          "generated": "DHIDS=QBIT(QBIT((QBIT((QBIT((QBIT((QBIT((QBIT(1.0D0)-P5P0PG))*G5))*R))*T0))/XJ)))"
+        },
+        {
+          "label": "",
+          "original": "DHIDT = (1.-P5P0G)*G5*R*T0/XJ",
+          "generated": "DHIDT=QBIT(QBIT((QBIT((QBIT((QBIT((QBIT((QBIT(1.0D0)-P5P0G))*G5))*R))*T0))/XJ)))"
+        },
+        {
+          "label": "",
+          "original": "EQPRS = 1./(1.-DHIDS/124.4808/THETCR)**3.5",
+          "generated": "EQPRS=QBIT(QBIT((QBIT(1.0D0)/QBIT((QBIT((QBIT(1.0D0)-QBIT((QBIT((DHIDS/QBIT(124.4808D0)))/THETCR))))**QBIT(3.5D0))))))"
+        },
+        {
+          "label": "",
+          "original": "EQPRT = 1./(1.-DHIDT/124.4808/THETCR)**3.5",
+          "generated": "EQPRT=QBIT(QBIT((QBIT(1.0D0)/QBIT((QBIT((QBIT(1.0D0)-QBIT((QBIT((DHIDT/QBIT(124.4808D0)))/THETCR))))**QBIT(3.5D0))))))"
+        },
+        {
+          "label": "",
+          "original": "XNU=U3/SQRT(2.*GR*XJ*DHIDS)",
+          "generated": "XNU=QBIT(QBIT((U3/QBIT(SQRT(QBIT((QBIT((QBIT((QBIT(2.0D0)*GR))*XJ))*DHIDS)))))))"
+        },
+        {
+          "label": "",
+          "original": "WTOP=W1*SQRT(T0)*144./P0",
+          "generated": "WTOP=QBIT(QBIT((QBIT((QBIT((W1*QBIT(SQRT(T0))))*QBIT(144.0D0)))/P0)))"
+        },
+        {
+          "label": "",
+          "original": "TOR= DELH*W1/1.12164E-05/XN",
+          "generated": "TOR=QBIT(QBIT((QBIT((QBIT((DELH*W1))/QBIT(1.12164D-05)))/XN)))"
+        },
+        {
+          "label": "",
+          "original": "TOP= TOR*144./P0",
+          "generated": "TOP=QBIT(QBIT((QBIT((TOR*QBIT(144.0D0)))/P0)))"
+        },
+        {
+          "label": "",
+          "original": "ELAM = DELH*GR*XJ/U3**2",
+          "generated": "ELAM=QBIT(QBIT((QBIT((QBIT((DELH*GR))*XJ))/QBIT((U3**2)))))"
+        },
+        {
+          "label": "",
+          "original": "RHO5P = P5P0*P0*2.*GR*G4/VCR5**2",
+          "generated": "RHO5P=QBIT(QBIT((QBIT((QBIT((QBIT((QBIT((P5P0*P0))*QBIT(2.0D0)))*GR))*G4))/QBIT((VCR5**2)))))"
+        },
+        {
+          "label": "",
+          "original": "P = DELH*W1*XJ/550.",
+          "generated": "P=QBIT(QBIT((QBIT((QBIT((DELH*W1))*XJ))/QBIT(550.0D0))))"
+        },
+        {
+          "label": "43",
+          "original": "PRS= 1./EQPRS",
+          "generated": "PRS=QBIT(QBIT((QBIT(1.0D0)/EQPRS)))"
+        },
+        {
+          "label": "",
+          "original": "EPS=(G1/2.)**(G5)*.7395945/G",
+          "generated": "EPS=QBIT(QBIT((QBIT((QBIT((QBIT((G1/QBIT(2.0D0)))**G5))*QBIT(0.7395945D0)))/G)))"
+        },
+        {
+          "label": "",
+          "original": "WTHODE=W1*STHETA*EPS/DELTA",
+          "generated": "WTHODE=QBIT(QBIT((QBIT((QBIT((W1*STHETA))*EPS))/DELTA)))"
+        },
+        {
+          "label": "",
+          "original": "EQTOR= TOR*EPS/DELTA",
+          "generated": "EQTOR=QBIT(QBIT((QBIT((TOR*EPS))/DELTA)))"
+        },
+        {
+          "label": "",
+          "original": "WNODE=WTHODE*XNOTH",
+          "generated": "WNODE=QBIT(QBIT((WTHODE*XNOTH)))"
+        },
+        {
+          "label": "",
+          "original": "DELHOT=DELH/T0",
+          "generated": "DELHOT=QBIT(QBIT((DELH/T0)))"
+        },
+        {
+          "label": "",
+          "original": "XNOT= XN/SQRT(T0)",
+          "generated": "XNOT=QBIT(QBIT((XN/QBIT(SQRT(T0)))))"
+        },
+        {
+          "label": "",
+          "original": "RHO5RT = P5P5P**(1./G)",
+          "generated": "RHO5RT=QBIT(QBIT((P5P5P**QBIT((QBIT(1.0D0)/G)))))"
+        },
+        {
+          "label": "",
+          "original": "RHO5 = RHO5RT*RHO5P",
+          "generated": "RHO5=QBIT(QBIT((RHO5RT*RHO5P)))"
+        },
+        {
+          "label": "",
+          "original": "CAPQ = W1/RHO5",
+          "generated": "CAPQ=QBIT(QBIT((W1/RHO5)))"
+        },
+        {
+          "label": "",
+          "original": "SCAPQ = SQRT(CAPQ)",
+          "generated": "SCAPQ=QBIT(QBIT(SQRT(CAPQ)))"
+        },
+        {
+          "label": "",
+          "original": "IF(MODE.EQ.3.OR.MODE.EQ.4.OR.MODE.EQ.5) GO TO 42",
+          "generated": "IF((((MODE.EQ.3)).OR.((MODE.EQ.4)).OR.((MODE.EQ.5)))) GO TO 42"
+        },
+        {
+          "label": "",
+          "original": "XNS=XN*.10472*SCAPQ/(DHIDT**.75)",
+          "generated": "XNS=QBIT(QBIT((QBIT((QBIT((XN*QBIT(0.10472D0)))*SCAPQ))/QBIT((DHIDT**QBIT(0.75D0))))))"
+        },
+        {
+          "label": "42",
+          "original": "XNS=XN*SCAPQ/((XJ*DHIDT)**.75)",
+          "generated": "XNS=QBIT(QBIT((QBIT((XN*SCAPQ))/QBIT((QBIT((XJ*DHIDT))**QBIT(0.75D0))))))"
+        },
+        {
+          "label": "",
+          "original": "IF(IT.EQ.3) GO TO 44",
+          "generated": "IF((IT.EQ.3)) GO TO 44"
+        },
+        {
+          "label": "",
+          "original": "AL1=AL1/T",
+          "generated": "AL1=QBIT(QBIT((AL1/T)))"
+        },
+        {
+          "label": "",
+          "original": "AL2=AL2/T",
+          "generated": "AL2=QBIT(QBIT((AL2/T)))"
+        },
+        {
+          "label": "",
+          "original": "XI3 = XI3/T",
+          "generated": "XI3=QBIT(QBIT((XI3/T)))"
+        },
+        {
+          "label": "",
+          "original": "AL3=AL3/T",
+          "generated": "AL3=QBIT(QBIT((AL3/T)))"
+        },
+        {
+          "label": "",
+          "original": "B3=B3/T",
+          "generated": "B3=QBIT(QBIT((B3/T)))"
+        },
+        {
+          "label": "",
+          "original": "B4=B4/T",
+          "generated": "B4=QBIT(QBIT((B4/T)))"
+        },
+        {
+          "label": "",
+          "original": "IF(MODE.EQ.1.OR.MODE.EQ.4) WRITE(6,505) V1VC1,XNS,PRS,XNU,ETAT,ETAS,DHTCR,WTHODE,EQPRS,EQPRT",
+          "generated": "IF((((MODE.EQ.1)).OR.((MODE.EQ.4)))) WRITE(6,505)LEGACY_G13(V1VC1),LEGACY_G13(XNS),LEGACY_G13(PRS),LEGACY_G13(XNU),LEGACY_G13(ETAT),LEGACY_G13(ETAS),LEGACY_G13(DHTCR),LEGACY_G13(WTHODE),LEGACY_G13(EQPRS),LEGACY_G13(EQPRT)"
+        },
+        {
+          "label": "",
+          "original": "IF(MODE.EQ.0.OR.MODE.EQ.3) GO TO 46",
+          "generated": "IF((((MODE.EQ.0)).OR.((MODE.EQ.3)))) GO TO 46"
+        },
+        {
+          "label": "",
+          "original": "IF(MODE.EQ.1.OR.MODE.EQ.4) GO TO 48",
+          "generated": "IF((((MODE.EQ.1)).OR.((MODE.EQ.4)))) GO TO 48"
+        },
+        {
+          "label": "",
+          "original": "IF(ITEST.EQ.1) WRITE(6,525) ETAD,PDSGN",
+          "generated": "IF((ITEST.EQ.1)) WRITE(6,525) ETAD,PDSGN"
+        },
+        {
+          "label": "",
+          "original": "IF(ITEST.EQ.2) WRITE(6,526) ETAD,PDSGN",
+          "generated": "IF((ITEST.EQ.2)) WRITE(6,526) ETAD,PDSGN"
+        },
+        {
+          "label": "",
+          "original": "WRITE(6,500)V1VC1,AL1,V3VC3,W4WC4,W5WC5,VUVC1,AL2,VUVC3,WUWC4,WXWC5,VRVC1,AL3,VRVC3,WXWC4,V5VC5,V0VC0,B3,W3WC3,B4,VUVC5,V2VC2,XI3,WUWC3,B5,VXVC5,VRVC2,VCR,WRWC3,VCR5,AL5",
+          "generated": "WRITE(6,500)LEGACY_G13(V1VC1),LEGACY_G13(AL1),LEGACY_G13(V3VC3),LEGACY_G13(W4WC4),LEGACY_G13(W5WC5),LEGACY_G13(VUVC1),LEGACY_G13(AL2),LEGACY_G13(VUVC3),LEGACY_G13(WUWC4),LEGACY_G13(WXWC5),LEGACY_G13(VRVC1),LEGACY_G13(AL3),LEGACY_G13(VRVC3),LEGACY_G13(WXWC4),LEGACY_G13(V5VC5),LEGACY_G13(V0VC0),LEGACY_G13(B3),LEGACY_G13(W3WC3),LEGACY_G13(B4),LEGACY_G13(VUVC5),LEGACY_G13(V2VC2),LEGACY_G13(XI3),LEGACY_G13(WUWC3),LEGACY_G13(B5),LEGACY_G13(VXVC5),LEGACY_G13(VRVC2),LEGACY_G13(VCR),LEGACY_G13(WRWC3),LEGACY_G13(VCR5),LEGACY_G13(AL5)"
+        },
+        {
+          "label": "",
+          "original": "WRITE(6,501)WTHODE,EQPRS,Z1,WTOP,W1,DHTCR,ETAS,XNU,DELHOT,DELH,XNOTH,ETAT,XNS,XNOT,ELAM,EQTOR,EQPRT,Z,TOP,TOR,XN,P,WNODE,T5,P5",
+          "generated": "WRITE(6,501)LEGACY_G13(WTHODE),LEGACY_G13(EQPRS),LEGACY_G13(Z1),LEGACY_G13(WTOP),LEGACY_G13(W1),LEGACY_G13(DHTCR),LEGACY_G13(ETAS),LEGACY_G13(XNU),LEGACY_G13(DELHOT),LEGACY_G13(DELH),LEGACY_G13(XNOTH),LEGACY_G13(ETAT),LEGACY_G13(XNS),LEGACY_G13(XNOT),LEGACY_G13(ELAM),LEGACY_G13(EQTOR),LEGACY_G13(EQPRT),LEGACY_G13(Z),LEGACY_G13(TOP),LEGACY_G13(TOR),LEGACY_G13(XN),LEGACY_G13(P),LEGACY_G13(WNODE),LEGACY_G13(T5),LEGACY_G13(P5)"
+        },
+        {
+          "label": "",
+          "original": "IF(MODE.EQ.2.OR.MODE.EQ.5) GO TO 51",
+          "generated": "IF((((MODE.EQ.2)).OR.((MODE.EQ.5)))) GO TO 51"
+        },
+        {
+          "label": "",
+          "original": "IF(WXWC4.EQ.1.) GO TO 59",
+          "generated": "IF((WXWC4.EQ.QBIT(1.0D0))) GO TO 59"
+        },
+        {
+          "label": "",
+          "original": "IF(J.EQ.2) GO TO 57",
+          "generated": "IF((J.EQ.2)) GO TO 57"
+        },
+        {
+          "label": "",
+          "original": "IF(IT.GE.2) GO TO 55",
+          "generated": "IF((IT.GE.2)) GO TO 55"
+        },
+        {
+          "label": "",
+          "original": "AL1=ALX*T",
+          "generated": "AL1=QBIT(QBIT((ALX*T)))"
+        },
+        {
+          "label": "",
+          "original": "B4=B4X*T",
+          "generated": "B4=QBIT(QBIT((B4X*T)))"
+        },
+        {
+          "label": "",
+          "original": "V1VC1=V1VC1+DELV",
+          "generated": "V1VC1=QBIT(QBIT((V1VC1+DELV)))"
+        },
+        {
+          "label": "",
+          "original": "VTINY=8.*EPSILON(VMAX)*MAX(1.,ABS(VMAX))",
+          "generated": "VTINY=QBIT(QBIT((QBIT((QBIT(8.0D0)*1.4901161193847656D-08))*QBIT(MAX(QBIT(1.0D0),QBIT(ABS(VMAX)))))))"
+        },
+        {
+          "label": "",
+          "original": "IF(V1VC1.GT.VMAX+VTINY) GO TO 51",
+          "generated": "IF((V1VC1.GT.QBIT((VMAX+VTINY)))) GO TO 51"
+        },
+        {
+          "label": "",
+          "original": "V1VC1=MIN(V1VC1,VMAX)",
+          "generated": "V1VC1=QBIT(QBIT(MIN(V1VC1,VMAX)))"
+        },
+        {
+          "label": "51",
+          "original": "AL1=ALX",
+          "generated": "AL1=QBIT(ALX)"
+        },
+        {
+          "label": "",
+          "original": "DELV= DELV1",
+          "generated": "DELV=QBIT(DELV1)"
+        },
+        {
+          "label": "",
+          "original": "B4= B4X",
+          "generated": "B4=QBIT(B4X)"
+        },
+        {
+          "label": "",
+          "original": "GIV=YGIV*COS(B4X*T)",
+          "generated": "GIV=QBIT(QBIT((YGIV*QBIT(COS(QBIT((B4X*T)))))))"
+        },
+        {
+          "label": "",
+          "original": "Y= Y+DELY",
+          "generated": "Y=QBIT(QBIT((Y+DELY)))"
+        },
+        {
+          "label": "",
+          "original": "YTINY=8.*EPSILON(YMAX)*MAX(1.,ABS(YMAX))",
+          "generated": "YTINY=QBIT(QBIT((QBIT((QBIT(8.0D0)*1.4901161193847656D-08))*QBIT(MAX(QBIT(1.0D0),QBIT(ABS(YMAX)))))))"
+        },
+        {
+          "label": "",
+          "original": "IF(Y.GT.YMAX+YTINY) GO TO 51",
+          "generated": "IF((Y.GT.QBIT((YMAX+YTINY)))) GO TO 51"
+        },
+        {
+          "label": "",
+          "original": "Y=MIN(Y,YMAX)",
+          "generated": "Y=QBIT(QBIT(MIN(Y,YMAX)))"
+        },
+        {
+          "label": "",
+          "original": "W4WC4= Y",
+          "generated": "W4WC4=QBIT(Y)"
+        },
+        {
+          "label": "",
+          "original": "PW4= SUBR(Y,G)",
+          "generated": "PW4=QBIT(QBIT(SUBR(Y,G)))"
+        },
+        {
+          "label": "",
+          "original": "AX= XK*Y*Y+CX",
+          "generated": "AX=QBIT(QBIT((QBIT((QBIT((XK*Y))*Y))+CX)))"
+        },
+        {
+          "label": "",
+          "original": "BX= 1.-G3*Y*Y",
+          "generated": "BX=QBIT(QBIT((QBIT(1.0D0)-QBIT((QBIT((G3*Y))*Y)))))"
+        },
+        {
+          "label": "",
+          "original": "P4P4ID= (1.-G3*(AX/BX))**G5",
+          "generated": "P4P4ID=QBIT(QBIT((QBIT((QBIT(1.0D0)-QBIT((G3*QBIT((AX/BX))))))**G5)))"
+        },
+        {
+          "label": "",
+          "original": "COSB4=GIV/(PW4*P4P4ID)",
+          "generated": "COSB4=QBIT(QBIT((GIV/QBIT((PW4*P4P4ID)))))"
+        },
+        {
+          "label": "",
+          "original": "B4= ACOS(COSB4)",
+          "generated": "B4=QBIT(QBIT(ACOS(COSB4)))"
+        },
+        {
+          "label": "",
+          "original": "B4= -B4",
+          "generated": "B4=QBIT(-(B4))"
+        },
+        {
+          "label": "",
+          "original": "COSB4= COS(B4)",
+          "generated": "COSB4=QBIT(QBIT(COS(B4)))"
+        },
+        {
+          "label": "",
+          "original": "SINB4= SIN(B4)",
+          "generated": "SINB4=QBIT(QBIT(SIN(B4)))"
+        },
+        {
+          "label": "",
+          "original": "B4= B4/T",
+          "generated": "B4=QBIT(QBIT((B4/T)))"
+        },
+        {
+          "label": "",
+          "original": "IF(J.EQ.2) GO TO 58",
+          "generated": "IF((J.EQ.2)) GO TO 58"
+        },
+        {
+          "label": "56",
+          "original": "IF(J.EQ.2) GO TO 57",
+          "generated": "IF((J.EQ.2)) GO TO 57"
+        },
+        {
+          "label": "",
+          "original": "Y= Y-DELY",
+          "generated": "Y=QBIT(QBIT((Y-DELY)))"
+        },
+        {
+          "label": "",
+          "original": "DELL= DELY/5.",
+          "generated": "DELL=QBIT(QBIT((DELY/QBIT(5.0D0))))"
+        },
+        {
+          "label": "",
+          "original": "J= 2",
+          "generated": "J=2"
+        },
+        {
+          "label": "57",
+          "original": "Y= Y+DELL",
+          "generated": "Y=QBIT(QBIT((Y+DELL)))"
+        },
+        {
+          "label": "58",
+          "original": "HB= W4WC4*COSB4",
+          "generated": "HB=QBIT(QBIT((W4WC4*COSB4)))"
+        },
+        {
+          "label": "",
+          "original": "IF(ABS((HB-HA)/HA).LT..02) GO TO 59",
+          "generated": "IF((QBIT(ABS(QBIT((QBIT((HB-HA))/HA)))).LT.QBIT(0.02D0))) GO TO 59"
+        },
+        {
+          "label": "",
+          "original": "DELL= DELL/2.",
+          "generated": "DELL=QBIT(QBIT((DELL/QBIT(2.0D0))))"
+        },
+        {
+          "label": "400",
+          "original": "FORMAT(7HK GAMMA,2X,G13.5,7H    P0,,2X,G13.5,6H    A1,2X,G13.5,2X,7HALPHA-1,2X,G13.5,7H BETA-4,2X,G13.5,5H   PD,2X,G13.5/7H      R,2X,G13.5,7H    T0,,2X,G13.5,6H    A3,2X,G13.5,2X,7H    BL1,2X,G13.5,7H    BL4,2X,G13.5,5H    K,2X,G13.5 /7H     D3,2X,G13.5,7H     A0,2X,G13.5,6H    A5,2X,G13.5,2X,7H     U3,2X,G13.5,7H  U4/U3,2X,G13.5,5H   ZZ,2X,G13.5 )",
+          "generated": "FORMAT(7HK GAMMA,2X,A13,7H    P0,,2X,A13,6H    A1,2X,A13,2X,7HALPHA-1,2X,A13,7H BETA-4,2X,A13,5H   PD,2X,A13/7H      R,2X,A13,7H    T0,,2X,A13,6H    A3,2X,A13,2X,7H    BL1,2X,A13,7H    BL4,2X,A13,5H    K,2X,A13 /7H     D3,2X,A13,7H     A0,2X,A13,6H    A5,2X,A13,2X,7H     U3,2X,A13,7H  U4/U3,2X,A13,5H   ZZ,2X,A13 )"
+        },
+        {
+          "label": "500",
+          "original": "FORMAT(/ 50X,21HVELOCITIES AND ANGLES/12H V/VCR)1    ,G13.5,1X,11HALPHA-1    ,G13.5,1X,11HV/VCR)3    ,G13.5,1X,11HW/WCR)4    ,G13.5,1X,11HW/WCR)5    ,G13.5/12H VU/VCR)1   ,G13.5,1X,11HALPHA-2    ,G13.5,1X,11HVU/VCR)3   ,G13.5,1X,11HWU/WCR)4   ,G13.5,1X,11HWX/WCR)5   ,G13.5/12H VR/VCR)1   ,G13.5,1X,11HALPHA-3    ,G13.5,1X,11HVR/VCR)3   ,G13.5,1X,11HWX/WCR)4   ,G13.5,1X,11HV/VCR)5    ,G13.5/12H V/VCR)0    ,G13.5,1X,11HBETA-3     ,G13.5,1X,11HW/WCR)3    ,G13.5,1X,11HBETA-4     ,G13.5,1X,11HVU/VCR)5   ,G13.5/12H V/VCR)2    ,G13.5,1X,11HI-3        ,G13.5,1X,11HWU/WCR)3   ,G13.5,1X,11HBETA-5     ,G13.5,1X,11HVX/VCR)5   ,G13.5/12H VR/VCR)2   ,G13.5,1X,11HVCR)3      ,G13.5,1X,11HWR/WCR)3   ,G13.5,1X,11HVCR)5      ,G13.5,1X,11HALPHA-5    ,G13.5)",
+          "generated": "FORMAT(/ 50X,21HVELOCITIES AND ANGLES/12H V/VCR)1    ,A13,1X,11HALPHA-1    ,A13,1X,11HV/VCR)3    ,A13,1X,11HW/WCR)4    ,A13,1X,11HW/WCR)5    ,A13/12H VU/VCR)1   ,A13,1X,11HALPHA-2    ,A13,1X,11HVU/VCR)3   ,A13,1X,11HWU/WCR)4   ,A13,1X,11HWX/WCR)5   ,A13/12H VR/VCR)1   ,A13,1X,11HALPHA-3    ,A13,1X,11HVR/VCR)3   ,A13,1X,11HWX/WCR)4   ,A13,1X,11HV/VCR)5    ,A13/12H V/VCR)0    ,A13,1X,11HBETA-3     ,A13,1X,11HW/WCR)3    ,A13,1X,11HBETA-4     ,A13,1X,11HVU/VCR)5   ,A13/12H V/VCR)2    ,A13,1X,11HI-3        ,A13,1X,11HWU/WCR)3   ,A13,1X,11HBETA-5     ,A13,1X,11HVX/VCR)5   ,A13/12H VR/VCR)2   ,A13,1X,11HVCR)3      ,A13,1X,11HWR/WCR)3   ,A13,1X,11HVCR)5      ,A13,1X,11HALPHA-5    ,A13)"
+        },
+        {
+          "label": "501",
+          "original": "FORMAT(50X,19HOVERALL PERFORMANCE/12H EQ-W       ,G13.5,1X,11HEQ-P0,/P5  ,G13.5,1X,11HP0,/P5     ,G13.5,1X,11HWT/P       ,G13.5,1X,11HW          ,G13.5/12H EQ-DEL-H   ,G13.5,1X,11HETA-S      ,G13.5,1X,11HNU         ,G13.5,1X,11HDEL-H/T    ,G13.5,1X,11HDEL-H      ,G13.5/12H EQ-N       ,G13.5,1X,11HETA-T      ,G13.5,1X,11HNS         ,G13.5,1X,11HN/T        ,G13.5,1X,11HW.F.       ,G13.5/12H EQ-TOR     ,G13.5,1X,11HEQ-P0,/P5, ,G13.5,1X,11HP0,/P5,    ,G13.5,1X,11HTOR/P      ,G13.5,1X,11HTOR        ,G13.5/12H N          ,G13.5,1X,11HP          ,G13.5,1X,11HWN/DEL     ,G13.5,1X,11HT5,        ,G13.5,1X,11HP5,        ,G13.5)",
+          "generated": "FORMAT(50X,19HOVERALL PERFORMANCE/12H EQ-W       ,A13,1X,11HEQ-P0,/P5  ,A13,1X,11HP0,/P5     ,A13,1X,11HWT/P       ,A13,1X,11HW          ,A13/12H EQ-DEL-H   ,A13,1X,11HETA-S      ,A13,1X,11HNU         ,A13,1X,11HDEL-H/T    ,A13,1X,11HDEL-H      ,A13/12H EQ-N       ,A13,1X,11HETA-T      ,A13,1X,11HNS         ,A13,1X,11HN/T        ,A13,1X,11HW.F.       ,A13/12H EQ-TOR     ,A13,1X,11HEQ-P0,/P5, ,A13,1X,11HP0,/P5,    ,A13,1X,11HTOR/P      ,A13,1X,11HTOR        ,A13/12H N          ,A13,1X,11HP          ,A13,1X,11HWN/DEL     ,A13,1X,11HT5,        ,A13,1X,11HP5,        ,A13)"
+        },
+        {
+          "label": "505",
+          "original": "FORMAT(10G13.5)",
+          "generated": "FORMAT(10A13)"
+        },
+        {
+          "label": "100",
+          "original": "XK1= XK",
+          "generated": "XK1=QBIT(XK)"
+        },
+        {
+          "label": "",
+          "original": "DIF1= ETA-ETAD",
+          "generated": "DIF1=QBIT(QBIT((ETA-ETAD)))"
+        },
+        {
+          "label": "",
+          "original": "XK= XK+.005",
+          "generated": "XK=QBIT(QBIT((XK+QBIT(0.005D0))))"
+        },
+        {
+          "label": "101",
+          "original": "XK2= XK",
+          "generated": "XK2=QBIT(XK)"
+        },
+        {
+          "label": "",
+          "original": "DIF2 = ETA-ETAD",
+          "generated": "DIF2=QBIT(QBIT((ETA-ETAD)))"
+        },
+        {
+          "label": "",
+          "original": "IF(DIF2*DIF1) 104,103,102",
+          "generated": "IF(QBIT((DIF2*DIF1))) 104,103,102"
+        },
+        {
+          "label": "102",
+          "original": "XK1= XK2",
+          "generated": "XK1=QBIT(XK2)"
+        },
+        {
+          "label": "",
+          "original": "XK= XK+.005",
+          "generated": "XK=QBIT(QBIT((XK+QBIT(0.005D0))))"
+        },
+        {
+          "label": "",
+          "original": "DIF1= DIF2",
+          "generated": "DIF1=QBIT(DIF2)"
+        },
+        {
+          "label": "103",
+          "original": "XK= XK2",
+          "generated": "XK=QBIT(XK2)"
+        },
+        {
+          "label": "",
+          "original": "K= 5",
+          "generated": "K=5"
+        },
+        {
+          "label": "104",
+          "original": "XK= -(XK2-XK1)/(DIF2-DIF1)*DIF1+XK1",
+          "generated": "XK=QBIT(QBIT((QBIT((QBIT((-(QBIT((XK2-XK1)))/QBIT((DIF2-DIF1))))*DIF1))+XK1)))"
+        },
+        {
+          "label": "10",
+          "original": "PD1=PD",
+          "generated": "PD1=QBIT(PD)"
+        },
+        {
+          "label": "",
+          "original": "DIF1= PR-PDSGN",
+          "generated": "DIF1=QBIT(QBIT((PR-PDSGN)))"
+        },
+        {
+          "label": "",
+          "original": "PD=PD-.005",
+          "generated": "PD=QBIT(QBIT((PD-QBIT(0.005D0))))"
+        },
+        {
+          "label": "11",
+          "original": "PD2=PD",
+          "generated": "PD2=QBIT(PD)"
+        },
+        {
+          "label": "",
+          "original": "DIF2 = PR-PDSGN",
+          "generated": "DIF2=QBIT(QBIT((PR-PDSGN)))"
+        },
+        {
+          "label": "",
+          "original": "IF(DIF2*DIF1) 14,13,12",
+          "generated": "IF(QBIT((DIF2*DIF1))) 14,13,12"
+        },
+        {
+          "label": "12",
+          "original": "PD1=PD2",
+          "generated": "PD1=QBIT(PD2)"
+        },
+        {
+          "label": "",
+          "original": "PD=PD-.005",
+          "generated": "PD=QBIT(QBIT((PD-QBIT(0.005D0))))"
+        },
+        {
+          "label": "",
+          "original": "DIF1= DIF2",
+          "generated": "DIF1=QBIT(DIF2)"
+        },
+        {
+          "label": "13",
+          "original": "PD=PD2",
+          "generated": "PD=QBIT(PD2)"
+        },
+        {
+          "label": "",
+          "original": "L= 5",
+          "generated": "L=5"
+        },
+        {
+          "label": "14",
+          "original": "PD= -(PD2-PD1)/(DIF2-DIF1)*DIF1+PD1",
+          "generated": "PD=QBIT(QBIT((QBIT((QBIT((-(QBIT((PD2-PD1)))/QBIT((DIF2-DIF1))))*DIF1))+PD1)))"
+        },
+        {
+          "label": "",
+          "original": "L= 5",
+          "generated": "L=5"
+        },
+        {
+          "label": "",
+          "original": "NCALL = NCALL+1",
+          "generated": "NCALL=(NCALL+1)"
+        },
+        {
+          "label": "",
+          "original": "IF (IND.NE.1.AND.NCALL.GT.100) GO TO 160",
+          "generated": "IF((((IND.NE.1)).AND.((NCALL.GT.100)))) GO TO 160"
+        },
+        {
+          "label": "10",
+          "original": "NCALL = 1",
+          "generated": "NCALL=1"
+        },
+        {
+          "label": "",
+          "original": "XORIG = XEST",
+          "generated": "XORIG=QBIT(XEST)"
+        },
+        {
+          "label": "",
+          "original": "IF (YCALC.GT.YGIV.AND.JZ.EQ.1) GO TO 20",
+          "generated": "IF((((YCALC.GT.YGIV)).AND.((JZ.EQ.1)))) GO TO 20"
+        },
+        {
+          "label": "",
+          "original": "IND = 2",
+          "generated": "IND=2"
+        },
+        {
+          "label": "",
+          "original": "Y(1) = YCALC",
+          "generated": "Y(1)=QBIT(YCALC)"
+        },
+        {
+          "label": "",
+          "original": "X(1) = 0.",
+          "generated": "X(1)=QBIT(QBIT(0.0D0))"
+        },
+        {
+          "label": "",
+          "original": "XEST = XEST+XDEL",
+          "generated": "XEST=QBIT(QBIT((XEST+XDEL)))"
+        },
+        {
+          "label": "20",
+          "original": "IND = 3",
+          "generated": "IND=3"
+        },
+        {
+          "label": "",
+          "original": "Y(3) = YCALC",
+          "generated": "Y(3)=QBIT(YCALC)"
+        },
+        {
+          "label": "",
+          "original": "X(3) = 0.",
+          "generated": "X(3)=QBIT(QBIT(0.0D0))"
+        },
+        {
+          "label": "",
+          "original": "XEST = XEST-XDEL",
+          "generated": "XEST=QBIT(QBIT((XEST-XDEL)))"
+        },
+        {
+          "label": "30",
+          "original": "IND = 4",
+          "generated": "IND=4"
+        },
+        {
+          "label": "",
+          "original": "Y(2) = YCALC",
+          "generated": "Y(2)=QBIT(YCALC)"
+        },
+        {
+          "label": "",
+          "original": "X(2) = XEST-XORIG",
+          "generated": "X(2)=QBIT(QBIT((XEST-XORIG)))"
+        },
+        {
+          "label": "",
+          "original": "XEST = XEST+XDEL",
+          "generated": "XEST=QBIT(QBIT((XEST+XDEL)))"
+        },
+        {
+          "label": "40",
+          "original": "IND = 5",
+          "generated": "IND=5"
+        },
+        {
+          "label": "",
+          "original": "Y(2) = YCALC",
+          "generated": "Y(2)=QBIT(YCALC)"
+        },
+        {
+          "label": "",
+          "original": "X(2) = XEST-XORIG",
+          "generated": "X(2)=QBIT(QBIT((XEST-XORIG)))"
+        },
+        {
+          "label": "",
+          "original": "XEST = XEST-XDEL",
+          "generated": "XEST=QBIT(QBIT((XEST-XDEL)))"
+        },
+        {
+          "label": "50",
+          "original": "Y(3) = YCALC",
+          "generated": "Y(3)=QBIT(YCALC)"
+        },
+        {
+          "label": "",
+          "original": "X(3) = XEST-XORIG",
+          "generated": "X(3)=QBIT(QBIT((XEST-XORIG)))"
+        },
+        {
+          "label": "60",
+          "original": "Y(1) = YCALC",
+          "generated": "Y(1)=QBIT(YCALC)"
+        },
+        {
+          "label": "",
+          "original": "X(1) = XEST-XORIG",
+          "generated": "X(1)=QBIT(QBIT((XEST-XORIG)))"
+        },
+        {
+          "label": "70",
+          "original": "IF (YGIV.LT.AMIN1(Y(1),Y(2),Y(3))) GO TO (120,130),JZ",
+          "generated": "IF((YGIV.LT.QBIT(AMIN1(QBIT(Y(1)),QBIT(Y(2)),QBIT(Y(3)))))) GO TO (120,130),JZ"
+        },
+        {
+          "label": "80",
+          "original": "IND = 6",
+          "generated": "IND=6"
+        },
+        {
+          "label": "",
+          "original": "DISCR = BPB**2-4.*APA*(CPC-YGIV)",
+          "generated": "DISCR=QBIT(QBIT((QBIT((BPB**2))-QBIT((QBIT((QBIT(4.0D0)*APA))*QBIT((CPC-YGIV)))))))"
+        },
+        {
+          "label": "",
+          "original": "IF (DISCR.LT.0.) GO TO 140",
+          "generated": "IF((DISCR.LT.QBIT(0.0D0))) GO TO 140"
+        },
+        {
+          "label": "",
+          "original": "IF (ABS(400.*APA*(CPC-YGIV)).LE.BPB**2) GO TO 90",
+          "generated": "IF((QBIT(ABS(QBIT((QBIT((QBIT(400.0D0)*APA))*QBIT((CPC-YGIV)))))).LE.QBIT((BPB**2)))) GO TO 90"
+        },
+        {
+          "label": "",
+          "original": "XEST = -BPB-SIGN(SQRT(DISCR),APA)",
+          "generated": "XEST=QBIT(QBIT((-(BPB)-QBIT(SIGN(QBIT(SQRT(DISCR)),APA)))))"
+        },
+        {
+          "label": "",
+          "original": "IF (JZ.EQ.1.AND.APA.GT.0..AND.Y(3).GT.Y(1)) XEST = -BPB+SQRT(DISCR)",
+          "generated": "IF((((JZ.EQ.1)).AND.((APA.GT.QBIT(0.0D0))).AND.((QBIT(Y(3)).GT.QBIT(Y(1)))))) XEST=QBIT(QBIT((-(BPB)+QBIT(SQRT(DISCR)))))"
+        },
+        {
+          "label": "",
+          "original": "IF (JZ.EQ.2.AND.APA.LT.0.) XEST = -BPB-SQRT(DISCR)",
+          "generated": "IF((((JZ.EQ.2)).AND.((APA.LT.QBIT(0.0D0))))) XEST=QBIT(QBIT((-(BPB)-QBIT(SQRT(DISCR)))))"
+        },
+        {
+          "label": "",
+          "original": "XEST = XEST/2./APA",
+          "generated": "XEST=QBIT(QBIT((QBIT((XEST/QBIT(2.0D0)))/APA)))"
+        },
+        {
+          "label": "90",
+          "original": "IF (JZ.EQ.2.AND.BPB.GT.0.) GO TO 130",
+          "generated": "IF((((JZ.EQ.2)).AND.((BPB.GT.QBIT(0.0D0))))) GO TO 130"
+        },
+        {
+          "label": "",
+          "original": "ACB2 = APA/BPB*(CPC-YGIV)/BPB",
+          "generated": "ACB2=QBIT(QBIT((QBIT((QBIT((APA/BPB))*QBIT((CPC-YGIV))))/BPB)))"
+        },
+        {
+          "label": "",
+          "original": "IF (ABS(ACB2).LE.1.E-8) ACB2=0.",
+          "generated": "IF((QBIT(ABS(ACB2)).LE.QBIT(1D-08))) ACB2=QBIT(QBIT(0.0D0))"
+        },
+        {
+          "label": "",
+          "original": "XEST = -(CPC-YGIV)/BPB*(1.+ACB2+2.*ACB2**2)",
+          "generated": "XEST=QBIT(QBIT((QBIT((-(QBIT((CPC-YGIV)))/BPB))*QBIT((QBIT((QBIT(1.0D0)+ACB2))+QBIT((QBIT(2.0D0)*QBIT((ACB2**2)))))))))"
+        },
+        {
+          "label": "100",
+          "original": "IF (XEST.GT.X(3)) GO TO 130",
+          "generated": "IF((XEST.GT.QBIT(X(3)))) GO TO 130"
+        },
+        {
+          "label": "",
+          "original": "IF (XEST.LT.X(1)) GO TO 120",
+          "generated": "IF((XEST.LT.QBIT(X(1)))) GO TO 120"
+        },
+        {
+          "label": "",
+          "original": "XEST = XEST+XORIG",
+          "generated": "XEST=QBIT(QBIT((XEST+XORIG)))"
+        },
+        {
+          "label": "110",
+          "original": "IF(XEST-XORIG.GT.X(3)) GO TO 130",
+          "generated": "IF((QBIT((XEST-XORIG)).GT.QBIT(X(3)))) GO TO 130"
+        },
+        {
+          "label": "",
+          "original": "IF(XEST-XORIG.LT.X(1)) GO TO 120",
+          "generated": "IF((QBIT((XEST-XORIG)).LT.QBIT(X(1)))) GO TO 120"
+        },
+        {
+          "label": "",
+          "original": "Y(2) = YCALC",
+          "generated": "Y(2)=QBIT(YCALC)"
+        },
+        {
+          "label": "",
+          "original": "X(2) = XEST-XORIG",
+          "generated": "X(2)=QBIT(QBIT((XEST-XORIG)))"
+        },
+        {
+          "label": "120",
+          "original": "IND = 5",
+          "generated": "IND=5"
+        },
+        {
+          "label": "",
+          "original": "XEST = X(1)-XDEL+XORIG",
+          "generated": "XEST=QBIT(QBIT((QBIT((QBIT(X(1))-XDEL))+XORIG)))"
+        },
+        {
+          "label": "",
+          "original": "XOSHFT = XEST-XORIG",
+          "generated": "XOSHFT=QBIT(QBIT((XEST-XORIG)))"
+        },
+        {
+          "label": "",
+          "original": "XORIG = XEST",
+          "generated": "XORIG=QBIT(XEST)"
+        },
+        {
+          "label": "",
+          "original": "Y(3) = Y(2)",
+          "generated": "Y(3)=QBIT(QBIT(Y(2)))"
+        },
+        {
+          "label": "",
+          "original": "X(3) = X(2)-XOSHFT",
+          "generated": "X(3)=QBIT(QBIT((QBIT(X(2))-XOSHFT)))"
+        },
+        {
+          "label": "",
+          "original": "Y(2) = Y(1)",
+          "generated": "Y(2)=QBIT(QBIT(Y(1)))"
+        },
+        {
+          "label": "",
+          "original": "X(2) = X(1)-XOSHFT",
+          "generated": "X(2)=QBIT(QBIT((QBIT(X(1))-XOSHFT)))"
+        },
+        {
+          "label": "130",
+          "original": "IND = 4",
+          "generated": "IND=4"
+        },
+        {
+          "label": "",
+          "original": "XEST = X(3)+XDEL+XORIG",
+          "generated": "XEST=QBIT(QBIT((QBIT((QBIT(X(3))+XDEL))+XORIG)))"
+        },
+        {
+          "label": "",
+          "original": "XOSHFT = XEST-XORIG",
+          "generated": "XOSHFT=QBIT(QBIT((XEST-XORIG)))"
+        },
+        {
+          "label": "",
+          "original": "XORIG = XEST",
+          "generated": "XORIG=QBIT(XEST)"
+        },
+        {
+          "label": "",
+          "original": "Y(1) = Y(2)",
+          "generated": "Y(1)=QBIT(QBIT(Y(2)))"
+        },
+        {
+          "label": "",
+          "original": "X(1) = X(2)-XOSHFT",
+          "generated": "X(1)=QBIT(QBIT((QBIT(X(2))-XOSHFT)))"
+        },
+        {
+          "label": "",
+          "original": "Y(2) = Y(3)",
+          "generated": "Y(2)=QBIT(QBIT(Y(3)))"
+        },
+        {
+          "label": "",
+          "original": "X(2) = X(3)-XOSHFT",
+          "generated": "X(2)=QBIT(QBIT((QBIT(X(3))-XOSHFT)))"
+        },
+        {
+          "label": "140",
+          "original": "XEST = -BPB/2./APA",
+          "generated": "XEST=QBIT(QBIT((QBIT((-(BPB)/QBIT(2.0D0)))/APA)))"
+        },
+        {
+          "label": "",
+          "original": "IND = 7",
+          "generated": "IND=7"
+        },
+        {
+          "label": "",
+          "original": "IF (XEST.LT.X(1)) GO TO 120",
+          "generated": "IF((XEST.LT.QBIT(X(1)))) GO TO 120"
+        },
+        {
+          "label": "",
+          "original": "IF(XEST.GT.X(3)) GO TO 130",
+          "generated": "IF((XEST.GT.QBIT(X(3)))) GO TO 130"
+        },
+        {
+          "label": "",
+          "original": "XEST = XEST+XORIG",
+          "generated": "XEST=QBIT(QBIT((XEST+XORIG)))"
+        },
+        {
+          "label": "150",
+          "original": "IF (YCALC.GE.YGIV) GO TO 110",
+          "generated": "IF((YCALC.GE.YGIV)) GO TO 110"
+        },
+        {
+          "label": "",
+          "original": "IND = 10",
+          "generated": "IND=10"
+        },
+        {
+          "label": "160",
+          "original": "IND = 11",
+          "generated": "IND=11"
+        },
+        {
+          "label": "",
+          "original": "C1 = X(3)-X(1)",
+          "generated": "C1=QBIT(QBIT((QBIT(X(3))-QBIT(X(1)))))"
+        },
+        {
+          "label": "",
+          "original": "C2 = (Y(2)-Y(1))/(X(2)-X(1))",
+          "generated": "C2=QBIT(QBIT((QBIT((QBIT(Y(2))-QBIT(Y(1))))/QBIT((QBIT(X(2))-QBIT(X(1)))))))"
+        },
+        {
+          "label": "",
+          "original": "A = (C1*C2-Y(3)+Y(1))/C1/(X(2)-X(3))",
+          "generated": "A=QBIT(QBIT((QBIT((QBIT((QBIT((QBIT((C1*C2))-QBIT(Y(3))))+QBIT(Y(1))))/C1))/QBIT((QBIT(X(2))-QBIT(X(3)))))))"
+        },
+        {
+          "label": "",
+          "original": "B = C2-(X(1)+X(2))*A",
+          "generated": "B=QBIT(QBIT((C2-QBIT((QBIT((QBIT(X(1))+QBIT(X(2))))*A)))))"
+        },
+        {
+          "label": "",
+          "original": "C = Y(1)-X(1)*B-X(1)**2*A",
+          "generated": "C=QBIT(QBIT((QBIT((QBIT(Y(1))-QBIT((QBIT(X(1))*B))))-QBIT((QBIT((QBIT(X(1))**2))*A)))))"
+        },
+        {
+          "label": "",
+          "original": "NITER=NITER+1",
+          "generated": "NITER=(NITER+1)"
+        },
+        {
+          "label": "",
+          "original": "IF(NITER.GT.200000) THEN",
+          "generated": "IF((NITER.GT.200000)) THEN"
+        }
+      ]
+    }
+  }
+}

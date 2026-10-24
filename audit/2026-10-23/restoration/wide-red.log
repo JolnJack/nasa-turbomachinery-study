@@ -1,0 +1,4 @@
+  File "/Users/ikunsredemptionmac/Downloads/NASA/restored/tests/regression.py", line 125
+    bad=re.sub(r'\bVOVCR=.*?(?=NVOVCR=)','VOVCR='+','.join(format(.05+i*.05,'.3f') for i in range(15)))+', ',bad,flags=re.S)
+                                                                                                                           ^
+SyntaxError: unmatched ')'

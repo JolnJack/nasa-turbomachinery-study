@@ -1,0 +1,38 @@
+compressor-100 131 / 132 exact; rows 12 / 12
+  {'row': 3, 'field': 'DETAVD', 'expected': 0.05412, 'actual': 0.05413, 'delta': 9.999999999996123e-06, 'same_5_significant_digits': False}
+surge-choke-100 2 / 2 exact; rows 1 / 1
+compressor-90 131 / 132 exact; rows 12 / 12
+  {'row': 1, 'field': 'DETAVD', 'expected': 0.05277, 'actual': 0.05278, 'delta': 1.0000000000003062e-05, 'same_5_significant_digits': False}
+surge-choke-90 2 / 2 exact; rows 1 / 1
+compressor-80 97 / 99 exact; rows 9 / 9
+  {'row': 5, 'field': 'DETAVD', 'expected': 0.04623, 'actual': 0.04624, 'delta': 1.0000000000003062e-05, 'same_5_significant_digits': False}
+  {'row': 7, 'field': 'DETAVD', 'expected': 0.04466, 'actual': 0.04467, 'delta': 1.0000000000003062e-05, 'same_5_significant_digits': False}
+surge-choke-80 2 / 2 exact; rows 1 / 1
+compressor-60 95 / 99 exact; rows 9 / 9
+  {'row': 2, 'field': 'DETAVD', 'expected': 0.05682, 'actual': 0.05683, 'delta': 9.999999999996123e-06, 'same_5_significant_digits': False}
+  {'row': 3, 'field': 'pressure_ratio', 'expected': 2.198, 'actual': 2.209, 'delta': 0.01100000000000012, 'same_5_significant_digits': False}
+  {'row': 3, 'field': 'ETAT', 'expected': 0.777, 'actual': 0.783, 'delta': 0.006000000000000005, 'same_5_significant_digits': False}
+surge-choke-60 2 / 2 exact; rows 1 / 1
+turbine-table-iii 32 / 55 exact; rows 11 / 11
+  {'row': 2, 'field': 2, 'expected': 73.2895, 'actual': 73.29, 'delta': 0.0005000000000023874, 'same_5_significant_digits': True}
+  {'row': 3, 'field': 2, 'expected': 73.1421, 'actual': 73.142, 'delta': -0.00010000000000331966, 'same_5_significant_digits': True}
+  {'row': 4, 'field': 2, 'expected': -11.8554, 'actual': -11.855, 'delta': 0.00039999999999906777, 'same_5_significant_digits': True}
+turbine-design-coefficients 4 / 5 exact; rows 1 / 1
+  {'row': 1, 'field': 2, 'expected': 0.28684, 'actual': 0.286839, 'delta': -9.999999999732445e-07, 'same_5_significant_digits': True}
+turbine-table-iv-table-II-input 74 / 165 exact; rows 33 / 33
+  {'row': 1, 'field': 4, 'expected': 0.18127, 'actual': 0.18128, 'delta': 1.0000000000010001e-05, 'same_5_significant_digits': False}
+  {'row': 1, 'field': 5, 'expected': 0.17792, 'actual': 0.17793, 'delta': 1.0000000000010001e-05, 'same_5_significant_digits': False}
+  {'row': 2, 'field': 2, 'expected': 73.2733, 'actual': 73.273, 'delta': -0.00030000000000995897, 'same_5_significant_digits': True}
+turbine-table-v-table-II-input 33 / 200 exact; rows 20 / 20
+  {'row': 1, 'field': 'NS', 'expected': 0.012937, 'actual': 0.012936, 'delta': -1.000000000001e-06, 'same_5_significant_digits': False}
+  {'row': 1, 'field': 'EQ-P5/P0', 'expected': 0.79806, 'actual': 0.79805, 'delta': -9.99999999995449e-06, 'same_5_significant_digits': False}
+  {'row': 1, 'field': 'NU', 'expected': 1.03221, 'actual': 1.0322, 'delta': -1.0000000000065512e-05, 'same_5_significant_digits': True}
+turbine-table-iv-table-III-coefficients 94 / 165 exact; rows 33 / 33
+  {'row': 2, 'field': 2, 'expected': 73.2733, 'actual': 73.273, 'delta': -0.00030000000000995897, 'same_5_significant_digits': True}
+  {'row': 3, 'field': 2, 'expected': 73.2404, 'actual': 73.24, 'delta': -0.00039999999999906777, 'same_5_significant_digits': True}
+  {'row': 4, 'field': 2, 'expected': -75.2549, 'actual': -75.255, 'delta': -9.99999999891088e-05, 'same_5_significant_digits': True}
+turbine-table-v-table-III-coefficients 139 / 200 exact; rows 20 / 20
+  {'row': 1, 'field': 'NU', 'expected': 1.03221, 'actual': 1.0322, 'delta': -1.0000000000065512e-05, 'same_5_significant_digits': True}
+  {'row': 1, 'field': 'DHTCR', 'expected': 10634.9, 'actual': 10635.0, 'delta': 0.1000000000003638, 'same_5_significant_digits': True}
+  {'row': 1, 'field': 'EQ-P0/P5', 'expected': 1.25303, 'actual': 1.253, 'delta': -3.0000000000196536e-05, 'same_5_significant_digits': True}
+RESULTS /Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/reference-20261023T102913556738Z

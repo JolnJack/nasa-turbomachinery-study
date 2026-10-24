@@ -1,0 +1,8 @@
+{
+  "source": "audit/2026-10-23/restoration/inverse-scan-20261023T155859411939Z/cases.json",
+  "sha256": "589df4562a46d7a2c4d3f6f93504691f982c72912c74aff347d566fc4145f7fb",
+  "targets": 1126,
+  "definition": "Fixed-exit-angle positive-work forward states generated before guards; no known coefficients used as search seeds; synthetic equation tests, not experiments.",
+  "source_grid": "audit/2026-10-23/restoration/systematic-20261023T153552066271Z",
+  "selection": "audit/2026-10-23/restoration/inverse-scan-20261023T155859411939Z/selection.json"
+}

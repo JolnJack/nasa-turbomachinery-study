@@ -1,0 +1,3220 @@
+NASA          TECHNICAL             NOTE                                NASA TN D-7487
+
+
+
+
+      !
+
+e,_
+
+z
+i--
+
+
+
+
+z
+
+
+
+
+FORTRAN            PROGRAM          FOR    PREDICTING
+OFF-DESIGN              PERFORMANCE
+OF        CENTRIFUGAL            COMPRESSORS
+
+
+by Michael        R. Galvas
+
+Lewis      Research     Center
+and
+
+ U.S.     Army    Air    Mobility   R&D    Laboratory
+Cleveland,       Ohio    44135
+
+
+
+ NATIONAL    AERONAUTICS AND SPACE ADMINISTRATION   °   WASHINGTON,   D. C.   •   NOVEMBER 1973
+                                                                                                                                                                        3.     Recipient's            Catalog        No.
+ 1. Report        No.                                                         I    2. Government               Accession           No.
+
+       NASA           TN         D-7487                                       I
+4.    Title    and    Subtitle                                                                                                                                          5.     Report         Date
+
+       FORTRAN                    PROGRAM                      FOR          PREDICTING                    OFF-DESIGN                                                                 November                    1973
+
+                                                                                                                                                                        6. Performing                 Organization           Code
+       PERFORMANCE                                OF      CENTRIFUGAL                          COMPRESSORS
+
+
+ 7, Author(s}                                                                                                                                                           8.     Performing             Organization           Report     No,
+       Michael             R.      Galvas                                                                                                                                          E-7480
+
+                                                                                                                                                                       10.     Work       Unit        No.
+
+ 9.   Performing        Organization         Name        and      Address                                                                                                          501-24
+       NASA           Lewis            Research                Center             and
+                                                                                                                                                                       11.     Contract          or    Grant     No.
+        U.S.         Army          Air       Mobility                R&D      Laboratory
+
+        Cleveland,                 Ohio           44135
+                                                                                                                                                                       13.     Type      of      Report        and    Period        Covered
+
+12.   Sponsoring         Agency          Name     and     Address                                                                                                                  Technical                Note
+        National            Aeronautics                     and       Space        Administration
+                                                                                                                                                                       14.     Sponsoring             Agency         Code
+
+        Washington,                    D.       C.       20546
+
+15.   Supplementary              Notes
+
+
+
+
+16.   Abstract
+
+        A FORTRAN                        program               for     calculating                the     off-design                     performance                  of centrifugal                        compressors
+
+        with         channel             diffusers             is presented.                      Use      of the            program                 requires          complete                     knowledge                 of the
+        overall           impeller                and      diffuser           geometries.                       Individual                  losses          are    computed                   using          analytical
+
+        equations                and      empirical                  correlations                 which         relate              loss         levels      to velocity                diagram                 character-
+        istics          and      overall             geometry.                 On a given                 speed             line         compressor               performance                          is   calculated
+
+        for      a range            of inlet            velocity            levels.           At        flow      rates             between               surge       and      choke,               individual                 effi-
+        ciency          decrements,                       compressor                    overall          efficiency,                      and     compressor                   total        pressure                  ratio         are
+        tabulated.                 An example                      case       of performance                         comparison                     with     a compressor                           built       by         a com-
+
+        mercial             engine           manufacturer                     is      presented                to demonstrate                         the     correlation                   with         limited              experi-
+        mental           data.
+
+
+
+
+17.    Key     Words      (Suggested         by      Author(s))                                                              18.     Distribution         Statement
+
+         Centrifugal                compressor                                                                                      Unclassified                  - unlimited
+
+         Off-design                performance
+
+
+
+
+19.    Security       Classif.    (of this report)                                    20.   Security      Classif.    {of    this        page)                               21.     No.-of      Pages                 22.    Price"
+                                                                                                                                                                                                                           Domestic,   $3.50
+                          Uncla          s sifted                                                              Unc la s sified                                                                5 8                          Foreign,  $6.00
+
+
+
+                                                  * For sale by the National Technical Information Service, Springfield, Virginia 22151
+               FORTRAN PROGRAM FOR PREDICTING OFF-DESIGN PERFORMANCE
+
+                                                OF CENTRIFUGAL COMPRESSORS
+
+                                                           by Michael               R. Galvas
+
+                                                      Lewis Research Center and
+                                         U.S. Army Air Mobility R&D Laboratory
+
+
+                                                                      SUMMARY
+
+
+        A FORTRAN             program          for    calculating             the    off-design         performance              of centrifugal                com-
+pressors       with      channel       diffusers        is presented.                 Use      of the    program         requires             complete
+knowledge           of the   overall       impeller        and       diffuser         geometries.               Individual        losses         are     com-
+puted      using     analytical        equations        and      empirical            correlations          which       relate        loss      levels         to
+velocity      diagram         characteristics              and      overall         geometry.           On a given            speed      line     com-
+pressor       performance              is calculated          for     a range         of inlet       velocity       levels.          At flow       rates
+between       surge      and choke,           individual         efficiency           decrements,               compressor             overall         effi-
+ciency,       and     compressor           total     pressure          ratio        are   tabulated.            An example             case      of per-
+formance           comparison          with     a compressor             built        by a commercial                engine          manufacturer               is
+presented          to demonstrate             the    correlation          with       limited       experimental              data.
+
+
+
+
+                                                                 INTRODUCTION
+
+
+        Centrifugal compressors                       are frequently used in refrigeration cycles, refining sys-
+tems,       aircraft auxiliary systems,                       turboshaft engines, and other systems                                     where          light-
+weight compact               compression             is required.              The off-design performance                            characteristics
+of centrifugal compressors                      are of interest because of the large effects that compressor
+component           performance           has on overall cycle performance                                and because the compressor
+is required to operate at off-design conditions much                                              of the time.          For turboshaft engines
+assuming           a drive turbine inlettemperature                             of 1422 K and efficiency of 90 percent, a
+2.6-percent loss in compressor                           efficiency results in a 2-percent increase in engine
+specificfuel consumption                      (SFC) and a 2.8-percent loss in engine power at design speed.
+These       losses become              more         pronounced at part-power                        settings. In addition to good per-
+formance           at off-design flow rates it is important that the compressor                                                  operate stably over
+the      range         of flows         and speeds              required             by the      engine         operating           envelope.               The      usable
+range          of the         compressor               pressure             ratio-mass            flow        characteristic               is bounded              by the           surge
+and      choke         mass        flow       rates.        Operation                at flows      less        than     the     surge         point      flow        should         be
+avoided           because           of potentially               dangerous             vibrations             induced          by the       intermittent                flow re-
+versals           and power             loss.          Operation             with the          compressor               choked           is generally             avoided            be-
+cause          of the poor             compressor                efficiency            and     pressure             ratio      at the      choke         point.          The
+problem              undertaken              in this      analysis            is to determine                 the     centrifugal             compressor                 perform-
+ance       characteristics                    over      a range           of rotative            speeds         and     flow      rates       and       predict         the
+usable         range          of flow rates              at which            the     compressor               can operate.                 The      method           of analysis
+uses       the       loss      correlations              and      equations            of reference              1 with        surge        and      choke        criteria
+added       to predict              compressor                 operating             range.
+         A FORTRAN                     program           has      been        developed           at NASA             Lewis        Research             Center          which
+predicts             centrifugal             compressor               performance                through            utilization           of empirical               correla-
+tions      which            are    related        to the        compressor               geometry              and     velocity           diagram           characteris-
+tics.       A complete                 knowledge            of the          compressor             overall            geometry            and       working          fluid      inlet
+total      conditions              is required            for its           use.      Working           fluid       state      conditions             and     flow proper-
+ties     are      calculated             using         a mean         streamline               one-dimensional                    analysis.             The       program             is
+limited          to centrifugal                compressors                   with     channel       diffusers               operating           up to their             choke
+point.           A comparison                  of calculated                and      experimental               performance                is given          to demon-
+strate         the     correlation              with     limited            experimental            data.            The      experimental                data       presented
+for     comparison                 were       obtained          from         a compressor                 developed            by Solar           Aircraft           Company,
+Division             of International                Harvester,               Inc.       Shock      losses            in the      rotor       are       neglected.
+Clearance              losses          are     considered             to be inherent               in the        impeller            losses         since        good        per-
+formance              correlation              is achieved               on compressors                   operating            with       reasonable              clearances.
+
+
+
+
+                                                                     METHOD              OF ANALYSIS
+
+
+         Input        values        of (V/Vcr)0                are       used       to determine               compressor                mass        flow      rate.           (Sym-
+bols     are      defined          in appendix             A and          compressor              stations            are     shown        in fig.          1. ) Individual
+losses         are     calculated             using       velocity           diagram           characteristics                 and       empirical            correlations
+determined              by the         input      absolute           velocity          level      and     compressor                 geometry.                For       com-
+pressors             having        inlet      guide       vanes          it is assumed             that       the     vanes        are     placed         in a constant-
+area      annulus             having         no wall      curvatures                 or slopes.            Overall           compressor                 efficiency,             total
+pressure             ratio,        and mass             flow      rate       are     tabulated          for     each        operating           point       inside       the     pre-
+dicted         range         for   each       speed       line       that     is input.           A complete                discussion              of the       loss    calcula-
+tions      is discussed                in appendix              B.
+
+
+
+
+2
+                                                                  Station 0               1
+
+
+
+
+                                                          Inletguide
+                                                          vane                                  Impeller
+
+
+
+
+                                                              Figure 1. - Meridional cross section o! compressor.
+
+
+
+
+                                                                        Required          Information
+
+
+         The       compressor             data          needed       to use        the    FORTRAN              program            are     the         following:
+inducer          inlet      tip diameter,                inducer          inlet    hub-tip          diameter          ratio,       inducer             inlet     blade         angle
+at the root-mean-square                            diameter,              inducer         blade       blockage         at the       rms         diameter,            inducer
+inlet      hub and tip wall                   slopes,          inducer         inlet     hub and         tip wall      curvatures,                inlet         solid-body
+swirl       angle        at the rms            diameter,             inducer-tip              to impeller-exit                 diameter           ratio,         impeller
+exit     blade       angle,      impeller               blade      exit       height,       number          of impeller            blades         at exit,          vaneless
+diffuser           diameter          ratio,       vaned          diffuser         setting       angle,       total     vaned        diffuser            throat       area,
+vaned       diffuser          area      ratio,          skin     friction         coefficient          of the     wetted          surfaces,              design       rotative
+speed,         and       the fraction            of design           rotative           speed       for which         the      calculations              are     to be per-
+formed.
+         The       working       fluid         properties            and       state     conditions          required            are:         inlet     total      pressure,
+inlet      total     temperature,                 inlet        dynamic          viscosity           based      on total         conditions,              specific         heat
+ratio,       and      gas     constant.
+          Two control            variables              are      used       to select         the    options         of solid-body              prewhirl            and        im-
+pellers        with       splitter       blades.               Inducer         inlet     hub and         tip wall       slopes          and     curvatures               are     all
+set equal to zero for compressors with inlet guide vanes.
+     Information which corresponds to the design speed line for the example compressor
+is as follows:
+
+
+
+
+                                                                                                                Compressor                     data
+
+
+    Design         rotative          speed,             N,     rpm          .......................................                                                                                                                 72 000
+
+    Inducer            inlet     tip diameter,                  D1T , m                   ...................................                                                                                                       0.0813
+    Inducer        hub-tip           diameter                ratio,          k       ....................................                                                                                                           0. 5313
+    Inducer            inlet     hub wall          curvature,                    C1H,          m -1        (positive              around           axis        of rotation)          ...............                                          0
+
+    Inducer inlet tip wail curvature, CIT , m -I                                                           (positivearound axis of rotation) ................                                                                                 0
+
+    Inducer inlet hub wall slope, XH , deg from                                                         axial            ...............................                                                                                      7
+    Inducer inlet tip wail slope, XT , deg from axial ................................                                                                                                                                                        0
+    Inducer inlet blade angle at the rms                                                 diameter,               _IMFb,               deg from                 meridional         ...............                                      49.0
+    Inducer-tip to impeller-exit diameter ratio, D IT /Dnj                                                                        ..........................                                                                        0. 5614
+
+    Number             of impeller             blades           at exit,             Z 3 .....................................                                                                                                              32
+    Impeller             blade      exit      angle,           _3'         deg from              meridional                     (positive          opposite           to direction        of rotation)               .......                25
+    Impeller             exit     blade       height,           b3,        m         ....................................                                                                                                           0.0051
+    Vanless            diffuser           diameter             ratio,            D4/D 3 ...................................                                                                                                            1.14
+    Vaned        diffuser           setting         angle,             _4'       deg from meridional                     ............................                                                                                       78
+                                                                                        2
+    Total       vaned           diffuser       throat           area,            A5, m    ................................                                                                                                        0.00071
+    Vaned        diffuser           area       ratio,          A6/A          5 .......................................                                                                                                                  2.7
+    Friction            coefficient,              Cf     ...........................................                                                                                                                                 0.004
+
+                                                                             Working               fluid        properties                 and       state       conditions
+
+    Specific           heat      ratio,       y     . ............................................                                                                                                                                      1.4
+    Gas      constant,             R,      J/(kg)(K)               ........................................                                                                                                                         287.05
+
+    Inlet      total       pressure,              p_,        N/m       2                                                                                                                                                           101 325
+
+    Inlet      total       temperature,                  T0,         K ......................................                                                                                                                       288.15
+    Inlet      dynamic            viscosity             based          on total            conditions,                   _,        N-sec/m              2 ..................                                                   1. 788×10 -5
+
+                                                                                                  Velocity             diagram               properties
+
+
+    Number             of values           of compressor                         inlet      absolute              critical            velocity            ratios        used   in calculating                performance             . . 15
+
+    Compressor                   inlet     absolute            critical             velocity             ratios,              ( V/V c r) 0 ...................                                                             0.47    to 0.61
+
+    Inducer            inlet      solid-body             swirl          angle            at the rms               diameter,                 _IMF'              deg from        meridional              ...........                            0
+    Splitter           control       variable,               SPLT            (SPLT            = 0,        no splitter               blades;             SPLT         = 1, splitters)              ............                                1
+
+
+
+
+4
+                                                                            Calculated Losses
+
+         Inlet      guide        vane       loss.        - Equations                relating        working             fluid       kinetic       energy         level,           bound-
+ary      layer,         and      blade         geometry             were        developed           for       axial       turbine         stators        in reference                 2.
+These        equations             were         used       to calculate              state      conditions              downstream                of the        inlet       guide
+vanes;          thus      the     velocity          diagram              characteristics                  were        found         by satisfying              one-
+dimensional                continuity.
+         An inlet          guide         vane       loss         coefficient          is calculated               using         the     same         assumptions                  about
+blade      geometry               and boundary                   layer      characteristics                    as used          in reference              3.      The        inlet
+guide      vane         loss      is then         calculated              as a fraction             of the        ideal         kinetic         energy         at the        rms
+diameter.
+         Inducer          incidence              loss.         - Reference              4 developed              equations             for      optimum          inducer             in-
+cidence           angle        of centrifugal               compressors                   with axial            inlets.           The        optimum           incidence             angle
+is calculated               from         the     inlet      velocity            diagram         characteristics                     and      blade      blockage            at the
+rms       diameter              assuming            an incompressible                         working          fluid.         The       enthalpy         loss         due     to inci-
+dence       is calculated                 assuming               that     the      relative        velocity           component               normal         to the optimum
+incidence              angle      is lost.           Therefore,                 the incidence              loss       is simply
+
+
+
+
+                                                                                   AhINc        - 2C
+                                                                                                          P
+
+where
+
+
+                                                               W L = W1M F sin[_opt                           - fllMF[
+
+
+         Blade         loadin_       loss.          - Boundary               layer        growth          in the        impeller             is highly         dependent             on
+the    diffusion           of the        working           fluid        internal        to the      impeller              itself.         Reference             5 proposed
+an equation              for     calculating             the       diffusion         factor        of the        impeller             based       on a uniform                veloc-
+ity loading             along      the     blade         chord.            This      equation         is used             to calculate            the    impeller             dif-
+fusion      factor         for     impellers               without         splitters.            A modified                form,          with       reduced          penalty
+due     to aerodynamic                    work       input,          is used         for impellers                which          have        a set      of splitter               blades.
+With      the diffusion             factor          calculated              by these           methods           the blade            loading         loss      was         ex-
+pressed           as
+
+
+                                                                                                        22
+                                                                            AhBL        = 0.05        Dfu 3
+
+
+         Skin      friction        loss.         - In addition              to the        losses          resulting           from        the    aerodynamic                  load-
+ing of the          impeller             blades,           the     impeller           incurs        losses         due      to skin          friction        of the impeller
+and shroud           wetted         areas.                 Reference            5 developed                 an equation               for        this     loss     based        on fully
+developed          turbulent            pipe          flow.          In the      case          of impellers            with          splitter           blade      rows,         the
+empirical          constant          appearing                    in the      equation           is modified                to account              for     the    higher        mean
+channel         relative         velocity             caused          by the addition                     of splitters.               The         general         equation          used
+for     skin    friction         loss         is
+
+
+                                                                                                      L
+
+
+                                                              AhsF         = KDFC          f
+                                                                                                DHYD
+                                                                                                     o3
+                                                                                                     D 3
+                                                                                                                          v
+                                                                                                                               2
+                                                                                                                              u3
+
+
+
+
+where          KSF        = 5.6      for conventional                         impellers               and       KSF     = 7.0             for impellers                  with    tandem
+blades.
+         Disk      friction        loss.             - The         specific         loss        due       to windage           on the            compressor               back      face
+is calculated              using        the        equation
+
+
+
+                                                                  _hDF        = 0.01356                  P3     u3D332
+                                                                                                      w Re 0' 2
+
+
+This      is a form           of the          disk         friction         power       loss          of reference              6.
+         Recirculation               loss.            - Losses              resulting           from        work       done      on the            working          fluid       due to
+backflow         into      the     impeller                 are     expressed              as
+
+
+                                                                                                                     22
+                                                                    AhRc        = 0.02            _/-_a          3 Dfu 3
+
+
+This      is a modification                        of the equation               proposed                 in reference               5.
+         Vaneless           diffuser               loss.          - The     flow angle               and     Mach      number               variation             with     radius           in
+the     vaneless          space         are         determined               by numerical                   solution          of the        differential            equations               for
+vaneless         space        flow       developed                  in reference                7.        The   equations                 are     simplified             through         the
+assumptions               of adiabatic                flow         and     constant            geometric            depth       passage.                   The     radial        total
+pressure           distribution               in the vaneless                   space           is calculated               using          the equation             derived            in
+reference            5.     When the fluid                        state     and flow            properties            are      determined                  at the        vaned      dif-
+fuser      leading         edge      radius                by the         methods       described               previously,                     the vaneless             diffuser
+loss      is calculated            from             the      equation
+
+
+
+
+6
+        Vaned          diffuser           loss.       - Curves              of maximum                 static       pressure             recovery               coefficient           at a
+given      area        ratio      were        extrapolated                  from       the    test       data      for    square           throat        diffusers            reported
+in reference                8 for       various           combinations                of vaned             diffuser       throat         Mach        number,               aerody-
+
+namic         blockage,             and     area          ratio.        These         data       were        recorded            for     channel          diffusers            with
+symmetrical                 pressure              Ioadings            about     the     channel            centerline.               The     vaned          diffuser           in a
+centrifugal             compressor                 is loaded            with a pressure                     gradient           across        the     channel.              In this
+analysis            it was     assumed              that       the difference                 in the        loadings           between         the       test     diffusers           of
+reference              8 and      the      compressor                  diffusers          would          have      no effect            on calculated               diffuser          re-
+covery.             A one-seventh                  power           velocity          distribution               in the boundary                layer        along        the     vane-
+less     space         endwalls            is used           to calculate             the     displacement                  thickness            representing           vaned
+                                                                                                                                                                     **
+diffuser   throat   blockage.                          The value of static    pressure                                recovery  coefficient                        Cp     cor-
+responding     to the vaned                         diffuser  geometric    area ratio,                                inlet Mach number,                          and aerody-
+namic         blockage          is extrapolated                     from       the     test      data.
+         The        vaned      diffuser            exit      critical         velocity         ratio        is calculated                using       one-dimensional
+continuity.              Vaned          diffuser            loss      is then         calculated            using        the    equation
+
+
+
+
+                                                    Calculation               of Compressor                     Choking          Flow
+
+
+         Two        criteria         are     used          in the prediction                  of compressor                    choking           flow:          (1) inducer
+choke         and      (2) vaned           diffuser           choke.          Reference              9 presented                data      on inducer              choking         inci-
+dence         levels        as functions              of relative             Mach           number          and      blade      angle        at the        rms       diameter
+for     inducer         pitch-chord                 ratios         of 0.5      and      thickness-chord                     ratios         of 0.05.              These         data
+were       used        to predict            compressor                  choking          flow       due     to inducer            choke.
+         Vaned         diffuser            choke       is predicted                from       one-dimensional                     continuity             using       the       com-
+puted      values           of weight             flow,       total     temperature,                  total      pressure,               aerodynamic                 blockage,
+and     the     geometric               throat        area.           The      maximum               value         of the       one-dimensional                     weight        flow
+function          is calculated               from          the    equation
+                                                                                                                                     -i)
+
+
+
+
+At the        first     input        critical            velocity         ratio      where          the left          side      of the equation              equals       or ex-
+ceeds         the     right      side       the         compressor               is choked.              One         would      expect        the speed         lines     to
+have      infinite          slopes          at the choke                point.       The        vertical             portions        of the     speed        lines      are     ap-
+proximated              through             the assumption                     of zero         static         pressure          recovery          in the      vaned       diffu-
+ser     for    the      cases        of vaned              diffuser         choke.            The       impeller             characteristic             should        exhibit
+a vertical            slope        at the impeller                    choke       point        but this          is not predicted               by the correlations
+used.
+
+
+
+
+                                                         Calculation             of Compressor                    Surge         Point
+
+
+        The         vaned       diffuser            is assumed              to be the            component                  which     governs         the    location         of the
+compressor                 surge          point.          Examination               of performance                     characteristics                 of centrifugal
+compressors                   covering             a range        of pressure                 ratios          indicates         that compressor                 flow      range
+can be expressed                     as a function                of the vaned                 diffuser          leading           edge    Mach       number.             With a
+good     impeller-diffuser                         throat        area      match         the      flow range                 will vary        with the diffuser               lead-
+ing edge            Mach       number              as     shown       in figure           2.      This         curve         was     deduced          from    unpublished
+operating          range data for centrifugal                                  compressors                    with     design        point     pressure          ratios
+ranging         from I. 9 to i0.0.
+
+
+
+                                            .gin
+
+
+
+
+                                       _J
+
+
+
+
+                                     _u
+
+
+                                               m
+
+
+
+
+                                                             I              I             I               I              I            I           I
+                                              3             .4            .5             .6             .1             .8            .9         1.O
+                                                              Vaned diffuser leading edgeMach number, M4
+                                              Figure 2. - Compressor flow range as a function of vaned diffuser leading edge
+                                               Mach number.
+
+
+8
+                                            Comparison                   of Estimated                        and     Experimental                               Performance
+
+
+            This               section        compares                the results                       obtained           by the         analytical                           procedure                      described
+herein             to the experimental                              results                    obtained         with        a commercially                                    manufactured                             centrifu-
+gal     compressor.
+            Figure                3 shows            the     comparison                          between           calculated                 and             experimental                           pressure                ratios
+as functions                       of corrected                   flow        for          60,      80,      90,     and       100 percent                           rotative                  speeds.                   Choking
+flow        is caused                     by inducer               choke           at 100 percent                      speed             and      by diffuser                           choke                 at the       other
+speeds.                    The         assumption                 of zero              static           pressure             recovery                         at the           vaned           diffuser                  choke
+point         permits                     an estimate              of the flow                    rate       at which           the       compressor                               pressure                     ratio        char-
+acteristic                     becomes             vertical.                 Experimentally,                           the      impeller                       characteristic                             exhibits            be-
+havior                similar              to that     of the            diffuser                 at the       choked           condition.                           However,                      the         multi-
+dimensional                        effects          that         characterize                      this      behavior               apparently                       cannot               be approximated
+accurately                       with       strictly         one-dimensional                                correlations.                       Modifying                        the       correlations                       for
+evaluation                      at the       hub,          mean,             and       tip sections                 and      averaging                         the        results              may             help       to pre-
+dict        the        gradual              pressure               ratio        reduction                   in moving               toward                    choke.               The          potential                 refine-
+ments             offered                 by this      approach                 have             not yet        been         considered                         herein.                   Maximum                        error        in
+predicting                      the       choking          weight            flow              occurs        at the         90 percent                        speed             line       and          is 25 percent.
+
+Maximum     error    in predicting                                            the compressor                         operating                  range                 (Wsurge/Wchoke)                                    occurs           at
+the 80 percent    speed    line and                                          is 8.1 percent.
+            Figure                4 shows            the     comparison                          between           calculated                   and            experimental                          efficiencies                    as
+
+
+
+                                                                    Compressor design
+                                                                      rotative speed,
+                                                                             N/NDE S,
+                                                                                                                             .8/ __                             Experimental                             Compressor         design
+                  7 --                                                       percent
+                                                                                                                                           --                   Calculated                                    rotative   speed,
+                                                                                100
+                                                                                                                                                                     _                  ..._ -..                 NINDES,
+                                                                                   %
+                                                                                                                              .8(
+                  5
+                                                                                       I                                                  /     60                                        ._
+
+       ._o-
+                                                                    90
+                                                                                       I
+                                                                                        I
+                                                                                           I
+                                                                                                                                         / ,
+                  5                                                                                                    ._     .7(
+                                                                                                                                     _                                    _                                       percent
+                                                                                                                                                  I                                                      I
+                                                                                                                              .72 _                l                                                      I        I
+                                                                                                                       o
+                                                                                                                                                      I                                                   I        I
+                                                                                                                                                          I                                               I
+
+
+                  3                                                                                                    _-
+                                                                                                                       E
+                                                                                                                       8
+                                                                                                                              .68
+
+
+                                  6O
+        E
+                                                                                                                              • 54 --
+       8
+                                                            --               Calculated
+                         '_l          _                                      Experimental
+                                               I            1            I                 I            I                                         I                  I                              I              I             I
+                                                                                                                              "602               .3                  .4            .5              .6            .7          .8
+                  .2              .3        .4       .5       .6       .7                           .8
+                                    Equivalent weight flow, wk/"BI6, kgtsec                                                                      Equivalent              weight flow, w i_1/5, kglsec
+
+                                                                                                                              Figure 4. - Comparison                          of calculated        and experimental          com-
+                  Figure 3. - Comparison   of calculated and experimental
+                    compressor total pressure ratios as functions of equiv-                                                      pressor total efficiencies as functions                                of equivalent       weight
+                                                                                                                                flow and rotative speeds.
+                    alent weight flow and rotative speeds.
+ functions           of corrected                 flow.       The       worst         estimate              of peak          efficiency            occurs          at the            90 per-
+ cent      speed        line      and     is in error               by 1.2        points.             Only      partial            data      is shown             for     the        effi-
+ ciency         contour           at 60 percent               speed.            This        results          because           the data            is replotted                 from            a
+ performance                map         that      had     efficiency            contours             and     more           data     could         not be accurately                            in-
+terpolated.                Predicted              surge       point         efficiencies              for     all     speed         lines       are     considerably                       lower
+than      those         experimentally                    measured.               This         can      be attributed                to predicted                 diffuser             pres-
+ sure       recovery            being          lower       than      that      attainable            experimentally.                        Aerodynamic                     blockage
+growth           may       not be as             rapid      as that         predicted            by the         model          in moving              toward             surge.
+          Compressor                efficiency              increases            with         increasing             flow       until        the    choke         point         is
+reached.             At the         choke         point      vaned          diffuser           static        pressure              recovery            decreases,                    result-
+ing in a decrease                    in overall             compressor                  efficiency.                 At the         impeller           choke         point         one
+would        expect         the     impeller              losses       to increase               substantially,                    resulting           in a decrease                       in
+overall          compressor                efficiency.                However,              this        behavior            is not predicted                  through                the        use
+of the       empirical             correlations.
+
+
+
+
+                                                                    CONCLUDING                       REMARKS
+
+
+          This       section        summarizes                    the pertinent               characteristics                      of the prediction                     method,
+discusses            the       limitations              of the       method,            and     notes        the      effect        of the         limitations                on the            re-
+sults.
+
+          For     inducers           with        relative          Mach         numbers              appreciably               in excess              of unity           the     pre-
+dicted       compressor                  total     pressure             ratio      and        efficiency             are      greater          than        that     attainable
+experimentally.                     This         is a result           of neglecting                 shock          losses          in the inducer                 inlet.
+         Predicted             static       pressure              recovery            for     vaned         diffusers              with throat             Mach          numbers
+greater          than      unity        will be too large.                      Extrapolation                 of the         channel          diffuser            data         used        in
+the     program            is valid         only in the              subsonic           flow       regime.
+         The      prewhirl           option         available           in the        program               is for         solid-body              vortex         swirl.             This
+type of swirl              is used         primarily               because         it minimizes                     inducer          inlet      tip relative                Mach
+number.
+
+         Compressor                total         pressure           ratio       and     efficiency             are         not adequately                  predicted             with
+the     one-dimensional                    correlations                when       the       compressor                 mass          flow      rate        is limited             by the
+impeller          rather          than     the      vaned          diffuser.            The      predicted             total        pressure            ratio           and     effi-
+ciency         levels      are      higher          than     those          measured             experimentally.
+         Predicted             surge       point         efficiencies             are       considerably                   lower      than         those      measured                     on
+the     example           compressor.                     Correlation             with experimental                          data     from         other          compressors
+indicates          that     the     predicted              surge       point       efficiencies               are      sometimes                   higher         and       some-
+times        lower        than     the     corresponding                    experimental                   values.            This        may       be due          in part           to the
+difficulty         encountered                 in making             precise          measurements                     at this            flow condition.
+
+
+10
+                                                                          FORTRANPROGRAM
+
+                                                                                  Program Input
+
+       The information required                                     for the       program                    is input      using     NAMELIST              format.            A
+sample        input       sheet,          with          the data          used      for           generating             the     100 percent     speed         line       for     the
+example        compressor,                       is shown             in figure              5.     The           definitions       of the     FORTRAN                input     varia-
+bles   are:
+
+ADTH                   total      vaned               diffuser        throat       area,            A5,           m2
+
+AL1MF                  inducer            inlet         absolute          flow      angle              for     solid-body           swirl    at rms        diameter,
+
+                           alMF
+AL3                    vaned          diffuser              setting       angle,             a4'        deg       from     meridional
+AR                     vaned          diffuser              area      ratio,       A6/A            5
+BIMFB                  inducer            rms           blade       angle,        fllMFb'                   deg    from        meridional
+B2                     impeller                exit      blade        height,        b3,           m
+
+B2X                    impeller                blade         exit    backsweep,                    _3b,           deg from        meridional
+
+BLOCK                  inducer            rms           blade       blockage             function
+
+
+
+                r_,_
+
+                                                Samp]   e   _nput                                                                                     s.[E,___o____
+
+
+
+
+                   ii:.                                                                                                                                    I
+
+                  iii!i    <47., A _-?...L,._.RqqK.=l"
+                                                    ?, .@._/=._.
+                                                             _.".,_py,VSTATEMENT
+                                                             FORTRAN    =.ojoo?1 ,, oAR%s
+                                                                                        = L...,s.P.L_=.<,.AFIA<=O._.......
+                                                                                                                    ,_,,,,c,,,_
+
+
+                           =0   ' '   CU {q_    =0"     'CHIH_[7     ' ' CHTT=O    " $   I              I                              i              _l
+
+
+
+
+                                                                             Figure5. - Sampleinput sheet.
+
+
+
+                                                                                                                                                                                        11
+CF                     skin        friction       coefficient,            Cf
+CHIH                   inducer          inlet      hub wall         slope,           XlH,     deg     from       axial
+CHIT                   inducer          inlet      tip wall        slope,         XlT , deg          from       axial
+CURVH                  inducer          inlet      hub curvature,                  C1H , m -1
+
+CURVT                 inducer           inlet      tip     curvature,             C1T , m -1
+
+DRAT                   inducer-tip              to impeller-exit                  diameter           ratio,       D1T/D        3
+DIT                    inducer          tip diameter,               D1T , m
+GAM                    specific          heat      ratio,
+
+LAMX                  inducer           hub-tip          diameter           ratio,
+
+MU0                   total inlet dynamic                      viscosity, _0' N'sec/m2
+
+N                      compressor                 design rotative speed, NDES,                                 rpm
+
+NONDES                percent compressor                           design rotative speed, N/NDE                                S
+
+NVOVCR                number            of input values of (V/Vcr)0
+P0P                    total inletpressure, P0' N/m2
+RGAS                   gas constant, R, J/(kg)(K)
+
+SPLT                   control variable for splittercalculations (SPLT                                                   = 0, conventional
+                             impeller; SPLT                    = I, impeller with splitters)
+
+TOP
+                       inlettotaltemperature,                             T_, K
+VLDRR
+                      vaneless diffuser diameter ratio, D4/D 3
+VOVCR                  values of inlet criticalvelocity ratio, (V/Vcr)0
+
+Z                      number           of impeller blades at exit, Z 3
+
+
+
+
+                                                                            Sample          Output
+
+         In the      normal           mode        of operation            the        program         performs            two iterations               over       the
+range       of inlet         absolute           critical       velocity           ratios      which      are      specified.                On the       first    iteration
+the      compressor                choking        flow      rate    is determined.                    On the       second           iteration         the     printout        of
+compressor                 performance                at flow rates             outside        the    usable       range           is deleted.              A listing        of
+the      input    information                 is tabulated          for     the      compressor               configuration                studied.          Then      the
+compressor                 surge      and       choke       flow    rates         are      printed      out.       Finally,           for     each       calculated
+point      inside          the   operating            range,        compressor               equivalent           weight           flow,      total    pressure
+ratio,       total     efficiency,              and      individual         efficiency          decrements               are        printed       out.        Sample
+output      for      the     example           compressor               is as follows:
+
+12
+13
+          0"3"        _   O_   O0
+
+
+
+
+l--
+
+                 e_
+
+
+
+
+                                    Zo   _o   o   o   -o   o   o   o        o
+_ :'_  _                                                               _0
+
+
+  - _o_
+
+
+
+
+Z     3
+
+
+
+
+14
+                               w
+                               ..l
+           I*-                 0
+                               Z
+
+           u-
+<
+
+
+
+Z      o,,¢                    l--
+
+      aOl_j
+
+
+
+           _      o   °                •                                                              N°              w
+
+
+L9               0_--          uJ_-
+
+
+
+
+0                     _-"
+
+
+
+
+                                                                                                _.    _.         _.   _.   _ •
+".r    •              XU'_
+                      tu   •
+
+
+
+
+-
+U,.        _          .J
+                      uJ                   ._
+
+
+
+
+                                                0
+
+                                                                                                            _°
+
+
+                                      ,=._u.                              g_
+                                                                          _g
+>          Z                   U.
+
+
+
+
+_._.                           ..
+
+
+                                                                                    u_O   _UO   uJO   u_O
+
+
+
+
+                                                                              -IP
+
+
+
+
+                                                                          N
+
+
+
+
+                                                    __..
+                                                    _eloo
+
+
+                                                             tl _I   It
+                                                            000_
+
+
+                 OZ
+
+._,               .._
+
+
+
+
+                                                            _gg
+
+_          _                          °
+
+
+
+
+                                                                                                                                 15
+     _o_
+     0    I'...   _              ,I_, 0
+     _o                          _o                           I.--_
+
+                                 tx:0D
+                                                                                 0   t   0    •   0   *   0    •   0    •
+
+
+
+
+                                                                                                                   _N
+
+
+
+                                                                            _0           _0               _0
+                       ,--,
+          •.4          UJ   •
+
+
+
+
+     U.           L_   tU       _
+
+
+
+
+                                tU        I--   "I(N
+
+
+
+
+     U                          0           _
+
+
+
+
+                                                                      Z_   Z_
+
+
+
+
+     _            -    _o_                         00_
+
+
+
+
+                                                         g
+
+                  _    g
+           •                    l::1 r_
+
+
+
+                                                         u_
+
+
+
+
+16
+Definitions         of the       abbreviated             FORTRAN                    output       variables           are:
+
+DETABL                    efficiency         decrement             due to impeller                      blade      aerodynamic             loading,           A_BL
+
+DETADF                    efficiency         decrement             due to disk                 friction,         AT/DF
+
+DETAIGV                   efficiency         decrement             due to inlet                guide        vane    loss,      A,TIG V
+
+DETAINC                   efficiency         decrement             due to inducer                   incidence,               AT/IN C
+
+DETARC                    efficiency         decrement             due to recirculation,                           AORC
+
+DETASF                    efficiency         decrement             due       to skin           friction,         AT/SF
+DETAVD                    efficiency         decrement             due       to vaned            diffuser          losses,       A_/VD
+
+DETAVLD                   efficiency         decrement             due       to vaneless                diffuser       losses,         A_/VLD
+
+ETAT                      compressor            total       efficiency,
+
+WEQ                       equivalent         flow       rate,      w V_'/6,               kg/sec
+                                                                         v     /
+
+
+
+
+                                                                   Error             Messages
+
+
+       If the compressor                    choking         flow rate               is not reached               with the        specified       values         of inlet
+absolute        critical         velocity      ratios,           the     operating              range        cannot         be determined              with    the
+methods         used       in this     analysis.              When        this        happens,             the   calculated           performance             output
+is deleted        and      the    message           COMPRESSOR                           CHOKING            FLOW        HAS NOT            BEEN         REACHED
+is printed.
+                                                         (V            ")          results       in calculated               weight      flow   greater         than
+       If the     first      input     value       of           /Vcr    0
+the   compressor               choking        weight        flow,        the         message            VOVCR         ARRAY            TOO      LARGE          is
+printed.
+
+       For      input      values      of      V /Vc--0r)          much            too      small       for the       compressor             of interest            a
+
+velocity        diagram          solution       at the          impeller             exit      cannot       be obtained.              When      this     occurs
+the   message           IRRATIONAL                  EXIT         TRIANGLE                    is printed.            All of these          problems            can be
+corrected         by making            the     appropriate               adjustments                to the VOVCR                 array       used.
+
+
+
+
+           Main     Program            FORTRAN                  Variables                and    Corresponding                 Engineering            Symbols
+
+
+A1                        a1
+
+A2                        a3
+
+A COUSR                   a/a,
+
+
+
+                                                                                                                                                                           17
+ADTH    A
+             5
+ALl
+         _IT
+ALIMF    _IMF
+AL2
+         ot 3
+AL3      _4
+ALPHI   temporary            storage
+
+ALPHA   Ot
+
+
+AMT
+        M5
+AMU     P
+
+
+AMULT   exp
+                 (j__rlMF        C dn1
+                    rlH
+
+ANU     V
+
+
+AR
+        A6/A      5
+B
+        B5
+B0
+        B0
+B1
+        131T
+BIH
+        _lH
+BIMF
+        _IMF
+BIMFB
+        fllMFb
+B2
+        b3
+B2X
+        /33b
+BARR    array     of vaned        diffuser    throat   blockages
+
+BLOCK
+        B1
+
+
+BMULT   exp
+                 j_rrlT C dn1
+                    IMF
+
+BOPT
+        _lMFopt
+BT      vaned     diffuser       inlet   blockage
+
+CF
+        Cf
+
+
+18
+CHIH      XIH
+CHIMF     XIMF
+CHIT      XIT
+CINC      inducer     choking     incidence
+
+CINCI     interpolation      variable
+
+CINC2     interpolation      variable
+
+CINC40    choking     incidence     array     for   40 ° rms   inducer   blade   angles
+
+CINC 50   choking     incidence     array     for   50 ° rms   inducer   blade   angles
+
+CINC60    choking     incidence     array     for   60 ° rms   inducer   blade   angles
+
+CONST 1   KBL
+CONST 2   KSF
+
+COSA      cos   _lT
+CP
+          Cp
+CPSTAR
+          Cp
+CURVH     CIH
+
+CURVMF    CIMF
+
+CURVT     CIT
+
+DIH       DIH
+DIT       DIT
+D2        D3
+DEBL      AqBL
+DEDF      AT;DF
+DEEXIT
+          A_exit
+DEIGV     AT?IGV
+DEINC     AYINC
+DELTA     5
+
+DELTAB    AB
+
+DELTAR    Ar
+
+DELTAS    AS*
+
+
+
+
+                                                                                          19
+DERC     AYRC
+DESF     AT?SF
+DEVD     A_VD
+
+DEVLD    A_VLD
+
+DF       Df
+DHACT    Ahac t
+DHAERO   Ah
+              aero
+DHBL     Z_hBL
+DHD F    Z_hDF
+DHDIF    AhvD
+DHEST    Ahes t
+DHIGV    AhIG V
+DHINC    Z_hiN C
+
+DHRC     AhRc
+DHSF     AhsF
+
+DHVLD    AhvL D
+DHYD     DHYD/D3
+DIFLEM   M 4 array
+DMF      D
+             1MF
+DRAT
+         D1T/D        3
+EPS      E
+
+
+ETAD     TAD
+ETAR     YR
+
+EWF
+
+F1                   at vaned   diffuser   area   ratio   of 1.2
+         Cp
+F2                   at vaned   diffuser   area   ratio   of 2.0
+         Cp
+F3                   at vaned   diffuser   area   ratio   of 3.0
+         Cp
+F4                   at vaned   diffuser   area   ratio   of 4.0
+         Cp
+F5                   at vaned   diffuser   area   ratio   of 5.0
+         Cp
+
+
+
+20
+                     IMF
+FINT     _r                  C dn
+               rlH
+
+
+
+FLFUNC
+
+FLRNG    Wsurge/Wchoke
+Gl       y+l
+
+G2       V-1
+
+GAM      Y
+
+
+GINT     f_ rlT            C dn
+           rlI-I
+
+H0       rlM F - rlH
+HI       rlT         - rlM    F
+HIS      _his
+
+INC      BIMF          - /31MFb
+J        index        variable
+
+JAN      iteration           counter
+
+K        choke        indication       variable
+
+L        index        variable
+
+LAMX     k
+
+LOD      L/D 3
+MIN      index        variable
+
+MU0
+MWRMS    array        of inducer        rms    relative   Mach   numbers
+
+N        NDES
+NO       index        variable
+
+NONDES   N/ DES
+NVOVCR
+         number            of values    of (V,/Vcr)0
+
+NWRITE   output        control      variable
+
+
+
+                                                                           21
+POP
+P1       PlMF
+PIP      PlMF
+P2       P3
+P2P
+P3P
+P4       P6
+P4PG     iteration         variable
+
+P4PL     iteration         variable
+
+PEXIT    P6
+PHI      ¢
+
+PIMF     P2MF
+PIPMF    P2MF
+POPP1    (P/P')      1MF
+
+PP       storage          variable
+
+PPEXIT
+PPOP1    (P'/P) 1MF
+PR       P_/P_
+
+PREC1    array       of     Cp
+                                      at area   ratio   1.2
+
+PREC2    array       of     Cp
+                                      at area   ratio   2.0
+
+PREC3                         **      at area   ratio   3.0
+         array       of     Cp
+                              **
+PREC4    array       of     Cp
+                                      at area   ratio   4.0
+                              **
+PREC5    array       of     Cp
+                                      at area   ratio   5.0
+
+PTH      P5
+PTHP
+Q        Q
+
+QAERO    qaero
+R        r
+
+R0P
+
+R1
+         Pl
+
+22
+RlP      pl
+R2       r3
+R2G      P3, est
+RANGE    Wsurge/Wchoke
+RARRAY   temporary           storage
+
+RE       Re
+
+RGAS     R
+
+RHO2     P3
+RHOH     PlH
+RHOMF    PlMF
+RHOR     p/p'
+
+RHOT     PIT
+RMRMS    WlMF/a         1
+RTHP     P5
+             T
+
+
+
+
+RVOEST
+         (pV/p'Vcr)2
+
+RVORPI
+         (pV/p'V       cr) I
+
+RVORVC
+         (pV/p'V       cr) l Pl /PiMF
+
+RVRVC4
+         (pV/p'Vcr)6
+
+RVRVTH   (pV/p'Vcr)          5
+
+S        integral       of       M3
+
+SINA     sin     SIT
+SPLT     splitter      control         variable
+
+SW       W
+
+
+TO       To
+TOP      %
+TOPP
+TI       T1
+
+TIPP
+
+
+                                                  23
+T2         T3
+T2P        T'
+            3
+T2PEST     T3est
+T2PP
+TALPH      tan
+
+THETA      8
+
+TOT0       T1/T       0
+
+TOT1       T2/T       1
+
+TPL        p'/p
+TX         T/R Ahaero/CpT       ° + 1
+UIH        UlH
+UIMF
+           UlMF
+UIT
+           UlT
+U2
+           u3
+VIMF       V1MF
+VIT        VIT
+
+V2         V3
+VARAL           tan
+
+VARA L 1   temporary      storage
+
+VARM       AM 2
+
+VARMI      temporary      storage
+
+VCR
+
+
+VCRTH
+
+VLDRR      D4/D       3
+
+VM1        VmlT
+VMIH
+           VmlH
+VMIMF      VmlMF
+V'M2
+           Vm 3
+VMIMF
+           Vm 1MF
+
+
+24
+VOVCR
+         (V/_Vcr)0
+
+VOVCR4   (VffCcr) 6
+
+VOVCRI   (_/_cr)l
+
+VSL      VSI,
+
+VUIH     VulI-I
+
+VulMF    VulMF
+
+VUIT     VulT
+
+VU2      Vu3
+
+WIH      WlH
+
+WlMF     WIMF
+
+WIMFEF   WlMFeff
+WIT      WIT
+
+W2       W3
+W2OWlT   W3/%V1T
+
+WCHK     Wchoke
+
+WCR      War
+
+WFUNC
+
+W1MF     WIMF
+
+WL       W L
+
+WOU2
+         C            u 12v
+WSURGE
+         Wsurge
+WUIH     Wultt
+
+WUIMF    WulMF
+WUIT     WulT
+
+WU2      Wu3
+XI
+         a -a 4
+
+
+
+
+                              25
+XC                         Kvu
+XK                         K
+                               vm
+XM                         M
+
+XM1                        temporary                 storage
+
+XM2                        M3
+
+XMACH                      M5
+
+XMARR                      array          of vaneless              diffuser          Mach       numbers
+
+Z                          Z3
+
+ZETA
+
+
+
+
+                                                                              Program           Listing
+
+
+      D[_ENS    iEN          VOVCR ( 15J
+      DI_EN&ICN              P3PI20;,XMARR|20)
+      0 | _E#_.% iGN        FI2OI,SI20J
+      Oi/_ENSICN             AMT(4),BARRIO)tPRECAI_.,6),PREC214t,6),PREC3(4.,6ll
+      Ol_FN.%ILN             PRECS(4,bI,PRECS(4,6|
+      DIMEN&I_N       MNRMS(SI,CINCbOISI,CINCSOiSJ,C[NC60(8}
+      fl[#dFNS  [_N   FLRNG(   7},DIFLEM(      1}
+       INTEGER     SPLT
+      REAL        LAMX,L6D.MUO.NONDES,NWRMS,INC,N
+      I'JATA ( AMT ( i }* l=l,4}/.2,._,.6,.81
+      OATA|       fiAi_i_ { [}*[=|,6}1o02,*04,*(]6,.08,.I0,.L2.1
+     DATA(    I I"REC 1 ( i , J),  1= L,6 ), J= A,6 }/.234,                                    -2_4,        * 257,-269,.215,      .226,   -233,
+    1.243,   .2&7,    .215.     -223. -232,    * 193, .199,                                   *ZO0,*2         12 ,. 183, -190,-196,-202,.
+    _166,.176,.|82,.188/
+     DATA(IPREC2(I.J},        [=l,_),J=l,6}l.6_tS,.61J,.696,.722,.620,.638,.656,
+    1-674,   . 590, .t,06, -623, .639,    • 562, . _Zb,.  590, -605 ,. 538 , *55[                                                           , • 564,    -578       ,•
+    251C,   .62_, *538, .552/
+      UA TA(      (PREC3(           [, J),        [=L    ,4},      d=l,6b/o          782,      • 78"/,.       796,       -802,      • 75'3.     *756,      .762,
+    1- 768, • ?GS.           • 7L6,         -124..         732,     • 672,     .t,80,.681,                o695,.652,             .668,.656,.660,                    •
+    2004..6|2,.6|9,                       *6261
+      I]ATA((PREC_(                 [,J},         [=L,It},J=I,6)/.862,.838,°833,.828,.8,.8,.St.S,.75
+    ,|2.. 756,*   760,.763,                       .7 I0..713..               716,.      719,.675,.678,.680,.683,                                  * 630,    -635
+    2, .640°   °6W6/
+      DATA(       ( PRE:CS(         [,J      ),   [-- 1,4),J=L,6}/°878,                        .865..852,                -838,.832,.825,.818,
+    I. 8 |2..        78,   .78,       .78.        olS,    o 736,      • 735    ,.735,          o 73_,       .692,        .694,     o69_),       .696,      obW_,
+    _.64],._50..652/
+     OATAIC[NCbO(i),                      l=I,8}I-I0.5,-5.,-2.,1.5,2.5,4.,5.,5./
+     OATA|C   [NC50(                l ) • l= L,8 ) 1-15-,-?-                   5.-3.,I*_.4.                   ,6.5,9.,           lI.l
+     DATA(CINC40(I),                    l=1,8)/-20.,-L2.,-5.,l.5,5.,8.,11.5,14.5t
+     DAIA|   M_HMS(               [).I=I,8)I.5,.6,.l,.8,oO,                                    I.,I.L,|.21
+     OATAIi}iFLEM!                  I ). 1=I,7)I._,.5,       o6,.7,                       .8,  .9,1./
+     DATAiFLRNG(                  I ) , l=|, ? ) I ._t8, .56, o4_,                      . 72..79,           . 8¢ ,. 891
+      NAI'FLIST            IINPUT/                GAM*POP,TOP,N,UI.T,MUU,CF,VOVCR,NVOVCR,RGAS,
+ lOkAT,l    A*WX,t_2X, Z ,VLDRWR,B2,8LMFH,AR,BLL]CK,AL.J,                                                           ADTH,NONDES,                SPLT,
+ ,_ AL |MF,CHIF,,C.HIT,CURVH,CURVT
+I RFA_(_,     INPbT}
+
+
+26
+     WRITE{6.309|
+     WR[TE(6,3iS}            POF.TUP.NUO,GAM+RGAS
+     wRITE(6.310}
+     WR[TF{6+3|61            Z.CF.SPLT.N.AL|MF+_LOCK
+     WRITE(6,311I
+     _RITE(6.317)            B]MF_,LAMX,DRAT
+
+
+     WRITFIb,3|8)            B2X,_2.VLORR,AL3
+     WRITF(6.313}
+     wRITE(_,3Ig}            AOTH,AR
+     wRITEI6,314)
+     wRITE|6,320}            (VOVCRIIJ.I=[,NVOVCR}
+     PEROS=NCNOES_IOO.
+     G|=GAN_|.
+     G_=GAM-|.
+     CP =GAN_RGASIG2
+     H2X=.OI_5_H2X
+     AL 3=AL 3_.0   |765
+     AL |MF=.OI765_AL              INF
+     _HIH=   .OI745_CH[H
+     CHIT=oO     1745_CHIT
+     FLFUNC=SORTIGAN/RGAS_I2.tGII_IGL/G2I)
+      ROP=POPIRGAStTOP
+     VC_=SORTI2._GAH/GI_RGAS_TOPI
+     UIT=3.i4LSg_N_NONOES_DITI60o
+     NWRITF=I
+     DO 18 L=I.2
+     Mih=l
+2    DC 17       J=MIN*NVOVCR
+     K=C
+     RINFB=.O17_5_BINF8
+     VUIT=O.
+     VUIMF=0.
+     VUlh=O.
+     VMIH=V_VCRiJ)*VCR
+     {J2=_ITIDRAT
+     D2=_ITI_RAT
+     IJI_=_IT_L_MX
+     DI_=D    1T_L   ANX
+      DNF=SURTIDIT**2*I                  A.+LAMX_2112.1
+     lJI_F=IJIT_CMF/D         IT
+    CH [NF= I Ch [ T-CH [ H) _( DNF-D[H   )1(             o IT-D   |H } +CH [ H
+    CIJ_VMF=(CIJRVT-CURVHJ_I        DMF-O_H               I /IOI   T-O LH}+CUR    _H
+    HO=(_MF-OIPII2.
+     H|=IBAT-DNF}t2.
+     FI&T=HOI_._ICURVh_CURVMFI
+     ANlJI. T=EXPIFINT|
+     VNIMF=_U[T=VM_H
+     GlhT=lnO+Hi&             16.$(i2o-HXIHO}_CURVH+(HO+HII=_ZIHO/HItCURVRF+I2o-HO
+    II_|)_CURVTI
+     _bLT=FXPIGINT)
+     VM|T=HMIJLT_VMIH
+     VMIhN=VMIH*£DSICHIH)
+     VMI_FN=VMI_F_COS(CH[MF)
+     V_ITN=VMIT*COS(CH|T|
+     R_Gh=_OP*II.-VMIH_2/2.1CPITOPI_II./G21
+     NHCMF=ROP*(|.-VM|MF==212.tCP/TOPI*$iI./G21
+     R_CT=ROP$II.-VM|T==212./CPITOP)==(Io/G2I
+     FC_I=_PGH_VMIHN_JHI2.
+     FC&2=R_CMF_VMINFN_DMF/2.
+
+                                                                                       27
+      FCh3=R_CT*VN|TN=OIT/2.
+      S_=(HOehl)             t6o=||2,-HI/HO)*FCNle(HU_HI)*=2#HOIHI*FCN2+(2.-HOtHI)*
+     IFCN3;*6.k8318
+       D_IGV=O°
+      VINF=SQRTiVMIMF$=2+VUIMF*=2)
+      TI=TOP-V|MF**212./CP
+      PiP=POP
+      POPPI=(I,-V|NF**212./CPITOPI**(GAM/G2)
+      Pi=P|P*POPPI
+      RIG=PIPIRGaS/TOP
+      R|   = RIP*(P|/PIP)**(|-/GAM)
+     RE=U2*O2/NUO*ROP
+     ALSTAG=ALJMF/2.
+      FS=O,OOTb/(COS(ALIMFJ-.O25)*(I._COS(ALSTAG)/Oo7)
+      VO_CRI=VNVCR(J)
+      IFIALI_F.LT,O,O01;                 GO    TO   36
+      V_CRI=VOVCR|*.O0|
+      AKE=IVCVCRI=VCR)**2/2.
+     POPPI=II.-AKE/CP/TOPJ**(GAH/G2)
+     AKFI[=AKS/(|.-ES)
+      P|OPPO=(I.-AKE|O/CP/TOP)*=(GAN/G2|
+      PIP=POP*P|OPPO/POPP1
+      R]F=P|P/RGAS/TOP
+     PI=P|P_POPP|
+     R|=RIPt(PQPPJ)*_(|./GAM)
+      OI=3.14159*OlT*=2*|I.-LAMX=*2I*VOVCRI*VCReCOS(ALIHFI/_.
+      NTCHKzGI*Ri
+     IF(MICMK.LTeSW)         GO          TO
+     VUIHF=VOVCR|*VCR*SIN(ALIMF)
+      VMIMF=VOVCRI*VCR=EOS(ALIMF)
+      VIMF=SQRIIVU|MF**2÷VMIMF**2)
+      TI=TOP-VIMF**2/2./CP
+      XK=VU|NF**2_2.*VNINF**2
+      XC=VUI_FIDMF*2°
+      VUil=XC*O|II2.
+      VUIH=XC*OIFI2.
+
+
+
+      OFIGV=_S*AKEID
+3b    VII=SQ_I(V_IT**2+VUIT**2)
+      _LI=ARSIN(VUIT/V|TI
+     Wt)lT=tjlt-vUIT
+     B|=ATAN(WU|TIVMIT)
+      wII:SQRIIVMIT**2+WUIT**2I
+      WUIM=IJIh-_UIH
+      R]H=ATAN(WU1_/VNIH)
+     wIH=SQRT(¥MAH**2_bU|_**2)
+     AI=SGRT(GAM*RGAS*TI)
+     wUI_F=UIMF-VUIMF
+     WI_F=SQ_TIVMINF**2÷WUI_F**2)
+     R_RNS=WINF/_I
+      8|WF=ATANI_U|NF/VM|HF)
+      INC=I_|MF-BJMFB)*51.29577
+     EPS=ATAN||I.-BLOCK;*TAN|BIHF)/(I._BLOC_=(TAN(BIMF))**2))
+     BCPI=BI_F-EPS
+      TIFPzTJ*WIMF**212./CP
+      wCR=S_RT(_._GAM/GI*RGAS*TIPP)
+      T_TO=I.-G2/G|*IWIMFIWCR;**2
+      W]MFEF=WINF*COSiB_PT-BIMFB)
+
+
+28
+      TOT|=|o-G21G|*|_|MFEFIWCRI**2
+      TI=TIPP*TOT|
+      wL=WIMF_SihIASSIBOPT-BINF}}
+       DhiNC=_L**212o
+       PIFMF=P|P=EXP(-OH|NCITIIRGAS}
+      DEITA=POPllOI325o35
+      ThETA=TOPt288.15
+      EWF=Sw=S_RTITHETA)/DELTA
+      8|_FB=EIMFB*51o29577
+      IFIB|NFBoGEo4Oo°ANDoBINFBoLEo50o)                                            GO    TO   ?l
+       i=2
+8|     IF(R_RMSoGE.MWRMSII-I).ANDoRMRMSoLEoMWRMS([|}                                                         GO     TO     80
+      l=i+|
+      GC T_    81
+80    CINCI=IRMRMS-MWRMSII-|))IIMWRMSIII-MWRMSII-I&}_IC|NCbOIII-LiNCbOI[
+     |-|I}÷CINC6OII-IJ
+       CINC2=IRMRMS-MwRMSII-|J)/IMWRMSII)-MWRHSI|-I})*{C[NCSOi[J-CINCSOI[
+     /-|}}÷CINCSOII-II
+        C INC=C    INC 1 ÷|    60 .-B     |HFB)        llO-*i        C INC2-C       [NC 1 }
+      IF(INC-LE-EINC}                   K=I
+      GO TO 74
+71     i=2
+72     IFIR_RNS.GE.MWRMSII-II.AND-RMRNS-LE-MWRMS(|)}                                                         GO      TO    73
+      I=1+|
+      G£    TC  72
+73    CINC|=IRMRMS--NWRNS/                     l-l}      I/(MWRMS(           [ I-NWRMS[            1-1    ))=ICINC$0(           l )-CINCSO(     l
+     l-I   l }+C [NCSO(   1-|       }
+       C I_C2=IRMRNS-HMRRS(                    [-I     i I/     (MWRNS(      [ J-NNRNS(            I-IJI4IC[NC4OI|I-C[NC+O/|
+     |-II}+CINC40(l-|)
+        C IKC=C     INC ]+(    50.-B|NFB}/IO.*(EINC2-C[NCIJ
+      IF( INC.LE.CINCI                  K=I
+74    CCKTINUE
+       IF/K.EO.|.ANC.J.EO.I)                           GO       TO   202
+       [F/K.EQ.I.AND.L.EO.I)                           GO       TO   18
+       T2PP=T|PP÷IU2++2-U|MF_+2II2./CP
+       P_[=VMIMF/U2
+       EPSLIN=i.IEXPIS.Lb=COSiB2X)/ZJ
+       VSL=SgRTICOS(82XIIIU2/Z**.?
+       IFiIDNFID_).GT.EPSLIMI                            VSL=U2*iSORT/COSIB2X}                            }/Z**.7}*/l.-I             {DMFIDZ-
+     IEPSLIM)/I         I.-EPSLIMI)**31÷U2_I(OMFtDZ-EPSL|M)/(                                                 I.-EPSLIMI)*=3
+       DhE ST=U2**2
+       T2FEST=I    DHEST/CP/tOp÷l                      • )_TOP
+       R2G=RI4iT2PESTITOPI_i                           |.IG2}
+       RHO2=R2G
+       VM2=S=tI3.14|5_RHG2_O2_B2)
+       VU_=U2-VM?=TANIB2X|-VSL
+       MI_=J
+       IFiV_2.LT.O..AND.LoEO.2}                                 GC   TO     200
+       IFIVP2.LT.O.)            GO        TO      17
+       IFIVU2.LT.O..ANO.L.EQo2)                                 GO   TO     20I
+       [FIVU2.LT.O-I              GO      TO      17
+
+
+       W2=SORTIbU2_2÷VM2_2)
+       IFIIVSL_COSIB2X)IW2I.GT.I..AND.L.EO.2}                                                 GO     TO    202
+       IFIIVSL=COSIR2X)I_2;.GT.I.)                                     GO     TO    17
+       T2=T2PP-_2**2/2o/EP
+       A2=SORTIGAM*RGAS*T2J
+       _2CklT=_2/_IT
+       wOU2=IPhI=*P+ID_FID2)==2÷W2OkLT*=2*IPHI**2+D_AT_*2))/2.
+
+
+                                                                                                                                                    29
+      AL2=AIAN|          YU2/VH2)
+      V2=SOR!    i _U2_2+VM2_2)
+      T2P=T_÷V2_*2/2        •/CP
+      Ot-,a ERO=CP_TOP*             ( T2P/TOP-JI,,.               )
+      UAFRO=CHAEROIU2**2
+      DF=     _|IIU2't'IZ/3.                i_I§9_i'II,.-CIT/D21+2.*OIT/D2)
+      CCI_ST 1=0o75
+      IF|SPL|._°||                  CONSTI=O°6
+      DF= I .-I,1213 Im|T+CONSTI'_AERO/CF
+      DI_SL=O    o05_ OF=_*2 _U2.'1=2
+      L ('JO= ( l°-OMFI°3048)ICOSIB2X)/2°
+      Ohi_F=°OI356*RHO2*U2*_3*O2_*2/SId/RE_**2
+      OH VO=Z/3     • 14J[59/C0   Si B2X ) +02/82
+      OI"YD=    I ./DHYD+O|T/D2t                    12 ./(        1 .-LAHX)+2°*Z/3.14.1i59/(I.+LAMX)
+     |*SCRT    ( l .el     ]i .+LAMX_I'*2        J)/2°_(TAN(B1)                 )**2    ) )
+       OI..RC= 0.02.       SORT I TANI         AL2 ) )_DF**2*U2**2
+       CC;hST2=5°6
+      IFISPLT.EG*|)                 CCN ST2=_'°O
+      OHSF=CONST2*CF_LOOIDhYD_IuOU2"I'U2**2
+      OHACT=£FAERCeOHDFeDHRC
+      H IS=DHAERO-DHBL-OHSF-DH[                                  GV-DH   INC
+      F I"AR==H IS ID)4AERO
+      T X= E T AR_OI'_A ERO/CP/|OP+                       L,,,
+51    P2F=TX$=IGAN/G2I=PIPMF
+      P2=P2P*    (T2P/T2)_tI-GAM/G2,1
+      R2G=P2/RGAS/T2
+      IF(ASS(IRHI32-R2G)/RHO2).,GT°O°O01)                                         GO    TO    4
+      XM2=    V2tA2
+      R2=02/_     •
+      AMU=1.4519E-b=T2_,_|.                         5/(    T2+|       1C.4)
+      A/_L=AMU/R2G
+      P,O= I.
+      XM=XM2
+      AL PhA=AL2
+      R= l .0
+      F( |)=XN2*_3/I            lo+G2/2°_XM2'_'_2)_*(G|/2./G2)
+      PBPI|I=P2P
+      XPARR | i )=XJ'12
+      DEL TAR=i     VLDRR-           |.   ) / |0°
+      ZEIA=CF*R2/82
+      AS=O.
+      OE    |000        NO=2.   |0
+      XM i =XlUl
+      ALPHI=ALPHA
+      OS=CEL TAR*R2/Ct'JS                 (ALPHA)
+      AS=ASeOS
+      D/L TAS= o037_AS*_                  (-o2)_          (V2/ANU)_(-02)                _OS
+      R=BO-2  .*OEL  TAS/B2
+      DEL "f_ B=80-        8
+      VARM=-_      .*    ( l .+G2/2.*XM4'=2)                      / ( XM_=2-l./COS(ALPHA)              $=2)   _( (GAH=XN_Z-TAN
+     | ( ALPha )e*2   )*/E           TA/BO/CL]S(ALPHA)+I./BO*DELTAS/DELTAR-I°/COS|                                       ALPHA)**
+     ?2JR ) _xM_*2_DELTAR
+       V_RAL=|°ICOSIALPHA)'_,=2/IXM**2-|i°/COS|ALPHA)                             )=e2)_((I°+GZ                             =XM_*2
+     I),_Z [TAIHO/CL_S(       ALPHA)+       | ./BO*DELTA_/DFLTAR-XH**2/R)*TAN(ALPHA)                                        _,DFLTA
+     2R
+      VAR_I=VARM
+      V,_ R AL I=VARAL
+      81=8
+      H=80
+
+
+
+3O
+         AS=AS-DS
+         XM=XM |**2+VARN
+         XJ_=S_RT(XM)
+         TALPH=TAN           I ALPHL         )-O-VARAL 1
+         AL PHJ=Al_h    ( TALPHI
+         OS=DEL   TAR*R2/CGS(                    ALPHA       )
+         R=R+DELTAR
+         AS=AS+DS
+         DFLTAS=.O31*AS**(-.2)*|V21ANU)**(-.2)*DS
+         B=BO-"2.*OEL               TAS/B2
+         DEL 1AR=BO-B
+         VARM=-2-*(].*G2/2.*XM**2)/(XM**2-1o/COSiALPHA)**2)                                                                    *(   (GAM*XN**2.-TAN
+        1( ALPI,    A )_'2      )*TETA/BO/CUSiALPHAJ+I./BO*OELTAS/DELTAR-I-/COS(                                                               ALPHA)**
+        22tR   ) _XM**2*DELTAR
+          VAI_AL=IolCOSIALPi_A)**2/IXM**Z-I1./COSIALPHA)                                                            )*,2)*  ( (1.        +G2      *XM**2
+        1 )*Z ETA/HU/CDS        ( ALPHA)+L       o/BO*OELTAH/DE                                       LTAR-XM**2/R)*TAN(ALPHA                   )*DELTA
+        2R
+         V_RM=(_ARt4I÷VARH)                      12.
+   7     VARAL=        | VARAL       ] ÷VARAL          I/2    •
+         8= (8+RI        it2.
+         X_= XMi*:t2+VARM
+         X H-= S(:RT ( XM )
+          TAL PH="[AN         (ALPH         1 )+VARAL
+          AL Pt_ A= a I Ai_ i TALPH)
+          HO=B
+          ACC, USR=SORT     ( | .t (1.+G2/2.4XN**2)                                         )
+          RHOR= | °t(   I°_G212.tXM**;_)**(                                  1./G2)
+          F ( hi3 )= XM**       3*A C..OUSi_,*RHOR*R
+          [FINOoEOo2)              S{ NO) =( F (NO)+F                       ( N(_-     l)       )*0.5*DELTAR
+         [FIhO-EQ-2)          GCI TO 8
+         CALL      FhTGRL   (NO* DELTAR'.     F,, S)
+       H TPL=l°/(|-_GAM*CF*R2*S(NOI/COS(AL2)tB2/XM2*(l°+G212"*XM2**2)**(GI/
+        L2.tG2)   J
+         PP=TPL*P2P
+          P3P ( NO )=PP
+          XNARR (NI_)=XM
+          XNAC.H=XMARR              | NO)
+lOOC      Plt_P=P3P          (hO)
+          [FiL.EO.i)                G_      TO   3,O
+          M=2
+  21      [FIXI_ACt-°GE°DIFLEH(M-1)°ANOoXIqACH-LE°D[FLEM(M))                                                              GO        TO   2Z
+          N=N+I
+          G£   TC      _ l
+  22      RAkGE=        (XMACI'+-D          [FLEN(N-             |)   ) / (O[        FLEH(N)-O[FLEN(P,-.-I)               l*    (FLRNG(H)-FLRNG(
+         |M-- | ) ) +FLRNG          (N- | )
+           _ SLIRGF=RANG            _*I_CI-K
+          [FIEWF.LI.I,=SURGE)                      GO        TO       203
+  30      C(hT  INUE
+          PTP=PTHPt(I.+G212.*XNACH*t2i**(GAHIG2)
+          gb_LD=CP*I2P*((PIH/PfHP)**(G2/GAH)-(PTH/PZP)**(G2/GAM))
+          81=1.-8
+          XM ACi-I= XMACF,*CC] S ( Ai:IS ( AL PHA-AL                            3 ) )
+          PTInP=PTH*(]°+G2/2°*XMACH**2)**IGAM/GZ)
+          X 1= ( ALPI_A-AL3|*57.29577
+          IdFUNC.=Sk#    SORT ( T2P               ) / AU 1[I_/P TI_P/_
+           [FIWFtJNC.GE.FLFUNC)                 CPSTAR=U°
+           [ F ( WFIJP.L .GE .FLFUNC         ) K=|
+           [F(tzFLJhCoGE.FLFUNC)                GO T_        l_e
+           [F    ((AR-I.2I.GT.Oo.AND.(AR-2°I.LT-O-J                                                      GO TO  10
+           [F    ((AR-.';._).GT.O.°AND.             IAR-3.|.LT°O.|                                      GO TO 1].
+
+
+                                                                                                                                                           31
+            IF     ((AR-3o)oGT.OooAND.iAR-q,.).LToU*)                                               GO   TO     Z2
+            IF   ((AK-_o)oL;ToOo,ANUo(AR-So)oLToOo)                                                 G(..) TO    13
+      |0    CALL     I_[hINTIXMACH._TtAMTebARR.PKECIo_ebIFL)
+            CALL        L [NINT(XMACH,_TtAt4T,SARR,PREC2t4tb,F2)
+            CPSTAR=IAR-io2)t.8_'iF2-F1)+F|
+            GC T_   14
+      | i   CALL  LININT(XNACH,_T,AMT,SAI_R,PREE2t_ebtFZ)
+            CALL   LKNKNT(XMACH,bTtAMT,BARR,PREC3,4,beF_)
+            CP STAR=(AR-2o)*(      F31,-F2 1 ÷F2
+            G_ TO   14
+      12    CALL  L|N|NTIXNACH,ST,AMT,SARR,PREC3o4,btF_)
+            CA! L L|N[NT(XMACHeHTeAMTtBARR,PRECIt,_tbJF_)
+            CP STAR= ( AR-3o  )* ( F Z*-F3) _F3
+            GC     TO     14
+      13    CALL        LININT(XNACH,BT,ANT,BARR,PKEC_,_*tboF/*)
+            CALL        LININT|XNACH,BTtAMT,BARRtPRECS,_,6,FS)
+            CPSTAR=(AR-4*               ) _' ( FS'F4        ) iF/*
+      I_    CCNTINUE
+            IFIK.EOoIoANO-J.EG*|)                            G_       TO       202
+            IFIKoEQo]oANCoL.EQoIb                            GO       TO       18
+            IFIKoNEoI-AN[;oJoI_QoNVOVCR)                                   GO        TO    20_
+            PFX IT=CPSTAR_I'      ( PTHP-PTH)+PTH
+            RTHP=PTHP/RGAS/T2P
+            VCRTH=SORT     ( 2o*GAMIGI*RGAS*T2P                                  )
+            RVRVTH=SW/RTHP/VCRTH/AOTH/B
+            Vi]VCR4=       o020
+     tO0    P4PL=PEXIT/II.-G2/GI._'VOVCR_'*2)**|GAM/G2)
+            RVRVC4=     ( l .-G21G     I_tVOVCR _.$2                    )**      I 1. tG2         ) _,VOVCR_,
+            P_ePG=RVRVTH*PTHP/AR/RVRVC_.
+            VCVCR_=VOVCR_,e.                OOJL
+            IFIP4PL.LT.P6PG)                  GO        TO      100
+            PPEX IT=P6PG
+15          Oh£ IF=T_P*CP_=(             ( PEXiT/PPEX                 IT)**(          L;2/GAMI-(PEXI             T/PTHP   )*_=(GZ/GAM)   )
+            PR=PPFXIT/POP
+            E I._C=O_AE   RO-DHSF-              CHBL-DHVLC-OHI]I                          F-DHI      GV-OHI     NC
+            ETAL)=_CTAD/D_ACT
+            DE i _.V=Ol"       | GV/OHACT
+            DERL=I]PBL           IOhACT
+            OESF=OHSF/CPACT
+            I)E CF =I_I"CF IOHACT
+            L)ERC=Ot'_RC I I.)_AC T
+            I)E _LO=OhVLOIOHACT
+            DEVC=OH(_          | FII]HACT
+            UE lhC=Oh          [NE/OHACT
+            [FIL.FG°2)             GO    TO     19
+17          CChl   INUF
+            iFiLoEOol)             GO    TO     18
+            IFII_=_[TEoNE.1)                  GI_      TO    J5
+            WR ITF(6.300)
+            WRITE|6°30|             )   PERDS
+            *R ITE (6,307)
+            _RITEI6.J03)                wSURGE,WCHK
+            NbRITF=I_WRITE+I
+
+            _R ITFt       6°J04    )
+            =_r ITF16,305)              EWF,Pk,ETAD
+            ._R [TE(b,306)
+            w_ITE(6o30_)         DEIGV.DEINCtl3EBL,DESF,DEOF,DEKC,DEVLD_.DEVD
+             IF(K.N_oI°ANOoMIN.LEoNVfJVCR)                GO TO 2
+
+
+
+32
+          IF(KoEG.Io,6NC.LoEG.,_)                       GO        TD    l
+200      wlR ITE(6•400)
+         tJ ! I_--M IN'_ i
+          IFII'IN.GT°NVOVCR)                   GO     TO      I
+         GC       T_   2
+20i      WRITFi6°_OO)
+         Nih=MIN*I
+          IF(elN.GT.NVflVCR)                   GO     TO      [
+         GC TO 2
+202      mR ITEiE,40_)
+         GO TO ].
+203      WRITE(6,403)                VOVCR(J)
+         Nik=NIN+i
+         IFiNIN.GT.NVOVCR)                     GO     TO      I
+         GO    TO 2
+204      wRITFI6.308)
+         GC       TO   1
+  IB     wCHK=SWwwSQRTITHETAIIDELTA
+         GO   TO   i
+]00      FORMATISgX.]3H                    PERCENT          NOES)
+30l      FORMAT   ( 63X,FS-l      )
+302      FORMAT|45X.|6H           SURGE               FLOW         RATE.IOX*|SHCHOKE                     FLOW    RATE)
+303      FOi_MAT | 5 |X.FS.3.20X.FS-3)
+304      FORMATI44X,,,4H                  WEO,,|OX.14HPRESSURE                        RATIOt|OXt4HETAI)
+305      FORMAT     146X        t F5.3.      |3X,FS.3.15X,F4-..t)
+3,06     FI_RMATIJ]IX.8H                  DETAIGV•8Xt7HDETAINC.BX.bHDETABL.8Xt6HOETASF.BXtbHDE
+        |TACF•SX           •61"DETARC•       8X• ?HOETAVLO         • 8X•6HDETAVD)
+3,0-/     FORMAT{          13X•F6.5•gX•F6.5.BX.F6.5•,l=LX.F6°5.SX•F6,,StBX.F6,,StgXtF6,,St
+        18X ,F6,5,(JX           ,F6.5)
+308      FOR_ATI45H               COMPRESSOR            CHOKING              FLOW      HAS     NOT     BEEN     REACHED)
+30g      FCRMJTI2IHIINLEI                      TOTAL_  PRESSUKE,._X,23HINLET                             TOTAL    TEMPERATURE,SX,2
+        IghlNLET      TOTAL               DYNAMIC     VISCOSITY,_X,19HSPECIFIC                               HEAT    RATIO,   SX,£2HGA
+        2S CONSTANT)
+31LO     FORMATIITH               NUMBER       OF     BLADES,SXº2OHFRICTION                            CCEFFICIENTtSXe_HSPLTe5
+        IX,I2hDESIGN              SPEED,SX,23HINDUCER                           RMS      SWIRL        ANGLE,SX,27HINDUCER             RMS
+        2BLCCKAGE             FACTOR)
+311      FO_i_,6TIIIX,24H                   INDUCER         RMS        BLADE        ANGLEt._X,3OHINDUCER                 HUB-TIP    DIAME
+        ITFR   RATIO,SX,_OHINDUCER                         TIP-IMPELLER        EXIT    DIAMETER     RATIO)
+3X2      F(3RMAT(301-_    IMPELLER                   BLADE    EXIT    BACKSwEEP,SX,23HIMPELLER                               BLADE    EXIT
+        I I-_I.,5X,32HVANELESS                       DIFFUSER      DIAMETER      RATIO,   SX,28HVANED                        DIFFUSER      S
+        2EIIIhG            ANGLE)
+313      F(_RNATi33X,33H                   TOTAL      VANED            DIFFUSER          THROAT        AREA,SX,25HVANED            OIFFUS
+    IER   _RE, A RATIO)
+3tz+ FCRMATK47X.36H         INLET    CRITICAL                                VELOCITY          RAT[O    ARRAY)
+315  F_RMATITX,FT.O,2|X,F6.2,Z3X.FB.Z,2_X•F3.                                                    I,16XtF6,2)
+316       FORMATIIX,F3.O,20X,F4°3,ISX,II,DX,F6-O,X7X,F6-Zt26XtF_-ZI
+317       FORMAT(2_X,F4,       I,27X,Fb.4,34X,F6-4)
+318       FORMATII3X,F4.[,26X,F6.5,27X,F_-3,30X,FS,2)
+31g       FCR_AII47X,F/-6,2BX,F4-21
+
+32O       FO_N_TIBFiO.2)
+          FORMATI|X,24HIRRATIONAL                             EXIT          TRIANGLE)
+402       FORMATIIX,2IFVOVCR                        ARRAY       TOO         LARGE)
+1,03      F_RMAIIiX,34HWT                    FLUW      LESS        THAN        SURGE         FOR     V/VCR=,F4.2)
+          FNC
+
+
+
+
+                                                                                                                                               33
+                                           Subroutine         LININT            (X 1, Y 1, X, Y, TN, MX, MY, F)
+
+
+         This subroutine   interpolates     a value of maximum   pressure   recovery     coefficient                                            Cp
+from      a table of vaned diffuser     throat   Mach numbers  and aerodynamic      blockage     given                                         as
+input.
+
+Xl              input,       vaned        diffuser       throat         Mach         number
+
+Y1              input,       throat        aerodynamic             blockage
+
+X               input       array        of throat      Mach        numbers
+
+Y               input       array        of throat      blockages
+
+TN                                                                               **      corresponding      to throat    Mach     numbers      and
+                input two-dimensional                      array        of      Cp
+                   blockages
+
+MX              input,       number          of throat        Mach        numbers
+
+MY              input,       number          of throat        blockages
+                                                                           **
+F
+                output,        interpolated           value        of    Cp
+
+
+ $18FTC           LININT
+
+
+                SUE_OiITINE      LIN[NT                 {XL.YI.X,Y,TN._X.MY.F|
+                DiNF_SICN      XlHX).                 Y(MYI.        TNiMX,MY)
+                I)E  1 J3=2.NX
+ |               IF  (X|.LE.X(J3))                    GO      TO    2
+                J3=NX
+ 2              DO      3    J4=2_NY
+ =I             IF       (YI-LE.Y(J_))                GO      TO    4
+                ,|4=NY
+                J/=J3-i
+                d2=J4-|
+                EPS l=( X l-X            | J l ) )/|   X( J3/-X         ( Jll    )
+                FPS2=(YI-Y(J2)                   I/(Y(J4)-Y(J2))
+                EPS3=I.-EPSI
+                FFS4=I°-FPS2
+              F=TNI.II.J21_EPS3_EPS4+TNIJ3.J2I_EPSiSEPS_+TNiJItJ4)_EPS2_EPS3_TNIJ
+            I_.JkI_EFSI_EPS2
+                RFTURN
+                ENC
+
+
+
+
+                                                 Subroutine             FNTGRL(NO,             DELTAR,     F, S)
+
+
+         This        subprogram             is used        to integrate              the function    M3(pa/p'a     ') in the   vaneless     dif-
+fuser.
+
+
+
+
+34
+NO                        number         of equally        spaced          radii
+
+DELTAR                    radius       ratio     between        stations
+
+F                         function         M3(pa/p'a       ')
+
+S                         integral       of     F
+
+        No FORTRAN                   listing     of the    subprogram              is available   but a brief   description   of the
+method        of integration             is as follows:
+        The     subprogram               uses       Simpson's         rule     in the following    manner:
+
+First     interval:
+
+
+
+
+                                                                     _x_      1 f(x)dx   =0
+
+
+
+Second        interval:
+
+
+
+
+                                                    j_x x2 f(x)dx          = Ax(5f 1 + 8f 2 - f3)/12
+                                                        1
+
+
+Remaining           intervals:
+
+
+
+
+                                               J_xi xi+l   f(x)dx       = Ax(5fi+ 1 + 8f i - fi_l)/12
+
+
+
+
+Lewis     Research            Center,
+        National          Aeronautics            and    Space        Administration,
+              and
+
+U.S.     Army         Air    Mobility           R&D     Laboratory,
+                Cleveland,            Ohio,       August        2,    1973,
+                      501-24.
+
+
+
+
+                                                                                                                                       35
+                                                         APPEND_             A
+
+
+
+                                                               SYMBOLS
+                    2
+A     area, m
+
+AR    area ratio
+
+a     local acoustic velocity, m/sec
+
+B     effectivedepth ratio
+
+b     blade height or passage depth, m
+                                        -I
+C     wall      curvature,          m
+
+Cf    skin friction            coefficient
+
+
+Cp    specific       heat,        J/(kg)      (K)
+
+      maximum              pressure        recovery         coefficient        at a constant   area   ratio
+Cp
+D     diameter,            m
+
+Df    diffusion          factor
+
+e s   inlet      guide     vane     loss      coefficient
+
+h     spacing       for numerical               integration
+
+Ah    incremental              compressor            specific      enthalpy,      J/kg
+
+K     constant
+
+L     blade length, m
+
+M     Mach       number
+
+N     rotative speed, rpm
+
+n     distance along radius, m
+
+P     pressure, N/m 2
+
+q     volumetric            flow rate,          m3/sec
+
+q     dimensionless                enthalpy
+
+R     gas      constant,          J/(kg)(K)
+
+R     radius       ratio
+
+Re    Reynolds           number         based       on inlet     total    conditions
+
+r     radius,       m
+
+s     arc      length,       m
+
+
+36
+/k s          incremental                arc       length,        m
+
+T             temperature,                    K
+
+t             blade      thickness,                m
+
+U             blade         speed,        m/sec
+
+V             absolute          gas      velocity,           m/sec
+
+W             relative          gas      velocity,           m/sec
+
+W             mass       flow         rate,        kg/sec
+
+Z             number           of impeller               blades
+
+O_            absolute          flow angle,                deg    from           meridional       plane
+
+              relative          flow angle,               deg from               meridional       plane
+
+              blade      angle,          deg from            meridional               plane
+
+              specific          heat      ratio
+
+8             ratio      of inlet         total      pressure           to standard             sea-level         pressure
+
+/kS*          incremental                boundary            layer      displacement              thickness,          m
+
+E             difference              between            compressor                inlet   relative       flow    angle      and   optimum   incidence
+                    angle
+
+              vaneless           diffuser           loss     coefficient
+
+T/            total      efficiency
+
+              total      efficiency               decrement
+
+              ratio      of inlet         total      temperature                  to standard         sea-level       temperature
+
+              inducer         hub-tip             diameter           ratio
+
+              dynamic           viscosity,               N-sec/m             2
+
+U             kinematic              viscosity,             m2/sec
+
+P             gas      density,          kg/m        3
+
+9             flow      coefficient
+
+X             wall      slope         or streamline               angle,            deg from      axial
+
+Subscripts:
+
+act           actual
+
+AD            adiabatic
+
+aero          aerodynamic
+
+
+                                                                                                                                                         37
+ av      average
+
+ BL      blade        loading
+
+ calc    calculated
+
+ choke   value        at choking         flow     rate
+
+ cr      critical        condition
+
+DES      design
+
+DF       disk       friction
+
+eff      effective
+
+eq       equivalent
+
+est      estimated
+
+exit     exit
+
+H        hub
+
+HYD      hydraulic
+
+i        iteration          subscript
+
+id       ideal
+
+IGV      inlet      guide      vane
+
+INC      incidence
+
+is       isentropic
+
+L        lost
+
+m        meridional
+
+max      maximum
+
+MF       rms
+
+n        normal
+
+opt      optimum
+
+R        rotor
+
+RC       recircuiation
+
+SF       skin    friction
+
+SL       slip
+
+st       stagger
+
+surge    value      at surge          flow rate
+
+38
+T            tip
+
+U            tangential
+
+V            vortex
+
+VD           vaned      diffuser
+
+VLD          vaneless       diffuser
+
+0            station      just     upstream        of inlet   guide   vanes
+
+1            impeller       inlet      upstream       of blade
+
+2            impeller       inlet      just     downstream       of blade     leading   edge
+
+3            impeller       exit
+
+4            vaned      diffuser       leading      edge
+
+5            vaned      diffuser       throat
+
+6            vaned      diffuser       exit
+
+Super   scripts:
+
+'            absolute       total    condition
+
+"            relative      total     condition
+
+
+
+
+                                                                                               39
+                                                                                  APPENDIX B
+
+
+                                                                                  EQUATIONS
+
+
+         This       section          presents            a more           detailed           discussion              of the        method           of calculating               com-
+pressor          performance                   than      was presented                  in the            section      Method             of Analysis.
+         The      equations             used      in calculating                  the    flow         solution        through             the     compressor               are        listed
+here      in the        approximate                order            of solution          in the            FORTRAN             program.                 The       known         con-
+stants      are        the     input      fluid        state     and        thermodynamic                       properties,               compressor                geometry,
+and      velocity         diagram              data.          The     working           fluid        properties              and     state        conditions            are      spe-
+
+cific     heat      ratio          V, inlet        total        pressure               p_,        inlet     total     temperature                   T_,       and     inlet      dy-
+namic       viscosity               based       on total            conditions               _.           The     velocity         diagram             data     are     compressor
+design         rotative         speed           NDES,           the     fraction             of design            rotative         speed         for    which         performance
+
+data      is desired                N/NDEs,             the     number,           of values               of (V /Vcr ) 0            for    which          performance                  is to
+
+be calculated,                 the values              of      V /Vcr ) 0         to be used,                   and the inducer                  solid-body             swirl       angle
+
+at the rms             diameter                C_lM F.          The compressor                        data are inducer                     inlet       hub and tip wall
+slopes           X1H         and       X1T , inducer                inlet      hub and tip wall                     curvatures               C1H          and       C1T , inducer
+inlet     tip diameter                  D1T , inducer                  inlet      hub-tip            diameter          ratio         k, inducer-inlet-tip                        to
+impeller-exit                 diameter            ratio         D1T/D3,             number                of blades          at impeller               exit     (including             split-
+ters)      Z3,      impeller            blade          exit     angle       (positive              opposite         to direction                of rotation           ) _3b'          im-
+peller      exit       blade        height         b3,         inducer         inlet     blade            angle     at the rms               diameter               _IMFb,            in-
+ducer       inlet       blockage            factor          calculated            at the rms                diameter,              vaneless            diffuser         diameter
+
+ratio       D4/D3,             vaned        diffuser            setting        angle          a4'         total     vaned      diffuser            throat        area         A5,
+vaned       diffuser          area ratio                A6/A5,    and wetted surface    friction   coefficient                                               Cf. With                 these
+known       values           compressor                 performance    can be evaluated      by the method                                                described.
+
+
+
+
+                       Calculation              of Inlet        Velocity           Triangles                and Compressor                      Weight          Flow
+
+
+         Calculation                of the      inducer          inlet       velocity             diagrams           and weight                 flow    are      handled         by two
+methods           depending             on whether               the      inlet    is swirl-free                    or subject             to solid-body                swirl.           For
+the      swirl      cases          it is assumed                that the inlet                guide         vanes      are     located             in a constant              area
+annulus          with        zero      wall      slope         with     respect          to the axial               direction.               The inner              and outer
+diameters              of the annulus                  are assumed                to be equal                to the inducer                inlet       hub and tip diam-
+eters.           For     the       swirl-free            cases         it is assumed                      that the flow            orthogonal             can be approxi-
+mated       by a radial                line.       These            assumptions                   greatly         simplify          calculation               of the velocities
+specified           by the          general       velocity             gradient          equation.
+
+
+
+
+4O
+          Swirl-free             inlets.        - For      compressor               configurations                  with    swirl-free           inlets       the     input
+
+                    V /Vcr-0 )          is used       as     the hub streamline                   value        of    V/Vcr.           The      variation            of inlet
+value       of
+velocity          with radius              is calculated            from      the general               velocity        gradient         equation          simplified
+for      swirl-free             flow.         This    equation          is (in simplified                   form     from     ref.       10)
+
+
+
+
+                                                                                               _0 n C dn
+                                                                    V m = Vml H e                                                                                            (B1)
+
+
+
+where         Vml H             is the hub absolute                 velocity,          C    is the          streamline          curvature,             and      n      is the
+distance           along        a radius.            Streamline            curvature           and      slope       at the     rms       inlet     diameter            are
+approximated                   by linear        interpolation            of the      input        hub and           tip values.           The      integral          in the
+previous           equation           is approximated                by the trapezoidal                      rule    at the     rms       diameter            and     by
+Simpson's             rule      for     unequal         intervals        at the      tip.         The       numerical         approximations                   are
+
+
+
+
+                                                                                            --_O
+                                                                                               (C IH+C IMF) 1
+
+                                                       VmlMF            = Vml H e                                                                                           (B2)
+
+
+and
+
+
+
+
+                                                                                                   (h0+ h 1) 2
+                                                                                       C1H d
+                                                                                                        hlh 0
+
+                     Vml T = Vml H e                                                                                                                                        (B3)
+
+
+where
+
+
+
+                                                                        h0 =rlM            F - rlH                                                                          (B4)
+
+and
+
+
+
+                                                                        h 1 = rlT          -rlM         F                                                                   (B5)
+
+
+Static      densities           at the hub,           rms,        and    tip diameters               are        determined           from        the   inlet        total
+density       and        the    calculated           velocity        at each        station.            Velocity           components            normal         to the
+annular          inlet     plane        are    calculated           using     the    velocities              and     streamline           angles       at the        three
+stations:
+
+                                                                                                                                                                              41
+                                                                      Vml n = Vml cos X                                                                                  (B6)
+
+where X is the streamline angle. Inlet mass flow is then computed using Simpson's
+rule for unequal intervals
+
+
+
+
+                                                                                                     (pr) 1MFVmlMFn
+w = 2nfh0--        +6hl             -_0          (Pr) 1HVmlHn              +         h0hl
+
+
+
+
+                                                                                                  + /2 - _/(pr)                  1TVmlTntt                               (B7)
+
+
+
+
+        Inlets     with     solid-body               swirl.        - For       impeller           inlets         with    inlet    guide    vanes        producing
+solid-body          swirl     the       equations          presented              in reference              2 for kinetic            energy      loss         were
+iteratively         solved        for      state     conditions          and       velocities             downstream              of the   inlet       guide       vanes.
+Conditions          at the        rms      diameter            were     assumed             to be representative                     of the flow             distribu-
+tion    at the     impeller             inlet.       The      inlet    guide        vane     stagger             angle     was     assumed            to be one-
+half     of the    turning         angle         at the    rms        diameter;            that     is,
+
+
+                                                                                          _IMF
+                                                                           aST       -                                                                                   (B8)
+                                                                                             2
+
+
+The     inlet     guide     vane        loss       coefficient         was        calculated          from         the    equation
+
+
+
+
+                                                   es = COS OtlMF
+                                                              0.0076 - 0. 025 Q + c°S_sT
+                                                                                     0.-7                                  /1                                            (B9)
+
+
+                                                              \
+Using      the    input     value         of     V /Vcr       )0   as a first            approximation                  to the    value    of      V/Vcr           down-
+
+stream          of the    inlet     guide          vanes      at the     rms       diameter,               the    following        equations           are      solved
+
+iteratively         with successive                  increments              in    V/Vcr           until         continuity       checks        the    calculation
+of equation         (BT):
+
+
+
+
+42
+                 KE=                            (BIO)
+
+
+
+
+                                                (Bii)
+
+
+
+
+                   KEid    _     KE             (BI2)
+                                I - eS
+
+
+
+          PlMF
+                                                (BI3)
+           p_
+
+                                 PlMF
+
+                                   p8
+             P_Mr:p_                            (B14)
+
+
+
+
+                                PlMF
+                                                (B15)
+                   PlMF-         RT_
+
+
+
+                                                (BI6)
+            PlMF       = PlMF    (_,tlM   F
+
+
+
+
+                                                (BIT)
+            PlMF       = PlMF     u,/iM F
+
+
+
+
+Q1                                              (BIB)
+     = 4 D_T( 1 . _2)IVI__I     V cr cos _IMF
+                      \ cr/1M F
+
+
+
+                   w = QIPlM       F            (B19)
+
+
+                                                   43
+         When      continuity           is satisfied         downstream                of the    inlet     guide     vanes,         the impeller          inlet
+velocity         triangles       are      calculated.             Combination              of the     Euler        equation         with the      solid-body
+vortex         equation        and     simple       radial       equilibrium             equation        shows       that     the   meridional          veloc-
+ity distribution             can be expressed                as
+
+
+
+
+                                                             Vml          = _Kvm           - 2V21                                                              (B20)
+
+
+
+Using the value of                    V/Vcr    which satisfies    continuity    downstream      of the inlet guide                                        vanes
+and the input value                   of the rms turning     angle allows    solution    of the constant    in equa-
+tion     (B20).       The      tangential           components            of the       inlet    absolute         velocity       at the    hub and        tip are
+calculated          from       the     vortex       condition.            Then     the     hub and tip          meridional           velocities        can      be
+determined           as follows:
+
+
+                                                                          Vu = Kvur                                                                          (B21)
+
+
+where
+
+
+
+                                                                               VulMF
+                                                                         KVu - --                                                                            (B22)
+                                                                                rlMF
+
+
+         The     following           general    inducer           inlet    velocity         diagram         characteristics              are      calculated
+after      the    particular           swirl-free        or solid-body                 swirl     calculations          are      completed:
+
+
+
+
+                                                             V1T         = _     VmlT
+                                                                                  2            + V2
+                                                                                                  ulT                                                        (B23)
+
+
+
+                                                                               sin-1     (VulT-_                                                             (B24)
+
+
+
+
+                                                                 Wul T = UlT - Vul T                                                                         (B25)
+
+
+
+
+                                                                  tilT    = tan-1        (WulT_                                                              (B26)
+                                                                                         \VmlT/
+
+
+
+44
+                                      W1T = _                       mlT    + W2ulT                                          (B27)
+
+
+                                              Wul H = UlH - Vul H                                                           (B28)
+
+
+
+                                                                                                                            (B29)
+
+
+
+
+                                      WIH          =        _/_V 2
+                                                                 mIH       + W 2
+                                                                               ulH                                          (B30)
+
+
+
+                                   VIMF        :        _/V 2
+                                                            ulMF           + V2
+                                                                              mlMF                                          (B31)
+
+
+
+                                      WulMF                 = UlM F - VulMF                                                 (B32)
+
+
+
+                                                             V2
+                                   WlMF        = t//(          mlMF         + w2ulMF                                        (B33)
+
+
+
+
+                                                            tan-1    (WulMF        /                                        (B34)
+                                       flIMF            =            \VmlMF        /
+
+
+
+The wheel speeds   used   in the   previous            equations          are   obtained   from   the   following   input
+constant s:
+
+
+
+
+                                                   7;
+                                                            -_Es/NDEsD1T
+                                     UlT =                                                                              (B35)
+                                                                     6O
+
+
+
+                                                       UlH = XUlT                                                       (B36)
+
+
+
+                                                                      D1MF
+                                          UlM F = UlT                                                                   (B37)
+                                                                          D1T
+
+
+
+
+                                                                                                                               45
+where
+
+
+
+
+                                                                                                                                                                (B38)
+                                                                D1MF        = _1           D2T(1       + _2)
+
+
+
+
+                                                                      Individual            Losses
+
+
+          Inlet      guide     vane       loss.        - When       the     inducer         inlet     velocity       diagram        characteristics
+have       been       determined              by the       method         described          in the        section    Inlets      With     Solid-Body
+Swirl,         the inlet        guide         vane     loss     is computed              using       the equation        found      in reference           1,    sub-
+ject      to the      assumptions                made       in reference            3.
+
+
+                                                                         AhIGv        = esKEid                                                                  (B39)
+
+
+          Inducer        incidence             loss.       - The     equations            developed          in reference          4 are    used        to deter-
+mine       the     optimum          inducer            incidence          angle     for     incompressible              flow.        Compressibility
+effects        are     ignored          because          the incidence             loss     is evaluated             at the rms       diameter          and     com-
+pressibility            effects         are      insignificant            except      at the hub according                 to reference            4.     Using
+the    input       blade       blockage           factor        at the     rms      diameter          the     optimum          incidence     angle       is found
+by
+
+
+
+                                                                   = tan- 1 (1 - B1)tan                   fllMF
+                                                                                                                                                                (B40)
+                                                                                  1 + B ltan         2 fllMF
+
+
+where
+
+
+                                                                                             Z ltu
+                                                                         B1 = 1                                                                                 (B41)
+                                                                                           27rrlM F
+
+
+The       optimum            relative         flow angle           is then
+
+
+                                                                         flopt     = fllMF          - _                                                         (B42)
+
+
+
+and      the      component             of the       relative      velocity         lost    is
+
+
+
+
+46
+                                                   WL = WlMF sin[_opt - _IMF [                                                                                (B43)
+
+The enthalpy           loss    due to incidence                 is expressed                   as
+
+
+
+                                                                                          W2                                                                  (B44)
+                                                                       AhiN C -
+                                                                                          2Cp
+
+
+and   the     total    pressure         just    inside     the blade                row        is
+
+
+
+                                                                                                -AhINc._
+
+                                                         P2MF           = PlMF            e                                                                    (B45)
+
+
+
+      Impeller         work       and    losses.         - The         impeller               exit       density      is obtained      through       iteration
+of the      impeller      loss     equations          and calculated                  state             properties.        The      enthalpy      rise      in the
+impeller        is initially       approximated                 as
+
+
+
+                                                                             Ahes t = u_                                                                       (B46)
+
+
+and   the     corresponding             impeller         exit        total     temperature                   is then
+
+
+
+                                                                                                                                                               (B47)
+                                                                3est     = /_                     +        TO
+                                                                           k pu
+
+
+The   impeller         exit    density         is initially           approximated                      to be
+
+
+
+                                                                                /T_e          st_l/(y        -1)
+                                                                                                                                                               (B48)
+                                                         P3 = PlMF_-_O                              /
+
+
+
+      The       meridional         component             of exit        absolute              velocity          is calculated        from      continuity
+
+
+                                                                                              W
+                                                                      Vm3       -                                                                              (B49)
+                                                                                     _P3D3b3
+
+
+
+
+                                                                                                                                                                     47
+        The tangential componentof exit absolute velocity is then
+
+                                              Vu3 = u3 - Vm3 tan _3b - VSL                                                             (B50)
+
+
+where     the    slip   velocity       VSL    is calculated       by the method             of reference         11.
+
+
+
+                                                                                _3b
+                                                        VSL = u3_/c°s                                                                  (B51)
+                                                                       Z0 . 7
+
+
+
+        The     remaining      state    and flow    properties        at the     exit      were     calculated         from   the   follow-
+ing relations:
+
+
+
+                                                                                 2
+                                                                                UlMF
+                                                  T_' = T1M
+                                                          " F +                                                                        (B52)
+                                                                               2Cp
+
+
+                                                         Wu3 = u 3 - Vu3                                                               (B53)
+
+
+
+
+                                                    W3 =        CV    2m3 + W 2u3                                                      (B54)
+
+
+
+
+                                                         T S = T_'                                                                     (B55)
+                                                                           2Cp
+
+
+
+
+                                                        V3 =          2
+                                                                     Vm3    + V 2
+                                                                                u3                                                     (B56)
+
+
+
+
+                                                                                                                                        (B57)
+                                                            T_ = T 3 +
+
+
+        The     work    loss   due     to blade   loading      is calculated         from     the    equation
+
+
+
+                                                         AhBL     = 0.05    Df2 u 23                                                    (B58)
+
+
+
+which     is given      by reference         5.   The    diffusion    factor          Df    is defined      as
+
+ 48
+                                                       W3                                 KBLqaero
+                                       Df = 1 -_                +                                                                                         (B59)
+
+
+
+
+where  a value of 0.75 is used for                          KBL    for conventional                        impellers          and a value of 0.6              is
+used for impellers   with splitters.                         A parametric     study                      of calculated         diffusion factors
+with a variation         in the        number        of blades         indicated             that    changing           the   constant       to 0.6      would
+compensate         for   the    changing         solidity       near      the        exit.         The     dimensionless           actual        head    is
+obtained      by dividing        the      enthalpy      rise        by the         exit    blade         speed     squared
+
+
+                                                                                    Ahaero
+                                                                 qaero         -                                                                          (B60)
+
+
+
+
+where
+
+
+                                                                                                                                                          (B61)
+                                                        5haero         = CpT                       - 1
+
+
+
+
+        Impeller      disk     friction      loss     is computed              using         the    method          of reference         6
+
+
+
+                                                    _hDF       = 0.01356               P3       3 23
+                                                                                               u3D                                                        (B62)
+                                                                                     wRe 0 . 2
+
+
+The     Reynolds      number           in this      equation        is based              on impeller            exit    dimensions          and inlet
+total    conditions
+
+
+
+                                                                Re = u3D3PlMF                                                                             (B63)
+
+
+
+
+        Skin friction        loss      is calculated           from      the       correlation             found        in reference         5
+
+
+
+
+                                                                                                                                                                   49
+                                                                                                   L
+
+                                                                                                                                                                                  (B64)
+                                                           AhsF       = KsFC f --
+                                                                                             DHYD
+                                                                                                 D-;               v
+                                                                                                                        u_
+
+
+                                                                                                 D3
+
+
+where         the      mean        flowpath       blade        length-diameter                       ratio      is expressed              as
+
+
+
+                                                                                         1         D1MF
+                                                                         L          1              0. 3048
+                                                                                                                                                                                  (B65)
+                                                                         D3         2         cos      _3b
+
+
+        The         ratio         of mean      hydraulic-exit                   diameter            ratio      is calculated             from        the    equation
+
+
+                                                                                                                   D1T
+
+                         DHYD                            1                                                             D3
+                                       -                                    +                                                                                                     (B66)
+
+                                                               + --                2         +                         1 + tan 2                      +
+                                               cos_3b            b3              1 -_            u(l+_)                                  f}lT
+
+
+
+and     the     ratio        of mean          relative        velocity-impeller                        exit    velocity         is determined                by
+
+
+
+
+                                                                                             + (W3             _2 [ (VmlMFI2               + (DIT_21-              _              (B67)
+
+
+                                                                                                                              :3} \W/jj
+        Some           studies        of the     effects           of the       addition           of splitter          blades      on the impeller                      flow      in-
+dicated         that        the    mean       channel         relative           velocity           is increased               in the     splitter         region.           The
+ratio     of mean             flow     path     blade        length      and        hydraulic             diameter-exit                 diameter           ratio        remain
+virtually           unchanged.                Computation             of the         mean           relative       velocity         ratios        for      an impeller
+both      with       and without             splitters         showed            that,       for     splitters,          the     average         relative              velocity          is
+about         14 percent            higher       than    for       conventional                  impellers.             This      phenomenon                is accounted
+for     by using            the     constant      7.0        for    impellers            with          splitters        and      5.6 for        impellers               without
+splitters.
+        At this          point       in the     iteration           procedure              the impeller                ideal     enthalpy          rise      is calculated
+as follows:
+
+
+
+5O
+                                     _hid = _haero - _hIGV - AhIN C - _hsF                                                 - AhBL                                       (B68)
+
+
+        Defining       the     impeller          efficiency             as
+
+
+                                                                                           Ahid
+                                                                                                                                                                        (B69)
+                                                                                      Ahaer        o
+
+
+the    state     conditions        at the        impeller              exit    are    calculated              from       the     relations
+
+
+                                                                                                                /(7-I)
+                                                                                                                                                                        (BT0)
+                                                                              t/R Ahaero                 1) 7
+
+
+
+
+                                                                       P3 =                                                                                             (B71)
+
+
+
+
+                                                                                           P3
+                                                                               P3-                                                                                      (B72)
+                                                                                        RT 3
+
+
+
+The value of P3                obtained          from       equation            (B72)       is compared                 to the     value       estimated           in
+equation (B48).
+       If the values           do not compare                    within        0.1    percent,             the former            value       is used       as a new
+approximation            and     equations              (B49)         to (B72)       are     iterated           until     two consecutive                 values        of
+exit   density        agree      within      the        tolerance             specified.
+       Recirculation             loss.      - Recirculation                     of the      working           fluid      from      the     vaneless         space        back
+into   the impeller            results       in additional                 work      which         is lost        to the       system.          Reference               5 ex-
+presses        this    loss    as a function               of the impeller                  exit       absolute         flow     angle,        impeller         diffu-
+sion factor,          and     impeller           exit     tip     speed.          The       following           modified          form       of the    equation              of
+reference         5 is used        to calculate                 the    recirculation               loss:
+
+
+                                                                                                              22
+                                                          AhRC          =0.02         __3                   Dfu3                                                        (B73)
+
+
+
+       Vaneless         diffuser         loss.          - Reference              7 developed               differential           equations          relating       Mach
+number,        flow     angle,      and      total        temperature                to vaneless              diffuser          radius       ratio    through           the
+
+                                                                                                                                                                              51
+fundamental relations of continuity, equilibrium, heat transfer, andfluid state. These
+equations are evaluatedat ten equally spacedintervals in the vaneless space. Two iter-
+ations of the equationsare performed at each station; the first iteration uses the calcu-
+lated properties at the point of interest to computethe variation in Mach number and
+flow angle to the next point; the seconditeration uses the estimated properties of the
+downstream point to computethe same variations. The arithmetic average of the two
+iterations is then usedfor the solution.
+     These equations, simplified for adiabatic flow in a geometrically constant depth
+radial passageare
+
+
+                                                                                                        1 dB       sec2_ q]
+                                                                                                                                            (B74)
+                         d¥              2_sec2                                       B    cos      +Bdl_             R     ]
+and
+
+
+
+
+                  tan    _        dR              see{E
+                                             M 2 - sec 2                                                              :----2}
+where
+
+
+                                                                           Cfr 3
+                                                                      -                                                                     (B76)
+                                                                            b3
+
+
+                                                                  m
+
+
+                                                                  R =r                                                                      (B77)
+                                                                            r3
+
+
+
+                                                                      B = __b                                                               (B78)
+                                                                             b3
+
+
+        The     schedule        of effective      passage      depth       is determined         by boundary       layer        displace-
+ment     thickness           growth      on the   end walls.      The end walls             in the vaneless        diffuser        are      as-
+sumed         to be parallel           and have   a spacing      equal        to the impeller       exit   blade    height.         The
+flow    pattern         between        the end walls    is approximated             as a log spiral        between         adjacent         cal-
+culation        stations.         With these      assumptions             the incremental        flow   path length        is
+
+
+
+ 52
+                                                                        AS- r 2 _R                                                                               (B79)
+                                                                                       COS     G
+
+
+
+
+and    the    incremental           boundary              layer     displacement                   thickness       is
+
+
+
+
+                                                      _5"         = 0.037        S -0"2        __              AS                                                (B80)
+
+
+
+where
+
+                                                                                   n
+
+
+                                                                           S = _             _S i                                                                (B81)
+
+                                                                                  i=l
+
+
+The     effective        passage         depth       is
+
+
+
+                                                                    Bi+l     = Bi            2 AS*                                                               (B82)
+                                                                                               b3
+
+
+and
+
+
+
+                                                                      AB = B i - Bi+ 1                                                                           (B83)
+
+
+        Loss      the    total     pressure          in the vaneless                space           is computed          from      the     following       equa-
+tion    derived         in reference          4:
+
+
+
+
+                                                                                             1R M 3 aa T fl_t R dR
+                                                                     7Cf          r 3                    P
+                                                 1        _ 1 +                                                                                                  (B84)
+
+
+                                                                                                       \a /3\p/3
+
+
+        The    integral          in equation          (B84)        is determined                   by numerical          methods.            Vaned       diffuser
+leading       edge      static     pressure           is calculated              from         the    isentropic         relation         using     the   total
+pressure          obtained        from     equation           (B84)        and    the        Mach      number       obtained        from         the distribu-
+tion    prescribed           by equation             (B74)
+
+
+
+
+                                                                                                                                                                    53
+                                                                                                                                                                        (B85)
+                                                                P4 =
+                                                                                 +Y
+                                                                                  --------_
+                                                                                        M
+                                                                            1       2     2)'Y/('y- 1)
+
+
+Vaneless          diffuser           loss      is then         determined               by
+
+
+
+
+                                                                                                                                                                            (B86)
+                                              AhvL D = CpT_
+
+
+
+
+         Vaned         diffuser        loss.           - Vaned          diffuser         performance             is predicted            by use       of the        test
+data     reported           in reference                8.      Lines       of maximum                pressure          recovery          coefficient           at a
+given     area         ratio       were       estimated            from         the performance                  maps      reported         for     single       plane
+divergence             diffusers            with square                throats.           The      component           of the vaned          diffuser           leading
+edge      Mach         number         parallel           to the vane              setting       angle        is used       as the      throat       Mach        number.
+A loss        in total         pressure           associated              with this          incidence          is calculated            holding       static        pres-
+sure      constant          between           the leading               edge      and throat.            The      throat      blockage           is estimated
+from      the     displacement                 thickness           growth           on the      vaneless          diffuser        end walls.            Using         these
+conditions          of throat             Mach         number,           total      pressure,           and     blockage          the pressure             recovery
+of the vaned              diffuser          is extrapolated                for      the specified             geometric           area     ratio.       Vaned           dif-
+fuser      exit     static         pressure            is then         calculated            from     the relation
+
+
+
+                                                                       P6 = C**(p_
+                                                                             p                  - p5 ) + P5                                                                 (B87)
+
+
+         The      exit     total     pressure                and velocity           are      determined           by trial        and     error       using         esti-
+mated         values       of exit          critical         velocity          ratio.        The     total      pressure          at the vaned          diffuser
+throat        is assumed             to be constant                across           the free-stream                area      outside       the      boundary           layer
+displacement               thickness.                  The     total     pressure            and     velocity       at the     vaned       diffuser          exit      are
+calculated          assuming              full    flow        across        the     geometric           area.          Starting        with a low value                 of
+          X
+
+
+
+
+ V /Vc*/6
+       ._           the      lower        estimate            of exit      total        pressure        is expressed              as
+
+
+
+                                                                                                P6                                                                          (B88)
+                                                               P6 :                                          V/(7 -1)
+
+
+
+                                                                                  y+l
+
+
+
+
+54
+andthe higher estimate is
+
+
+                                                                            /ov           _,
+
+
+
+                                                                P6 = AR IpOV
+                                                                           'V c r) 6
+
+
+
+where
+
+
+
+                                                                                                                                            (B90)
+
+                                                           'Vcr              P5    c      5A5 B5
+
+
+
+Equations          (B88)     and   (B89)     are    solved          using    increasing        values     of    V /Vcr ) 6    until   conver-
+
+gence     is achieved.             The     vaned     diffuser         loss    is then      calculated      from     the   relation
+
+
+
+
+                                                           W_                                                                               (B91)
+                                         AhvD       = Cp        3
+
+
+
+
+        Efficiency         decrements.             - Decrements              in efficiency       caused        by the individual       losses
+are     obtained      from     the following          equations:
+
+
+                                                                                  AhIG V
+                                                                    AT/IGV -                                                                (B92)
+                                                                                   Ahac t
+
+
+
+                                                                                  AhIN C
+                                                                    AT/INC -                                                                (B93)
+                                                                                  Ahac t
+
+
+
+                                                                                  AhBL
+                                                                                                                                            (B94)
+                                                                                  Ahac t
+
+
+
+                                                                                  AhsF
+                                                                                                                                            (B95)
+                                                                                  Ahac t
+
+                                                                                                                                                55
+                                                                  AhDF
+                                                     AhDF     -                                            (B96)
+                                                                  Ahac t
+
+
+
+                                                                  AhRc
+                                                                                                           (B97)
+                                                                  Ahac t
+
+
+
+                                                                  AhvL D
+                                                    AT/VLD    -                                            (B98)
+                                                                  Ahac t
+
+
+
+                                                                  AhvD
+                                                                                                           (B99)
+                                                                  Ahac t
+
+
+where
+
+
+
+                                         Ahac t = Ahaero + AhRc            + AhDF                         (B100)
+
+
+
+     Overall   efficiency.          - The overall    total   efficiency     is calculated   as follows:
+
+
+                       Ah
+                             aero     - (AhIG V + AhIN c + AhBL            + AhsF   + AhvL D + AhvD)
+               _AD =                                                                                      (B101)
+                                                    Ahaero    + AhRc       + AhDF
+
+
+
+
+56
+                                                                                 REFERENCES
+
+
+ 1. Galvas,                Michael              R. : Analytical                 Correlation             of Centrifugal             Compressor                      Design
+            Geometry                  for Maximum                      Efficiency       With      Specific         Speed.         NASA TN D-6729,                            1972.
+
+ 2. Stewart,                Warner                 L. ; Whitney,               Warren          J. ; and Wong,                Robert         Y. : A Study               of
+             Boundary-Layer                         Characteristics                   of Turbomachine                  Blade      Rows         and         Their       Relation
+            to Over-All                     Blade        Loss.           J.   Basic     Eng.,       vol.     82,       no.     3, Sept.        1960,         pp.      588-592.
+
+ 3. Rohlik,                Harold             E. : Analyitical                 Determination               of Radial           Inflow        Turbine           Design         Geom-
+             etry    for         Maximum                 Efficiency.              NASA         TN D-4384,              1968.
+
+ 4. Stanitz,               John            D. : Effect            of Blade-Thickness                     Taper         on Axial-Velocity                     Distribution            at
+             the    Leading                 Edge     of an Entrance                   Rotor      Blade      Row With            Axial        Inlet,         and      the Influ-
+             ence      of This               Distribution               on Alinement             of the     Rotor        Blade        for     Zero         Angle        of Attack.
+             NACA          TN-2986,                  1953.
+
+ 5. Coppage,                     J.        E. ; Dallenbach,                   F. : Eichenberger,                 J.    P. ; Hlavaka,                  G.     E.;
+             Knoernschild,                     E.     M. ; and Vanke,                   N. : Study         of Supersonic                Radial         Compressors                   for
+             Refrigeration                    and     Pressurization                   Systems.            AiResearch             Mfg.        Co.          (WADC
+             TR-55-257),                     Dec.        1956.
+
+ 6. Shepherd,                     Dennis            G. : Principles                 of Turbomachinery.                        Macmillan               Co.,          1956.
+
+ 7. Stanitz,               John            D. : One-Dimensional                         Compressible                  Flow     in Vaneless                 Diffusers         of
+             Radial-             and        Mixed-Flow                 Centrifugal            Compressors,               Including           Effects          of Friction,
+             Heat      Transfer,                   and     Area         Change.          NACA       TN       2610,        1952.
+
+ 8. Runstadtler,                           Peter     W.,         Jr.     : Pressure             Recovery         Performance                  of Straight-Channel,
+             Single-Plane                    Divergence                 Diffusers        High     Mach       Numbers.                 Rep.       N-88,            Creare,         Inc.
+             (USAAVLABS-TR-69-56,                                        AD-865300),             Oct.      1969.
+
+ 9.     Rodgers,                 Colin:            Typical         Performance                Characteristics                 of Gas        Turbine           Radial         Com-
+             pressors.                     Paper         63-AItGT-14,                 ASME,       Mar.       1963.
+
+10.     Stewart,            Warner                 L. : Analytical               Investigation             of Flow           Through         a High-Speed                   Mixed-
+             Flow       Turbine.                    NACA         TM ES1H06,               1951.
+
+11.     Weisner,                 F.        J. : A Review                 of Slip      Factors       for     Centrifugal           Impellers.                   J.     Eng.
+             Power,              vol.        89,     no.     4, Oct.           1967,     pp.      558-572.
+
+
+
+
+ NASA-Langley,      1973    --         1     E-q480                                                                                                                                    57
+

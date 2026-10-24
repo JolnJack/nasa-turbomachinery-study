@@ -1,0 +1,322 @@
+{
+  "created_utc": "2026-10-23T16:22:32.640912+00:00",
+  "status": "All declared grid executions complete; engineering inverse1126/1126; functional61/61; failed categories and strict modern reference failure retained; overall final acceptance incomplete.",
+  "evidence_index": "audit/2026-10-23/restoration/wide-delivery-index.json",
+  "files": [
+    {
+      "path": "RESTORATION_STATUS.md",
+      "bytes": 1951,
+      "sha256": "dfab005d72cf809f73c9215f37732176d1dfd26c59ff9b7bfa43b88f1d6883fc"
+    },
+    {
+      "path": "restored/ERRATA.md",
+      "bytes": 4439,
+      "sha256": "9224ad6c19b3eb56dba2f412d763fa689be87d545fccfcdaf8f851eea36d3609"
+    },
+    {
+      "path": "restored/Makefile",
+      "bytes": 2905,
+      "sha256": "3f2db66d766ad38858a2bb29bc6ad54ccba5b70dc03f2c7fb090c2902e073711"
+    },
+    {
+      "path": "restored/NEW_DATA_TRIAL.md",
+      "bytes": 5334,
+      "sha256": "7bad9d0f4cd08222eab8e2c3921509c1727af79a78a547e3ef8cf7745ef9b195"
+    },
+    {
+      "path": "restored/README.md",
+      "bytes": 6568,
+      "sha256": "6fec61bc8b3bedfddb3a329fb095692195e4d6b46cea77012284cae60014493f"
+    },
+    {
+      "path": "restored/SCAN_PLAN.md",
+      "bytes": 2841,
+      "sha256": "9f64de8299409595889e8c9d8c0a788d42346d5a8d02865bed3a2acdf21be23d"
+    },
+    {
+      "path": "restored/SCAN_RESULTS.md",
+      "bytes": 5646,
+      "sha256": "5f11cddd77d4843bb3c24c6bbf90bbcd4c639e34b94b08ff3b25b813f7cfd9e0"
+    },
+    {
+      "path": "restored/SOURCE_MAP.md",
+      "bytes": 6427,
+      "sha256": "9f1cf66f587417ee2b32c8a4cede1757aa44993142f80f574b57df72b7a15a64"
+    },
+    {
+      "path": "restored/TURBINE_FINDINGS.md",
+      "bytes": 5762,
+      "sha256": "3c53752dfb9480302e0ebdc8e48bd215f55d0c06780ac6080a75e9f86a04afb3"
+    },
+    {
+      "path": "restored/VALIDATION.md",
+      "bytes": 6748,
+      "sha256": "3b13ea2b6bf3d83f39317bbab94b46d3d6b9caff9252e5e6e67abd338917b58d"
+    },
+    {
+      "path": "restored/WORK_PLAN.md",
+      "bytes": 3041,
+      "sha256": "efa54d8fb941db4d528965997c8baa9ef7d5969f71f4bbeeca809aa2413c0ce6"
+    },
+    {
+      "path": "restored/build/compat27/compressor_tn_d7487",
+      "bytes": 179184,
+      "sha256": "340c119898b5907159da639e8b1200f4f7f8494a720c1b3e5dec981328fc68e5"
+    },
+    {
+      "path": "restored/build/compat27/turbine_tn_d8063",
+      "bytes": 161984,
+      "sha256": "e6bc897666de9788f9e7ae89eec9917c18d4df971cb60e7b36b977f896b3c960"
+    },
+    {
+      "path": "restored/build/modern64/compressor_tn_d7487",
+      "bytes": 109344,
+      "sha256": "3a6c8b5ad34e8a3fb8f1356c003dd1217f776ad69e80c3c586d59272db61b2a5"
+    },
+    {
+      "path": "restored/build/modern64/turbine_tn_d8063",
+      "bytes": 92016,
+      "sha256": "794cd1606ba57ef664ca9bde40045e4731d8a681930f78e0b1de0224c4d715d8"
+    },
+    {
+      "path": "restored/build/native32/compressor_tn_d7487",
+      "bytes": 109360,
+      "sha256": "290106dfc6d3a4d898b08761fe773f97a63f41ae315ee868a3ce55c1f6e281d7"
+    },
+    {
+      "path": "restored/build/native32/turbine_tn_d8063",
+      "bytes": 92032,
+      "sha256": "6e6ec338f7228312849a320f8416283cae7b1f594477a48a6579e436db458c22"
+    },
+    {
+      "path": "restored/build/output/compressor.out",
+      "bytes": 24430,
+      "sha256": "415cdb693e6b86bf79c98192fe3e5b9e61e8fa9c04c4f09c8c95e9b00285d522"
+    },
+    {
+      "path": "restored/build/output/turbine.out",
+      "bytes": 134748,
+      "sha256": "a07426795583c76d472fd15bd95653f3c51073172a5215c57ce5aba3f8bd7a58"
+    },
+    {
+      "path": "restored/compat27/compressor_tn_d7487.f90",
+      "bytes": 31910,
+      "sha256": "d3c503f56810d94724a97011295ec9a400270a02e340a9094ce15493a214338b"
+    },
+    {
+      "path": "restored/compat27/generation.json",
+      "bytes": 152957,
+      "sha256": "be35616c91650495bbfc9ae9b20e7332e60696d440f29cdc8b3bfba10ae5437f"
+    },
+    {
+      "path": "restored/compat27/turbine_tn_d8063.f90",
+      "bytes": 26345,
+      "sha256": "809866bf4706ee136cf1f7eb5b1da1c25addae37a2b6fb32f8f3eafa4e49dcde"
+    },
+    {
+      "path": "restored/compressor_tn_d7487.f",
+      "bytes": 18953,
+      "sha256": "dc2a7564c29bf75c4c0b98e9b18885d06468d4cfa56b784d32cd59e4b7360f01"
+    },
+    {
+      "path": "restored/examples/compressor_new_data.inp",
+      "bytes": 359,
+      "sha256": "8d0405c58fb9cb4e1bf3e49418c487bd7ac63aa7e8b7910bdb579767275be7ab"
+    },
+    {
+      "path": "restored/examples/compressor_original.inp",
+      "bytes": 1354,
+      "sha256": "be56d958ea2261930bc4f0442652e290a6d35708cb91bcb8b5666b8a7b4c27fd"
+    },
+    {
+      "path": "restored/examples/turbine_design_then_offdesign.inp",
+      "bytes": 534,
+      "sha256": "924ccac354dbe92bbf526fc9e094a8a37abb53bef38cf81d4d6510b1934c1004"
+    },
+    {
+      "path": "restored/examples/turbine_known_root_design.inp",
+      "bytes": 402,
+      "sha256": "741f5b29eadeab03cc87e6cdc7c042fd9442dce192312893b1042b8d1a27f672"
+    },
+    {
+      "path": "restored/examples/turbine_new_data.inp",
+      "bytes": 415,
+      "sha256": "6c3b918679058126799cfb0009c5e9df0dda93e9267d7245a45bc35e2ffa08ff"
+    },
+    {
+      "path": "restored/examples/turbine_original.inp",
+      "bytes": 1111,
+      "sha256": "d1ab293ac84ff266dc58b44997c1f6816660660626948ede80d3a3cd91c36a34"
+    },
+    {
+      "path": "restored/examples/turbine_table_III_coefficients.inp",
+      "bytes": 338,
+      "sha256": "44eca264c379934e53e69d01cce30ddf00f276547b16106ceb85fbb7160047c8"
+    },
+    {
+      "path": "restored/read_namelist_cards.f90",
+      "bytes": 2532,
+      "sha256": "3eb3c92ee8c9c00b759d1721c32d9f9c668eef59dc356da64424784e3e505831"
+    },
+    {
+      "path": "restored/tests/TRANSCRIPTION_NOTES.md",
+      "bytes": 1347,
+      "sha256": "71186069c9d90a6603462cbd82d03b54b8bf6ee352b9a1b3e7123de32115fd12"
+    },
+    {
+      "path": "restored/tests/check_arithmetic.py",
+      "bytes": 2670,
+      "sha256": "f93d238c59cc2a5948e3249c4d10904dab3277dbbe744a7310c3c2c9fc8215f3"
+    },
+    {
+      "path": "restored/tests/check_conservation.py",
+      "bytes": 3358,
+      "sha256": "ca7afa80ffd94ead21c21bdcda75863d49606e55414272d6169e8f8bcecac28e"
+    },
+    {
+      "path": "restored/tests/check_design_interface.py",
+      "bytes": 2149,
+      "sha256": "da87386c928733d997a6e782e32a5b3c072ad3b3291fbcf0c86c1fe3022072af"
+    },
+    {
+      "path": "restored/tests/check_design_solver.py",
+      "bytes": 2448,
+      "sha256": "17788b3ae0f8f1812cc8e694aa0a6cb324453b82c230301c9494fbc394b1c596"
+    },
+    {
+      "path": "restored/tests/check_historical.py",
+      "bytes": 8042,
+      "sha256": "a0d90fc8b91a9377e91c3fda6d95498a7736be9673894815164218036853765e"
+    },
+    {
+      "path": "restored/tests/check_subprograms.py",
+      "bytes": 1997,
+      "sha256": "57a7e219b4cc4ef90f55998c431424e4e607f218570d05ffdd8f07658da6fc0d"
+    },
+    {
+      "path": "restored/tests/compare_full.py",
+      "bytes": 4736,
+      "sha256": "18100eee7b7e3a0642e06f0c2b0301d21bbf1772c52400464ec06b6e65e01a6e"
+    },
+    {
+      "path": "restored/tests/fixtures/turbine_known_roots.json",
+      "bytes": 1051952,
+      "sha256": "589df4562a46d7a2c4d3f6f93504691f982c72912c74aff347d566fc4145f7fb"
+    },
+    {
+      "path": "restored/tests/fixtures/turbine_known_roots.provenance.json",
+      "bytes": 551,
+      "sha256": "e9a20ca57d0ba337a4e1fc68a868834f6bfd51301706ce3c48a6eb3306614596"
+    },
+    {
+      "path": "restored/tests/fixtures/turbine_slow_design.inp",
+      "bytes": 402,
+      "sha256": "7a211b9e666a7416f3d5a83bb8f7e4a8f452203d09838c1fdf41fb01e6970930"
+    },
+    {
+      "path": "restored/tests/reference_full.json",
+      "bytes": 17093,
+      "sha256": "2299a4c275bc762cd15e63e07208d4f05089deca776d5275d558999926634ecc"
+    },
+    {
+      "path": "restored/tests/reference_full.py",
+      "bytes": 4902,
+      "sha256": "eac393ce1a49771b93dd41792b1bb65cb446b55749a849d7b7a46ebce5e54d1a"
+    },
+    {
+      "path": "restored/tests/regression.py",
+      "bytes": 11226,
+      "sha256": "a189484c13c876f08f0899fd09caafbe21dd729bd0c69c89aa7a9cea50d3c261"
+    },
+    {
+      "path": "restored/tests/scan_inverse.py",
+      "bytes": 5001,
+      "sha256": "c89a6bed56b95f4d57cb71e16d2ceb9febb535bb47870bb05fa99c536d677805"
+    },
+    {
+      "path": "restored/tests/subprograms.f",
+      "bytes": 2236,
+      "sha256": "eab1754a99f4beead8e49a84704ba44e55bc2b11814c08173fb7965fb01655f8"
+    },
+    {
+      "path": "restored/tests/systematic_scan.py",
+      "bytes": 11564,
+      "sha256": "2eed3564507479f41277c677cfe7d0d80f94e8dd57b309865d082b6652029a13"
+    },
+    {
+      "path": "restored/tests/try_new_data.py",
+      "bytes": 10370,
+      "sha256": "42381858beaae44e33e90f769e245a9bfdad546463bdca47ed3c98be0ee4c90a"
+    },
+    {
+      "path": "restored/tests/verify_integrity.py",
+      "bytes": 993,
+      "sha256": "c2acc70793dbb48fb1036c6669c90733d1cf0399fda5b2e35ba95a550096ce19"
+    },
+    {
+      "path": "restored/tools/compare_historical_turbine.py",
+      "bytes": 5605,
+      "sha256": "a7245b0e3bfaf91cc906c2cac8fe07b896859484aa36066b7d5f66410ee11725"
+    },
+    {
+      "path": "restored/tools/generate_compat27.py",
+      "bytes": 7914,
+      "sha256": "1702d585f8fae57989ab453c8bc4ed8a52d8095ca2fa1c56240841300f5b7eb5"
+    },
+    {
+      "path": "restored/tools/plot_validation.py",
+      "bytes": 2800,
+      "sha256": "ff70b5dccc241776dde60746370bf4096c06cd364998304ca9ad8badf9530074"
+    },
+    {
+      "path": "restored/tools/prepare_historical.py",
+      "bytes": 2292,
+      "sha256": "dec782c6e23effdd27144b08a73201d850b4b841b56151f3d553acde71140f38"
+    },
+    {
+      "path": "restored/tools/run_historical_turbine.py",
+      "bytes": 11950,
+      "sha256": "b1eeddfca6a6975f5ef487641f4116bf70ee071e3ceaee7bb02ea21c7e2bf028"
+    },
+    {
+      "path": "restored/tools/trace_turbine.py",
+      "bytes": 4810,
+      "sha256": "dfe2dfc5daf70d06f7bb25570990650f81e5283fb829d94d67d286b04f954b61"
+    },
+    {
+      "path": "restored/tools/turbine_design_solver.py",
+      "bytes": 16199,
+      "sha256": "f9569d0a28356e328174092dc3552c038c1631e0d7a5921bae50fa1813fed547"
+    },
+    {
+      "path": "restored/turbine_tn_d8063.f",
+      "bytes": 21151,
+      "sha256": "80bd0b4604e726fb44614d720a08ddc6db8cf0a11605f53b7801234da8d98fed"
+    },
+    {
+      "path": "restored/validation/compressor_reference.png",
+      "bytes": 146088,
+      "sha256": "ef969cac0796773073b53244fa4c323da801510552e98e6706b6f7ec516268cd"
+    },
+    {
+      "path": "restored/validation/compressor_reference.svg",
+      "bytes": 46051,
+      "sha256": "27a26d3a56c93cc7a61eda2e27249f78ca42b91db9af56973b0e61b0e64e7bd1"
+    },
+    {
+      "path": "restored/validation/plot-provenance.json",
+      "bytes": 281,
+      "sha256": "e631a62473a5873169ca0620ba7738fedfab0f7b7a2df67deca5033f6abf1811"
+    },
+    {
+      "path": "restored/validation/turbine_reference.png",
+      "bytes": 96965,
+      "sha256": "60bcc8e1457b802b837a6e072303bb97f36fdde79e51b7756e9a32e013c4b1cb"
+    },
+    {
+      "path": "restored/validation/turbine_reference.svg",
+      "bytes": 20704,
+      "sha256": "b4f904a4fffc2d6237217959e4646d4e30c7db63f3fa4b12ed540d129ce1f91f"
+    }
+  ]
+}

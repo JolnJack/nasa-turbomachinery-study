@@ -1,0 +1,96 @@
+{
+  "compiler": "GNU Fortran (Homebrew GCC 16.2.0) 16.2.0\nCopyright (C) 2026 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+  "source_directory": "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-22/baseline",
+  "source_sha256": {
+    "turbine_tn_d8063.f": "de5bb490d8ac5a2be99b20d82f09c4a57484f46d0d3db8476363148507821293",
+    "compressor_tn_d7487.f": "8e4236aa8e25373cf2060ca435fd1e46e05210bef4632506e1f5912ebb6634e7"
+  },
+  "results": [
+    {
+      "program": "compressor_tn_d7487",
+      "profile": "existing_flags",
+      "compile_command": [
+        "/opt/homebrew/bin/gfortran",
+        "-std=legacy",
+        "-fno-automatic",
+        "-w",
+        "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-22/baseline/compressor_tn_d7487.f",
+        "-o",
+        "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-22/runs/20261023T043448074421Z/compressor_tn_d7487-existing_flags"
+      ],
+      "compile_exit": 0,
+      "run_exit": 2,
+      "timed_out": false,
+      "stdout_bytes": 24430,
+      "matches_existing_output_bytes": true,
+      "stderr_excerpt": "At line 36 of file /Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-22/baseline/compressor_tn_d7487.f (unit = 5, file = 'stdin')\nFortran runtime error: End of file\n\nError termination. Backtrace:\n#0  0x102f53323\n#1  0x102f53ef7\n#2  0x102f547cb\n#3  0x1030710d3\n#4  0x1030720ff\n#5  0x103074707\n#6  0x103074923\n#7  0x102b6d5b3\n#8  0x102b73867\n"
+    },
+    {
+      "program": "compressor_tn_d7487",
+      "profile": "diagnostic",
+      "compile_command": [
+        "/opt/homebrew/bin/gfortran",
+        "-std=legacy",
+        "-fno-automatic",
+        "-Wall",
+        "-Wextra",
+        "-g",
+        "-fcheck=all",
+        "-fbacktrace",
+        "-ffpe-trap=invalid,zero,overflow",
+        "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-22/baseline/compressor_tn_d7487.f",
+        "-o",
+        "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-22/runs/20261023T043448074421Z/compressor_tn_d7487-diagnostic"
+      ],
+      "compile_exit": 0,
+      "run_exit": 2,
+      "timed_out": false,
+      "stdout_bytes": 20353,
+      "matches_existing_output_bytes": false,
+      "stderr_excerpt": "At line 178 of file /Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-22/baseline/compressor_tn_d7487.f\nFortran runtime error: Index '9' of dimension 1 of array 'mwrms' above upper bound of 8\n\nError termination. Backtrace:\n#0  0x10300f2f3 in ???\n#1  0x10300fef7 in ???\n#2  0x103010287 in ???\n#3  0x102c14abb in MAIN__\n\tat /Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-22/baseline/compressor_tn_d7487.f:178\n#4  0x102c192b7 in main\n\tat /Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-22/baseline/compressor_tn_d7487.f:446\n"
+    },
+    {
+      "program": "turbine_tn_d8063",
+      "profile": "existing_flags",
+      "compile_command": [
+        "/opt/homebrew/bin/gfortran",
+        "-std=legacy",
+        "-fno-automatic",
+        "-w",
+        "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-22/baseline/turbine_tn_d8063.f",
+        "-o",
+        "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-22/runs/20261023T043448074421Z/turbine_tn_d8063-existing_flags"
+      ],
+      "compile_exit": 0,
+      "run_exit": 2,
+      "timed_out": false,
+      "stdout_bytes": 97946,
+      "matches_existing_output_bytes": true,
+      "stderr_excerpt": "At line 18 of file /Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-22/baseline/turbine_tn_d8063.f (unit = 5, file = 'stdin')\nFortran runtime error: End of file\n\nError termination. Backtrace:\n#0  0x10456f323\n#1  0x10456fef7\n#2  0x1045707cb\n#3  0x10468d0d3\n#4  0x10468d637\n#5  0x104689be3\n#6  0x10468e53b\n#7  0x10468fa2b\n#8  0x10416d827\n#9  0x104172f5b\n"
+    },
+    {
+      "program": "turbine_tn_d8063",
+      "profile": "diagnostic",
+      "compile_command": [
+        "/opt/homebrew/bin/gfortran",
+        "-std=legacy",
+        "-fno-automatic",
+        "-Wall",
+        "-Wextra",
+        "-g",
+        "-fcheck=all",
+        "-fbacktrace",
+        "-ffpe-trap=invalid,zero,overflow",
+        "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-22/baseline/turbine_tn_d8063.f",
+        "-o",
+        "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-22/runs/20261023T043448074421Z/turbine_tn_d8063-diagnostic"
+      ],
+      "compile_exit": 0,
+      "run_exit": 2,
+      "timed_out": false,
+      "stdout_bytes": 97946,
+      "matches_existing_output_bytes": true,
+      "stderr_excerpt": "At line 18 of file /Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-22/baseline/turbine_tn_d8063.f (unit = 5, file = 'stdin')\nFortran runtime error: End of file\n\nError termination. Backtrace:\n#0  0x10469f2f3 in ???\n#1  0x10469fef7 in ???\n#2  0x1046a07cb in ???\n#3  0x1047bd0d3 in ???\n#4  0x1047bd637 in ???\n#5  0x1047b9be3 in ???\n#6  0x1047be53b in ???\n#7  0x1047bfa2b in ???\n#8  0x104365a0b in MAIN__\n\tat /Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-22/baseline/turbine_tn_d8063.f:18\n#9  0x10436b237 in main\n\tat /Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-22/baseline/turbine_tn_d8063.f:430\n"
+    }
+  ]
+}

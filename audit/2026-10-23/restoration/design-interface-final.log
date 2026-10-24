@@ -1,0 +1,10 @@
+python3 tests/check_design_interface.py
+{'name': 'native32-SI-total', 'pass': True, 'status': 'matched', 'errors': [8.855042943345381e-08, 2.860000000159957e-07, 3.5057471259314354e-07]}
+{'name': 'native32-SI-static', 'pass': True, 'status': 'matched', 'errors': [1.7710085886690763e-07, 2.300000001564939e-08, 1.3372186979943024e-07]}
+{'name': 'native32-US-total', 'pass': True, 'status': 'matched', 'errors': [3.4951762528656616e-07, 2.2599999993655473e-07, 2.011494253384427e-07]}
+{'name': 'native32-over-capacity', 'pass': True, 'status': 'stator-capacity-boundary-or-exceeded', 'errors': None}
+{'name': 'compat27-SI-total', 'pass': True, 'status': 'matched', 'errors': [4.2463405236503604e-08, 3.899335860868547e-07, 5.083522577331578e-07]}
+{'name': 'compat27-SI-static', 'pass': True, 'status': 'matched', 'errors': [4.2463405236503604e-08, 7.504224774912416e-08, 3.3908662200321515e-07]}
+{'name': 'compat27-US-total', 'pass': True, 'status': 'matched', 'errors': [4.912842177517973e-08, 1.291632651945207e-07, 5.169161434448455e-07]}
+{'name': 'compat27-over-capacity', 'pass': True, 'status': 'stator-capacity-boundary-or-exceeded', 'errors': None}
+RESULTS /Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/design-interface-20261023T160729806268Z

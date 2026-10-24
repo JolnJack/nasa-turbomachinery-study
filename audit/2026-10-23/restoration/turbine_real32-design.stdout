@@ -1,0 +1,25 @@
+1                                   NASA RADIAL INFLOW TURBINE COMPUTER PROGRAM
+                                    12.62-CM DIA TURBINE                            
+                                    100 PERCENT SPEED                               
+K GAMMA     1.6667        P0,    0.17237E+06    A1    0.38008E-02  ALPHA-1     72.470     BETA-4    -56.860       PD     0.0000    
+      R     99.198        T0,     1144.4        A3    0.39789E-02      BL1    0.95168        BL4    0.93718        K     0.0000    
+     D3     12.624         A0    0.12018E-01    A5    0.44543E-02       U3     237.95      U4/U3    0.56776       ZZ     22.000    
+             PD   0.987837    
+              K   0.286839    
+ DESIGN WT-FLOW   0.338790    
+   DESIGN ETA-T   0.913000    
+ DESIGN P0,/P5,    1.74000    
+
+                                                  VELOCITIES AND ANGLES
+ V/VCR)1      0.60480     ALPHA-1       72.470     V/VCR)3      0.62055     W/WCR)4      0.42154     W/WCR)5      0.41351    
+ VU/VCR)1     0.57671     ALPHA-2       73.290     VU/VCR)3     0.59389     WU/WCR)4    -0.35297     WX/WCR)5     0.21541    
+ VR/VCR)1     0.18217     ALPHA-3       73.142     VR/VCR)3     0.17996     WX/WCR)4     0.23045     V/VCR)5      0.22205    
+ V/VCR)0      0.49333E-01 BETA-3       -11.855     W/WCR)3      0.19253     BETA-4       -56.860     VU/VCR)5     0.37859E-01
+ V/VCR)2      0.60214     I-3           5.6760     WU/WCR)3    -0.39554E-01 BETA-5       -58.606     VX/VCR)5     0.21880    
+ VR/VCR)2     0.17314     VCR)3         376.71     WR/WCR)3     0.18842     VCR)5         340.82     ALPHA-5       9.8165    
+                                                  OVERALL PERFORMANCE
+ EQ-W         0.22000     EQ-P0,/P5     1.6889     P0,/P5        1.7948     WT/P         0.66492     W            0.33879    
+ EQ-DEL-H      35013.     ETA-S        0.86975     NU           0.69152     DEL-H/T       44.993     DEL-H         51492.    
+ EQ-N          494.76     ETA-T        0.91298     NS           0.97688E-02 N/T           17.736     W.F.         0.90941    
+ EQ-TOR        148.67     EQ-P0,/P5,    1.6445     P0,/P5,       1.7400     TOR/P         1610.8     TOR           277.64    
+ N             600.00     P             17.445     WN/DEL        108.85     T5,           936.80     P5,           99064.    

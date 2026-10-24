@@ -1,0 +1,54 @@
+./build/compat27/compressor_tn_d7487 < examples/compressor_original.inp > build/output/compressor.out
+./build/compat27/turbine_tn_d8063 < examples/turbine_original.inp > build/output/turbine.out
+python3 tests/verify_integrity.py
+PASS: 14 originals, 14 baseline copies, both generated programs and original example inputs
+python3 tools/prepare_historical.py
+Prepared isolated runtime: /Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/historical7094/s709-2.4.4
+python3 tests/check_historical.py
+PASS design-carry-long executes without compile/runtime failure
+PASS design-carry-short executes without compile/runtime failure
+PASS table-III all printed values exact
+PASS design-coefficients all printed values exact
+PASS table-IV all printed values exact
+PASS complete long and short choking scans
+PASS raw table V has only the independently evidenced E1 discrepancy
+PASS E1 candidate independently agrees with report identity
+PASS original-table-II executes without compile/runtime failure
+PASS original Table II remains a distinct nonmatching case
+PASS rounded-design-coefficients executes without compile/runtime failure
+PASS rounded coefficients do not silently replace internal precision
+PASS mode-0 executes without compile/runtime failure
+PASS mode 0 expected output count
+PASS mode-1 executes without compile/runtime failure
+PASS mode 1 expected output count
+PASS mode-2 executes without compile/runtime failure
+PASS mode 2 expected output count
+PASS mode-3 executes without compile/runtime failure
+PASS mode 3 expected output count
+PASS mode-4 executes without compile/runtime failure
+PASS mode 4 expected output count
+PASS mode-5 executes without compile/runtime failure
+PASS mode 5 expected output count
+PASS octal decoder known 1 and 1/2
+PASS failed-design-diagnostic returns a diagnostic failure
+PASS historical no-solution message is preserved
+RAW PRINTED REFERENCE 424 / 425; formula-first acceptance True
+RESULTS /Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/historical-check-20261023T160149788156Z
+python3 tests/try_new_data.py
+PASS compressor-native32 completion and finite diagnostics
+PASS compressor-native32 physical ranges
+PASS compressor-native32 mass/energy/loss consistency
+PASS turbine-native32 completion and finite diagnostics
+PASS turbine-native32 conservation
+PASS turbine-native32 physical ranges and output counts
+PASS compressor-compat27 completion and finite diagnostics
+PASS compressor-compat27 physical ranges
+PASS compressor-compat27 mass/energy/loss consistency
+PASS turbine-compat27 completion and finite diagnostics
+PASS turbine-compat27 conservation
+PASS turbine-compat27 physical ranges and output counts
+PASS turbine historical completion
+PASS turbine historical physical ranges and output counts
+PASS turbine historical independent conservation
+RESULTS /Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/new-data-20261023T160156127233Z
+ALL CONSISTENCY CHECKS True

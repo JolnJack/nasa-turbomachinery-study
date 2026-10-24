@@ -1,0 +1,10 @@
+{
+  "source": "audit/2026-10-23/restoration/inverse-scan-20261023T155859411939Z/cases.json",
+  "id": "I00796",
+  "forward_id": "01505",
+  "forward_coefficients": {
+    "PD": 0.9799999967217445,
+    "XK": 0.29999999701976776
+  },
+  "note": "Synthetic mathematical round-trip example. PD/K zeroed in input; search never uses them as seeds."
+}

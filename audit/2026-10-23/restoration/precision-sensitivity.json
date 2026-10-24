@@ -1,0 +1,38 @@
+{
+  "scope": "Exploratory binary-precision sensitivity model, NOT an IBM CPU/compiler emulator.\nRound real constants, input, intrinsics and expression operations to p fraction bits.\nHistorical evaluation order, library errors, accumulator/MQ and integer words are not emulated.\nNever used as a production build or as an acceptance oracle.\n",
+  "cases": [
+    {
+      "bits": 24,
+      "rounding": "nearest",
+      "exit": 0,
+      "points": 42,
+      "60percent_third": [
+        0.251,
+        2.209,
+        0.783
+      ]
+    },
+    {
+      "bits": 27,
+      "rounding": "zero",
+      "exit": 0,
+      "points": 42,
+      "60percent_third": [
+        0.251,
+        2.198,
+        0.777
+      ]
+    },
+    {
+      "bits": 27,
+      "rounding": "nearest",
+      "exit": 0,
+      "points": 42,
+      "60percent_third": [
+        0.251,
+        2.209,
+        0.783
+      ]
+    }
+  ]
+}

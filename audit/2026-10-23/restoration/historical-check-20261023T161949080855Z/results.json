@@ -1,0 +1,1792 @@
+{
+  "checks": [
+    {
+      "name": "design-carry-long executes without compile/runtime failure",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "design-carry-short executes without compile/runtime failure",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "table-III all printed values exact",
+      "pass": true,
+      "detail": {
+        "exact_cells": 55,
+        "expected_cells": 55,
+        "differences": []
+      }
+    },
+    {
+      "name": "design-coefficients all printed values exact",
+      "pass": true,
+      "detail": {
+        "exact_cells": 5,
+        "expected_cells": 5,
+        "differences": []
+      }
+    },
+    {
+      "name": "table-IV all printed values exact",
+      "pass": true,
+      "detail": {
+        "exact_cells": 165,
+        "expected_cells": 165,
+        "differences": []
+      }
+    },
+    {
+      "name": "complete long and short choking scans",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "raw table V has only the independently evidenced E1 discrepancy",
+      "pass": true,
+      "detail": {
+        "exact_cells": 199,
+        "expected_cells": 200,
+        "differences": [
+          {
+            "row": 9,
+            "column": 5,
+            "expected": 0.90378,
+            "raw_actual": 0.9007816091179848,
+            "printed_actual": 0.90078
+          }
+        ]
+      }
+    },
+    {
+      "name": "E1 candidate independently agrees with report identity",
+      "pass": true,
+      "detail": {
+        "formula": 0.9007787261924552,
+        "printed": 0.90378,
+        "candidate": 0.90078
+      }
+    },
+    {
+      "name": "original-table-II executes without compile/runtime failure",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "original Table II remains a distinct nonmatching case",
+      "pass": true,
+      "detail": {
+        "exact_cells": 107,
+        "expected_cells": 165,
+        "differences": [
+          {
+            "row": 1,
+            "column": 4,
+            "expected": 0.18127,
+            "raw_actual": 0.18127527460455894,
+            "printed_actual": 0.18128
+          },
+          {
+            "row": 1,
+            "column": 5,
+            "expected": 0.17792,
+            "raw_actual": 0.17792619951069355,
+            "printed_actual": 0.17793
+          },
+          {
+            "row": 2,
+            "column": 5,
+            "expected": 0.092832,
+            "raw_actual": 0.09283305332064629,
+            "printed_actual": 0.092833
+          },
+          {
+            "row": 3,
+            "column": 4,
+            "expected": 0.0991,
+            "raw_actual": 0.09910079464316368,
+            "printed_actual": 0.099101
+          },
+          {
+            "row": 5,
+            "column": 5,
+            "expected": 0.092548,
+            "raw_actual": 0.09254875872284174,
+            "printed_actual": 0.092549
+          },
+          {
+            "row": 6,
+            "column": 5,
+            "expected": 66.9618,
+            "raw_actual": 66.96139335632324,
+            "printed_actual": 66.9614
+          },
+          {
+            "row": 7,
+            "column": 2,
+            "expected": 1.25303,
+            "raw_actual": 1.253052830696106,
+            "printed_actual": 1.25305
+          },
+          {
+            "row": 7,
+            "column": 3,
+            "expected": 1.27858,
+            "raw_actual": 1.2786026448011398,
+            "printed_actual": 1.2786
+          },
+          {
+            "row": 7,
+            "column": 4,
+            "expected": 0.36807,
+            "raw_actual": 0.36806323006749153,
+            "printed_actual": 0.36806
+          },
+          {
+            "row": 8,
+            "column": 1,
+            "expected": 10634.9,
+            "raw_actual": 10634.958740234375,
+            "printed_actual": 10635.0
+          },
+          {
+            "row": 8,
+            "column": 2,
+            "expected": 0.5886,
+            "raw_actual": 0.5885636433959007,
+            "printed_actual": 0.58856
+          },
+          {
+            "row": 8,
+            "column": 3,
+            "expected": 1.03221,
+            "raw_actual": 1.0321716964244843,
+            "printed_actual": 1.03217
+          },
+          {
+            "row": 8,
+            "column": 4,
+            "expected": 13.6661,
+            "raw_actual": 13.666165709495544,
+            "printed_actual": 13.6662
+          },
+          {
+            "row": 8,
+            "column": 5,
+            "expected": 15640.0,
+            "raw_actual": 15640.106811523438,
+            "printed_actual": 15640.1
+          },
+          {
+            "row": 9,
+            "column": 2,
+            "expected": 0.68226,
+            "raw_actual": 0.6822063326835632,
+            "printed_actual": 0.68221
+          },
+          {
+            "row": 9,
+            "column": 3,
+            "expected": 0.012937,
+            "raw_actual": 0.012935952981933951,
+            "printed_actual": 0.012936
+          },
+          {
+            "row": 10,
+            "column": 2,
+            "expected": 1.21377,
+            "raw_actual": 1.2137854099273682,
+            "printed_actual": 1.21379
+          },
+          {
+            "row": 10,
+            "column": 3,
+            "expected": 1.23436,
+            "raw_actual": 1.2343785464763641,
+            "printed_actual": 1.23438
+          },
+          {
+            "row": 11,
+            "column": 2,
+            "expected": 2.93309,
+            "raw_actual": 2.933084338903427,
+            "printed_actual": 2.93308
+          },
+          {
+            "row": 11,
+            "column": 3,
+            "expected": 60.2536,
+            "raw_actual": 60.25322246551514,
+            "printed_actual": 60.2532
+          },
+          {
+            "row": 12,
+            "column": 4,
+            "expected": 0.215,
+            "raw_actual": 0.21500625647604465,
+            "printed_actual": 0.21501
+          },
+          {
+            "row": 15,
+            "column": 5,
+            "expected": 0.19303,
+            "raw_actual": 0.19302347861230373,
+            "printed_actual": 0.19302
+          },
+          {
+            "row": 17,
+            "column": 5,
+            "expected": 60.3183,
+            "raw_actual": 60.317848205566406,
+            "printed_actual": 60.3178
+          },
+          {
+            "row": 18,
+            "column": 2,
+            "expected": 1.29942,
+            "raw_actual": 1.2994408458471298,
+            "printed_actual": 1.29944
+          },
+          {
+            "row": 18,
+            "column": 3,
+            "expected": 1.3313,
+            "raw_actual": 1.331323280930519,
+            "printed_actual": 1.33132
+          },
+          {
+            "row": 18,
+            "column": 4,
+            "expected": 0.42407,
+            "raw_actual": 0.42406444624066353,
+            "printed_actual": 0.42406
+          },
+          {
+            "row": 19,
+            "column": 2,
+            "expected": 0.69588,
+            "raw_actual": 0.6958389952778816,
+            "printed_actual": 0.69584
+          },
+          {
+            "row": 19,
+            "column": 3,
+            "expected": 0.96036,
+            "raw_actual": 0.9603367373347282,
+            "printed_actual": 0.96034
+          },
+          {
+            "row": 19,
+            "column": 4,
+            "expected": 18.6645,
+            "raw_actual": 18.664605855941772,
+            "printed_actual": 18.6646
+          },
+          {
+            "row": 19,
+            "column": 5,
+            "expected": 21360.4,
+            "raw_actual": 21360.521728515625,
+            "printed_actual": 21360.5
+          },
+          {
+            "row": 20,
+            "column": 2,
+            "expected": 0.77581,
+            "raw_actual": 0.7757628560066223,
+            "printed_actual": 0.77576
+          },
+          {
+            "row": 20,
+            "column": 3,
+            "expected": 0.012228,
+            "raw_actual": 0.01222747447900474,
+            "printed_actual": 0.012227
+          },
+          {
+            "row": 21,
+            "column": 2,
+            "expected": 1.26365,
+            "raw_actual": 1.2636749595403671,
+            "printed_actual": 1.26367
+          },
+          {
+            "row": 21,
+            "column": 3,
+            "expected": 1.29061,
+            "raw_actual": 1.2906291335821152,
+            "printed_actual": 1.29063
+          },
+          {
+            "row": 21,
+            "column": 5,
+            "expected": 73.4559,
+            "raw_actual": 73.45578479766846,
+            "printed_actual": 73.4558
+          },
+          {
+            "row": 22,
+            "column": 2,
+            "expected": 4.61538,
+            "raw_actual": 4.61536568403244,
+            "printed_actual": 4.61537
+          },
+          {
+            "row": 22,
+            "column": 3,
+            "expected": 69.4213,
+            "raw_actual": 69.42081451416016,
+            "printed_actual": 69.4208
+          },
+          {
+            "row": 22,
+            "column": 5,
+            "expected": 133560.0,
+            "raw_actual": 133554.166015625,
+            "printed_actual": 133550.0
+          },
+          {
+            "row": 23,
+            "column": 4,
+            "expected": 0.25008,
+            "raw_actual": 0.2500874288380146,
+            "printed_actual": 0.25009
+          },
+          {
+            "row": 26,
+            "column": 5,
+            "expected": 0.16728,
+            "raw_actual": 0.16727401688694954,
+            "printed_actual": 0.16727
+          },
+          {
+            "row": 28,
+            "column": 5,
+            "expected": 52.5177,
+            "raw_actual": 52.51702547073364,
+            "printed_actual": 52.517
+          },
+          {
+            "row": 29,
+            "column": 1,
+            "expected": 0.15804,
+            "raw_actual": 0.15803465247154236,
+            "printed_actual": 0.15803
+          },
+          {
+            "row": 29,
+            "column": 2,
+            "expected": 1.35205,
+            "raw_actual": 1.3520711809396744,
+            "printed_actual": 1.35207
+          },
+          {
+            "row": 29,
+            "column": 3,
+            "expected": 1.39174,
+            "raw_actual": 1.3917683064937592,
+            "printed_actual": 1.39177
+          },
+          {
+            "row": 29,
+            "column": 5,
+            "expected": 0.24337,
+            "raw_actual": 0.24336348287761211,
+            "printed_actual": 0.24336
+          },
+          {
+            "row": 30,
+            "column": 1,
+            "expected": 18435.5,
+            "raw_actual": 18435.5830078125,
+            "printed_actual": 18435.6
+          },
+          {
+            "row": 30,
+            "column": 2,
+            "expected": 0.77129,
+            "raw_actual": 0.7712485417723656,
+            "printed_actual": 0.77125
+          },
+          {
+            "row": 30,
+            "column": 3,
+            "expected": 0.89744,
+            "raw_actual": 0.8974120020866394,
+            "printed_actual": 0.89741
+          },
+          {
+            "row": 30,
+            "column": 4,
+            "expected": 23.69,
+            "raw_actual": 23.690146684646606,
+            "printed_actual": 23.6901
+          },
+          {
+            "row": 30,
+            "column": 5,
+            "expected": 27111.8,
+            "raw_actual": 27111.95166015625,
+            "printed_actual": 27112.0
+          },
+          {
+            "row": 31,
+            "column": 2,
+            "expected": 0.83787,
+            "raw_actual": 0.8378238007426262,
+            "printed_actual": 0.83782
+          },
+          {
+            "row": 32,
+            "column": 1,
+            "expected": 56.2318,
+            "raw_actual": 56.2316780090332,
+            "printed_actual": 56.2317
+          },
+          {
+            "row": 32,
+            "column": 2,
+            "expected": 1.31874,
+            "raw_actual": 1.3187638372182846,
+            "printed_actual": 1.31876
+          },
+          {
+            "row": 32,
+            "column": 3,
+            "expected": 1.35341,
+            "raw_actual": 1.3534373492002487,
+            "printed_actual": 1.35344
+          },
+          {
+            "row": 32,
+            "column": 4,
+            "expected": 609.226,
+            "raw_actual": 609.2242202758789,
+            "printed_actual": 609.224
+          },
+          {
+            "row": 32,
+            "column": 5,
+            "expected": 105.012,
+            "raw_actual": 105.01130962371826,
+            "printed_actual": 105.011
+          },
+          {
+            "row": 33,
+            "column": 2,
+            "expected": 6.59807,
+            "raw_actual": 6.5980589389801025,
+            "printed_actual": 6.59806
+          },
+          {
+            "row": 33,
+            "column": 3,
+            "expected": 78.1904,
+            "raw_actual": 78.18993377685547,
+            "printed_actual": 78.1899
+          }
+        ]
+      }
+    },
+    {
+      "name": "rounded-design-coefficients executes without compile/runtime failure",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "rounded coefficients do not silently replace internal precision",
+      "pass": true,
+      "detail": {
+        "exact_cells": 155,
+        "expected_cells": 165,
+        "differences": [
+          {
+            "row": 8,
+            "column": 3,
+            "expected": 1.03221,
+            "raw_actual": 1.0322049111127853,
+            "printed_actual": 1.0322
+          },
+          {
+            "row": 19,
+            "column": 2,
+            "expected": 0.69588,
+            "raw_actual": 0.6958746463060379,
+            "printed_actual": 0.69587
+          },
+          {
+            "row": 21,
+            "column": 2,
+            "expected": 1.26365,
+            "raw_actual": 1.263655424118042,
+            "printed_actual": 1.26366
+          },
+          {
+            "row": 22,
+            "column": 2,
+            "expected": 4.61538,
+            "raw_actual": 4.6153735518455505,
+            "printed_actual": 4.61537
+          },
+          {
+            "row": 22,
+            "column": 3,
+            "expected": 69.4213,
+            "raw_actual": 69.42123508453369,
+            "printed_actual": 69.4212
+          },
+          {
+            "row": 29,
+            "column": 5,
+            "expected": 0.24337,
+            "raw_actual": 0.2433649618178606,
+            "printed_actual": 0.24336
+          },
+          {
+            "row": 30,
+            "column": 2,
+            "expected": 0.77129,
+            "raw_actual": 0.7712845727801323,
+            "printed_actual": 0.77128
+          },
+          {
+            "row": 30,
+            "column": 3,
+            "expected": 0.89744,
+            "raw_actual": 0.8974348828196526,
+            "printed_actual": 0.89743
+          },
+          {
+            "row": 32,
+            "column": 4,
+            "expected": 609.226,
+            "raw_actual": 609.2252960205078,
+            "printed_actual": 609.225
+          },
+          {
+            "row": 32,
+            "column": 5,
+            "expected": 105.012,
+            "raw_actual": 105.01149559020996,
+            "printed_actual": 105.011
+          }
+        ]
+      }
+    },
+    {
+      "name": "mode-0 executes without compile/runtime failure",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mode 0 expected output count",
+      "pass": true,
+      "detail": {
+        "points": 20
+      }
+    },
+    {
+      "name": "mode-1 executes without compile/runtime failure",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mode 1 expected output count",
+      "pass": true,
+      "detail": {
+        "points": 20
+      }
+    },
+    {
+      "name": "mode-2 executes without compile/runtime failure",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mode 2 expected output count",
+      "pass": true,
+      "detail": {
+        "points": 1
+      }
+    },
+    {
+      "name": "mode-3 executes without compile/runtime failure",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mode 3 expected output count",
+      "pass": true,
+      "detail": {
+        "points": 20
+      }
+    },
+    {
+      "name": "mode-4 executes without compile/runtime failure",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mode 4 expected output count",
+      "pass": true,
+      "detail": {
+        "points": 20
+      }
+    },
+    {
+      "name": "mode-5 executes without compile/runtime failure",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mode 5 expected output count",
+      "pass": true,
+      "detail": {
+        "points": 1
+      }
+    },
+    {
+      "name": "octal decoder known 1 and 1/2",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "failed-design-diagnostic returns a diagnostic failure",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "historical no-solution message is preserved",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "jobs": {
+    "design-carry-long": {
+      "path": "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/historical7094/turbine-20261023T161949129571Z",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/Users/ikunsredemptionmac/Downloads/NASA/restored/tools/run_historical_turbine.py",
+        "--portable-formats",
+        "--library-source",
+        "--formatted-input",
+        "--dump-words",
+        "--input",
+        "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/historical-check-20261023T161949080855Z/design-carry-long.inp"
+      ],
+      "exit": 0,
+      "run": {
+        "command": [
+          "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/historical7094/s709-2.4.4/s709",
+          "-p",
+          "-m7094",
+          "-cibsys.cmd",
+          "r=reader",
+          "p=print",
+          "u=punch",
+          "a1r=ASYS1.BIN",
+          "a2r=ASYS8.BIN",
+          "a3=sysin.bcd",
+          "a4=sysou1.bcd",
+          "a5=sysut1.bin",
+          "a6=sysut3.bin",
+          "a7=sysut2.bin",
+          "a8=syspp1.bin",
+          "a9=sysut4.bin",
+          "a10=sysck2.bin"
+        ],
+        "emulator_status": 0,
+        "program_executed": true,
+        "loading_suppressed": false,
+        "runtime_error": false,
+        "original_source_sha256": "de5bb490d8ac5a2be99b20d82f09c4a57484f46d0d3db8476363148507821293",
+        "source_sha256": "bae1ddcc1c46e7e371b2d9c1e0fbe505b1ea3b11970d62918227829d1c429ae6",
+        "format_change": "G formats to E16.8",
+        "library_source": true,
+        "formatted_input": true,
+        "dump_words": true,
+        "input_sha256": "55f081fa0b0563bb1876c774d1bb1de7e163f5bc2fcb89c1a8e1dfc3f6e5b6d1",
+        "smoke": false,
+        "job_sha256": "080b6090167d65f73ef1fd2b1743aef69a792caeb9368e42f03b4de49d1c9663",
+        "runtime_sha256": {
+          "s709-2.4.4/s709": "e3d2951e34a79a5c10f545c4128e413d287da364b5c3255744607469c833b35e",
+          "s709-2.4.4/ASYS1.BIN": "6b89a77dcf3279b4d7752c8d63dddd6ff3d0ad4552651f2742ba3f8124a4b815",
+          "s709-2.4.4/ASYS8.BIN": "0bc52c3cb2fce19884b3617e02448fe823b737ea4155e6714ac1d427545f3199",
+          "IBFTC/rtl/fasc.map": "2e7f30e05daf50ddd4bb75b6556c03dbbf9bb0619daf2d201c93cffbb57051fb"
+        }
+      }
+    },
+    "design-carry-short": {
+      "path": "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/historical7094/turbine-20261023T161949913171Z",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/Users/ikunsredemptionmac/Downloads/NASA/restored/tools/run_historical_turbine.py",
+        "--portable-formats",
+        "--library-source",
+        "--formatted-input",
+        "--dump-words",
+        "--input",
+        "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/historical-check-20261023T161949080855Z/design-carry-short.inp"
+      ],
+      "exit": 0,
+      "run": {
+        "command": [
+          "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/historical7094/s709-2.4.4/s709",
+          "-p",
+          "-m7094",
+          "-cibsys.cmd",
+          "r=reader",
+          "p=print",
+          "u=punch",
+          "a1r=ASYS1.BIN",
+          "a2r=ASYS8.BIN",
+          "a3=sysin.bcd",
+          "a4=sysou1.bcd",
+          "a5=sysut1.bin",
+          "a6=sysut3.bin",
+          "a7=sysut2.bin",
+          "a8=syspp1.bin",
+          "a9=sysut4.bin",
+          "a10=sysck2.bin"
+        ],
+        "emulator_status": 0,
+        "program_executed": true,
+        "loading_suppressed": false,
+        "runtime_error": false,
+        "original_source_sha256": "de5bb490d8ac5a2be99b20d82f09c4a57484f46d0d3db8476363148507821293",
+        "source_sha256": "bae1ddcc1c46e7e371b2d9c1e0fbe505b1ea3b11970d62918227829d1c429ae6",
+        "format_change": "G formats to E16.8",
+        "library_source": true,
+        "formatted_input": true,
+        "dump_words": true,
+        "input_sha256": "a51734afb174f233fe3576eb22eb34d21e501f46c69060a3c2b87049a901aab5",
+        "smoke": false,
+        "job_sha256": "deecf08497e7665efe4dbd408f88c1a38e095d2d0f3778e5223f7da76ae5cd02",
+        "runtime_sha256": {
+          "s709-2.4.4/s709": "e3d2951e34a79a5c10f545c4128e413d287da364b5c3255744607469c833b35e",
+          "s709-2.4.4/ASYS1.BIN": "6b89a77dcf3279b4d7752c8d63dddd6ff3d0ad4552651f2742ba3f8124a4b815",
+          "s709-2.4.4/ASYS8.BIN": "0bc52c3cb2fce19884b3617e02448fe823b737ea4155e6714ac1d427545f3199",
+          "IBFTC/rtl/fasc.map": "2e7f30e05daf50ddd4bb75b6556c03dbbf9bb0619daf2d201c93cffbb57051fb"
+        }
+      }
+    },
+    "original-table-II": {
+      "path": "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/historical7094/turbine-20261023T161950720018Z",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/Users/ikunsredemptionmac/Downloads/NASA/restored/tools/run_historical_turbine.py",
+        "--portable-formats",
+        "--library-source",
+        "--formatted-input",
+        "--dump-words",
+        "--input",
+        "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/historical-check-20261023T161949080855Z/original-table-II.inp"
+      ],
+      "exit": 0,
+      "run": {
+        "command": [
+          "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/historical7094/s709-2.4.4/s709",
+          "-p",
+          "-m7094",
+          "-cibsys.cmd",
+          "r=reader",
+          "p=print",
+          "u=punch",
+          "a1r=ASYS1.BIN",
+          "a2r=ASYS8.BIN",
+          "a3=sysin.bcd",
+          "a4=sysou1.bcd",
+          "a5=sysut1.bin",
+          "a6=sysut3.bin",
+          "a7=sysut2.bin",
+          "a8=syspp1.bin",
+          "a9=sysut4.bin",
+          "a10=sysck2.bin"
+        ],
+        "emulator_status": 0,
+        "program_executed": true,
+        "loading_suppressed": false,
+        "runtime_error": false,
+        "original_source_sha256": "de5bb490d8ac5a2be99b20d82f09c4a57484f46d0d3db8476363148507821293",
+        "source_sha256": "4829d7622e5ac3e7d29c1bf2ae25b96c6cdc8f99a3f367d4c1f813cb414eaf58",
+        "format_change": "G formats to E16.8",
+        "library_source": true,
+        "formatted_input": true,
+        "dump_words": true,
+        "input_sha256": "e6ff0228c601a0fe4651cc83c490d081b71331100adf3e3523ff21962276f9f0",
+        "smoke": false,
+        "job_sha256": "2854f736f0208c0af1beab94094c8f79e8727be01b1a06ca515b2bd2bb5eb9b1",
+        "runtime_sha256": {
+          "s709-2.4.4/s709": "e3d2951e34a79a5c10f545c4128e413d287da364b5c3255744607469c833b35e",
+          "s709-2.4.4/ASYS1.BIN": "6b89a77dcf3279b4d7752c8d63dddd6ff3d0ad4552651f2742ba3f8124a4b815",
+          "s709-2.4.4/ASYS8.BIN": "0bc52c3cb2fce19884b3617e02448fe823b737ea4155e6714ac1d427545f3199",
+          "IBFTC/rtl/fasc.map": "2e7f30e05daf50ddd4bb75b6556c03dbbf9bb0619daf2d201c93cffbb57051fb"
+        }
+      }
+    },
+    "rounded-design-coefficients": {
+      "path": "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/historical7094/turbine-20261023T161951456385Z",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/Users/ikunsredemptionmac/Downloads/NASA/restored/tools/run_historical_turbine.py",
+        "--portable-formats",
+        "--library-source",
+        "--formatted-input",
+        "--dump-words",
+        "--input",
+        "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/historical-check-20261023T161949080855Z/rounded-design-coefficients.inp"
+      ],
+      "exit": 0,
+      "run": {
+        "command": [
+          "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/historical7094/s709-2.4.4/s709",
+          "-p",
+          "-m7094",
+          "-cibsys.cmd",
+          "r=reader",
+          "p=print",
+          "u=punch",
+          "a1r=ASYS1.BIN",
+          "a2r=ASYS8.BIN",
+          "a3=sysin.bcd",
+          "a4=sysou1.bcd",
+          "a5=sysut1.bin",
+          "a6=sysut3.bin",
+          "a7=sysut2.bin",
+          "a8=syspp1.bin",
+          "a9=sysut4.bin",
+          "a10=sysck2.bin"
+        ],
+        "emulator_status": 0,
+        "program_executed": true,
+        "loading_suppressed": false,
+        "runtime_error": false,
+        "original_source_sha256": "de5bb490d8ac5a2be99b20d82f09c4a57484f46d0d3db8476363148507821293",
+        "source_sha256": "4829d7622e5ac3e7d29c1bf2ae25b96c6cdc8f99a3f367d4c1f813cb414eaf58",
+        "format_change": "G formats to E16.8",
+        "library_source": true,
+        "formatted_input": true,
+        "dump_words": true,
+        "input_sha256": "887a7c20a25fc1f4a4c5eb64b425e94adf84853b918df29581061331a7084c7e",
+        "smoke": false,
+        "job_sha256": "250e973d498e035f48c93b7593d55171a58ea91de5c2f3ddffc5056d72c11792",
+        "runtime_sha256": {
+          "s709-2.4.4/s709": "e3d2951e34a79a5c10f545c4128e413d287da364b5c3255744607469c833b35e",
+          "s709-2.4.4/ASYS1.BIN": "6b89a77dcf3279b4d7752c8d63dddd6ff3d0ad4552651f2742ba3f8124a4b815",
+          "s709-2.4.4/ASYS8.BIN": "0bc52c3cb2fce19884b3617e02448fe823b737ea4155e6714ac1d427545f3199",
+          "IBFTC/rtl/fasc.map": "2e7f30e05daf50ddd4bb75b6556c03dbbf9bb0619daf2d201c93cffbb57051fb"
+        }
+      }
+    },
+    "mode-0": {
+      "path": "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/historical7094/turbine-20261023T161952179185Z",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/Users/ikunsredemptionmac/Downloads/NASA/restored/tools/run_historical_turbine.py",
+        "--portable-formats",
+        "--library-source",
+        "--formatted-input",
+        "--dump-words",
+        "--input",
+        "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/historical-check-20261023T161949080855Z/mode-0.inp"
+      ],
+      "exit": 0,
+      "run": {
+        "command": [
+          "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/historical7094/s709-2.4.4/s709",
+          "-p",
+          "-m7094",
+          "-cibsys.cmd",
+          "r=reader",
+          "p=print",
+          "u=punch",
+          "a1r=ASYS1.BIN",
+          "a2r=ASYS8.BIN",
+          "a3=sysin.bcd",
+          "a4=sysou1.bcd",
+          "a5=sysut1.bin",
+          "a6=sysut3.bin",
+          "a7=sysut2.bin",
+          "a8=syspp1.bin",
+          "a9=sysut4.bin",
+          "a10=sysck2.bin"
+        ],
+        "emulator_status": 0,
+        "program_executed": true,
+        "loading_suppressed": false,
+        "runtime_error": false,
+        "original_source_sha256": "de5bb490d8ac5a2be99b20d82f09c4a57484f46d0d3db8476363148507821293",
+        "source_sha256": "4829d7622e5ac3e7d29c1bf2ae25b96c6cdc8f99a3f367d4c1f813cb414eaf58",
+        "format_change": "G formats to E16.8",
+        "library_source": true,
+        "formatted_input": true,
+        "dump_words": true,
+        "input_sha256": "e6ff0228c601a0fe4651cc83c490d081b71331100adf3e3523ff21962276f9f0",
+        "smoke": false,
+        "job_sha256": "2854f736f0208c0af1beab94094c8f79e8727be01b1a06ca515b2bd2bb5eb9b1",
+        "runtime_sha256": {
+          "s709-2.4.4/s709": "e3d2951e34a79a5c10f545c4128e413d287da364b5c3255744607469c833b35e",
+          "s709-2.4.4/ASYS1.BIN": "6b89a77dcf3279b4d7752c8d63dddd6ff3d0ad4552651f2742ba3f8124a4b815",
+          "s709-2.4.4/ASYS8.BIN": "0bc52c3cb2fce19884b3617e02448fe823b737ea4155e6714ac1d427545f3199",
+          "IBFTC/rtl/fasc.map": "2e7f30e05daf50ddd4bb75b6556c03dbbf9bb0619daf2d201c93cffbb57051fb"
+        }
+      }
+    },
+    "mode-1": {
+      "path": "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/historical7094/turbine-20261023T161952809852Z",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/Users/ikunsredemptionmac/Downloads/NASA/restored/tools/run_historical_turbine.py",
+        "--portable-formats",
+        "--library-source",
+        "--formatted-input",
+        "--dump-words",
+        "--input",
+        "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/historical-check-20261023T161949080855Z/mode-1.inp"
+      ],
+      "exit": 0,
+      "run": {
+        "command": [
+          "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/historical7094/s709-2.4.4/s709",
+          "-p",
+          "-m7094",
+          "-cibsys.cmd",
+          "r=reader",
+          "p=print",
+          "u=punch",
+          "a1r=ASYS1.BIN",
+          "a2r=ASYS8.BIN",
+          "a3=sysin.bcd",
+          "a4=sysou1.bcd",
+          "a5=sysut1.bin",
+          "a6=sysut3.bin",
+          "a7=sysut2.bin",
+          "a8=syspp1.bin",
+          "a9=sysut4.bin",
+          "a10=sysck2.bin"
+        ],
+        "emulator_status": 0,
+        "program_executed": true,
+        "loading_suppressed": false,
+        "runtime_error": false,
+        "original_source_sha256": "de5bb490d8ac5a2be99b20d82f09c4a57484f46d0d3db8476363148507821293",
+        "source_sha256": "4829d7622e5ac3e7d29c1bf2ae25b96c6cdc8f99a3f367d4c1f813cb414eaf58",
+        "format_change": "G formats to E16.8",
+        "library_source": true,
+        "formatted_input": true,
+        "dump_words": true,
+        "input_sha256": "5ce4f0d2b72fdca4a4ccad00fabb4a3a936cbd09ab32e9c31e5bcea9ff9335bb",
+        "smoke": false,
+        "job_sha256": "11c456299908bf7ca8cee17c785dcd2bc7ab645b62843b7ef8943b08f03cb9fe",
+        "runtime_sha256": {
+          "s709-2.4.4/s709": "e3d2951e34a79a5c10f545c4128e413d287da364b5c3255744607469c833b35e",
+          "s709-2.4.4/ASYS1.BIN": "6b89a77dcf3279b4d7752c8d63dddd6ff3d0ad4552651f2742ba3f8124a4b815",
+          "s709-2.4.4/ASYS8.BIN": "0bc52c3cb2fce19884b3617e02448fe823b737ea4155e6714ac1d427545f3199",
+          "IBFTC/rtl/fasc.map": "2e7f30e05daf50ddd4bb75b6556c03dbbf9bb0619daf2d201c93cffbb57051fb"
+        }
+      }
+    },
+    "mode-2": {
+      "path": "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/historical7094/turbine-20261023T161953530171Z",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/Users/ikunsredemptionmac/Downloads/NASA/restored/tools/run_historical_turbine.py",
+        "--portable-formats",
+        "--library-source",
+        "--formatted-input",
+        "--dump-words",
+        "--input",
+        "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/historical-check-20261023T161949080855Z/mode-2.inp"
+      ],
+      "exit": 0,
+      "run": {
+        "command": [
+          "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/historical7094/s709-2.4.4/s709",
+          "-p",
+          "-m7094",
+          "-cibsys.cmd",
+          "r=reader",
+          "p=print",
+          "u=punch",
+          "a1r=ASYS1.BIN",
+          "a2r=ASYS8.BIN",
+          "a3=sysin.bcd",
+          "a4=sysou1.bcd",
+          "a5=sysut1.bin",
+          "a6=sysut3.bin",
+          "a7=sysut2.bin",
+          "a8=syspp1.bin",
+          "a9=sysut4.bin",
+          "a10=sysck2.bin"
+        ],
+        "emulator_status": 0,
+        "program_executed": true,
+        "loading_suppressed": false,
+        "runtime_error": false,
+        "original_source_sha256": "de5bb490d8ac5a2be99b20d82f09c4a57484f46d0d3db8476363148507821293",
+        "source_sha256": "4829d7622e5ac3e7d29c1bf2ae25b96c6cdc8f99a3f367d4c1f813cb414eaf58",
+        "format_change": "G formats to E16.8",
+        "library_source": true,
+        "formatted_input": true,
+        "dump_words": true,
+        "input_sha256": "8f8c027e0ce9266247889aac2aff5d2399148a2b8998367cac50ef953ae57188",
+        "smoke": false,
+        "job_sha256": "44a0983bc81c77ceaedca019218ca91db1392afe113cbc492ef6aabf9279a6fe",
+        "runtime_sha256": {
+          "s709-2.4.4/s709": "e3d2951e34a79a5c10f545c4128e413d287da364b5c3255744607469c833b35e",
+          "s709-2.4.4/ASYS1.BIN": "6b89a77dcf3279b4d7752c8d63dddd6ff3d0ad4552651f2742ba3f8124a4b815",
+          "s709-2.4.4/ASYS8.BIN": "0bc52c3cb2fce19884b3617e02448fe823b737ea4155e6714ac1d427545f3199",
+          "IBFTC/rtl/fasc.map": "2e7f30e05daf50ddd4bb75b6556c03dbbf9bb0619daf2d201c93cffbb57051fb"
+        }
+      }
+    },
+    "mode-3": {
+      "path": "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/historical7094/turbine-20261023T161954156336Z",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/Users/ikunsredemptionmac/Downloads/NASA/restored/tools/run_historical_turbine.py",
+        "--portable-formats",
+        "--library-source",
+        "--formatted-input",
+        "--dump-words",
+        "--input",
+        "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/historical-check-20261023T161949080855Z/mode-3.inp"
+      ],
+      "exit": 0,
+      "run": {
+        "command": [
+          "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/historical7094/s709-2.4.4/s709",
+          "-p",
+          "-m7094",
+          "-cibsys.cmd",
+          "r=reader",
+          "p=print",
+          "u=punch",
+          "a1r=ASYS1.BIN",
+          "a2r=ASYS8.BIN",
+          "a3=sysin.bcd",
+          "a4=sysou1.bcd",
+          "a5=sysut1.bin",
+          "a6=sysut3.bin",
+          "a7=sysut2.bin",
+          "a8=syspp1.bin",
+          "a9=sysut4.bin",
+          "a10=sysck2.bin"
+        ],
+        "emulator_status": 0,
+        "program_executed": true,
+        "loading_suppressed": false,
+        "runtime_error": false,
+        "original_source_sha256": "de5bb490d8ac5a2be99b20d82f09c4a57484f46d0d3db8476363148507821293",
+        "source_sha256": "4829d7622e5ac3e7d29c1bf2ae25b96c6cdc8f99a3f367d4c1f813cb414eaf58",
+        "format_change": "G formats to E16.8",
+        "library_source": true,
+        "formatted_input": true,
+        "dump_words": true,
+        "input_sha256": "90f35edeaa37839fd0f96fd070c2e2633c7e2335935a8e5e705e0a8477aa7334",
+        "smoke": false,
+        "job_sha256": "eac354805b8d82415b4f3c73b9d49c35cfde1a79ce32078f030215fbfd250327",
+        "runtime_sha256": {
+          "s709-2.4.4/s709": "e3d2951e34a79a5c10f545c4128e413d287da364b5c3255744607469c833b35e",
+          "s709-2.4.4/ASYS1.BIN": "6b89a77dcf3279b4d7752c8d63dddd6ff3d0ad4552651f2742ba3f8124a4b815",
+          "s709-2.4.4/ASYS8.BIN": "0bc52c3cb2fce19884b3617e02448fe823b737ea4155e6714ac1d427545f3199",
+          "IBFTC/rtl/fasc.map": "2e7f30e05daf50ddd4bb75b6556c03dbbf9bb0619daf2d201c93cffbb57051fb"
+        }
+      }
+    },
+    "mode-4": {
+      "path": "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/historical7094/turbine-20261023T161954899034Z",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/Users/ikunsredemptionmac/Downloads/NASA/restored/tools/run_historical_turbine.py",
+        "--portable-formats",
+        "--library-source",
+        "--formatted-input",
+        "--dump-words",
+        "--input",
+        "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/historical-check-20261023T161949080855Z/mode-4.inp"
+      ],
+      "exit": 0,
+      "run": {
+        "command": [
+          "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/historical7094/s709-2.4.4/s709",
+          "-p",
+          "-m7094",
+          "-cibsys.cmd",
+          "r=reader",
+          "p=print",
+          "u=punch",
+          "a1r=ASYS1.BIN",
+          "a2r=ASYS8.BIN",
+          "a3=sysin.bcd",
+          "a4=sysou1.bcd",
+          "a5=sysut1.bin",
+          "a6=sysut3.bin",
+          "a7=sysut2.bin",
+          "a8=syspp1.bin",
+          "a9=sysut4.bin",
+          "a10=sysck2.bin"
+        ],
+        "emulator_status": 0,
+        "program_executed": true,
+        "loading_suppressed": false,
+        "runtime_error": false,
+        "original_source_sha256": "de5bb490d8ac5a2be99b20d82f09c4a57484f46d0d3db8476363148507821293",
+        "source_sha256": "4829d7622e5ac3e7d29c1bf2ae25b96c6cdc8f99a3f367d4c1f813cb414eaf58",
+        "format_change": "G formats to E16.8",
+        "library_source": true,
+        "formatted_input": true,
+        "dump_words": true,
+        "input_sha256": "4c76bb071457961d74cb62dbacb5b591679c3861749d6a729e160c447535bd7e",
+        "smoke": false,
+        "job_sha256": "2dfd899d3c2add041d88a63c84847d0bbbe2af37846474dc39ea05c909d1e195",
+        "runtime_sha256": {
+          "s709-2.4.4/s709": "e3d2951e34a79a5c10f545c4128e413d287da364b5c3255744607469c833b35e",
+          "s709-2.4.4/ASYS1.BIN": "6b89a77dcf3279b4d7752c8d63dddd6ff3d0ad4552651f2742ba3f8124a4b815",
+          "s709-2.4.4/ASYS8.BIN": "0bc52c3cb2fce19884b3617e02448fe823b737ea4155e6714ac1d427545f3199",
+          "IBFTC/rtl/fasc.map": "2e7f30e05daf50ddd4bb75b6556c03dbbf9bb0619daf2d201c93cffbb57051fb"
+        }
+      }
+    },
+    "mode-5": {
+      "path": "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/historical7094/turbine-20261023T161955596592Z",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/Users/ikunsredemptionmac/Downloads/NASA/restored/tools/run_historical_turbine.py",
+        "--portable-formats",
+        "--library-source",
+        "--formatted-input",
+        "--dump-words",
+        "--input",
+        "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/historical-check-20261023T161949080855Z/mode-5.inp"
+      ],
+      "exit": 0,
+      "run": {
+        "command": [
+          "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/historical7094/s709-2.4.4/s709",
+          "-p",
+          "-m7094",
+          "-cibsys.cmd",
+          "r=reader",
+          "p=print",
+          "u=punch",
+          "a1r=ASYS1.BIN",
+          "a2r=ASYS8.BIN",
+          "a3=sysin.bcd",
+          "a4=sysou1.bcd",
+          "a5=sysut1.bin",
+          "a6=sysut3.bin",
+          "a7=sysut2.bin",
+          "a8=syspp1.bin",
+          "a9=sysut4.bin",
+          "a10=sysck2.bin"
+        ],
+        "emulator_status": 0,
+        "program_executed": true,
+        "loading_suppressed": false,
+        "runtime_error": false,
+        "original_source_sha256": "de5bb490d8ac5a2be99b20d82f09c4a57484f46d0d3db8476363148507821293",
+        "source_sha256": "4829d7622e5ac3e7d29c1bf2ae25b96c6cdc8f99a3f367d4c1f813cb414eaf58",
+        "format_change": "G formats to E16.8",
+        "library_source": true,
+        "formatted_input": true,
+        "dump_words": true,
+        "input_sha256": "f2d7a5ff4e32fecda5e3328f906175cfc1aafea239818a9f75266d6b622c2c2e",
+        "smoke": false,
+        "job_sha256": "7d175f1449061c08038138b1ae3f599ac5aefa8377971d824b3d3a34d63b634e",
+        "runtime_sha256": {
+          "s709-2.4.4/s709": "e3d2951e34a79a5c10f545c4128e413d287da364b5c3255744607469c833b35e",
+          "s709-2.4.4/ASYS1.BIN": "6b89a77dcf3279b4d7752c8d63dddd6ff3d0ad4552651f2742ba3f8124a4b815",
+          "s709-2.4.4/ASYS8.BIN": "0bc52c3cb2fce19884b3617e02448fe823b737ea4155e6714ac1d427545f3199",
+          "IBFTC/rtl/fasc.map": "2e7f30e05daf50ddd4bb75b6556c03dbbf9bb0619daf2d201c93cffbb57051fb"
+        }
+      }
+    },
+    "failed-design-diagnostic": {
+      "path": "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/historical7094/turbine-20261023T161956314079Z",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/Users/ikunsredemptionmac/Downloads/NASA/restored/tools/run_historical_turbine.py",
+        "--portable-formats",
+        "--library-source",
+        "--formatted-input",
+        "--dump-words",
+        "--input",
+        "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/historical-check-20261023T161949080855Z/failed-design-diagnostic.inp"
+      ],
+      "exit": 1,
+      "run": {
+        "command": [
+          "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/historical7094/s709-2.4.4/s709",
+          "-p",
+          "-m7094",
+          "-cibsys.cmd",
+          "r=reader",
+          "p=print",
+          "u=punch",
+          "a1r=ASYS1.BIN",
+          "a2r=ASYS8.BIN",
+          "a3=sysin.bcd",
+          "a4=sysou1.bcd",
+          "a5=sysut1.bin",
+          "a6=sysut3.bin",
+          "a7=sysut2.bin",
+          "a8=syspp1.bin",
+          "a9=sysut4.bin",
+          "a10=sysck2.bin"
+        ],
+        "emulator_status": 0,
+        "program_executed": true,
+        "loading_suppressed": false,
+        "runtime_error": true,
+        "original_source_sha256": "de5bb490d8ac5a2be99b20d82f09c4a57484f46d0d3db8476363148507821293",
+        "source_sha256": "bae1ddcc1c46e7e371b2d9c1e0fbe505b1ea3b11970d62918227829d1c429ae6",
+        "format_change": "G formats to E16.8",
+        "library_source": true,
+        "formatted_input": true,
+        "dump_words": true,
+        "input_sha256": "b91836ec7288303f3f30d3086a129216a1e4a2f25f719161aa76845968ad1b58",
+        "smoke": false,
+        "job_sha256": "9eb3dc1b66451b8b258d2eba11e6b0dcc2d5eea1df6f5ef2d4786eba17b1a4aa",
+        "runtime_sha256": {
+          "s709-2.4.4/s709": "e3d2951e34a79a5c10f545c4128e413d287da364b5c3255744607469c833b35e",
+          "s709-2.4.4/ASYS1.BIN": "6b89a77dcf3279b4d7752c8d63dddd6ff3d0ad4552651f2742ba3f8124a4b815",
+          "s709-2.4.4/ASYS8.BIN": "0bc52c3cb2fce19884b3617e02448fe823b737ea4155e6714ac1d427545f3199",
+          "IBFTC/rtl/fasc.map": "2e7f30e05daf50ddd4bb75b6556c03dbbf9bb0619daf2d201c93cffbb57051fb"
+        }
+      }
+    }
+  },
+  "comparisons": {
+    "table-III": {
+      "exact_cells": 55,
+      "expected_cells": 55,
+      "differences": []
+    },
+    "design-coefficients": {
+      "exact_cells": 5,
+      "expected_cells": 5,
+      "differences": []
+    },
+    "table-IV": {
+      "exact_cells": 165,
+      "expected_cells": 165,
+      "differences": []
+    },
+    "table-V-raw": {
+      "exact_cells": 199,
+      "expected_cells": 200,
+      "differences": [
+        {
+          "row": 9,
+          "column": 5,
+          "expected": 0.90378,
+          "raw_actual": 0.9007816091179848,
+          "printed_actual": 0.90078
+        }
+      ]
+    },
+    "table-IV-original-table-II": {
+      "exact_cells": 107,
+      "expected_cells": 165,
+      "differences": [
+        {
+          "row": 1,
+          "column": 4,
+          "expected": 0.18127,
+          "raw_actual": 0.18127527460455894,
+          "printed_actual": 0.18128
+        },
+        {
+          "row": 1,
+          "column": 5,
+          "expected": 0.17792,
+          "raw_actual": 0.17792619951069355,
+          "printed_actual": 0.17793
+        },
+        {
+          "row": 2,
+          "column": 5,
+          "expected": 0.092832,
+          "raw_actual": 0.09283305332064629,
+          "printed_actual": 0.092833
+        },
+        {
+          "row": 3,
+          "column": 4,
+          "expected": 0.0991,
+          "raw_actual": 0.09910079464316368,
+          "printed_actual": 0.099101
+        },
+        {
+          "row": 5,
+          "column": 5,
+          "expected": 0.092548,
+          "raw_actual": 0.09254875872284174,
+          "printed_actual": 0.092549
+        },
+        {
+          "row": 6,
+          "column": 5,
+          "expected": 66.9618,
+          "raw_actual": 66.96139335632324,
+          "printed_actual": 66.9614
+        },
+        {
+          "row": 7,
+          "column": 2,
+          "expected": 1.25303,
+          "raw_actual": 1.253052830696106,
+          "printed_actual": 1.25305
+        },
+        {
+          "row": 7,
+          "column": 3,
+          "expected": 1.27858,
+          "raw_actual": 1.2786026448011398,
+          "printed_actual": 1.2786
+        },
+        {
+          "row": 7,
+          "column": 4,
+          "expected": 0.36807,
+          "raw_actual": 0.36806323006749153,
+          "printed_actual": 0.36806
+        },
+        {
+          "row": 8,
+          "column": 1,
+          "expected": 10634.9,
+          "raw_actual": 10634.958740234375,
+          "printed_actual": 10635.0
+        },
+        {
+          "row": 8,
+          "column": 2,
+          "expected": 0.5886,
+          "raw_actual": 0.5885636433959007,
+          "printed_actual": 0.58856
+        },
+        {
+          "row": 8,
+          "column": 3,
+          "expected": 1.03221,
+          "raw_actual": 1.0321716964244843,
+          "printed_actual": 1.03217
+        },
+        {
+          "row": 8,
+          "column": 4,
+          "expected": 13.6661,
+          "raw_actual": 13.666165709495544,
+          "printed_actual": 13.6662
+        },
+        {
+          "row": 8,
+          "column": 5,
+          "expected": 15640.0,
+          "raw_actual": 15640.106811523438,
+          "printed_actual": 15640.1
+        },
+        {
+          "row": 9,
+          "column": 2,
+          "expected": 0.68226,
+          "raw_actual": 0.6822063326835632,
+          "printed_actual": 0.68221
+        },
+        {
+          "row": 9,
+          "column": 3,
+          "expected": 0.012937,
+          "raw_actual": 0.012935952981933951,
+          "printed_actual": 0.012936
+        },
+        {
+          "row": 10,
+          "column": 2,
+          "expected": 1.21377,
+          "raw_actual": 1.2137854099273682,
+          "printed_actual": 1.21379
+        },
+        {
+          "row": 10,
+          "column": 3,
+          "expected": 1.23436,
+          "raw_actual": 1.2343785464763641,
+          "printed_actual": 1.23438
+        },
+        {
+          "row": 11,
+          "column": 2,
+          "expected": 2.93309,
+          "raw_actual": 2.933084338903427,
+          "printed_actual": 2.93308
+        },
+        {
+          "row": 11,
+          "column": 3,
+          "expected": 60.2536,
+          "raw_actual": 60.25322246551514,
+          "printed_actual": 60.2532
+        },
+        {
+          "row": 12,
+          "column": 4,
+          "expected": 0.215,
+          "raw_actual": 0.21500625647604465,
+          "printed_actual": 0.21501
+        },
+        {
+          "row": 15,
+          "column": 5,
+          "expected": 0.19303,
+          "raw_actual": 0.19302347861230373,
+          "printed_actual": 0.19302
+        },
+        {
+          "row": 17,
+          "column": 5,
+          "expected": 60.3183,
+          "raw_actual": 60.317848205566406,
+          "printed_actual": 60.3178
+        },
+        {
+          "row": 18,
+          "column": 2,
+          "expected": 1.29942,
+          "raw_actual": 1.2994408458471298,
+          "printed_actual": 1.29944
+        },
+        {
+          "row": 18,
+          "column": 3,
+          "expected": 1.3313,
+          "raw_actual": 1.331323280930519,
+          "printed_actual": 1.33132
+        },
+        {
+          "row": 18,
+          "column": 4,
+          "expected": 0.42407,
+          "raw_actual": 0.42406444624066353,
+          "printed_actual": 0.42406
+        },
+        {
+          "row": 19,
+          "column": 2,
+          "expected": 0.69588,
+          "raw_actual": 0.6958389952778816,
+          "printed_actual": 0.69584
+        },
+        {
+          "row": 19,
+          "column": 3,
+          "expected": 0.96036,
+          "raw_actual": 0.9603367373347282,
+          "printed_actual": 0.96034
+        },
+        {
+          "row": 19,
+          "column": 4,
+          "expected": 18.6645,
+          "raw_actual": 18.664605855941772,
+          "printed_actual": 18.6646
+        },
+        {
+          "row": 19,
+          "column": 5,
+          "expected": 21360.4,
+          "raw_actual": 21360.521728515625,
+          "printed_actual": 21360.5
+        },
+        {
+          "row": 20,
+          "column": 2,
+          "expected": 0.77581,
+          "raw_actual": 0.7757628560066223,
+          "printed_actual": 0.77576
+        },
+        {
+          "row": 20,
+          "column": 3,
+          "expected": 0.012228,
+          "raw_actual": 0.01222747447900474,
+          "printed_actual": 0.012227
+        },
+        {
+          "row": 21,
+          "column": 2,
+          "expected": 1.26365,
+          "raw_actual": 1.2636749595403671,
+          "printed_actual": 1.26367
+        },
+        {
+          "row": 21,
+          "column": 3,
+          "expected": 1.29061,
+          "raw_actual": 1.2906291335821152,
+          "printed_actual": 1.29063
+        },
+        {
+          "row": 21,
+          "column": 5,
+          "expected": 73.4559,
+          "raw_actual": 73.45578479766846,
+          "printed_actual": 73.4558
+        },
+        {
+          "row": 22,
+          "column": 2,
+          "expected": 4.61538,
+          "raw_actual": 4.61536568403244,
+          "printed_actual": 4.61537
+        },
+        {
+          "row": 22,
+          "column": 3,
+          "expected": 69.4213,
+          "raw_actual": 69.42081451416016,
+          "printed_actual": 69.4208
+        },
+        {
+          "row": 22,
+          "column": 5,
+          "expected": 133560.0,
+          "raw_actual": 133554.166015625,
+          "printed_actual": 133550.0
+        },
+        {
+          "row": 23,
+          "column": 4,
+          "expected": 0.25008,
+          "raw_actual": 0.2500874288380146,
+          "printed_actual": 0.25009
+        },
+        {
+          "row": 26,
+          "column": 5,
+          "expected": 0.16728,
+          "raw_actual": 0.16727401688694954,
+          "printed_actual": 0.16727
+        },
+        {
+          "row": 28,
+          "column": 5,
+          "expected": 52.5177,
+          "raw_actual": 52.51702547073364,
+          "printed_actual": 52.517
+        },
+        {
+          "row": 29,
+          "column": 1,
+          "expected": 0.15804,
+          "raw_actual": 0.15803465247154236,
+          "printed_actual": 0.15803
+        },
+        {
+          "row": 29,
+          "column": 2,
+          "expected": 1.35205,
+          "raw_actual": 1.3520711809396744,
+          "printed_actual": 1.35207
+        },
+        {
+          "row": 29,
+          "column": 3,
+          "expected": 1.39174,
+          "raw_actual": 1.3917683064937592,
+          "printed_actual": 1.39177
+        },
+        {
+          "row": 29,
+          "column": 5,
+          "expected": 0.24337,
+          "raw_actual": 0.24336348287761211,
+          "printed_actual": 0.24336
+        },
+        {
+          "row": 30,
+          "column": 1,
+          "expected": 18435.5,
+          "raw_actual": 18435.5830078125,
+          "printed_actual": 18435.6
+        },
+        {
+          "row": 30,
+          "column": 2,
+          "expected": 0.77129,
+          "raw_actual": 0.7712485417723656,
+          "printed_actual": 0.77125
+        },
+        {
+          "row": 30,
+          "column": 3,
+          "expected": 0.89744,
+          "raw_actual": 0.8974120020866394,
+          "printed_actual": 0.89741
+        },
+        {
+          "row": 30,
+          "column": 4,
+          "expected": 23.69,
+          "raw_actual": 23.690146684646606,
+          "printed_actual": 23.6901
+        },
+        {
+          "row": 30,
+          "column": 5,
+          "expected": 27111.8,
+          "raw_actual": 27111.95166015625,
+          "printed_actual": 27112.0
+        },
+        {
+          "row": 31,
+          "column": 2,
+          "expected": 0.83787,
+          "raw_actual": 0.8378238007426262,
+          "printed_actual": 0.83782
+        },
+        {
+          "row": 32,
+          "column": 1,
+          "expected": 56.2318,
+          "raw_actual": 56.2316780090332,
+          "printed_actual": 56.2317
+        },
+        {
+          "row": 32,
+          "column": 2,
+          "expected": 1.31874,
+          "raw_actual": 1.3187638372182846,
+          "printed_actual": 1.31876
+        },
+        {
+          "row": 32,
+          "column": 3,
+          "expected": 1.35341,
+          "raw_actual": 1.3534373492002487,
+          "printed_actual": 1.35344
+        },
+        {
+          "row": 32,
+          "column": 4,
+          "expected": 609.226,
+          "raw_actual": 609.2242202758789,
+          "printed_actual": 609.224
+        },
+        {
+          "row": 32,
+          "column": 5,
+          "expected": 105.012,
+          "raw_actual": 105.01130962371826,
+          "printed_actual": 105.011
+        },
+        {
+          "row": 33,
+          "column": 2,
+          "expected": 6.59807,
+          "raw_actual": 6.5980589389801025,
+          "printed_actual": 6.59806
+        },
+        {
+          "row": 33,
+          "column": 3,
+          "expected": 78.1904,
+          "raw_actual": 78.18993377685547,
+          "printed_actual": 78.1899
+        }
+      ]
+    },
+    "table-IV-rounded-coefficients": {
+      "exact_cells": 155,
+      "expected_cells": 165,
+      "differences": [
+        {
+          "row": 8,
+          "column": 3,
+          "expected": 1.03221,
+          "raw_actual": 1.0322049111127853,
+          "printed_actual": 1.0322
+        },
+        {
+          "row": 19,
+          "column": 2,
+          "expected": 0.69588,
+          "raw_actual": 0.6958746463060379,
+          "printed_actual": 0.69587
+        },
+        {
+          "row": 21,
+          "column": 2,
+          "expected": 1.26365,
+          "raw_actual": 1.263655424118042,
+          "printed_actual": 1.26366
+        },
+        {
+          "row": 22,
+          "column": 2,
+          "expected": 4.61538,
+          "raw_actual": 4.6153735518455505,
+          "printed_actual": 4.61537
+        },
+        {
+          "row": 22,
+          "column": 3,
+          "expected": 69.4213,
+          "raw_actual": 69.42123508453369,
+          "printed_actual": 69.4212
+        },
+        {
+          "row": 29,
+          "column": 5,
+          "expected": 0.24337,
+          "raw_actual": 0.2433649618178606,
+          "printed_actual": 0.24336
+        },
+        {
+          "row": 30,
+          "column": 2,
+          "expected": 0.77129,
+          "raw_actual": 0.7712845727801323,
+          "printed_actual": 0.77128
+        },
+        {
+          "row": 30,
+          "column": 3,
+          "expected": 0.89744,
+          "raw_actual": 0.8974348828196526,
+          "printed_actual": 0.89743
+        },
+        {
+          "row": 32,
+          "column": 4,
+          "expected": 609.226,
+          "raw_actual": 609.2252960205078,
+          "printed_actual": 609.225
+        },
+        {
+          "row": 32,
+          "column": 5,
+          "expected": 105.012,
+          "raw_actual": 105.01149559020996,
+          "printed_actual": 105.011
+        }
+      ]
+    }
+  },
+  "scope": "Original turbine listing, archived IBM compiler/math library, adapted I/O; numerical reference reconstruction, not full-domain certification.",
+  "raw_reference_exact": 424,
+  "raw_reference_total": 425,
+  "formula_first_acceptance": true,
+  "raw_reference_acceptance": false,
+  "identity": {
+    "turbine_tn_d8063.f": "de5bb490d8ac5a2be99b20d82f09c4a57484f46d0d3db8476363148507821293",
+    "turbine_tn_d8063.inp": "d1ab293ac84ff266dc58b44997c1f6816660660626948ede80d3a3cd91c36a34",
+    "restored/tests/reference_full.json": "2299a4c275bc762cd15e63e07208d4f05089deca776d5275d558999926634ecc",
+    "restored/tools/run_historical_turbine.py": "b1eeddfca6a6975f5ef487641f4116bf70ee071e3ceaee7bb02ea21c7e2bf028",
+    "restored/tools/compare_historical_turbine.py": "a7245b0e3bfaf91cc906c2cac8fe07b896859484aa36066b7d5f66410ee11725",
+    "restored/tests/check_historical.py": "a0d90fc8b91a9377e91c3fda6d95498a7736be9673894815164218036853765e"
+  }
+}

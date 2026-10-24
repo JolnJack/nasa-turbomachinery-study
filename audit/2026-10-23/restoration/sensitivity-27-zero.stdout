@@ -1,0 +1,244 @@
+1INLET TOTAL PRESSURE     INLET TOTAL TEMPERATURE     INLET TOTAL DYNAMIC VISCOSITY     SPECIFIC HEAT RATIO     GAS CONSTANT
+       101325.                     288.15                       .0000179                        1.4                287.05
+ NUMBER OF BLADES     FRICTION COEFFICIENT     SPLT     DESIGN SPEED     INDUCER RMS SWIRL ANGLE     INDUCER RMS BLOCKAGE FACTOR
+       32.                    .004               1         72000.                 0.00                          0.90
+            INDUCER RMS BLADE ANGLE     INDUCER HUB-TIP DIAMETER RATIO     INDUCER TIP-IMPELLER EXIT DIAMETER RATIO
+                        49.0                           0.5313                                  0.5614
+ IMPELLER BLADE EXIT BACKSWEEP     IMPELLER BLADE EXIT HT.     VANELESS DIFFUSER DIAMETER RATIO     VANED DIFFUSER SETTING ANGLE
+             25.0                          .00510                           1.140                              78.00
+                                  TOTAL VANED DIFFUSER THROAT AREA     VANED DIFFUSER AREA RATIO
+                                               .000710                            2.70
+                                                INLET CRITICAL VELOCITY RATIO ARRAY
+      0.47      0.48      0.49      0.50      0.51      0.52      0.53      0.54
+      0.55      0.56      0.57      0.58      0.59      0.60      0.61
+ WT FLOW LESS THAN SURGE FOR V/VCR=0.47
+                                                            PERCENT NDES
+                                                               100.0
+                                              SURGE FLOW RATE          CHOKE FLOW RATE
+                                                   0.614                    0.719
+                                             WEQ          PRESSURE RATIO          ETAT
+                                            0.616             6.485               .768
+            DETAIGV        DETAINC        DETABL        DETASF        DETADF        DETARC        DETAVLD        DETAVD
+             .00000         .00035        .03264        .05138        .03603        .02885         .02651        .05619
+                                             WEQ          PRESSURE RATIO          ETAT
+                                            0.626             6.485               .770
+            DETAIGV        DETAINC        DETABL        DETASF        DETADF        DETARC        DETAVLD        DETAVD
+             .00000         .00037        .03233        .05199        .03546        .02828         .02604        .05511
+                                             WEQ          PRESSURE RATIO          ETAT
+                                            0.636             6.484               .773
+            DETAIGV        DETAINC        DETABL        DETASF        DETADF        DETARC        DETAVLD        DETAVD
+             .00000         .00038        .03205        .05259        .03494        .02776         .02561        .05412
+                                             WEQ          PRESSURE RATIO          ETAT
+                                            0.646             6.481               .775
+            DETAIGV        DETAINC        DETABL        DETASF        DETADF        DETARC        DETAVLD        DETAVD
+             .00000         .00039        .03177        .05321        .03444        .02726         .02520        .05322
+                                             WEQ          PRESSURE RATIO          ETAT
+                                            0.656             6.477               .776
+            DETAIGV        DETAINC        DETABL        DETASF        DETADF        DETARC        DETAVLD        DETAVD
+             .00000         .00040        .03150        .05384        .03397        .02678         .02481        .05239
+                                             WEQ          PRESSURE RATIO          ETAT
+                                            0.665             6.472               .778
+            DETAIGV        DETAINC        DETABL        DETASF        DETADF        DETARC        DETAVLD        DETAVD
+             .00000         .00041        .03123        .05448        .03351        .02632         .02443        .05163
+                                             WEQ          PRESSURE RATIO          ETAT
+                                            0.675             6.465               .780
+            DETAIGV        DETAINC        DETABL        DETASF        DETADF        DETARC        DETAVLD        DETAVD
+             .00000         .00042        .03097        .05513        .03307        .02587         .02407        .05096
+                                             WEQ          PRESSURE RATIO          ETAT
+                                            0.684             6.458               .781
+            DETAIGV        DETAINC        DETABL        DETASF        DETADF        DETARC        DETAVLD        DETAVD
+             .00000         .00043        .03072        .05579        .03264        .02544         .02372        .05036
+                                             WEQ          PRESSURE RATIO          ETAT
+                                            0.693             6.448               .782
+            DETAIGV        DETAINC        DETABL        DETASF        DETADF        DETARC        DETAVLD        DETAVD
+             .00000         .00044        .03047        .05647        .03224        .02503         .02338        .04983
+                                             WEQ          PRESSURE RATIO          ETAT
+                                            0.702             6.438               .783
+            DETAIGV        DETAINC        DETABL        DETASF        DETADF        DETARC        DETAVLD        DETAVD
+             .00000         .00045        .03024        .05716        .03184        .02463         .02306        .04938
+                                             WEQ          PRESSURE RATIO          ETAT
+                                            0.710             6.427               .784
+            DETAIGV        DETAINC        DETABL        DETASF        DETADF        DETARC        DETAVLD        DETAVD
+             .00000         .00046        .03000        .05785        .03147        .02425         .02275        .04900
+                                             WEQ          PRESSURE RATIO          ETAT
+                                            0.719             6.414               .785
+            DETAIGV        DETAINC        DETABL        DETASF        DETADF        DETARC        DETAVLD        DETAVD
+             .00000         .00047        .02978        .05856        .03111        .02388         .02245        .04870
+1INLET TOTAL PRESSURE     INLET TOTAL TEMPERATURE     INLET TOTAL DYNAMIC VISCOSITY     SPECIFIC HEAT RATIO     GAS CONSTANT
+       101325.                     288.15                       .0000179                        1.4                287.05
+ NUMBER OF BLADES     FRICTION COEFFICIENT     SPLT     DESIGN SPEED     INDUCER RMS SWIRL ANGLE     INDUCER RMS BLOCKAGE FACTOR
+       32.                    .004               1         72000.                 0.00                          0.90
+            INDUCER RMS BLADE ANGLE     INDUCER HUB-TIP DIAMETER RATIO     INDUCER TIP-IMPELLER EXIT DIAMETER RATIO
+                        49.0                           0.5313                                  0.5614
+ IMPELLER BLADE EXIT BACKSWEEP     IMPELLER BLADE EXIT HT.     VANELESS DIFFUSER DIAMETER RATIO     VANED DIFFUSER SETTING ANGLE
+             25.0                          .00510                           1.140                              78.00
+                                  TOTAL VANED DIFFUSER THROAT AREA     VANED DIFFUSER AREA RATIO
+                                               .000710                            2.70
+                                                INLET CRITICAL VELOCITY RATIO ARRAY
+      0.39      0.40      0.41      0.42      0.43      0.44      0.45      0.46
+      0.47      0.48      0.49      0.50      0.51      0.52      0.53
+ WT FLOW LESS THAN SURGE FOR V/VCR=0.39
+ WT FLOW LESS THAN SURGE FOR V/VCR=0.40
+                                                            PERCENT NDES
+                                                                90.0
+                                              SURGE FLOW RATE          CHOKE FLOW RATE
+                                                   0.540                    0.656
+                                             WEQ          PRESSURE RATIO          ETAT
+                                            0.540             4.857               .782
+            DETAIGV        DETAINC        DETABL        DETASF        DETADF        DETARC        DETAVLD        DETAVD
+             .00000         .00034        .02969        .05390        .03316        .02450         .02334        .05277
+                                             WEQ          PRESSURE RATIO          ETAT
+                                            0.552             4.863               .786
+            DETAIGV        DETAINC        DETABL        DETASF        DETADF        DETARC        DETAVLD        DETAVD
+             .00000         .00035        .02926        .05468        .03254        .02384         .02285        .05027
+                                             WEQ          PRESSURE RATIO          ETAT
+                                            0.563             4.846               .787
+            DETAIGV        DETAINC        DETABL        DETASF        DETADF        DETARC        DETAVLD        DETAVD
+             .00000         .00036        .02883        .05548        .03195        .02321         .02238        .05074
+                                             WEQ          PRESSURE RATIO          ETAT
+                                            0.574             4.849               .791
+            DETAIGV        DETAINC        DETABL        DETASF        DETADF        DETARC        DETAVLD        DETAVD
+             .00000         .00037        .02841        .05630        .03139        .02260         .02193        .04834
+                                             WEQ          PRESSURE RATIO          ETAT
+                                            0.584             4.831               .791
+            DETAIGV        DETAINC        DETABL        DETASF        DETADF        DETARC        DETAVLD        DETAVD
+             .00000         .00039        .02800        .05715        .03086        .02201         .02151        .04881
+                                             WEQ          PRESSURE RATIO          ETAT
+                                            0.595             4.833               .795
+            DETAIGV        DETAINC        DETABL        DETASF        DETADF        DETARC        DETAVLD        DETAVD
+             .00000         .00040        .02759        .05801        .03034        .02144         .02110        .04651
+                                             WEQ          PRESSURE RATIO          ETAT
+                                            0.605             4.814               .795
+            DETAIGV        DETAINC        DETABL        DETASF        DETADF        DETARC        DETAVLD        DETAVD
+             .00000         .00041        .02720        .05890        .02985        .02090         .02071        .04698
+                                             WEQ          PRESSURE RATIO          ETAT
+                                            0.616             4.814               .798
+            DETAIGV        DETAINC        DETABL        DETASF        DETADF        DETARC        DETAVLD        DETAVD
+             .00000         .00043        .02681        .05980        .02938        .02038         .02034        .04479
+                                             WEQ          PRESSURE RATIO          ETAT
+                                            0.626             4.794               .798
+            DETAIGV        DETAINC        DETABL        DETASF        DETADF        DETARC        DETAVLD        DETAVD
+             .00000         .00044        .02643        .06073        .02893        .01988         .01999        .04525
+                                             WEQ          PRESSURE RATIO          ETAT
+                                            0.636             4.792               .801
+            DETAIGV        DETAINC        DETABL        DETASF        DETADF        DETARC        DETAVLD        DETAVD
+             .00000         .00045        .02606        .06167        .02849        .01939         .01965        .04316
+                                             WEQ          PRESSURE RATIO          ETAT
+                                            0.646             4.789               .804
+            DETAIGV        DETAINC        DETABL        DETASF        DETADF        DETARC        DETAVLD        DETAVD
+             .00000         .00046        .02570        .06264        .02808        .01893         .01932        .04114
+                                             WEQ          PRESSURE RATIO          ETAT
+                                            0.656             3.381               .591
+            DETAIGV        DETAINC        DETABL        DETASF        DETADF        DETARC        DETAVLD        DETAVD
+             .00000         .00048        .02535        .06363        .02768        .01848         .01901        .25445
+1INLET TOTAL PRESSURE     INLET TOTAL TEMPERATURE     INLET TOTAL DYNAMIC VISCOSITY     SPECIFIC HEAT RATIO     GAS CONSTANT
+       101325.                     288.15                       .0000179                        1.4                287.05
+ NUMBER OF BLADES     FRICTION COEFFICIENT     SPLT     DESIGN SPEED     INDUCER RMS SWIRL ANGLE     INDUCER RMS BLOCKAGE FACTOR
+       32.                    .004               1         72000.                 0.00                          0.90
+            INDUCER RMS BLADE ANGLE     INDUCER HUB-TIP DIAMETER RATIO     INDUCER TIP-IMPELLER EXIT DIAMETER RATIO
+                        49.0                           0.5313                                  0.5614
+ IMPELLER BLADE EXIT BACKSWEEP     IMPELLER BLADE EXIT HT.     VANELESS DIFFUSER DIAMETER RATIO     VANED DIFFUSER SETTING ANGLE
+             25.0                          .00510                           1.140                              78.00
+                                  TOTAL VANED DIFFUSER THROAT AREA     VANED DIFFUSER AREA RATIO
+                                               .000710                            2.70
+                                                INLET CRITICAL VELOCITY RATIO ARRAY
+      0.27      0.28      0.29      0.30      0.31      0.32      0.33      0.34
+      0.35      0.36      0.37      0.38      0.39      0.40      0.41
+ WT FLOW LESS THAN SURGE FOR V/VCR=0.27
+ WT FLOW LESS THAN SURGE FOR V/VCR=0.28
+ WT FLOW LESS THAN SURGE FOR V/VCR=0.29
+ WT FLOW LESS THAN SURGE FOR V/VCR=0.30
+                                                            PERCENT NDES
+                                                                80.0
+                                              SURGE FLOW RATE          CHOKE FLOW RATE
+                                                   0.409                    0.518
+                                             WEQ          PRESSURE RATIO          ETAT
+                                            0.421             3.677               .781
+            DETAIGV        DETAINC        DETABL        DETASF        DETADF        DETARC        DETAVLD        DETAVD
+             .00000         .00026        .02912        .05321        .03395        .02404         .02311        .05507
+                                             WEQ          PRESSURE RATIO          ETAT
+                                            0.434             3.676               .786
+            DETAIGV        DETAINC        DETABL        DETASF        DETADF        DETARC        DETAVLD        DETAVD
+             .00000         .00028        .02845        .05416        .03306        .02307         .02243        .05289
+                                             WEQ          PRESSURE RATIO          ETAT
+                                            0.446             3.676               .790
+            DETAIGV        DETAINC        DETABL        DETASF        DETADF        DETARC        DETAVLD        DETAVD
+             .00000         .00029        .02780        .05512        .03225        .02217         .02180        .05070
+                                             WEQ          PRESSURE RATIO          ETAT
+                                            0.458             3.674               .794
+            DETAIGV        DETAINC        DETABL        DETASF        DETADF        DETARC        DETAVLD        DETAVD
+             .00000         .00031        .02717        .05611        .03148        .02131         .02121        .04848
+                                             WEQ          PRESSURE RATIO          ETAT
+                                            0.470             3.672               .798
+            DETAIGV        DETAINC        DETABL        DETASF        DETADF        DETARC        DETAVLD        DETAVD
+             .00000         .00032        .02654        .05714        .03075        .02048         .02065        .04623
+                                             WEQ          PRESSURE RATIO          ETAT
+                                            0.482             3.654               .799
+            DETAIGV        DETAINC        DETABL        DETASF        DETADF        DETARC        DETAVLD        DETAVD
+             .00000         .00034        .02592        .05821        .03006        .01970         .02013        .04705
+                                             WEQ          PRESSURE RATIO          ETAT
+                                            0.494             3.651               .802
+            DETAIGV        DETAINC        DETABL        DETASF        DETADF        DETARC        DETAVLD        DETAVD
+             .00000         .00035        .02532        .05932        .02941        .01895         .01963        .04466
+                                             WEQ          PRESSURE RATIO          ETAT
+                                            0.506             3.648               .806
+            DETAIGV        DETAINC        DETABL        DETASF        DETADF        DETARC        DETAVLD        DETAVD
+             .00000         .00037        .02472        .06046        .02879        .01823         .01916        .04224
+                                             WEQ          PRESSURE RATIO          ETAT
+                                            0.518             2.717               .596
+            DETAIGV        DETAINC        DETABL        DETASF        DETADF        DETARC        DETAVLD        DETAVD
+             .00000         .00038        .02414        .06164        .02820        .01754         .01872        .25375
+1INLET TOTAL PRESSURE     INLET TOTAL TEMPERATURE     INLET TOTAL DYNAMIC VISCOSITY     SPECIFIC HEAT RATIO     GAS CONSTANT
+       101325.                     288.15                       .0000179                        1.4                287.05
+ NUMBER OF BLADES     FRICTION COEFFICIENT     SPLT     DESIGN SPEED     INDUCER RMS SWIRL ANGLE     INDUCER RMS BLOCKAGE FACTOR
+       32.                    .004               1         72000.                 0.00                          0.90
+            INDUCER RMS BLADE ANGLE     INDUCER HUB-TIP DIAMETER RATIO     INDUCER TIP-IMPELLER EXIT DIAMETER RATIO
+                        49.0                           0.5313                                  0.5614
+ IMPELLER BLADE EXIT BACKSWEEP     IMPELLER BLADE EXIT HT.     VANELESS DIFFUSER DIAMETER RATIO     VANED DIFFUSER SETTING ANGLE
+             25.0                          .00510                           1.140                              78.00
+                                  TOTAL VANED DIFFUSER THROAT AREA     VANED DIFFUSER AREA RATIO
+                                               .000710                            2.70
+                                                INLET CRITICAL VELOCITY RATIO ARRAY
+      0.15      0.16      0.17      0.18      0.19      0.20      0.21      0.22
+      0.23      0.24      0.25      0.26
+ WT FLOW LESS THAN SURGE FOR V/VCR=0.15
+                                                            PERCENT NDES
+                                                                60.0
+                                              SURGE FLOW RATE          CHOKE FLOW RATE
+                                                   0.223                    0.331
+                                             WEQ          PRESSURE RATIO          ETAT
+                                            0.224             2.209               .766
+            DETAIGV        DETAINC        DETABL        DETASF        DETADF        DETARC        DETAVLD        DETAVD
+             .00000         .00014        .03086        .05113        .03944        .02711         .02516        .05969
+                                             WEQ          PRESSURE RATIO          ETAT
+                                            0.238             2.209               .775
+            DETAIGV        DETAINC        DETABL        DETASF        DETADF        DETARC        DETAVLD        DETAVD
+             .00000         .00016        .02958        .05236        .03750        .02513         .02377        .05682
+                                             WEQ          PRESSURE RATIO          ETAT
+                                            0.251             2.198               .777
+            DETAIGV        DETAINC        DETABL        DETASF        DETADF        DETARC        DETAVLD        DETAVD
+             .00000         .00017        .02831        .05369        .03576        .02331         .02253        .05939
+                                             WEQ          PRESSURE RATIO          ETAT
+                                            0.265             2.198               .785
+            DETAIGV        DETAINC        DETABL        DETASF        DETADF        DETARC        DETAVLD        DETAVD
+             .00000         .00019        .02706        .05510        .03420        .02161         .02142        .05543
+                                             WEQ          PRESSURE RATIO          ETAT
+                                            0.278             2.199               .793
+            DETAIGV        DETAINC        DETABL        DETASF        DETADF        DETARC        DETAVLD        DETAVD
+             .00000         .00021        .02583        .05661        .03278        .02004         .02041        .05108
+                                             WEQ          PRESSURE RATIO          ETAT
+                                            0.292             2.199               .801
+            DETAIGV        DETAINC        DETABL        DETASF        DETADF        DETARC        DETAVLD        DETAVD
+             .00000         .00023        .02462        .05822        .03148        .01857         .01950        .04634
+                                             WEQ          PRESSURE RATIO          ETAT
+                                            0.305             2.199               .809
+            DETAIGV        DETAINC        DETABL        DETASF        DETADF        DETARC        DETAVLD        DETAVD
+             .00000         .00025        .02343        .05993        .03030        .01721         .01868        .04120
+                                             WEQ          PRESSURE RATIO          ETAT
+                                            0.318             2.198               .817
+            DETAIGV        DETAINC        DETABL        DETASF        DETADF        DETARC        DETAVLD        DETAVD
+             .00000         .00027        .02224        .06179        .02919        .01590         .01791        .03559
+                                             WEQ          PRESSURE RATIO          ETAT
+                                            0.331             1.814               .606
+            DETAIGV        DETAINC        DETABL        DETASF        DETADF        DETARC        DETAVLD        DETAVD
+             .00000         .00029        .02109        .06372        .02819        .01471         .01722        .24910

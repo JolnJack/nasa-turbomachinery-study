@@ -1,0 +1,1066 @@
+{
+  "native32": {
+    "exit": 0,
+    "points": 85,
+    "max_mass_relative_residual": 1.7540785019506877e-07,
+    "max_energy_relative_residual": 2.8705034601893688e-06,
+    "pass": true,
+    "rules": "Mass <=3e-5: source root tolerance 1e-5 plus single-real rounding. Energy <=5e-6: printed audit operands/single-real cancellation. These are conservation checks, not tolerances for NASA printed-table acceptance.",
+    "observations": [
+      {
+        "mode": 2.0,
+        "mass_relative_residual": 5.2988685111677874e-08,
+        "euler_relative_residual": 2.7004001292200637e-07,
+        "thermal_relative_residual": 3.6609347872760483e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 5.27813283030025e-08,
+        "euler_relative_residual": 1.4477986552209295e-06,
+        "thermal_relative_residual": 4.272283591918922e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 8.195957383934868e-08,
+        "euler_relative_residual": 1.4199019855785714e-06,
+        "thermal_relative_residual": 1.1933673774892983e-06
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 1.6091367580074047e-07,
+        "euler_relative_residual": 3.160661040561056e-07,
+        "thermal_relative_residual": 4.7948697291197567e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 4.469589219735994e-08,
+        "euler_relative_residual": 5.03205300872185e-07,
+        "thermal_relative_residual": 6.993558106078897e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 1.0577045052238035e-07,
+        "euler_relative_residual": 5.138643520747764e-07,
+        "thermal_relative_residual": 5.945057317351404e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 6.50323027941175e-08,
+        "euler_relative_residual": 8.162692066079158e-07,
+        "thermal_relative_residual": 8.431155315074011e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 1.8134579481398058e-08,
+        "euler_relative_residual": 4.930277615173825e-07,
+        "thermal_relative_residual": 3.048193183342342e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 1.0917526771983675e-07,
+        "euler_relative_residual": 2.1946669835667467e-07,
+        "thermal_relative_residual": 5.287658393130748e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 1.0685772304819705e-07,
+        "euler_relative_residual": 7.622174304834532e-07,
+        "thermal_relative_residual": 6.911043852984701e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 1.5105322792590018e-07,
+        "euler_relative_residual": 9.76692410959999e-08,
+        "thermal_relative_residual": 8.679023985034762e-11
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 6.810056883996244e-08,
+        "euler_relative_residual": 2.992868060720734e-07,
+        "thermal_relative_residual": 2.5823540159390436e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 2.1498695133346952e-08,
+        "euler_relative_residual": 1.9729560615558163e-08,
+        "thermal_relative_residual": 6.832223395900293e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 4.1722748467708626e-08,
+        "euler_relative_residual": 3.389305452314997e-07,
+        "thermal_relative_residual": 5.312393377673597e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 9.985962164515351e-08,
+        "euler_relative_residual": 4.036395634022451e-07,
+        "thermal_relative_residual": 3.6502197229730955e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 9.378551507209789e-08,
+        "euler_relative_residual": 2.401623525637679e-07,
+        "thermal_relative_residual": 2.2848930432645284e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 8.249654542882724e-08,
+        "euler_relative_residual": 5.344700941627227e-08,
+        "thermal_relative_residual": 1.1261077290446622e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 8.759868394424262e-08,
+        "euler_relative_residual": 4.395263280088875e-07,
+        "thermal_relative_residual": 4.974161429846229e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 4.3844354728381875e-08,
+        "euler_relative_residual": 2.8172765553539665e-07,
+        "thermal_relative_residual": 2.8806627820130417e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 8.386448116167335e-08,
+        "euler_relative_residual": 8.1677275501066e-08,
+        "thermal_relative_residual": 1.2491463713577068e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 4.1698546056287076e-08,
+        "euler_relative_residual": 3.045469438876656e-07,
+        "thermal_relative_residual": 3.8522181505714775e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 1.4314984724331216e-08,
+        "euler_relative_residual": 8.927864627803889e-07,
+        "thermal_relative_residual": 2.0247484023511773e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 1.1135639098264145e-08,
+        "euler_relative_residual": 5.299576555389332e-07,
+        "thermal_relative_residual": 1.4025055587881705e-06
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 6.20684860041783e-08,
+        "euler_relative_residual": 3.527400544590791e-07,
+        "thermal_relative_residual": 3.5205573638930765e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 3.007454127259077e-08,
+        "euler_relative_residual": 2.927894262985382e-07,
+        "thermal_relative_residual": 1.5309146465348303e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 2.4095417536877357e-08,
+        "euler_relative_residual": 9.620457236955771e-08,
+        "thermal_relative_residual": 7.616327411111767e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 1.0373961309648023e-07,
+        "euler_relative_residual": 4.904112961214301e-08,
+        "thermal_relative_residual": 8.690499692818389e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 6.975630905680166e-08,
+        "euler_relative_residual": 2.3142356773684086e-07,
+        "thermal_relative_residual": 2.7899670161903555e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 4.569669802993759e-08,
+        "euler_relative_residual": 2.556939361452925e-07,
+        "thermal_relative_residual": 2.126775692844608e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 1.008408598877894e-07,
+        "euler_relative_residual": 3.474429747523564e-08,
+        "thermal_relative_residual": 2.9190370754692973e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 1.074110980282535e-08,
+        "euler_relative_residual": 3.579040433718104e-07,
+        "thermal_relative_residual": 4.29920428125292e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 4.6512132975294126e-08,
+        "euler_relative_residual": 1.4892205721463382e-07,
+        "thermal_relative_residual": 3.6972784673938846e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 7.234500662290939e-08,
+        "euler_relative_residual": 4.262572806756359e-07,
+        "thermal_relative_residual": 2.731684321289105e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 9.264014741785496e-08,
+        "euler_relative_residual": 4.505475214628571e-07,
+        "thermal_relative_residual": 3.8614041014542057e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 2.288874549026827e-08,
+        "euler_relative_residual": 2.776627807748507e-07,
+        "thermal_relative_residual": 2.2149329143298067e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 7.913731575677848e-08,
+        "euler_relative_residual": 1.1041714930717981e-07,
+        "thermal_relative_residual": 1.965730377703046e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 5.411769308595869e-08,
+        "euler_relative_residual": 2.8224803601289e-07,
+        "thermal_relative_residual": 2.8085076975703873e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 4.5347468181122993e-08,
+        "euler_relative_residual": 6.545090707867966e-08,
+        "thermal_relative_residual": 1.1860125108628029e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 1.560931470046086e-08,
+        "euler_relative_residual": 2.733062300778508e-07,
+        "thermal_relative_residual": 2.0484789365433993e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 6.146886551019474e-08,
+        "euler_relative_residual": 5.713762435092241e-08,
+        "thermal_relative_residual": 3.2601678040516076e-09
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 1.6390762640584674e-07,
+        "euler_relative_residual": 3.072674939044292e-07,
+        "thermal_relative_residual": 2.1667251799512042e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 1.1558796889798077e-07,
+        "euler_relative_residual": 5.066348227991623e-07,
+        "thermal_relative_residual": 6.100731240111356e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 2.3663128236882563e-08,
+        "euler_relative_residual": 1.0736783782838556e-07,
+        "thermal_relative_residual": 2.108681131190294e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 1.234510263016742e-08,
+        "euler_relative_residual": 8.620913042495228e-07,
+        "thermal_relative_residual": 3.096608441487434e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 1.0794952946647613e-07,
+        "euler_relative_residual": 2.810475452496579e-07,
+        "thermal_relative_residual": 1.2041598744759496e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 7.243812542829053e-08,
+        "euler_relative_residual": 1.6876906867470775e-07,
+        "thermal_relative_residual": 3.4703391981995194e-09
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 1.4802138506640969e-08,
+        "euler_relative_residual": 6.725911614952351e-07,
+        "thermal_relative_residual": 4.803187266650644e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 1.743772021595614e-07,
+        "euler_relative_residual": 5.434282956502698e-07,
+        "thermal_relative_residual": 3.6648579681971316e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 3.4107922834669216e-08,
+        "euler_relative_residual": 6.412252335926711e-07,
+        "thermal_relative_residual": 5.636033815583116e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 3.6648190283839536e-08,
+        "euler_relative_residual": 7.767913362053828e-08,
+        "thermal_relative_residual": 2.8176986036181826e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 1.2863241151818251e-08,
+        "euler_relative_residual": 1.1598289864372782e-07,
+        "thermal_relative_residual": 1.547579467208715e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 5.524866080415479e-08,
+        "euler_relative_residual": 1.1099132034640036e-07,
+        "thermal_relative_residual": 5.655073123059334e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 3.761812170660682e-08,
+        "euler_relative_residual": 2.374850636123145e-06,
+        "thermal_relative_residual": 2.8705034601893688e-06
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 5.02220763802944e-08,
+        "euler_relative_residual": 3.7065006161539364e-07,
+        "thermal_relative_residual": 1.758215825805938e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 5.9559472752713124e-08,
+        "euler_relative_residual": 2.7718916845972424e-09,
+        "thermal_relative_residual": 2.647452516601723e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 4.375069781720282e-09,
+        "euler_relative_residual": 6.165637600803022e-07,
+        "thermal_relative_residual": 6.810011154226383e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 5.407433648319275e-08,
+        "euler_relative_residual": 8.441492647908194e-07,
+        "thermal_relative_residual": 6.5812272239569e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 6.640625852528509e-08,
+        "euler_relative_residual": 9.343888955378947e-07,
+        "thermal_relative_residual": 1.0958049776694308e-06
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 1.505929767449895e-07,
+        "euler_relative_residual": 3.001823775272411e-08,
+        "thermal_relative_residual": 2.0952138736035065e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 3.2955777515493655e-09,
+        "euler_relative_residual": 1.0163063932476236e-07,
+        "thermal_relative_residual": 9.101745638002291e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 4.815617949280067e-09,
+        "euler_relative_residual": 4.526460456840223e-08,
+        "thermal_relative_residual": 1.9153488120353844e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 7.107267401524492e-08,
+        "euler_relative_residual": 2.2125521278095898e-07,
+        "thermal_relative_residual": 1.7532492877985153e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 4.466714675308979e-08,
+        "euler_relative_residual": 1.4725350669763194e-07,
+        "thermal_relative_residual": 1.0693988748322693e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 7.043552139852296e-09,
+        "euler_relative_residual": 9.811920155931246e-07,
+        "thermal_relative_residual": 2.5201676419235737e-06
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 2.139342033312481e-09,
+        "euler_relative_residual": 1.274214083686444e-06,
+        "thermal_relative_residual": 1.6625173285319665e-06
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 1.014567689722183e-07,
+        "euler_relative_residual": 1.8326528274929102e-07,
+        "thermal_relative_residual": 7.844951040007582e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 5.065149720487017e-08,
+        "euler_relative_residual": 2.136721741693092e-06,
+        "thermal_relative_residual": 1.1986077517959665e-06
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 1.5382669873077514e-07,
+        "euler_relative_residual": 3.598227832795073e-07,
+        "thermal_relative_residual": 1.4020003386103883e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 7.59866974833029e-08,
+        "euler_relative_residual": 5.115600329981249e-08,
+        "thermal_relative_residual": 4.2920939075031023e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 6.464091607442226e-08,
+        "euler_relative_residual": 1.260116595743016e-06,
+        "thermal_relative_residual": 1.1203000296653326e-06
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 1.2493762932062855e-08,
+        "euler_relative_residual": 3.539803498870876e-07,
+        "thermal_relative_residual": 2.8662275003164566e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 1.4467582576586844e-07,
+        "euler_relative_residual": 1.5678586092099775e-07,
+        "thermal_relative_residual": 1.0795915528824488e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 1.0709279304297405e-07,
+        "euler_relative_residual": 1.2140034546737179e-07,
+        "thermal_relative_residual": 2.4618541080676985e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 2.8456318529909283e-08,
+        "euler_relative_residual": 1.7440543216146323e-07,
+        "thermal_relative_residual": 9.58377223213629e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 1.3607714551665977e-07,
+        "euler_relative_residual": 2.0679097713159057e-06,
+        "thermal_relative_residual": 1.4656322645199774e-06
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 1.1598142309426946e-07,
+        "euler_relative_residual": 2.035300751469115e-06,
+        "thermal_relative_residual": 3.730071082854624e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 1.0712361960922236e-08,
+        "euler_relative_residual": 3.718799404587666e-07,
+        "thermal_relative_residual": 1.2883943671663537e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 4.555398133469591e-09,
+        "euler_relative_residual": 8.694285004518246e-07,
+        "thermal_relative_residual": 8.713200610435571e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 5.24334244029319e-08,
+        "euler_relative_residual": 2.4958448722960137e-07,
+        "thermal_relative_residual": 7.508632793527096e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 1.7297426135328263e-08,
+        "euler_relative_residual": 9.315706508859562e-09,
+        "thermal_relative_residual": 3.5424473725885783e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 1.9597746051916353e-08,
+        "euler_relative_residual": 1.214952233449351e-06,
+        "thermal_relative_residual": 2.6802572421381616e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 1.7540785019506877e-07,
+        "euler_relative_residual": 2.040000290453805e-06,
+        "thermal_relative_residual": 1.2290470617227956e-06
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 6.00536944662904e-08,
+        "euler_relative_residual": 1.7675812891633819e-06,
+        "thermal_relative_residual": 1.2483031863243305e-06
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 4.211803189727618e-08,
+        "euler_relative_residual": 4.843616327641028e-07,
+        "thermal_relative_residual": 2.10511270425063e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 1.7626498492394604e-08,
+        "euler_relative_residual": 1.8462237103846704e-07,
+        "thermal_relative_residual": 3.89131391954936e-07
+      }
+    ],
+    "command": [
+      "/opt/homebrew/bin/gfortran",
+      "-std=legacy",
+      "-fno-automatic",
+      "-fcheck=all",
+      "-ffpe-trap=invalid,zero,overflow",
+      "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/conservation-20261023T161812044537Z/instrumented-native32.f",
+      "/Users/ikunsredemptionmac/Downloads/NASA/restored/read_namelist_cards.f90",
+      "-o",
+      "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/conservation-20261023T161812044537Z/native32"
+    ]
+  },
+  "compat27": {
+    "exit": 0,
+    "points": 85,
+    "max_mass_relative_residual": 6.431381752639176e-08,
+    "max_energy_relative_residual": 1.1343820239646392e-06,
+    "pass": true,
+    "rules": "Mass <=3e-5: source root tolerance 1e-5 plus single-real rounding. Energy <=5e-6: printed audit operands/single-real cancellation. These are conservation checks, not tolerances for NASA printed-table acceptance.",
+    "observations": [
+      {
+        "mode": 2.0,
+        "mass_relative_residual": 5.4532356983395944e-08,
+        "euler_relative_residual": 7.802355303764427e-08,
+        "thermal_relative_residual": 8.585457508983558e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 2.696897878298996e-08,
+        "euler_relative_residual": 7.989230859647867e-07,
+        "thermal_relative_residual": 5.560909888824187e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 2.0220612665328424e-08,
+        "euler_relative_residual": 4.0001672514082874e-07,
+        "thermal_relative_residual": 3.472512268598844e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 5.8146174753440306e-08,
+        "euler_relative_residual": 1.9298985203482788e-07,
+        "thermal_relative_residual": 1.488019585422235e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 3.3172156931989966e-08,
+        "euler_relative_residual": 3.278363460270533e-07,
+        "thermal_relative_residual": 2.894830796307169e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 3.019175708459068e-08,
+        "euler_relative_residual": 3.018674919534381e-07,
+        "thermal_relative_residual": 2.7301836799673765e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 5.085218534757879e-08,
+        "euler_relative_residual": 1.5988650643910907e-07,
+        "thermal_relative_residual": 1.3029171478938588e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 4.938861587685558e-08,
+        "euler_relative_residual": 1.0497841730774531e-07,
+        "thermal_relative_residual": 5.396417937683657e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 3.2858233248979075e-08,
+        "euler_relative_residual": 8.409559348120265e-08,
+        "thermal_relative_residual": 5.6776787637958377e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 3.65124517133903e-08,
+        "euler_relative_residual": 8.368696207134529e-08,
+        "thermal_relative_residual": 5.0638411657801706e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 2.078925464264483e-08,
+        "euler_relative_residual": 3.6257310418687735e-08,
+        "thermal_relative_residual": 3.32748340283678e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 4.1377133920622653e-08,
+        "euler_relative_residual": 4.689317781998542e-08,
+        "thermal_relative_residual": 5.3354267474439186e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 3.3682094122187924e-08,
+        "euler_relative_residual": 1.023326225079592e-08,
+        "thermal_relative_residual": 6.320704173458989e-10
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 5.411557887037851e-08,
+        "euler_relative_residual": 5.272996787443874e-08,
+        "thermal_relative_residual": 4.797714378126269e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 3.781373705608613e-08,
+        "euler_relative_residual": 6.05107251279699e-08,
+        "thermal_relative_residual": 5.5224276111789933e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 4.280984059587083e-08,
+        "euler_relative_residual": 8.577569137598261e-09,
+        "thermal_relative_residual": 1.0139929687714941e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 3.652673071013767e-08,
+        "euler_relative_residual": 3.281607238195142e-08,
+        "thermal_relative_residual": 3.3404707944278057e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 5.803416185702724e-08,
+        "euler_relative_residual": 2.9632409144356607e-08,
+        "thermal_relative_residual": 3.580504060952028e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 5.331417385034155e-08,
+        "euler_relative_residual": 7.008435277005561e-08,
+        "thermal_relative_residual": 5.595206086753698e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 6.431381752639176e-08,
+        "euler_relative_residual": 6.795260248289103e-08,
+        "thermal_relative_residual": 5.8920851440197766e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 6.385774975043209e-08,
+        "euler_relative_residual": 5.499592379914804e-08,
+        "thermal_relative_residual": 4.732513915639701e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 2.4607935001145983e-08,
+        "euler_relative_residual": 4.0033788558799704e-07,
+        "thermal_relative_residual": 2.63601944480886e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 4.8512259128773484e-08,
+        "euler_relative_residual": 4.710788150896647e-07,
+        "thermal_relative_residual": 4.195451658902222e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 3.773946715193919e-08,
+        "euler_relative_residual": 1.5226280263162775e-07,
+        "thermal_relative_residual": 5.4726829551953925e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 5.6792199850129723e-08,
+        "euler_relative_residual": 1.9404548993509112e-07,
+        "thermal_relative_residual": 1.5909554042829322e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 3.0335195716888756e-08,
+        "euler_relative_residual": 1.3936351120035895e-07,
+        "thermal_relative_residual": 8.696753026609548e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 3.584945564151166e-08,
+        "euler_relative_residual": 1.0167267456631785e-07,
+        "thermal_relative_residual": 1.046906757256223e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 2.28724462717094e-08,
+        "euler_relative_residual": 4.36939112936653e-08,
+        "thermal_relative_residual": 1.8706968407081616e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 5.0946902580612374e-08,
+        "euler_relative_residual": 7.317973745442575e-08,
+        "thermal_relative_residual": 5.179198439451998e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 2.611225506044148e-08,
+        "euler_relative_residual": 8.712349676011324e-08,
+        "thermal_relative_residual": 8.635345173107835e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 2.7415058859276312e-08,
+        "euler_relative_residual": 2.927183397259459e-08,
+        "thermal_relative_residual": 4.915662389109167e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 3.57728588368077e-08,
+        "euler_relative_residual": 8.812085509923456e-08,
+        "thermal_relative_residual": 8.585835609608732e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 3.882217387707066e-08,
+        "euler_relative_residual": 3.0384409775416514e-08,
+        "thermal_relative_residual": 3.2781861407261555e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 4.555913731941214e-08,
+        "euler_relative_residual": 1.8969412596966803e-08,
+        "thermal_relative_residual": 1.7873408455547506e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 4.457540892018513e-08,
+        "euler_relative_residual": 4.206347228476498e-08,
+        "thermal_relative_residual": 2.899655553856447e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 3.795152876429624e-08,
+        "euler_relative_residual": 7.546406976695991e-08,
+        "thermal_relative_residual": 6.97400567620845e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 3.336257362073669e-08,
+        "euler_relative_residual": 4.788059870561872e-08,
+        "thermal_relative_residual": 5.6040130051744726e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 2.905235832026754e-08,
+        "euler_relative_residual": 2.9736987987372032e-08,
+        "thermal_relative_residual": 3.718341795787199e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 3.758497172976487e-08,
+        "euler_relative_residual": 7.848444020991804e-08,
+        "thermal_relative_residual": 8.362760796549325e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 4.8365881582740724e-08,
+        "euler_relative_residual": 1.740545035151203e-08,
+        "thermal_relative_residual": 1.815526028945041e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 5.343593423359899e-08,
+        "euler_relative_residual": 2.6581389973173726e-08,
+        "thermal_relative_residual": 2.7666850302362907e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 3.249464623739052e-08,
+        "euler_relative_residual": 5.059809852144897e-07,
+        "thermal_relative_residual": 3.3817644848327677e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 2.6479672161835764e-08,
+        "euler_relative_residual": 4.166323554436533e-07,
+        "thermal_relative_residual": 2.7971445527763715e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 3.331068226934163e-08,
+        "euler_relative_residual": 3.147433420382035e-07,
+        "thermal_relative_residual": 2.3388093408317535e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 5.370410758977614e-08,
+        "euler_relative_residual": 3.6382526147429643e-07,
+        "thermal_relative_residual": 3.5895742929475955e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 3.735722693686277e-08,
+        "euler_relative_residual": 1.7558234747440714e-07,
+        "thermal_relative_residual": 1.32114351935166e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 2.282489396227928e-08,
+        "euler_relative_residual": 1.7973074808703298e-07,
+        "thermal_relative_residual": 1.559699772656693e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 5.031689999902614e-08,
+        "euler_relative_residual": 7.512717146905157e-08,
+        "thermal_relative_residual": 5.3381413987561374e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 2.9247158467859325e-08,
+        "euler_relative_residual": 5.136569862151697e-08,
+        "thermal_relative_residual": 2.223221617426797e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 3.983046972194538e-08,
+        "euler_relative_residual": 4.800627481824034e-08,
+        "thermal_relative_residual": 5.724374408261692e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 4.0273682397257015e-08,
+        "euler_relative_residual": 1.2250077965843986e-07,
+        "thermal_relative_residual": 1.1801568425734778e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 3.1040719851527284e-08,
+        "euler_relative_residual": 4.956159041342098e-08,
+        "thermal_relative_residual": 3.5329652544704e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 2.680415989091024e-08,
+        "euler_relative_residual": 6.647277583524853e-07,
+        "thermal_relative_residual": 4.403691475318351e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 3.448386293633639e-08,
+        "euler_relative_residual": 3.0183733669891355e-07,
+        "thermal_relative_residual": 1.9596844578189352e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 2.2797388332224695e-08,
+        "euler_relative_residual": 3.2472030455016214e-07,
+        "thermal_relative_residual": 1.271701948485612e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 3.559051365911053e-08,
+        "euler_relative_residual": 3.585890658116485e-07,
+        "thermal_relative_residual": 2.625206538698343e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 4.237810450912689e-08,
+        "euler_relative_residual": 1.221278845303085e-07,
+        "thermal_relative_residual": 8.346584652276613e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 3.8948068182845046e-08,
+        "euler_relative_residual": 1.700970611690038e-07,
+        "thermal_relative_residual": 1.3964724400577535e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 3.74484673999963e-08,
+        "euler_relative_residual": 1.704696606149987e-07,
+        "thermal_relative_residual": 1.2035159289583398e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 4.072677902529955e-08,
+        "euler_relative_residual": 1.4749123847956903e-07,
+        "thermal_relative_residual": 1.0305301152461585e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 3.4758784213093205e-08,
+        "euler_relative_residual": 1.6309307181526996e-07,
+        "thermal_relative_residual": 1.406615260694459e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 2.1306480219990348e-08,
+        "euler_relative_residual": 1.9880406540274604e-07,
+        "thermal_relative_residual": 1.6116740377621491e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 3.5218830210759166e-08,
+        "euler_relative_residual": 1.7550990383963214e-07,
+        "thermal_relative_residual": 1.5426114855268777e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 3.4560633076017514e-08,
+        "euler_relative_residual": 1.021760653501322e-06,
+        "thermal_relative_residual": 8.465374556881101e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 2.0137591930766462e-08,
+        "euler_relative_residual": 4.3496329755011266e-07,
+        "thermal_relative_residual": 1.7221327499620897e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 3.886172228386958e-08,
+        "euler_relative_residual": 5.551285646655365e-07,
+        "thermal_relative_residual": 2.558163765644069e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 1.622299019611522e-08,
+        "euler_relative_residual": 2.6767105908598956e-07,
+        "thermal_relative_residual": 1.5831488991937697e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 3.842950578229804e-08,
+        "euler_relative_residual": 2.768231615916016e-07,
+        "thermal_relative_residual": 2.1637485642522445e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 3.8140331106072466e-08,
+        "euler_relative_residual": 5.000159233932317e-07,
+        "thermal_relative_residual": 3.1041790360043123e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 5.0614679002329434e-08,
+        "euler_relative_residual": 1.8854112076184002e-07,
+        "thermal_relative_residual": 1.2449807463339492e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 4.252873589084153e-08,
+        "euler_relative_residual": 1.7986123801822094e-07,
+        "thermal_relative_residual": 1.379045416371291e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 1.4570205399217396e-08,
+        "euler_relative_residual": 1.5039340599118904e-07,
+        "thermal_relative_residual": 1.471453166054092e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 4.084651821647448e-08,
+        "euler_relative_residual": 2.1675904434425498e-07,
+        "thermal_relative_residual": 1.702045195660759e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 4.115794464172383e-08,
+        "euler_relative_residual": 2.031965471730827e-07,
+        "thermal_relative_residual": 1.855126837096973e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 4.097627491047498e-08,
+        "euler_relative_residual": 8.919724518496757e-07,
+        "thermal_relative_residual": 3.678098434287617e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 3.5513779057062587e-08,
+        "euler_relative_residual": 1.1343820239646392e-06,
+        "thermal_relative_residual": 6.997544248242719e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 3.34355090299443e-08,
+        "euler_relative_residual": 6.860337810916404e-07,
+        "thermal_relative_residual": 5.716845276620738e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 3.3987355540757516e-08,
+        "euler_relative_residual": 7.09577168929854e-07,
+        "thermal_relative_residual": 3.490061083352462e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 1.66854360072569e-08,
+        "euler_relative_residual": 9.325093533050614e-07,
+        "thermal_relative_residual": 5.766620199386193e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 4.898206334588927e-08,
+        "euler_relative_residual": 3.792964628968279e-07,
+        "thermal_relative_residual": 3.0116763981096576e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 2.6041375107283448e-08,
+        "euler_relative_residual": 4.3068465468811743e-07,
+        "thermal_relative_residual": 3.7805407156410433e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 2.940720280813162e-08,
+        "euler_relative_residual": 4.840736614556014e-07,
+        "thermal_relative_residual": 4.4030316406182545e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 3.036848121754526e-08,
+        "euler_relative_residual": 2.3479509912611693e-07,
+        "thermal_relative_residual": 1.35317613126686e-07
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 3.8239483166968274e-08,
+        "euler_relative_residual": 2.5955587534124437e-07,
+        "thermal_relative_residual": 8.862564972709857e-08
+      },
+      {
+        "mode": 0.0,
+        "mass_relative_residual": 3.7807539123430805e-08,
+        "euler_relative_residual": 3.0162929068879713e-07,
+        "thermal_relative_residual": 2.5308617994349386e-07
+      }
+    ],
+    "command": [
+      "/opt/homebrew/bin/gfortran",
+      "-std=legacy",
+      "-fno-automatic",
+      "-fcheck=all",
+      "-ffpe-trap=invalid,zero,overflow",
+      "-fdefault-real-16",
+      "-ffree-line-length-none",
+      "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/conservation-20261023T161812044537Z/instrumented-compat27.f90",
+      "/Users/ikunsredemptionmac/Downloads/NASA/restored/read_namelist_cards.f90",
+      "-o",
+      "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/conservation-20261023T161812044537Z/compat27"
+    ]
+  }
+}

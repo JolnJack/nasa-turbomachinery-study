@@ -1,0 +1,129 @@
+{
+  "derivation": "From code EQPRS=(1-DHIDS/C)**(-3.5), EQPRT=(1-DHIDT/C)**(-3.5), ETAS=H/DHIDS, ETAT=H/DHIDT. Therefore ETAT=ETAS*(1-EQPRS**(-1/3.5))/(1-EQPRT**(-1/3.5)). No program output used.",
+  "rows": [
+    {
+      "row": 1,
+      "ETAT_printed": 0.68226,
+      "ETAT_implied_by_same_row": 0.6822386692606501,
+      "difference": 2.1330739349845196e-05
+    },
+    {
+      "row": 2,
+      "ETAT_printed": 0.77581,
+      "ETAT_implied_by_same_row": 0.7758261225400472,
+      "difference": -1.6122540047236456e-05
+    },
+    {
+      "row": 3,
+      "ETAT_printed": 0.83787,
+      "ETAT_implied_by_same_row": 0.837879700319663,
+      "difference": -9.70031966296414e-06
+    },
+    {
+      "row": 4,
+      "ETAT_printed": 0.8775,
+      "ETAT_implied_by_same_row": 0.8774977315862855,
+      "difference": 2.268413714423545e-06
+    },
+    {
+      "row": 5,
+      "ETAT_printed": 0.90064,
+      "ETAT_implied_by_same_row": 0.900636482138392,
+      "difference": 3.5178616080155933e-06
+    },
+    {
+      "row": 6,
+      "ETAT_printed": 0.91145,
+      "ETAT_implied_by_same_row": 0.911440870505897,
+      "difference": 9.129494103032876e-06
+    },
+    {
+      "row": 7,
+      "ETAT_printed": 0.91311,
+      "ETAT_implied_by_same_row": 0.9131052148386302,
+      "difference": 4.785161369813551e-06
+    },
+    {
+      "row": 8,
+      "ETAT_printed": 0.90984,
+      "ETAT_implied_by_same_row": 0.9098394487573613,
+      "difference": 5.512426386466984e-07
+    },
+    {
+      "row": 9,
+      "ETAT_printed": 0.90378,
+      "ETAT_implied_by_same_row": 0.9007787261924552,
+      "difference": 0.00300127380754478
+    },
+    {
+      "row": 10,
+      "ETAT_printed": 0.88408,
+      "ETAT_implied_by_same_row": 0.8840800401934572,
+      "difference": -4.019345722916512e-08
+    },
+    {
+      "row": 11,
+      "ETAT_printed": 0.84101,
+      "ETAT_implied_by_same_row": 0.8410108537450054,
+      "difference": -8.537450053580642e-07
+    },
+    {
+      "row": 12,
+      "ETAT_printed": 0.8297,
+      "ETAT_implied_by_same_row": 0.829694097062725,
+      "difference": 5.902937274981923e-06
+    },
+    {
+      "row": 13,
+      "ETAT_printed": 0.81733,
+      "ETAT_implied_by_same_row": 0.817327051944039,
+      "difference": 2.948055961016216e-06
+    },
+    {
+      "row": 14,
+      "ETAT_printed": 0.80367,
+      "ETAT_implied_by_same_row": 0.8036691332528751,
+      "difference": 8.667471248502423e-07
+    },
+    {
+      "row": 15,
+      "ETAT_printed": 0.78839,
+      "ETAT_implied_by_same_row": 0.788386382139587,
+      "difference": 3.6178604130299163e-06
+    },
+    {
+      "row": 16,
+      "ETAT_printed": 0.77092,
+      "ETAT_implied_by_same_row": 0.7709231678265148,
+      "difference": -3.1678265147716544e-06
+    },
+    {
+      "row": 17,
+      "ETAT_printed": 0.75035,
+      "ETAT_implied_by_same_row": 0.7503492056258864,
+      "difference": 7.943741135996163e-07
+    },
+    {
+      "row": 18,
+      "ETAT_printed": 0.72494,
+      "ETAT_implied_by_same_row": 0.7249339123071087,
+      "difference": 6.087692891343366e-06
+    },
+    {
+      "row": 19,
+      "ETAT_printed": 0.69101,
+      "ETAT_implied_by_same_row": 0.6910041265752992,
+      "difference": 5.8734247008196405e-06
+    },
+    {
+      "row": 20,
+      "ETAT_printed": 0.68254,
+      "ETAT_implied_by_same_row": 0.6825466428483536,
+      "difference": -6.642848353610731e-06
+    }
+  ],
+  "row9_printed_rounding_enclosure": [
+    0.900766985803411,
+    0.9007904667075848
+  ]
+}

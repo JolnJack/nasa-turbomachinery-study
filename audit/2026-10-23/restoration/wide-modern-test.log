@@ -1,0 +1,128 @@
+python3 tests/verify_integrity.py
+PASS: 14 originals, 14 baseline copies, both generated programs and original example inputs
+python3 tests/regression.py --compat27 --quad --tag functional
+PASS compressor 100 safe completion 
+PASS compressor 100 reference triples {'expected': 12, 'actual': 12, 'differences': []}
+PASS compressor 90 safe completion 
+PASS compressor 90 reference triples {'expected': 12, 'actual': 12, 'differences': []}
+PASS compressor 80 safe completion 
+PASS compressor 80 reference triples {'expected': 9, 'actual': 9, 'differences': []}
+PASS compressor 60 safe completion 
+PASS compressor 60 reference triples {'expected': 9, 'actual': 9, 'differences': []}
+PASS AR node continuity 1.2 [[5.75, 0.707], [5.75, 0.707], [5.749, 0.707]]
+PASS AR node continuity 2.0 [[6.417, 0.763], [6.417, 0.762], [6.417, 0.762]]
+PASS AR node continuity 3.0 [[6.55, 0.774], [6.55, 0.774], [6.55, 0.774]]
+PASS AR node continuity 4.0 [[6.582, 0.776], [6.582, 0.776], [6.582, 0.776]]
+PASS AR node continuity 5.0 [[6.58, 0.776], [6.58, 0.776], [6.58, 0.776]]
+PASS turbine 0 safe completion 
+PASS turbine 0 intact titles 
+PASS turbine 0 complete choking scan 20
+PASS turbine 1 safe completion 
+PASS turbine 1 intact titles 
+PASS turbine 1 complete choking scan 20
+PASS turbine 2 safe completion 
+PASS turbine 2 intact titles 
+PASS compressor_tn_d7487 empty EOF 
+PASS compressor_tn_d7487 malformed input fails  INVALID COMPRESSOR NAMELIST
+STOP 1
+
+PASS turbine_tn_d8063 empty EOF 
+PASS turbine_tn_d8063 malformed input fails  INVALID OR TRUNCATED TURBINE INPUT
+STOP 1
+
+PASS compressor_tn_d7487 rejects truncated  INVALID COMPRESSOR NAMELIST
+STOP 1
+
+PASS compressor_tn_d7487 rejects garbage  INVALID COMPRESSOR NAMELIST
+STOP 1
+
+PASS compressor_tn_d7487 rejects wrong-group  INVALID COMPRESSOR NAMELIST
+STOP 1
+
+PASS turbine_tn_d8063 rejects truncated  INVALID OR TRUNCATED TURBINE INPUT
+STOP 1
+
+PASS turbine_tn_d8063 rejects garbage  INVALID OR TRUNCATED TURBINE INPUT
+STOP 1
+
+PASS turbine_tn_d8063 rejects wrong-group  INVALID OR TRUNCATED TURBINE INPUT
+STOP 1
+
+PASS compressor feature SPLT {'points': 12, 'exit': 0}
+PASS compressor readable SPLT 
+PASS compressor feature CURVH {'points': 12, 'exit': 0}
+PASS compressor readable CURVH 
+PASS compressor feature AL1MF {'points': 10, 'exit': 0}
+PASS compressor readable AL1MF 
+PASS compressor partial namelist keeps geometry {'full': 18, 'partial': 18}
+PASS turbine US mode 3 {'points': 20, 'exit': 0}
+PASS turbine US mode 4 {'points': 20, 'exit': 0}
+PASS turbine SI US dimensionless agreement {'max_relative_difference': 4.719429892873661e-05, 'rule': '1e-4 reflects printed 5 significant digits and published unit constants, not NASA reference tolerance'}
+PASS turbine US mode 5 {'points': 1, 'exit': 0}
+PASS turbine static design 
+PASS namelist syntax lowercase 
+PASS namelist syntax slash 
+PASS namelist syntax dollar 
+PASS namelist syntax comment 
+PASS compressor rejects NVOVCR {'exit': 1, 'stderr': ' INVALID COMPRESSOR INPUT DOMAIN\nSTOP 1\n'}
+PASS compressor rejects GAM {'exit': 1, 'stderr': ' INVALID COMPRESSOR INPUT DOMAIN\nSTOP 1\n'}
+PASS compressor rejects VLDRR {'exit': 1, 'stderr': ' INVALID COMPRESSOR INPUT DOMAIN\nSTOP 1\n'}
+PASS compressor rejects AR {'exit': 1, 'stderr': ' INVALID COMPRESSOR INPUT DOMAIN\nSTOP 1\n'}
+PASS turbine rejects MODE {'exit': 1, 'stderr': ' INVALID TURBINE INPUT DOMAIN\nSTOP 1\n'}
+PASS turbine rejects DELV {'exit': 1, 'stderr': ' INVALID TURBINE INPUT DOMAIN\nSTOP 1\n'}
+PASS turbine rejects G {'exit': 1, 'stderr': ' INVALID TURBINE INPUT DOMAIN\nSTOP 1\n'}
+PASS turbine rejects A1 {'exit': 1, 'stderr': ' INVALID TURBINE INPUT DOMAIN\nSTOP 1\n'}
+PASS turbine infeasible design reports failure {'exit': 2, 'stderr': ' DESIGN FLOW EXCEEDS STATOR CAPACITY\nSTOP 2\n'}
+PASS failed turbine design stops before inherited off-design {'exit': 2, 'performance_blocks': 0, 'stderr': ' TURBINE DESIGN TARGETS NOT ACHIEVED\nSTOP 2\n'}
+PASS compressor rejects negative diffuser losses {'exit': 2, 'stderr': ' NONPHYSICAL COMPRESSOR PERFORMANCE\nSTOP 2\n'}
+PASS turbine rejects undefined positive-work parameters {'exit': 2, 'stderr': ' TURBINE POINT OUTSIDE POSITIVE-WORK DOMAIN\nSTOP 2\n'}
+PASS supersonic stator start has nonzero inlet flow {'exit': 0, 'V0VC0': [0.061208, 0.061208], 'stderr': ''}
+RESULTS /Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/run-functional-20261023T155237506185Z
+python3 tests/check_arithmetic.py
+{'cases': 1000, 'actual_rows': 1000, 'exact_operations': 4000, 'mismatches': []}
+RESULTS /Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/arithmetic-20261023T155244600415Z
+python3 tests/check_subprograms.py
+ SUBPROGRAM FAILURES:           0
+
+
+RESULTS /Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/subprograms-20261023T155245695304Z
+python3 tests/check_subprograms.py --compat27
+ SUBPROGRAM FAILURES:           0
+
+
+RESULTS /Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/subprograms-20261023T155246342011Z
+python3 tests/check_conservation.py
+native32 {'exit': 0, 'points': 85, 'max_mass_relative_residual': 1.7540785019506877e-07, 'max_energy_relative_residual': 2.8705034601893688e-06, 'pass': True}
+compat27 {'exit': 0, 'points': 85, 'max_mass_relative_residual': 6.431381752639176e-08, 'max_energy_relative_residual': 1.1343820239646392e-06, 'pass': True}
+RESULTS /Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/conservation-20261023T155247066071Z
+python3 tests/compare_full.py --compat27 --quad
+compressor-100 132 / 132 exact; rows 12 / 12
+surge-choke-100 2 / 2 exact; rows 1 / 1
+compressor-90 132 / 132 exact; rows 12 / 12
+surge-choke-90 2 / 2 exact; rows 1 / 1
+compressor-80 99 / 99 exact; rows 9 / 9
+surge-choke-80 2 / 2 exact; rows 1 / 1
+compressor-60 99 / 99 exact; rows 9 / 9
+surge-choke-60 2 / 2 exact; rows 1 / 1
+turbine-table-iii 54 / 55 exact; rows 11 / 11
+  {'row': 6, 'field': 5, 'expected': 9.81656, 'actual': 9.81657, 'delta': 9.999999999621423e-06, 'same_5_significant_digits': True}
+turbine-design-coefficients 4 / 5 exact; rows 1 / 1
+  {'row': 1, 'field': 2, 'expected': 0.28684, 'actual': 0.286838, 'delta': -2.000000000002e-06, 'same_5_significant_digits': True}
+turbine-table-iv-table-II-input 106 / 165 exact; rows 33 / 33
+  {'row': 1, 'field': 4, 'expected': 0.18127, 'actual': 0.18128, 'delta': 1.0000000000010001e-05, 'same_5_significant_digits': False}
+  {'row': 1, 'field': 5, 'expected': 0.17792, 'actual': 0.17793, 'delta': 1.0000000000010001e-05, 'same_5_significant_digits': False}
+  {'row': 2, 'field': 5, 'expected': 0.092832, 'actual': 0.092833, 'delta': 1.000000000001e-06, 'same_5_significant_digits': False}
+turbine-table-v-table-II-input 33 / 200 exact; rows 20 / 20
+  {'row': 1, 'field': 'NS', 'expected': 0.012937, 'actual': 0.012936, 'delta': -1.000000000001e-06, 'same_5_significant_digits': False}
+  {'row': 1, 'field': 'EQ-P5/P0', 'expected': 0.79806, 'actual': 0.79805, 'delta': -9.99999999995449e-06, 'same_5_significant_digits': False}
+  {'row': 1, 'field': 'NU', 'expected': 1.03221, 'actual': 1.03217, 'delta': -4.0000000000040004e-05, 'same_5_significant_digits': True}
+turbine-table-iv-table-III-coefficients 155 / 165 exact; rows 33 / 33
+  {'row': 8, 'field': 3, 'expected': 1.03221, 'actual': 1.0322, 'delta': -1.0000000000065512e-05, 'same_5_significant_digits': True}
+  {'row': 19, 'field': 2, 'expected': 0.69588, 'actual': 0.69587, 'delta': -1.0000000000065512e-05, 'same_5_significant_digits': False}
+  {'row': 21, 'field': 2, 'expected': 1.26365, 'actual': 1.26366, 'delta': 1.0000000000065512e-05, 'same_5_significant_digits': False}
+turbine-table-v-table-III-coefficients 182 / 200 exact; rows 20 / 20
+  {'row': 1, 'field': 'NU', 'expected': 1.03221, 'actual': 1.0322, 'delta': -1.0000000000065512e-05, 'same_5_significant_digits': True}
+  {'row': 2, 'field': 'ETAS', 'expected': 0.69588, 'actual': 0.69587, 'delta': -1.0000000000065512e-05, 'same_5_significant_digits': False}
+  {'row': 2, 'field': 'EQ-P0/P5total', 'expected': 1.26365, 'actual': 1.26366, 'delta': 1.0000000000065512e-05, 'same_5_significant_digits': False}
+RESULTS /Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/reference-20261023T155248707122Z
+make: *** [test-reference] Error 1

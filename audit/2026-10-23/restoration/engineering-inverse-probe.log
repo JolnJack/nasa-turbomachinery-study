@@ -1,0 +1,18 @@
+RESULTS /Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/engineering-inverse-20261023T155150450797Z
+PLANNED 40
+{
+  "planned": 40,
+  "completed": 40,
+  "counts": {
+    "compat27": {
+      "matched": 20
+    },
+    "native32": {
+      "matched": 20
+    }
+  },
+  "source_cases": "audit/2026-10-23/restoration/inverse-scan-20261023T153826531099Z/cases.json",
+  "max_evaluations": 34,
+  "mean_evaluations": 14.525,
+  "known_root_coefficients_used_as_seeds": false
+}

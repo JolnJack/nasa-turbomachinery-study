@@ -1,0 +1,69 @@
+RESULTS /Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/systematic-20261023T153552066271Z
+PLANNED 3328 remaining 3328
+COMPLETED 100
+COMPLETED 200
+COMPLETED 300
+COMPLETED 400
+COMPLETED 500
+COMPLETED 600
+COMPLETED 700
+COMPLETED 800
+COMPLETED 900
+COMPLETED 1000
+COMPLETED 1100
+COMPLETED 1200
+COMPLETED 1300
+COMPLETED 1400
+COMPLETED 1500
+COMPLETED 1600
+COMPLETED 1700
+COMPLETED 1800
+COMPLETED 1900
+COMPLETED 2000
+COMPLETED 2100
+COMPLETED 2200
+COMPLETED 2300
+COMPLETED 2400
+COMPLETED 2500
+COMPLETED 2600
+COMPLETED 2700
+COMPLETED 2800
+COMPLETED 2900
+COMPLETED 3000
+COMPLETED 3100
+COMPLETED 3200
+COMPLETED 3300
+{
+  "planned_runs": 3328,
+  "completed_runs": 3328,
+  "categories": {
+    "compressor/native32": {
+      "no-performance-output": 379,
+      "outside-positive-work-range": 18,
+      "consistent-performance": 909,
+      "explicit-rejection": 23
+    },
+    "compressor/compat27": {
+      "no-performance-output": 379,
+      "outside-positive-work-range": 18,
+      "consistent-performance": 909,
+      "explicit-rejection": 23
+    },
+    "turbine/native32": {
+      "conservation-failure": 87,
+      "consistent-performance": 163,
+      "outside-positive-work-range": 48,
+      "abnormal-exit": 8,
+      "explicit-rejection": 29
+    },
+    "turbine/compat27": {
+      "consistent-performance": 244,
+      "outside-positive-work-range": 48,
+      "conservation-failure": 6,
+      "abnormal-exit": 8,
+      "explicit-rejection": 29
+    }
+  },
+  "timeout_s": 2,
+  "notes": "Full declared finite grid, not proof of an infinite continuous domain. All classifications retained; non-performance/rejection is not performance success."
+}

@@ -1,0 +1,14 @@
+PASS compressor rejects NVOVCR {'exit': 1, 'stderr': ' INVALID COMPRESSOR INPUT DOMAIN\nSTOP 1\n'}
+PASS compressor rejects GAM {'exit': 1, 'stderr': ' INVALID COMPRESSOR INPUT DOMAIN\nSTOP 1\n'}
+PASS compressor rejects VLDRR {'exit': 1, 'stderr': ' INVALID COMPRESSOR INPUT DOMAIN\nSTOP 1\n'}
+PASS compressor rejects AR {'exit': 1, 'stderr': ' INVALID COMPRESSOR INPUT DOMAIN\nSTOP 1\n'}
+PASS turbine rejects MODE {'exit': 1, 'stderr': ' INVALID TURBINE INPUT DOMAIN\nSTOP 1\n'}
+PASS turbine rejects DELV {'exit': 1, 'stderr': ' INVALID TURBINE INPUT DOMAIN\nSTOP 1\n'}
+PASS turbine rejects G {'exit': 1, 'stderr': ' INVALID TURBINE INPUT DOMAIN\nSTOP 1\n'}
+PASS turbine rejects A1 {'exit': 1, 'stderr': ' INVALID TURBINE INPUT DOMAIN\nSTOP 1\n'}
+PASS turbine infeasible design reports failure {'exit': 2, 'stderr': ' DESIGN FLOW EXCEEDS STATOR CAPACITY\nSTOP 2\n'}
+PASS failed turbine design stops before inherited off-design {'exit': 2, 'performance_blocks': 0, 'stderr': ' TURBINE DESIGN TARGETS NOT ACHIEVED\nSTOP 2\n'}
+PASS compressor rejects negative diffuser losses {'exit': 2, 'stderr': ' NONPHYSICAL COMPRESSOR PERFORMANCE\nSTOP 2\n'}
+PASS turbine rejects undefined positive-work parameters {'exit': 2, 'stderr': ' TURBINE POINT OUTSIDE POSITIVE-WORK DOMAIN\nSTOP 2\n'}
+PASS legacy turbine search has a finite iteration budget {'exit': 2, 'stderr': ' TURBINE ITERATION BUDGET EXCEEDED          85\nSTOP 2\n'}
+RESULTS /Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/run-iteration-green-20261023T161151421841Z

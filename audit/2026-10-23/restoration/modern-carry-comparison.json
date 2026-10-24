@@ -1,0 +1,104 @@
+{
+  "III": {
+    "exact_cells": 54,
+    "expected_cells": 55,
+    "differences": [
+      {
+        "row": 6,
+        "column": 5,
+        "expected": 9.81656,
+        "raw_actual": 9.81657,
+        "printed_actual": 9.81657
+      }
+    ]
+  },
+  "IV": {
+    "exact_cells": 161,
+    "expected_cells": 165,
+    "differences": [
+      {
+        "row": 17,
+        "column": 5,
+        "expected": 60.3183,
+        "raw_actual": 60.3184,
+        "printed_actual": 60.3184
+      },
+      {
+        "row": 21,
+        "column": 2,
+        "expected": 1.26365,
+        "raw_actual": 1.26366,
+        "printed_actual": 1.26366
+      },
+      {
+        "row": 24,
+        "column": 2,
+        "expected": 73.2772,
+        "raw_actual": 73.2771,
+        "printed_actual": 73.2771
+      },
+      {
+        "row": 28,
+        "column": 5,
+        "expected": 52.5177,
+        "raw_actual": 52.5178,
+        "printed_actual": 52.5178
+      }
+    ]
+  },
+  "V": {
+    "exact_cells": 193,
+    "expected_cells": 200,
+    "differences": [
+      {
+        "row": 2,
+        "column": 10,
+        "expected": 1.26365,
+        "raw_actual": 1.26366,
+        "printed_actual": 1.26366
+      },
+      {
+        "row": 9,
+        "column": 5,
+        "expected": 0.90378,
+        "raw_actual": 0.90078,
+        "printed_actual": 0.90078
+      },
+      {
+        "row": 11,
+        "column": 10,
+        "expected": 2.51398,
+        "raw_actual": 2.51399,
+        "printed_actual": 2.51399
+      },
+      {
+        "row": 13,
+        "column": 7,
+        "expected": 58739.5,
+        "raw_actual": 58739.6,
+        "printed_actual": 58739.6
+      },
+      {
+        "row": 13,
+        "column": 9,
+        "expected": 3.31047,
+        "raw_actual": 3.31048,
+        "printed_actual": 3.31048
+      },
+      {
+        "row": 19,
+        "column": 9,
+        "expected": 4.76379,
+        "raw_actual": 4.7638,
+        "printed_actual": 4.7638
+      },
+      {
+        "row": 20,
+        "column": 7,
+        "expected": 57857.0,
+        "raw_actual": 57857.1,
+        "printed_actual": 57857.1
+      }
+    ]
+  }
+}

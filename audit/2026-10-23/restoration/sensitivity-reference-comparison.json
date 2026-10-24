@@ -1,0 +1,208 @@
+{
+  "24-nearest": {
+    "100": {
+      "matched": 131,
+      "expected": 132,
+      "surge_choke_match": true,
+      "differences": [
+        {
+          "row": 3,
+          "field": "DETAVD",
+          "reference": 0.05412,
+          "actual": 0.05413
+        }
+      ]
+    },
+    "90": {
+      "matched": 130,
+      "expected": 132,
+      "surge_choke_match": true,
+      "differences": [
+        {
+          "row": 1,
+          "field": "DETAVD",
+          "reference": 0.05277,
+          "actual": 0.05278
+        },
+        {
+          "row": 6,
+          "field": "DETAVD",
+          "reference": 0.04651,
+          "actual": 0.04652
+        }
+      ]
+    },
+    "80": {
+      "matched": 96,
+      "expected": 99,
+      "surge_choke_match": true,
+      "differences": [
+        {
+          "row": 5,
+          "field": "DETAVD",
+          "reference": 0.04623,
+          "actual": 0.04624
+        },
+        {
+          "row": 6,
+          "field": "DETAVD",
+          "reference": 0.04705,
+          "actual": 0.04706
+        },
+        {
+          "row": 7,
+          "field": "DETAVD",
+          "reference": 0.04466,
+          "actual": 0.04467
+        }
+      ]
+    },
+    "60": {
+      "matched": 93,
+      "expected": 99,
+      "surge_choke_match": true,
+      "differences": [
+        {
+          "row": 1,
+          "field": "DETAVD",
+          "reference": 0.05969,
+          "actual": 0.0597
+        },
+        {
+          "row": 2,
+          "field": "DETAVD",
+          "reference": 0.05682,
+          "actual": 0.05683
+        },
+        {
+          "row": 3,
+          "field": "pressure_ratio",
+          "reference": 2.198,
+          "actual": 2.209
+        },
+        {
+          "row": 3,
+          "field": "ETAT",
+          "reference": 0.777,
+          "actual": 0.783
+        },
+        {
+          "row": 3,
+          "field": "DETAVD",
+          "reference": 0.05939,
+          "actual": 0.05355
+        },
+        {
+          "row": 7,
+          "field": "DETAVD",
+          "reference": 0.0412,
+          "actual": 0.04121
+        }
+      ]
+    }
+  },
+  "27-zero": {
+    "100": {
+      "matched": 132,
+      "expected": 132,
+      "surge_choke_match": true,
+      "differences": []
+    },
+    "90": {
+      "matched": 132,
+      "expected": 132,
+      "surge_choke_match": true,
+      "differences": []
+    },
+    "80": {
+      "matched": 99,
+      "expected": 99,
+      "surge_choke_match": true,
+      "differences": []
+    },
+    "60": {
+      "matched": 99,
+      "expected": 99,
+      "surge_choke_match": true,
+      "differences": []
+    }
+  },
+  "27-nearest": {
+    "100": {
+      "matched": 131,
+      "expected": 132,
+      "surge_choke_match": true,
+      "differences": [
+        {
+          "row": 3,
+          "field": "DETAVD",
+          "reference": 0.05412,
+          "actual": 0.05413
+        }
+      ]
+    },
+    "90": {
+      "matched": 131,
+      "expected": 132,
+      "surge_choke_match": true,
+      "differences": [
+        {
+          "row": 1,
+          "field": "DETAVD",
+          "reference": 0.05277,
+          "actual": 0.05278
+        }
+      ]
+    },
+    "80": {
+      "matched": 97,
+      "expected": 99,
+      "surge_choke_match": true,
+      "differences": [
+        {
+          "row": 5,
+          "field": "DETAVD",
+          "reference": 0.04623,
+          "actual": 0.04624
+        },
+        {
+          "row": 7,
+          "field": "DETAVD",
+          "reference": 0.04466,
+          "actual": 0.04467
+        }
+      ]
+    },
+    "60": {
+      "matched": 95,
+      "expected": 99,
+      "surge_choke_match": true,
+      "differences": [
+        {
+          "row": 2,
+          "field": "DETAVD",
+          "reference": 0.05682,
+          "actual": 0.05683
+        },
+        {
+          "row": 3,
+          "field": "pressure_ratio",
+          "reference": 2.198,
+          "actual": 2.209
+        },
+        {
+          "row": 3,
+          "field": "ETAT",
+          "reference": 0.777,
+          "actual": 0.783
+        },
+        {
+          "row": 3,
+          "field": "DETAVD",
+          "reference": 0.05939,
+          "actual": 0.05355
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "cases": 1000,
+  "actual_rows": 1000,
+  "exact_operations": 4000,
+  "mismatches": [],
+  "command": [
+    "/opt/homebrew/bin/gfortran",
+    "-fdefault-real-16",
+    "-ffree-line-length-none",
+    "-fcheck=all",
+    "-ffpe-trap=invalid,zero,overflow",
+    "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/arithmetic-20261023T161809871517Z/driver.f90",
+    "-o",
+    "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/arithmetic-20261023T161809871517Z/check"
+  ],
+  "scope": "27-bit significand truncation; exact-rational add/subtract/multiply/divide over synthetic finite operands. Not an IBM machine certification."
+}

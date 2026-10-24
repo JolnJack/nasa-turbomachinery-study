@@ -1,0 +1,10 @@
+ CHOKE           1           1  0.454712331       23.4493198       48.9907455    
+At line 179 of file audit/2026-10-23/restoration/compressor_trace.f
+Fortran runtime error: Index '9' of dimension 1 of array 'mwrms' above upper bound of 8
+
+Error termination. Backtrace:
+#0  0x100c63323
+#1  0x100c63ef7
+#2  0x100c64287
+#3  0x1007f0b7b
+#4  0x1007f536f

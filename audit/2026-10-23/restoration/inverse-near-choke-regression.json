@@ -1,0 +1,82 @@
+[
+  {
+    "id": "I01028",
+    "program": "turbine",
+    "group": "known-root-inverse",
+    "input": "            12.62-CM DIA TURBINE\n            100 PERCENT SPEED\n &IN P0=172368.9,T0=600.0,A0=.0120176,A1=.0038008,A3=.0039789,A5=.0044543,\n AL1=72.47,B4=-56.86,U3=350.0,U4U3=.567765,R=99.1976,G=1.6667,\n BL1=.95168,BL4=.93718,ZZ=22.,V1=0.2,DELV=0.1,VMAX=1.2,DELY=.05,YMAX=1.40,\n D3=12.6238,D2=12.9997,MODE=2,XK=0.7,PD=0.98 WD=0.31691559031605721 ETAD=0.37636417150497437 PDSGN=3.4786266088485718 ITEST=2 &END\n",
+    "target": {
+      "WD": 0.3169155903160572,
+      "ETAD": 0.37636417150497437,
+      "PDSGN": 3.4786266088485718,
+      "ITEST": 2,
+      "MODE": 2
+    },
+    "forward_id": "01568",
+    "model": "compat27",
+    "forward_coefficients": {
+      "PD": 0.9799999967217445,
+      "XK": 0.6999999955296516
+    },
+    "forward_V1": 0.37760310247540474
+  },
+  {
+    "id": "I01030",
+    "program": "turbine",
+    "group": "known-root-inverse",
+    "input": "            12.62-CM DIA TURBINE\n            100 PERCENT SPEED\n &IN P0=172368.9,T0=600.0,A0=.0120176,A1=.0038008,A3=.0039789,A5=.0044543,\n AL1=72.47,B4=-56.86,U3=350.0,U4U3=.567765,R=99.1976,G=1.6667,\n BL1=.95168,BL4=.93718,ZZ=22.,V1=0.2,DELV=0.1,VMAX=1.2,DELY=.05,YMAX=1.40,\n D3=12.6238,D2=12.9997,MODE=2,XK=0.7,PD=0.98 WD=0.31691554199999999 ETAD=0.37636420100000001 PDSGN=3.4786302999999998 ITEST=2 &END\n",
+    "target": {
+      "WD": 0.316915542,
+      "ETAD": 0.376364201,
+      "PDSGN": 3.4786303,
+      "ITEST": 2,
+      "MODE": 2
+    },
+    "forward_id": "01568",
+    "model": "native32",
+    "forward_coefficients": {
+      "PD": 0.980000019,
+      "XK": 0.699999988
+    },
+    "forward_V1": 0.377603173
+  },
+  {
+    "id": "I01032",
+    "program": "turbine",
+    "group": "known-root-inverse",
+    "input": "            12.62-CM DIA TURBINE\n            100 PERCENT SPEED\n &IN P0=172368.9,T0=600.0,A0=.0120176,A1=.0038008,A3=.0039789,A5=.0044543,\n AL1=72.47,B4=-56.86,U3=350.0,U4U3=.567765,R=99.1976,G=1.6667,\n BL1=.95168,BL4=.93718,ZZ=22.,V1=0.2,DELV=0.1,VMAX=1.2,DELY=.05,YMAX=1.40,\n D3=12.6238,D2=12.9997,MODE=2,XK=0.7,PD=1.0 WD=0.32338325679302216 ETAD=0.38114764168858528 PDSGN=3.4090541005134583 ITEST=2 &END\n",
+    "target": {
+      "WD": 0.32338325679302216,
+      "ETAD": 0.3811476416885853,
+      "PDSGN": 3.4090541005134583,
+      "ITEST": 2,
+      "MODE": 2
+    },
+    "forward_id": "01569",
+    "model": "compat27",
+    "forward_coefficients": {
+      "PD": 1.0,
+      "XK": 0.6999999955296516
+    },
+    "forward_V1": 0.37760310247540474
+  },
+  {
+    "id": "I01034",
+    "program": "turbine",
+    "group": "known-root-inverse",
+    "input": "            12.62-CM DIA TURBINE\n            100 PERCENT SPEED\n &IN P0=172368.9,T0=600.0,A0=.0120176,A1=.0038008,A3=.0039789,A5=.0044543,\n AL1=72.47,B4=-56.86,U3=350.0,U4U3=.567765,R=99.1976,G=1.6667,\n BL1=.95168,BL4=.93718,ZZ=22.,V1=0.2,DELV=0.1,VMAX=1.2,DELY=.05,YMAX=1.40,\n D3=12.6238,D2=12.9997,MODE=2,XK=0.7,PD=1.0 WD=0.32338321199999998 ETAD=0.38114762299999999 PDSGN=3.4090578599999999 ITEST=2 &END\n",
+    "target": {
+      "WD": 0.323383212,
+      "ETAD": 0.381147623,
+      "PDSGN": 3.40905786,
+      "ITEST": 2,
+      "MODE": 2
+    },
+    "forward_id": "01569",
+    "model": "native32",
+    "forward_coefficients": {
+      "PD": 1.0,
+      "XK": 0.699999988
+    },
+    "forward_V1": 0.377603173
+  }
+]

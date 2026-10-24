@@ -1,0 +1,42 @@
+{
+  "planned_runs": 4992,
+  "completed_runs": 4992,
+  "categories": {
+    "compressor/modern64": {
+      "explicit-rejection": 80,
+      "no-performance-output": 379,
+      "consistent-performance": 870
+    },
+    "compressor/native32": {
+      "no-performance-output": 379,
+      "explicit-rejection": 80,
+      "consistent-performance": 870
+    },
+    "compressor/compat27": {
+      "no-performance-output": 379,
+      "explicit-rejection": 80,
+      "consistent-performance": 870
+    },
+    "turbine/native32": {
+      "conservation-failure": 87,
+      "consistent-performance": 163,
+      "explicit-rejection": 85
+    },
+    "turbine/modern64": {
+      "consistent-performance": 250,
+      "explicit-rejection": 85
+    },
+    "turbine/compat27": {
+      "consistent-performance": 244,
+      "explicit-rejection": 85,
+      "conservation-failure": 6
+    }
+  },
+  "timeout_s": 2,
+  "models": [
+    "native32",
+    "compat27",
+    "modern64"
+  ],
+  "notes": "Full declared finite grid, not proof of an infinite continuous domain. All classifications retained; non-performance/rejection is not performance success."
+}

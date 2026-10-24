@@ -1,0 +1,40 @@
+{
+  "created_utc": "2026-10-23T12:16:29.526224+00:00",
+  "new_data": {
+    "command": "make -C restored test-new-data",
+    "exit": 0,
+    "checks": 15,
+    "results": "audit/2026-10-23/restoration/new-data-20261023T121321259138Z/results.json"
+  },
+  "regression_red": {
+    "exit": 1,
+    "results": "audit/2026-10-23/restoration/run-newdata-red-20261023T120828075323Z/results.json",
+    "program_exit": -4,
+    "bad_performance_blocks": 3
+  },
+  "regression_green": {
+    "exit": 0,
+    "results": "audit/2026-10-23/restoration/run-newdata-green-20261023T120942867636Z/results.json",
+    "program_exit": 2,
+    "performance_blocks": 0
+  },
+  "full_modern": {
+    "command": "make -C restored test",
+    "exit": 2,
+    "log": "audit/2026-10-23/restoration/newdata-full-modern-test.log",
+    "functional_checks": 58,
+    "functional_pass": true,
+    "reference_results": "audit/2026-10-23/restoration/reference-20261023T121155507193Z/comparison.json",
+    "strict_modern_turbine_reference_pass": false
+  },
+  "historical": {
+    "command": "make -C restored test-historical",
+    "exit": 0,
+    "checks": 27,
+    "results": "audit/2026-10-23/restoration/historical-check-20261023T121148634455Z/results.json",
+    "raw_reference_exact": 424,
+    "raw_reference_total": 425,
+    "formula_first_acceptance": true
+  },
+  "original_integrity": "14 originals and 14 baseline copies verified"
+}

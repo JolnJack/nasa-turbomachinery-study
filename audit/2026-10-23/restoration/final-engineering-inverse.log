@@ -1,0 +1,36 @@
+RESULTS /Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/engineering-inverse-20261023T161311443744Z
+PLANNED 930
+COMPLETED 50
+COMPLETED 100
+COMPLETED 150
+COMPLETED 200
+COMPLETED 250
+COMPLETED 300
+COMPLETED 350
+COMPLETED 400
+COMPLETED 450
+COMPLETED 500
+COMPLETED 550
+COMPLETED 600
+COMPLETED 650
+COMPLETED 700
+COMPLETED 750
+COMPLETED 800
+COMPLETED 850
+COMPLETED 900
+{
+  "planned": 930,
+  "completed": 930,
+  "counts": {
+    "compat27": {
+      "matched": 465
+    },
+    "native32": {
+      "matched": 465
+    }
+  },
+  "source_cases": "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/inverse-scan-20261023T161257215839Z/cases.json",
+  "max_evaluations": 214,
+  "mean_evaluations": 22.835483870967742,
+  "known_root_coefficients_used_as_seeds": false
+}

@@ -1,0 +1,70 @@
+restored/compat27/compressor_tn_d7487.f90:487:26:
+
+  487 | 300 FORMAT(59X,13H PERCENT NDES)
+      |                          1
+Warning: The H format specifier at (1) is a Fortran 95 deleted feature
+restored/compat27/compressor_tn_d7487.f90:489:74:
+
+  489 | 302 FORMAT(45X,16H SURGE FLOW RATE,10X,15HCHOKE FLOW RATE)
+      |                                                                          1
+Warning: The H format specifier at (1) is a Fortran 95 deleted feature
+restored/compat27/compressor_tn_d7487.f90:491:90:
+
+  491 | 304 FORMAT(44X,4H WEQ,10X,14HPRESSURE RATIO,10X,4HETAT)
+      |                                                                                          1
+Warning: The H format specifier at (1) is a Fortran 95 deleted feature
+restored/compat27/compressor_tn_d7487.f90:493:200:
+
+  493 | 306 FORMAT(11X,8H DETAIGV,8X,7HDETAINC,8X,6HDETABL,8X,6HDETASF,8X,6HDETADF,8X,6HDETARC,8X,7HDETAVLD,8X,6HDETAVD)
+      |                                                                                                                                                                                                        1
+Warning: The H format specifier at (1) is a Fortran 95 deleted feature
+restored/compat27/compressor_tn_d7487.f90:495:18:
+
+  495 | 308 FORMAT(45H COMPRESSOR CHOKING FLOW HAS NOT BEEN REACHED)
+      |                  1
+Warning: The H format specifier at (1) is a Fortran 95 deleted feature
+restored/compat27/compressor_tn_d7487.f90:496:258:
+
+  496 | 309 FORMAT(21H1INLET TOTAL PRESSURE,5X,23HINLET TOTAL TEMPERATURE,5X,29HINLET TOTAL DYNAMIC VISCOSITY,5X,19HSPECIFIC HEAT RATIO,5X,12HGAS CONSTANT)
+      |                                                                                                                                                                                                                                                                  1
+Warning: The H format specifier at (1) is a Fortran 95 deleted feature
+restored/compat27/compressor_tn_d7487.f90:497:238:
+
+  497 | 310 FORMAT(17H NUMBER OF BLADES,5X,20HFRICTION COEFFICIENT,5X,4HSPLT,5X,12HDESIGN SPEED,5X,23HINDUCER RMS SWIRL ANGLE,5X,27HINDUCER RMS BLOCKAGE FACTOR)
+      |                                                                                                                                                                                                                                              1
+Warning: The H format specifier at (1) is a Fortran 95 deleted feature
+restored/compat27/compressor_tn_d7487.f90:498:162:
+
+  498 | 311 FORMAT(11X,24H INDUCER RMS BLADE ANGLE,5X,30HINDUCER HUB-TIP DIAMETER RATIO,5X,40HINDUCER TIP-IMPELLER EXIT DIAMETER RATIO)
+      |                                                                                                                                                                  1
+Warning: The H format specifier at (1) is a Fortran 95 deleted feature
+restored/compat27/compressor_tn_d7487.f90:499:230:
+
+  499 | 312 FORMAT(30H IMPELLER BLADE EXIT BACKSWEEP,5X,23HIMPELLER BLADE EXIT HT.,5X,32HVANELESS DIFFUSER DIAMETER RATIO,5X,28HVANED DIFFUSER SETTING ANGLE)
+      |                                                                                                                                                                                                                                      1
+Warning: The H format specifier at (1) is a Fortran 95 deleted feature
+restored/compat27/compressor_tn_d7487.f90:500:106:
+
+  500 | 313 FORMAT(33X,33H TOTAL VANED DIFFUSER THROAT AREA,5X,25HVANED DIFFUSER AREA RATIO)
+      |                                                                                                          1
+Warning: The H format specifier at (1) is a Fortran 95 deleted feature
+restored/compat27/compressor_tn_d7487.f90:501:26:
+
+  501 | 314 FORMAT(47X,36H INLET CRITICAL VELOCITY RATIO ARRAY)
+      |                          1
+Warning: The H format specifier at (1) is a Fortran 95 deleted feature
+restored/compat27/compressor_tn_d7487.f90:508:24:
+
+  508 | 400 FORMAT(1X,24HIRRATIONAL EXIT TRIANGLE)
+      |                        1
+Warning: The H format specifier at (1) is a Fortran 95 deleted feature
+restored/compat27/compressor_tn_d7487.f90:509:24:
+
+  509 | 402 FORMAT(1X,21HVOVCR ARRAY TOO LARGE)
+      |                        1
+Warning: The H format specifier at (1) is a Fortran 95 deleted feature
+restored/compat27/compressor_tn_d7487.f90:510:24:
+
+  510 | 403 FORMAT(1X,34HWT FLOW LESS THAN SURGE FOR V/VCR=,F4.2)
+      |                        1
+Warning: The H format specifier at (1) is a Fortran 95 deleted feature

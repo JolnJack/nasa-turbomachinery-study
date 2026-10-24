@@ -1,0 +1,67 @@
+{
+  "frozen_cases": "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/inverse-scan-20261023T155859411939Z/cases.json",
+  "grid": {
+    "path": "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/systematic-20261023T161759915354Z",
+    "exit": 0
+  },
+  "legacy_inverse": {
+    "path": "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/inverse-scan-20261023T161822215851Z",
+    "exit": 0
+  },
+  "engineering_inverse": {
+    "path": "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/engineering-inverse-20261023T161915581778Z",
+    "exit": 0
+  },
+  "modern_test": {
+    "exit": 2,
+    "log": "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/delivery-modern-test.log",
+    "reason": "Strict modern turbine reference differences retained",
+    "runs": [
+      "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/run-functional-20261023T161803194923Z",
+      "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/arithmetic-20261023T161809871517Z",
+      "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/subprograms-20261023T161810387147Z",
+      "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/subprograms-20261023T161811076073Z",
+      "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/conservation-20261023T161812044537Z",
+      "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/reference-20261023T161814074726Z"
+    ]
+  },
+  "supporting": {
+    "exit": 0,
+    "log": "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/delivery-supporting.log",
+    "runs": [
+      "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/design-interface-20261023T161942276666Z",
+      "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/historical-check-20261023T161949080855Z",
+      "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/new-data-20261023T161957063855Z"
+    ]
+  },
+  "choke_cli": {
+    "exit": 0,
+    "path": "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/delivery-choke-example",
+    "equation_residuals": [
+      3.1256143683061253e-08,
+      6.073275806117209e-08,
+      4.1963498261700567e-08,
+      3.0458102592103574e-09
+    ]
+  },
+  "normal_cli": {
+    "path": "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/delivery-normal-example",
+    "exit": 0,
+    "replay_errors": [
+      4.326986635661001e-08,
+      1.2665987014770508e-07,
+      4.578274159783291e-08
+    ]
+  },
+  "engineering_details": {
+    "ordinary_forward": 1110,
+    "algebraic_validated": 16,
+    "max_target_errors": [
+      2.9548612053398315e-05,
+      3.653700000005866e-05,
+      7.143158989442178e-05
+    ]
+  },
+  "legacy_timeouts_2s": 56,
+  "status": "All declared grid executions complete; engineering inverse1126/1126; functional61/61; failed categories and strict modern reference failure retained; overall final acceptance incomplete."
+}

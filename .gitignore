@@ -1,0 +1,21 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+*.dSYM/
+*.mod
+*.smod
+
+# Local builds, large regenerated runs and optional historical runtime.
+/restored/build/
+/audit/**/historical7094/
+/audit/**/plot_env/
+/audit/**/run-reorganized-*/
+/audit/**/design-interface-reorganized-*/
+
+# Local credentials and editor configuration.
+.env
+.env.*
+!.env.example
+.venv/
+.vscode/
+.idea/

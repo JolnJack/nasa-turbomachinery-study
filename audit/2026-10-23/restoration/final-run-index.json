@@ -1,0 +1,13 @@
+{
+  "runs": {
+    "run-functional-20261023T110006334562Z": "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/run-functional-20261023T110006334562Z/results.json",
+    "arithmetic-20261023T110009902753Z": "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/arithmetic-20261023T110009902753Z/results.json",
+    "subprograms-20261023T110010431113Z": "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/subprograms-20261023T110010431113Z/results.json",
+    "subprograms-20261023T110011156853Z": "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/subprograms-20261023T110011156853Z/results.json",
+    "conservation-20261023T110012020254Z": "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/conservation-20261023T110012020254Z/results.json",
+    "reference-20261023T110013961758Z": "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/reference-20261023T110013961758Z/comparison.json"
+  },
+  "make_all_native_run_exit": 0,
+  "make_test_exit": 2,
+  "make_test_failure": "strict unmodified printed turbine references; never suppressed"
+}

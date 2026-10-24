@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/Users/ikunsredemptionmac/Downloads/NASA/restored/tests/systematic_scan.py", line 185, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/Users/ikunsredemptionmac/Downloads/NASA/restored/tests/systematic_scan.py", line 167, in main
+    paths=build(run)
+  File "/Users/ikunsredemptionmac/Downloads/NASA/restored/tests/systematic_scan.py", line 58, in build
+    p.check_returncode()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 509, in check_returncode
+    raise CalledProcessError(self.returncode, self.args, self.stdout,
+                             self.stderr)
+subprocess.CalledProcessError: Command '['/opt/homebrew/bin/gfortran', '-std=legacy', '-fno-automatic', '-fcheck=all', '-ffpe-trap=invalid,zero,overflow', '-fbacktrace', '/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/systematic-20261023T154932565003Z/compressor-native32/scan.f', '/Users/ikunsredemptionmac/Downloads/NASA/restored/read_namelist_cards.f90', '-o', '/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/systematic-20261023T154932565003Z/compressor-native32/program']' returned non-zero exit status 1.

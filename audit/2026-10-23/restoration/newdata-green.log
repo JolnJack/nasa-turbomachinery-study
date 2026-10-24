@@ -1,0 +1,11 @@
+PASS compressor rejects NVOVCR {'exit': 1, 'stderr': ' INVALID COMPRESSOR INPUT DOMAIN\nSTOP 1\n'}
+PASS compressor rejects GAM {'exit': 1, 'stderr': ' INVALID COMPRESSOR INPUT DOMAIN\nSTOP 1\n'}
+PASS compressor rejects VLDRR {'exit': 1, 'stderr': ' INVALID COMPRESSOR INPUT DOMAIN\nSTOP 1\n'}
+PASS compressor rejects AR {'exit': 1, 'stderr': ' INVALID COMPRESSOR INPUT DOMAIN\nSTOP 1\n'}
+PASS turbine rejects MODE {'exit': 1, 'stderr': ' INVALID TURBINE INPUT DOMAIN\nSTOP 1\n'}
+PASS turbine rejects DELV {'exit': 1, 'stderr': ' INVALID TURBINE INPUT DOMAIN\nSTOP 1\n'}
+PASS turbine rejects G {'exit': 1, 'stderr': ' INVALID TURBINE INPUT DOMAIN\nSTOP 1\n'}
+PASS turbine rejects A1 {'exit': 1, 'stderr': ' INVALID TURBINE INPUT DOMAIN\nSTOP 1\n'}
+PASS turbine infeasible design reports failure {'exit': 2, 'stderr': ' DESIGN FLOW EXCEEDS STATOR CAPACITY\nSTOP 2\n'}
+PASS failed turbine design stops before inherited off-design {'exit': 2, 'performance_blocks': 0, 'stderr': ' TURBINE DESIGN TARGETS NOT ACHIEVED\nSTOP 2\n'}
+RESULTS /Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/run-newdata-green-20261023T120942867636Z

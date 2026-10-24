@@ -1,0 +1,93 @@
+RESULTS /Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/systematic-20261023T161237132350Z
+PLANNED 4992 remaining 4992
+COMPLETED 100
+COMPLETED 200
+COMPLETED 300
+COMPLETED 400
+COMPLETED 500
+COMPLETED 600
+COMPLETED 700
+COMPLETED 800
+COMPLETED 900
+COMPLETED 1000
+COMPLETED 1100
+COMPLETED 1200
+COMPLETED 1300
+COMPLETED 1400
+COMPLETED 1500
+COMPLETED 1600
+COMPLETED 1700
+COMPLETED 1800
+COMPLETED 1900
+COMPLETED 2000
+COMPLETED 2100
+COMPLETED 2200
+COMPLETED 2300
+COMPLETED 2400
+COMPLETED 2500
+COMPLETED 2600
+COMPLETED 2700
+COMPLETED 2800
+COMPLETED 2900
+COMPLETED 3000
+COMPLETED 3100
+COMPLETED 3200
+COMPLETED 3300
+COMPLETED 3400
+COMPLETED 3500
+COMPLETED 3600
+COMPLETED 3700
+COMPLETED 3800
+COMPLETED 3900
+COMPLETED 4000
+COMPLETED 4100
+COMPLETED 4200
+COMPLETED 4300
+COMPLETED 4400
+COMPLETED 4500
+COMPLETED 4600
+COMPLETED 4700
+COMPLETED 4800
+COMPLETED 4900
+{
+  "planned_runs": 4992,
+  "completed_runs": 4992,
+  "categories": {
+    "compressor/modern64": {
+      "explicit-rejection": 80,
+      "no-performance-output": 379,
+      "consistent-performance": 870
+    },
+    "compressor/compat27": {
+      "no-performance-output": 379,
+      "explicit-rejection": 80,
+      "consistent-performance": 870
+    },
+    "compressor/native32": {
+      "explicit-rejection": 80,
+      "no-performance-output": 379,
+      "consistent-performance": 870
+    },
+    "turbine/native32": {
+      "conservation-failure": 87,
+      "consistent-performance": 163,
+      "explicit-rejection": 85
+    },
+    "turbine/compat27": {
+      "consistent-performance": 244,
+      "explicit-rejection": 85,
+      "conservation-failure": 6
+    },
+    "turbine/modern64": {
+      "consistent-performance": 250,
+      "explicit-rejection": 85
+    }
+  },
+  "timeout_s": 2,
+  "models": [
+    "native32",
+    "compat27",
+    "modern64"
+  ],
+  "notes": "Full declared finite grid, not proof of an infinite continuous domain. All classifications retained; non-performance/rejection is not performance success."
+}

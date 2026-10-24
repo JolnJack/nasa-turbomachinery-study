@@ -1,0 +1,20 @@
+{
+  "command": [
+    "/opt/homebrew/bin/gfortran",
+    "-std=legacy",
+    "-fno-automatic",
+    "-fcheck=all",
+    "-ffpe-trap=invalid,zero,overflow",
+    "/Users/ikunsredemptionmac/Downloads/NASA/restored/tests/subprograms.f",
+    "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/subprograms-20261023T161810387147Z/compressor_tn_d7487-subprograms.f",
+    "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/subprograms-20261023T161810387147Z/turbine_tn_d8063-subprograms.f",
+    "-o",
+    "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/subprograms-20261023T161810387147Z/check"
+  ],
+  "exit": 0,
+  "source_sha256": {
+    "turbine_tn_d8063.f": "80bd0b4604e726fb44614d720a08ddc6db8cf0a11605f53b7801234da8d98fed",
+    "compressor_tn_d7487.f": "dc2a7564c29bf75c4c0b98e9b18885d06468d4cfa56b784d32cd59e4b7360f01"
+  },
+  "scope": "FNTGRL degree 0..2, 18 lengths, all nodes; LININT bilinear surface; PABC quadratic; GETK/SEEKPR affine roots; CONTIN two roots/choking"
+}

@@ -1,0 +1,64 @@
+python3 tests/check_design_interface.py
+{'name': 'native32-SI-total', 'pass': True, 'status': 'matched', 'errors': [8.855042943345381e-08, 2.860000000159957e-07, 3.5057471259314354e-07]}
+{'name': 'native32-SI-static', 'pass': True, 'status': 'matched', 'errors': [1.7710085886690763e-07, 2.300000001564939e-08, 1.3372186979943024e-07]}
+{'name': 'native32-US-total', 'pass': True, 'status': 'matched', 'errors': [3.4951762528656616e-07, 2.2599999993655473e-07, 2.011494253384427e-07]}
+{'name': 'native32-over-capacity', 'pass': True, 'status': 'stator-capacity-boundary-or-exceeded', 'errors': None}
+{'name': 'compat27-SI-total', 'pass': True, 'status': 'matched', 'errors': [4.2463405236503604e-08, 3.899335860868547e-07, 5.083522577331578e-07]}
+{'name': 'compat27-SI-static', 'pass': True, 'status': 'matched', 'errors': [4.2463405236503604e-08, 7.504224774912416e-08, 3.3908662200321515e-07]}
+{'name': 'compat27-US-total', 'pass': True, 'status': 'matched', 'errors': [4.912842177517973e-08, 1.291632651945207e-07, 5.169161434448455e-07]}
+{'name': 'compat27-over-capacity', 'pass': True, 'status': 'stator-capacity-boundary-or-exceeded', 'errors': None}
+RESULTS /Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/design-interface-20261023T161942276666Z
+./build/compat27/compressor_tn_d7487 < examples/compressor_original.inp > build/output/compressor.out
+./build/compat27/turbine_tn_d8063 < examples/turbine_original.inp > build/output/turbine.out
+python3 tests/verify_integrity.py
+PASS: 14 originals, 14 baseline copies, both generated programs and original example inputs
+python3 tools/prepare_historical.py
+Prepared isolated runtime: /Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/historical7094/s709-2.4.4
+python3 tests/check_historical.py
+PASS design-carry-long executes without compile/runtime failure
+PASS design-carry-short executes without compile/runtime failure
+PASS table-III all printed values exact
+PASS design-coefficients all printed values exact
+PASS table-IV all printed values exact
+PASS complete long and short choking scans
+PASS raw table V has only the independently evidenced E1 discrepancy
+PASS E1 candidate independently agrees with report identity
+PASS original-table-II executes without compile/runtime failure
+PASS original Table II remains a distinct nonmatching case
+PASS rounded-design-coefficients executes without compile/runtime failure
+PASS rounded coefficients do not silently replace internal precision
+PASS mode-0 executes without compile/runtime failure
+PASS mode 0 expected output count
+PASS mode-1 executes without compile/runtime failure
+PASS mode 1 expected output count
+PASS mode-2 executes without compile/runtime failure
+PASS mode 2 expected output count
+PASS mode-3 executes without compile/runtime failure
+PASS mode 3 expected output count
+PASS mode-4 executes without compile/runtime failure
+PASS mode 4 expected output count
+PASS mode-5 executes without compile/runtime failure
+PASS mode 5 expected output count
+PASS octal decoder known 1 and 1/2
+PASS failed-design-diagnostic returns a diagnostic failure
+PASS historical no-solution message is preserved
+RAW PRINTED REFERENCE 424 / 425; formula-first acceptance True
+RESULTS /Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/historical-check-20261023T161949080855Z
+python3 tests/try_new_data.py
+PASS compressor-native32 completion and finite diagnostics
+PASS compressor-native32 physical ranges
+PASS compressor-native32 mass/energy/loss consistency
+PASS turbine-native32 completion and finite diagnostics
+PASS turbine-native32 conservation
+PASS turbine-native32 physical ranges and output counts
+PASS compressor-compat27 completion and finite diagnostics
+PASS compressor-compat27 physical ranges
+PASS compressor-compat27 mass/energy/loss consistency
+PASS turbine-compat27 completion and finite diagnostics
+PASS turbine-compat27 conservation
+PASS turbine-compat27 physical ranges and output counts
+PASS turbine historical completion
+PASS turbine historical physical ranges and output counts
+PASS turbine historical independent conservation
+RESULTS /Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/new-data-20261023T161957063855Z
+ALL CONSISTENCY CHECKS True

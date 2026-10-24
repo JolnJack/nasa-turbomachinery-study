@@ -1,0 +1,29 @@
+compressor-100 132 / 132 exact; rows 12 / 12
+surge-choke-100 2 / 2 exact; rows 1 / 1
+compressor-90 132 / 132 exact; rows 12 / 12
+surge-choke-90 2 / 2 exact; rows 1 / 1
+compressor-80 99 / 99 exact; rows 9 / 9
+surge-choke-80 2 / 2 exact; rows 1 / 1
+compressor-60 99 / 99 exact; rows 9 / 9
+surge-choke-60 2 / 2 exact; rows 1 / 1
+turbine-table-iii 54 / 55 exact; rows 11 / 11
+  {'row': 6, 'field': 5, 'expected': 9.81656, 'actual': 9.81657, 'delta': 9.999999999621423e-06, 'same_5_significant_digits': True}
+turbine-design-coefficients 4 / 5 exact; rows 1 / 1
+  {'row': 1, 'field': 2, 'expected': 0.28684, 'actual': 0.286838, 'delta': -2.000000000002e-06, 'same_5_significant_digits': True}
+turbine-table-iv-table-II-input 106 / 165 exact; rows 33 / 33
+  {'row': 1, 'field': 4, 'expected': 0.18127, 'actual': 0.18128, 'delta': 1.0000000000010001e-05, 'same_5_significant_digits': False}
+  {'row': 1, 'field': 5, 'expected': 0.17792, 'actual': 0.17793, 'delta': 1.0000000000010001e-05, 'same_5_significant_digits': False}
+  {'row': 2, 'field': 5, 'expected': 0.092832, 'actual': 0.092833, 'delta': 1.000000000001e-06, 'same_5_significant_digits': False}
+turbine-table-v-table-II-input 33 / 200 exact; rows 20 / 20
+  {'row': 1, 'field': 'NS', 'expected': 0.012937, 'actual': 0.012936, 'delta': -1.000000000001e-06, 'same_5_significant_digits': False}
+  {'row': 1, 'field': 'EQ-P5/P0', 'expected': 0.79806, 'actual': 0.79805, 'delta': -9.99999999995449e-06, 'same_5_significant_digits': False}
+  {'row': 1, 'field': 'NU', 'expected': 1.03221, 'actual': 1.03217, 'delta': -4.0000000000040004e-05, 'same_5_significant_digits': True}
+turbine-table-iv-table-III-coefficients 155 / 165 exact; rows 33 / 33
+  {'row': 8, 'field': 3, 'expected': 1.03221, 'actual': 1.0322, 'delta': -1.0000000000065512e-05, 'same_5_significant_digits': True}
+  {'row': 19, 'field': 2, 'expected': 0.69588, 'actual': 0.69587, 'delta': -1.0000000000065512e-05, 'same_5_significant_digits': False}
+  {'row': 21, 'field': 2, 'expected': 1.26365, 'actual': 1.26366, 'delta': 1.0000000000065512e-05, 'same_5_significant_digits': False}
+turbine-table-v-table-III-coefficients 182 / 200 exact; rows 20 / 20
+  {'row': 1, 'field': 'NU', 'expected': 1.03221, 'actual': 1.0322, 'delta': -1.0000000000065512e-05, 'same_5_significant_digits': True}
+  {'row': 2, 'field': 'ETAS', 'expected': 0.69588, 'actual': 0.69587, 'delta': -1.0000000000065512e-05, 'same_5_significant_digits': False}
+  {'row': 2, 'field': 'EQ-P0/P5total', 'expected': 1.26365, 'actual': 1.26366, 'delta': 1.0000000000065512e-05, 'same_5_significant_digits': False}
+RESULTS /Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/reference-20261023T104852796028Z

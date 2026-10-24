@@ -1,0 +1,58 @@
+restored/compat27/turbine_tn_d8063.f90:444:34:
+
+  444 | 200 FORMAT(1H1,35X,43HNASA RADIAL INFLOW TURBINE COMPUTER PROGRAM/24X,10A6/24X,10A6 )
+      |                                  1
+Warning: The H format specifier at (1) is a Fortran 95 deleted feature
+restored/compat27/turbine_tn_d8063.f90:445:28:
+
+  445 | 300 FORMAT(/10X,54HNO SOLUTION FOR THIS CASE - CHECK A1,BL1,AL1 OR B4,BL4)
+      |                            1
+Warning: The H format specifier at (1) is a Fortran 95 deleted feature
+restored/compat27/turbine_tn_d8063.f90:446:600:
+
+  446 | 400 FORMAT(7HK GAMMA,2X,A13,7H    P0,,2X,A13,6H    A1,2X,A13,2X,7HALPHA-1,2X,A13,7H BETA-4,2X,A13,5H   PD,2X,A13/7H      R,2X,A13,7H    T0,,2X,A13,6H    A3,2X,A13,2X,7H    BL1,2X,A13,7H    BL4,2X,A13,5H    K,2X,A13 /7H     D3,2X,A13,7H     A0,2X,A13,6H    A5,2X,A13,2X,7H     U3,2X,A13,7H  U4/U3,2X,A13,5H   ZZ,2X,A13 )
+      |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        1
+Warning: The H format specifier at (1) is a Fortran 95 deleted feature
+restored/compat27/turbine_tn_d8063.f90:447:0:
+
+  447 | 500 FORMAT(/ 50X,21HVELOCITIES AND ANGLES/12H V/VCR)1    ,A13,1X,11HALPHA-1    ,A13,1X,11HV/VCR)3    ,A13,1X,11HW/WCR)4    ,A13,1X,11HW/WCR)5    ,A13/12H VU/VCR)1   ,A13,1X,11HALPHA-2    ,A13,1X,11HVU/VCR)3   ,A13,1X,11HWU/WCR)4   ,A13,1X,11HWX/WCR)5   ,A13/12H VR/VCR)1   ,A13,1X,11HALPHA-3    ,A13,1X,11HVR/VCR)3   ,A13,1X,11HWX/WCR)4   ,A13,1X,11HV/VCR)5    ,A13/12H V/VCR)0    ,A13,1X,11HBETA-3     ,A13,1X,11HW/WCR)3    ,A13,1X,11HBETA-4     ,A13,1X,11HVU/VCR)5   ,A13/12H V/VCR)2    ,A13,1X,11HI-3        ,A13,1X,11HWU/WCR)3   ,A13,1X,11HBETA-5     ,A13,1X,11HVX/VCR)5   ,A13/12H VR/VCR)2   ,A13,1X,11HVCR)3      ,A13,1X,11HWR/WCR)3   ,A13,1X,11HVCR)5      ,A13,1X,11HALPHA-5    ,A13)
+Warning: The H format specifier at (1) is a Fortran 95 deleted feature
+restored/compat27/turbine_tn_d8063.f90:448:0:
+
+  448 | 501 FORMAT(50X,19HOVERALL PERFORMANCE/12H EQ-W       ,A13,1X,11HEQ-P0,/P5  ,A13,1X,11HP0,/P5     ,A13,1X,11HWT/P       ,A13,1X,11HW          ,A13/12H EQ-DEL-H   ,A13,1X,11HETA-S      ,A13,1X,11HNU         ,A13,1X,11HDEL-H/T    ,A13,1X,11HDEL-H      ,A13/12H EQ-N       ,A13,1X,11HETA-T      ,A13,1X,11HNS         ,A13,1X,11HN/T        ,A13,1X,11HW.F.       ,A13/12H EQ-TOR     ,A13,1X,11HEQ-P0,/P5, ,A13,1X,11HP0,/P5,    ,A13,1X,11HTOR/P      ,A13,1X,11HTOR        ,A13/12H N          ,A13,1X,11HP          ,A13,1X,11HWN/DEL     ,A13,1X,11HT5,        ,A13,1X,11HP5,        ,A13)
+Warning: The H format specifier at (1) is a Fortran 95 deleted feature
+restored/compat27/turbine_tn_d8063.f90:450:82:
+
+  450 | 509 FORMAT(13X,2HPD,G15.6/14X,1HK,G15.6/1X,14HDESIGN WT-FLOW,G15.6)
+      |                                                                                  1
+Warning: The H format specifier at (1) is a Fortran 95 deleted feature
+restored/compat27/turbine_tn_d8063.f90:451:76:
+
+  451 | 525 FORMAT(3X,12HDESIGN ETA-S ,G15.6/2X,13HDESIGN P0,/P5,G15.6)
+      |                                                                            1
+Warning: The H format specifier at (1) is a Fortran 95 deleted feature
+restored/compat27/turbine_tn_d8063.f90:452:76:
+
+  452 | 526 FORMAT(3X,12HDESIGN ETA-T ,G15.6/1X,14HDESIGN P0,/P5,,G15.6)
+      |                                                                            1
+Warning: The H format specifier at (1) is a Fortran 95 deleted feature
+restored/compat27/turbine_tn_d8063.f90:453:28:
+
+  453 | 600 FORMAT(/10X,41HLAST CASE IS APPROXIMATE LIMITING LOADING)
+      |                            1
+Warning: The H format specifier at (1) is a Fortran 95 deleted feature
+restored/compat27/turbine_tn_d8063.f90:454:226:
+
+  454 | 666 FORMAT(7HK V1VC1,8X,2HNS,11X,9HEQ-P5/P0,,4X,2HNU,11X,4HETAT,9X,4HETAS,9X,5HDHTCR,8X,6HWTHODE,7X,9HEQ-P0,/P5,4X,10HEQ-P0,/P5, )
+      |                                                                                                                                                                                                                                  1
+Warning: The H format specifier at (1) is a Fortran 95 deleted feature
+restored/compat27/turbine_tn_d8063.f90:455:27:
+
+  455 | 2040 FORMAT(10X,44HNO SOLUTION COULD BE FOUND IN 100 ITERATIONS)
+      |                           1
+Warning: The H format specifier at (1) is a Fortran 95 deleted feature
+restored/compat27/turbine_tn_d8063.f90:456:181:
+
+  456 | 2050 FORMAT(10X,69HITERATION PROCEDURE HAD TO BE RESTARTED TO AVOID NEGATIVE TEMPERATURE/15X,67HRESTART PROCEDURE WAS ABORTED AFTER 1000 TOTAL NUMBER OF ITERATIONS)
+      |                                                                                                                                                                                     1
+Warning: The H format specifier at (1) is a Fortran 95 deleted feature

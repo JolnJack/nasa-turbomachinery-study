@@ -1,0 +1,28 @@
+RESULTS /Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/inverse-scan-20261023T161257215839Z
+PLANNED 930
+COMPLETED 100
+COMPLETED 200
+COMPLETED 300
+COMPLETED 400
+COMPLETED 500
+COMPLETED 600
+COMPLETED 700
+COMPLETED 800
+COMPLETED 900
+{
+  "planned": 930,
+  "completed": 930,
+  "counts": {
+    "compat27": {
+      "known-root-missed": 390,
+      "matched": 75
+    },
+    "native32": {
+      "known-root-missed": 388,
+      "matched": 75,
+      "target-or-coefficient-mismatch": 2
+    }
+  },
+  "source_grid": "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/systematic-20261023T161237132350Z",
+  "known_root_definition": "Target generated from same model forward equation at finite positive-work point; coefficients and source point retained. No experimental truth claimed."
+}

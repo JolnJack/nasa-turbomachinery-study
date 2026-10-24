@@ -1,0 +1,1628 @@
+{
+  "kind": "synthetic new inputs, no independent experimental truth",
+  "cases": {
+    "compressor-native32": {
+      "command": [
+        "/opt/homebrew/bin/gfortran",
+        "-std=legacy",
+        "-fno-automatic",
+        "-fcheck=all",
+        "-ffpe-trap=invalid,zero,overflow",
+        "-fbacktrace",
+        "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/new-data-20261023T161957063855Z/compressor-native32/instrumented.f",
+        "/Users/ikunsredemptionmac/Downloads/NASA/restored/read_namelist_cards.f90",
+        "-o",
+        "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/new-data-20261023T161957063855Z/compressor-native32/program"
+      ],
+      "exit": 0,
+      "points": 6,
+      "unexpected_stderr": [],
+      "source_sha256": "5839a7351c1a64afbd321a74bc0581e406b2c21d85d651dea292845a9f367f2b",
+      "observations": [
+        {
+          "flow_kg_s": 0.684916437,
+          "corrected_flow_kg_s": 0.594997466,
+          "pressure_ratio": 5.12171316,
+          "efficiency": 0.79225558,
+          "mass_relative_residual": 0.00015341463434009634,
+          "euler_relative_residual": 5.004865116984156e-08,
+          "thermal_relative_residual": 3.064833990488195e-08,
+          "loss_closure_absolute_residual": 1.530700000085261e-08
+        },
+        {
+          "flow_kg_s": 0.708906472,
+          "corrected_flow_kg_s": 0.615837932,
+          "pressure_ratio": 5.10279131,
+          "efficiency": 0.79564023,
+          "mass_relative_residual": 0.0002064613142692255,
+          "euler_relative_residual": 2.1765004870033728e-09,
+          "thermal_relative_residual": 8.121101705763484e-08,
+          "loss_closure_absolute_residual": 3.6660000035659834e-08
+        },
+        {
+          "flow_kg_s": 0.732188702,
+          "corrected_flow_kg_s": 0.636063576,
+          "pressure_ratio": 5.08067036,
+          "efficiency": 0.798522353,
+          "mass_relative_residual": 0.00027291470645966797,
+          "euler_relative_residual": 1.9142102845067523e-07,
+          "thermal_relative_residual": 1.716495392142734e-09,
+          "loss_closure_absolute_residual": 7.111999988929085e-08
+        },
+        {
+          "flow_kg_s": 0.754740298,
+          "corrected_flow_kg_s": 0.65565449,
+          "pressure_ratio": 5.05555725,
+          "efficiency": 0.800921917,
+          "mass_relative_residual": 0.00035303599252982013,
+          "euler_relative_residual": 4.4019752287334004e-08,
+          "thermal_relative_residual": 1.260625443870529e-08,
+          "loss_closure_absolute_residual": 9.612099993727696e-08
+        },
+        {
+          "flow_kg_s": 0.776538789,
+          "corrected_flow_kg_s": 0.674591184,
+          "pressure_ratio": 5.02763605,
+          "efficiency": 0.80285567,
+          "mass_relative_residual": 0.00045036967025424045,
+          "euler_relative_residual": 9.485807331413846e-08,
+          "thermal_relative_residual": 2.7317241351422356e-08,
+          "loss_closure_absolute_residual": 1.3519000141570814e-08
+        },
+        {
+          "flow_kg_s": 0.797562897,
+          "corrected_flow_kg_s": 0.692855179,
+          "pressure_ratio": 3.4365015,
+          "efficiency": 0.576891124,
+          "mass_relative_residual": 0.0005670436302577875,
+          "euler_relative_residual": 1.521782983017676e-07,
+          "thermal_relative_residual": 4.3760836982818726e-08,
+          "loss_closure_absolute_residual": 2.3442000007811714e-08
+        }
+      ]
+    },
+    "turbine-native32": {
+      "command": [
+        "/opt/homebrew/bin/gfortran",
+        "-std=legacy",
+        "-fno-automatic",
+        "-fcheck=all",
+        "-ffpe-trap=invalid,zero,overflow",
+        "-fbacktrace",
+        "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/new-data-20261023T161957063855Z/turbine-native32/instrumented.f",
+        "/Users/ikunsredemptionmac/Downloads/NASA/restored/read_namelist_cards.f90",
+        "-o",
+        "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/new-data-20261023T161957063855Z/turbine-native32/program"
+      ],
+      "exit": 0,
+      "points": 40,
+      "unexpected_stderr": [],
+      "source_sha256": "327fe1935c3526938384f645c812f24c795806004256707a4d98a746ade65f03",
+      "conservation": [
+        {
+          "mass_relative_residual": 9.224204810008376e-08,
+          "euler_relative_residual": 2.0284794397296594e-06,
+          "thermal_relative_residual": 2.211152222683914e-06
+        },
+        {
+          "mass_relative_residual": 1.9355353358947182e-08,
+          "euler_relative_residual": 3.3314085990345177e-07,
+          "thermal_relative_residual": 1.796937843830541e-07
+        },
+        {
+          "mass_relative_residual": 6.671982189841187e-08,
+          "euler_relative_residual": 2.6613749277205103e-07,
+          "thermal_relative_residual": 3.8812223458454526e-10
+        },
+        {
+          "mass_relative_residual": 9.211625601880792e-09,
+          "euler_relative_residual": 6.58533233314254e-07,
+          "thermal_relative_residual": 7.612247011769706e-07
+        },
+        {
+          "mass_relative_residual": 4.135272138606476e-08,
+          "euler_relative_residual": 4.935108763078094e-07,
+          "thermal_relative_residual": 5.440275637248455e-07
+        },
+        {
+          "mass_relative_residual": 1.4044506400391126e-07,
+          "euler_relative_residual": 9.030223708292571e-08,
+          "thermal_relative_residual": 8.975871668508073e-08
+        },
+        {
+          "mass_relative_residual": 3.0521002628667694e-08,
+          "euler_relative_residual": 8.796310702039217e-08,
+          "thermal_relative_residual": 8.933502539004247e-08
+        },
+        {
+          "mass_relative_residual": 1.170895435936609e-07,
+          "euler_relative_residual": 8.22006353233865e-07,
+          "thermal_relative_residual": 1.0402880283472797e-06
+        },
+        {
+          "mass_relative_residual": 4.185097707372282e-09,
+          "euler_relative_residual": 9.852935819541502e-08,
+          "thermal_relative_residual": 3.903474513250753e-07
+        },
+        {
+          "mass_relative_residual": 6.90474376205113e-08,
+          "euler_relative_residual": 5.012689436933784e-07,
+          "thermal_relative_residual": 2.8688722783477145e-07
+        },
+        {
+          "mass_relative_residual": 6.422700239563911e-08,
+          "euler_relative_residual": 7.194235976735513e-08,
+          "thermal_relative_residual": 9.590301354311296e-08
+        },
+        {
+          "mass_relative_residual": 1.8371453335512737e-08,
+          "euler_relative_residual": 8.638589934774872e-09,
+          "thermal_relative_residual": 1.965439271005738e-07
+        },
+        {
+          "mass_relative_residual": 7.1598560032276866e-09,
+          "euler_relative_residual": 9.942612385455831e-08,
+          "thermal_relative_residual": 1.5194000360254902e-07
+        },
+        {
+          "mass_relative_residual": 4.7248879320394824e-08,
+          "euler_relative_residual": 9.224104280853658e-08,
+          "thermal_relative_residual": 4.667075902126255e-08
+        },
+        {
+          "mass_relative_residual": 6.443644502709942e-08,
+          "euler_relative_residual": 8.56268743811353e-08,
+          "thermal_relative_residual": 6.562141157299141e-08
+        },
+        {
+          "mass_relative_residual": 3.456402436046555e-08,
+          "euler_relative_residual": 1.330358821156469e-07,
+          "thermal_relative_residual": 3.9728625785181127e-08
+        },
+        {
+          "mass_relative_residual": 1.745239482848086e-07,
+          "euler_relative_residual": 2.1595881776320298e-07,
+          "thermal_relative_residual": 2.116535720009516e-07
+        },
+        {
+          "mass_relative_residual": 5.597302926312856e-08,
+          "euler_relative_residual": 1.1422664479892156e-07,
+          "thermal_relative_residual": 1.3112907899718375e-07
+        },
+        {
+          "mass_relative_residual": 1.3468806801973981e-07,
+          "euler_relative_residual": 2.587676161899927e-07,
+          "thermal_relative_residual": 1.6231618276300408e-07
+        },
+        {
+          "mass_relative_residual": 7.239054690090637e-08,
+          "euler_relative_residual": 5.063769839595151e-07,
+          "thermal_relative_residual": 2.8235465916927445e-07
+        },
+        {
+          "mass_relative_residual": 9.224204810008376e-08,
+          "euler_relative_residual": 2.0284794397296594e-06,
+          "thermal_relative_residual": 2.211152222683914e-06
+        },
+        {
+          "mass_relative_residual": 1.9355353358947182e-08,
+          "euler_relative_residual": 3.3314085990345177e-07,
+          "thermal_relative_residual": 1.796937843830541e-07
+        },
+        {
+          "mass_relative_residual": 6.671982189841187e-08,
+          "euler_relative_residual": 2.6613749277205103e-07,
+          "thermal_relative_residual": 3.8812223458454526e-10
+        },
+        {
+          "mass_relative_residual": 9.211625601880792e-09,
+          "euler_relative_residual": 6.58533233314254e-07,
+          "thermal_relative_residual": 7.612247011769706e-07
+        },
+        {
+          "mass_relative_residual": 4.135272138606476e-08,
+          "euler_relative_residual": 4.935108763078094e-07,
+          "thermal_relative_residual": 5.440275637248455e-07
+        },
+        {
+          "mass_relative_residual": 1.4044506400391126e-07,
+          "euler_relative_residual": 9.030223708292571e-08,
+          "thermal_relative_residual": 8.975871668508073e-08
+        },
+        {
+          "mass_relative_residual": 3.0521002628667694e-08,
+          "euler_relative_residual": 8.796310702039217e-08,
+          "thermal_relative_residual": 8.933502539004247e-08
+        },
+        {
+          "mass_relative_residual": 1.170895435936609e-07,
+          "euler_relative_residual": 8.22006353233865e-07,
+          "thermal_relative_residual": 1.0402880283472797e-06
+        },
+        {
+          "mass_relative_residual": 4.185097707372282e-09,
+          "euler_relative_residual": 9.852935819541502e-08,
+          "thermal_relative_residual": 3.903474513250753e-07
+        },
+        {
+          "mass_relative_residual": 6.90474376205113e-08,
+          "euler_relative_residual": 5.012689436933784e-07,
+          "thermal_relative_residual": 2.8688722783477145e-07
+        },
+        {
+          "mass_relative_residual": 6.422700239563911e-08,
+          "euler_relative_residual": 7.194235976735513e-08,
+          "thermal_relative_residual": 9.590301354311296e-08
+        },
+        {
+          "mass_relative_residual": 1.8371453335512737e-08,
+          "euler_relative_residual": 8.638589934774872e-09,
+          "thermal_relative_residual": 1.965439271005738e-07
+        },
+        {
+          "mass_relative_residual": 7.1598560032276866e-09,
+          "euler_relative_residual": 9.942612385455831e-08,
+          "thermal_relative_residual": 1.5194000360254902e-07
+        },
+        {
+          "mass_relative_residual": 4.7248879320394824e-08,
+          "euler_relative_residual": 9.224104280853658e-08,
+          "thermal_relative_residual": 4.667075902126255e-08
+        },
+        {
+          "mass_relative_residual": 6.443644502709942e-08,
+          "euler_relative_residual": 8.56268743811353e-08,
+          "thermal_relative_residual": 6.562141157299141e-08
+        },
+        {
+          "mass_relative_residual": 3.456402436046555e-08,
+          "euler_relative_residual": 1.330358821156469e-07,
+          "thermal_relative_residual": 3.9728625785181127e-08
+        },
+        {
+          "mass_relative_residual": 1.745239482848086e-07,
+          "euler_relative_residual": 2.1595881776320298e-07,
+          "thermal_relative_residual": 2.116535720009516e-07
+        },
+        {
+          "mass_relative_residual": 5.597302926312856e-08,
+          "euler_relative_residual": 1.1422664479892156e-07,
+          "thermal_relative_residual": 1.3112907899718375e-07
+        },
+        {
+          "mass_relative_residual": 1.3468806801973981e-07,
+          "euler_relative_residual": 2.587676161899927e-07,
+          "thermal_relative_residual": 1.6231618276300408e-07
+        },
+        {
+          "mass_relative_residual": 7.239054690090637e-08,
+          "euler_relative_residual": 5.063769839595151e-07,
+          "thermal_relative_residual": 2.8235465916927445e-07
+        }
+      ],
+      "long_points": 20,
+      "short_points": 20,
+      "representative": {
+        "V1VC1": 0.6,
+        "mass_flow_kg_s": 0.41699,
+        "total_efficiency": 0.90603,
+        "total_pressure_ratio": 1.7456
+      },
+      "short_rows": [
+        [
+          0.3,
+          0.012853,
+          0.79306,
+          1.0303,
+          0.66424,
+          0.57298,
+          10632.0,
+          0.12143,
+          1.2609,
+          1.2203
+        ],
+        [
+          0.35,
+          0.012175,
+          0.76448,
+          0.95982,
+          0.76006,
+          0.68147,
+          14571.0,
+          0.13991,
+          1.3081,
+          1.271
+        ],
+        [
+          0.4,
+          0.011602,
+          0.73444,
+          0.89786,
+          0.82427,
+          0.75845,
+          18532.0,
+          0.15758,
+          1.3616,
+          1.3271
+        ],
+        [
+          0.45,
+          0.011092,
+          0.70239,
+          0.84187,
+          0.8659,
+          0.81057,
+          22528.0,
+          0.17434,
+          1.4237,
+          1.3904
+        ],
+        [
+          0.5,
+          0.010629,
+          0.66793,
+          0.79044,
+          0.89083,
+          0.84293,
+          26575.0,
+          0.19009,
+          1.4972,
+          1.4632
+        ],
+        [
+          0.55,
+          0.010205,
+          0.63074,
+          0.74266,
+          0.90321,
+          0.85951,
+          30697.0,
+          0.20473,
+          1.5854,
+          1.5482
+        ],
+        [
+          0.6,
+          0.0098201,
+          0.59044,
+          0.69778,
+          0.90603,
+          0.86336,
+          34929.0,
+          0.21815,
+          1.6936,
+          1.6491
+        ],
+        [
+          0.65,
+          0.0094852,
+          0.5474,
+          0.65592,
+          0.90345,
+          0.85848,
+          39305.0,
+          0.23027,
+          1.8268,
+          1.7682
+        ],
+        [
+          0.7,
+          0.0091917,
+          0.49977,
+          0.61523,
+          0.89508,
+          0.84422,
+          43935.0,
+          0.241,
+          2.0009,
+          1.9161
+        ],
+        [
+          0.75,
+          0.0089393,
+          0.4421,
+          0.57195,
+          0.87844,
+          0.81616,
+          49146.0,
+          0.25025,
+          2.2619,
+          2.1205
+        ],
+        [
+          0.79136,
+          0.0088106,
+          0.34602,
+          0.51005,
+          0.83873,
+          0.74445,
+          56368.0,
+          0.25674,
+          2.89,
+          2.5209
+        ],
+        [
+          0.79136,
+          0.0088465,
+          0.32416,
+          0.49725,
+          0.82718,
+          0.72325,
+          57619.0,
+          0.25674,
+          3.0849,
+          2.6206
+        ],
+        [
+          0.79136,
+          0.0089141,
+          0.30233,
+          0.48482,
+          0.81457,
+          0.70114,
+          58758.0,
+          0.25674,
+          3.3076,
+          2.7266
+        ],
+        [
+          0.79136,
+          0.0090158,
+          0.2808,
+          0.47285,
+          0.80067,
+          0.6782,
+          59749.0,
+          0.25674,
+          3.5612,
+          2.8389
+        ],
+        [
+          0.79136,
+          0.009154,
+          0.25992,
+          0.46148,
+          0.78511,
+          0.65447,
+          60537.0,
+          0.25674,
+          3.8473,
+          2.9567
+        ],
+        [
+          0.79136,
+          0.0093285,
+          0.24026,
+          0.45093,
+          0.76733,
+          0.62998,
+          61030.0,
+          0.25674,
+          4.1622,
+          3.0781
+        ],
+        [
+          0.79136,
+          0.0095293,
+          0.22289,
+          0.44171,
+          0.74638,
+          0.60494,
+          61075.0,
+          0.25674,
+          4.4865,
+          3.1988
+        ],
+        [
+          0.79136,
+          0.0097126,
+          0.21045,
+          0.43514,
+          0.72045,
+          0.58048,
+          60387.0,
+          0.25674,
+          4.7518,
+          3.3084
+        ],
+        [
+          0.79136,
+          0.0097567,
+          0.20921,
+          0.43449,
+          0.68566,
+          0.55947,
+          58376.0,
+          0.25674,
+          4.7799,
+          3.3838
+        ],
+        [
+          0.79136,
+          0.0097355,
+          0.21116,
+          0.43552,
+          0.67695,
+          0.55573,
+          57713.0,
+          0.25674,
+          4.7358,
+          3.3906
+        ]
+      ]
+    },
+    "compressor-compat27": {
+      "command": [
+        "/opt/homebrew/bin/gfortran",
+        "-std=legacy",
+        "-fno-automatic",
+        "-fcheck=all",
+        "-ffpe-trap=invalid,zero,overflow",
+        "-fbacktrace",
+        "-fdefault-real-16",
+        "-ffree-line-length-none",
+        "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/new-data-20261023T161957063855Z/compressor-compat27/instrumented.f90",
+        "/Users/ikunsredemptionmac/Downloads/NASA/restored/read_namelist_cards.f90",
+        "-o",
+        "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/new-data-20261023T161957063855Z/compressor-compat27/program"
+      ],
+      "exit": 0,
+      "points": 6,
+      "unexpected_stderr": [],
+      "source_sha256": "6130177b2cb1c5b7bf6dfb12ed35ae38761cc241ea43458b138445355133b7e3",
+      "observations": [
+        {
+          "flow_kg_s": 0.6849164217710495,
+          "corrected_flow_kg_s": 0.594997376203537,
+          "pressure_ratio": 5.121722340583801,
+          "efficiency": 0.7922572270035744,
+          "mass_relative_residual": 0.0001533851892339651,
+          "euler_relative_residual": 5.6032084853064016e-08,
+          "thermal_relative_residual": 1.4828758068407053e-08,
+          "loss_closure_absolute_residual": 2.0569132175296545e-08
+        },
+        {
+          "flow_kg_s": 0.7089064195752144,
+          "corrected_flow_kg_s": 0.615837849676609,
+          "pressure_ratio": 5.10280054807663,
+          "efficiency": 0.7956419512629509,
+          "mass_relative_residual": 0.00020624658417165548,
+          "euler_relative_residual": 7.605433622761864e-08,
+          "thermal_relative_residual": 1.79549784004403e-08,
+          "loss_closure_absolute_residual": 2.3941538529470563e-08
+        },
+        {
+          "flow_kg_s": 0.7321887090802193,
+          "corrected_flow_kg_s": 0.6360635310411453,
+          "pressure_ratio": 5.080679774284363,
+          "efficiency": 0.7985238134860992,
+          "mass_relative_residual": 0.00027222393900939854,
+          "euler_relative_residual": 9.210287407781473e-08,
+          "thermal_relative_residual": 2.3288144498670107e-08,
+          "loss_closure_absolute_residual": 1.4646502677351236e-08
+        },
+        {
+          "flow_kg_s": 0.7547402456402779,
+          "corrected_flow_kg_s": 0.6556543931365013,
+          "pressure_ratio": 5.05556708574295,
+          "efficiency": 0.8009235709905624,
+          "mass_relative_residual": 0.000352988524033397,
+          "euler_relative_residual": 6.611909521442664e-08,
+          "thermal_relative_residual": 1.4730921179833771e-08,
+          "loss_closure_absolute_residual": 1.648004399612546e-08
+        },
+        {
+          "flow_kg_s": 0.7765388116240501,
+          "corrected_flow_kg_s": 0.674591138958931,
+          "pressure_ratio": 5.02764630317688,
+          "efficiency": 0.8028574883937836,
+          "mass_relative_residual": 0.0004506002944824653,
+          "euler_relative_residual": 9.939381319289604e-08,
+          "thermal_relative_residual": 2.375684722711209e-08,
+          "loss_closure_absolute_residual": 1.259468263015151e-08
+        },
+        {
+          "flow_kg_s": 0.7975629270076752,
+          "corrected_flow_kg_s": 0.6928551122546196,
+          "pressure_ratio": 3.4364990293979645,
+          "efficiency": 0.5768909454345703,
+          "mass_relative_residual": 0.000566812652881186,
+          "euler_relative_residual": 1.148964979345423e-07,
+          "thermal_relative_residual": 2.5506791596114952e-08,
+          "loss_closure_absolute_residual": 7.908965926617384e-09
+        }
+      ]
+    },
+    "turbine-compat27": {
+      "command": [
+        "/opt/homebrew/bin/gfortran",
+        "-std=legacy",
+        "-fno-automatic",
+        "-fcheck=all",
+        "-ffpe-trap=invalid,zero,overflow",
+        "-fbacktrace",
+        "-fdefault-real-16",
+        "-ffree-line-length-none",
+        "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/new-data-20261023T161957063855Z/turbine-compat27/instrumented.f90",
+        "/Users/ikunsredemptionmac/Downloads/NASA/restored/read_namelist_cards.f90",
+        "-o",
+        "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/new-data-20261023T161957063855Z/turbine-compat27/program"
+      ],
+      "exit": 0,
+      "points": 40,
+      "unexpected_stderr": [],
+      "source_sha256": "178cd9853e4758c5a2836cdf7141d2a6d8f3c444aaafd6cb9801dcff563687e3",
+      "conservation": [
+        {
+          "mass_relative_residual": 5.524625209436884e-08,
+          "euler_relative_residual": 6.438531753519757e-07,
+          "thermal_relative_residual": 4.119182396390417e-07
+        },
+        {
+          "mass_relative_residual": 3.993730376972182e-08,
+          "euler_relative_residual": 4.604626623010379e-07,
+          "thermal_relative_residual": 4.4577236247254686e-07
+        },
+        {
+          "mass_relative_residual": 2.0670407346964537e-08,
+          "euler_relative_residual": 2.856302470940977e-07,
+          "thermal_relative_residual": 1.5707358115617385e-07
+        },
+        {
+          "mass_relative_residual": 1.9035777927228486e-08,
+          "euler_relative_residual": 2.076688449511539e-07,
+          "thermal_relative_residual": 1.3954018851819386e-07
+        },
+        {
+          "mass_relative_residual": 2.952290761280885e-08,
+          "euler_relative_residual": 2.3205578038352216e-07,
+          "thermal_relative_residual": 1.4401882032728177e-07
+        },
+        {
+          "mass_relative_residual": 3.055195420689855e-08,
+          "euler_relative_residual": 1.4210827858374837e-07,
+          "thermal_relative_residual": 7.489750471977394e-08
+        },
+        {
+          "mass_relative_residual": 4.276457476004346e-08,
+          "euler_relative_residual": 1.6425414360427727e-07,
+          "thermal_relative_residual": 1.3473229184345568e-07
+        },
+        {
+          "mass_relative_residual": 3.143734877834176e-08,
+          "euler_relative_residual": 1.7123104097447294e-07,
+          "thermal_relative_residual": 1.4317153344841536e-07
+        },
+        {
+          "mass_relative_residual": 5.512362200152026e-08,
+          "euler_relative_residual": 7.96841817030013e-08,
+          "thermal_relative_residual": 3.680041850101755e-08
+        },
+        {
+          "mass_relative_residual": 5.037381510147707e-08,
+          "euler_relative_residual": 1.0208259441761899e-07,
+          "thermal_relative_residual": 7.567657403725066e-08
+        },
+        {
+          "mass_relative_residual": 2.4321029238519196e-08,
+          "euler_relative_residual": 8.18323671543992e-08,
+          "thermal_relative_residual": 5.152260159248648e-08
+        },
+        {
+          "mass_relative_residual": 2.79356968787322e-08,
+          "euler_relative_residual": 7.713331193382857e-08,
+          "thermal_relative_residual": 4.685977007107133e-08
+        },
+        {
+          "mass_relative_residual": 2.0942280588689258e-08,
+          "euler_relative_residual": 6.333427509424489e-08,
+          "thermal_relative_residual": 4.970533135466603e-08
+        },
+        {
+          "mass_relative_residual": 3.204669629207024e-08,
+          "euler_relative_residual": 8.190058387801434e-08,
+          "thermal_relative_residual": 5.4470736816365544e-08
+        },
+        {
+          "mass_relative_residual": 2.469958207950907e-08,
+          "euler_relative_residual": 5.886098514718705e-08,
+          "thermal_relative_residual": 1.4233224357004607e-08
+        },
+        {
+          "mass_relative_residual": 3.7263554708231516e-08,
+          "euler_relative_residual": 3.041901656734042e-08,
+          "thermal_relative_residual": 7.033730618207034e-09
+        },
+        {
+          "mass_relative_residual": 4.1737178315280475e-08,
+          "euler_relative_residual": 7.170297363598598e-08,
+          "thermal_relative_residual": 2.6370593246596935e-08
+        },
+        {
+          "mass_relative_residual": 4.1126678023290804e-08,
+          "euler_relative_residual": 4.304511010937778e-08,
+          "thermal_relative_residual": 2.4592184753349633e-08
+        },
+        {
+          "mass_relative_residual": 2.229214383204081e-08,
+          "euler_relative_residual": 7.284408877529202e-08,
+          "thermal_relative_residual": 4.9410177823894215e-08
+        },
+        {
+          "mass_relative_residual": 4.0890990460799524e-08,
+          "euler_relative_residual": 1.1105331701484998e-07,
+          "thermal_relative_residual": 7.742499467576783e-08
+        },
+        {
+          "mass_relative_residual": 5.524625209436884e-08,
+          "euler_relative_residual": 6.438531753519757e-07,
+          "thermal_relative_residual": 4.119182396390417e-07
+        },
+        {
+          "mass_relative_residual": 3.993730376972182e-08,
+          "euler_relative_residual": 4.604626623010379e-07,
+          "thermal_relative_residual": 4.4577236247254686e-07
+        },
+        {
+          "mass_relative_residual": 2.0670407346964537e-08,
+          "euler_relative_residual": 2.856302470940977e-07,
+          "thermal_relative_residual": 1.5707358115617385e-07
+        },
+        {
+          "mass_relative_residual": 1.9035777927228486e-08,
+          "euler_relative_residual": 2.076688449511539e-07,
+          "thermal_relative_residual": 1.3954018851819386e-07
+        },
+        {
+          "mass_relative_residual": 2.952290761280885e-08,
+          "euler_relative_residual": 2.3205578038352216e-07,
+          "thermal_relative_residual": 1.4401882032728177e-07
+        },
+        {
+          "mass_relative_residual": 3.055195420689855e-08,
+          "euler_relative_residual": 1.4210827858374837e-07,
+          "thermal_relative_residual": 7.489750471977394e-08
+        },
+        {
+          "mass_relative_residual": 4.276457476004346e-08,
+          "euler_relative_residual": 1.6425414360427727e-07,
+          "thermal_relative_residual": 1.3473229184345568e-07
+        },
+        {
+          "mass_relative_residual": 3.143734877834176e-08,
+          "euler_relative_residual": 1.7123104097447294e-07,
+          "thermal_relative_residual": 1.4317153344841536e-07
+        },
+        {
+          "mass_relative_residual": 5.512362200152026e-08,
+          "euler_relative_residual": 7.96841817030013e-08,
+          "thermal_relative_residual": 3.680041850101755e-08
+        },
+        {
+          "mass_relative_residual": 5.037381510147707e-08,
+          "euler_relative_residual": 1.0208259441761899e-07,
+          "thermal_relative_residual": 7.567657403725066e-08
+        },
+        {
+          "mass_relative_residual": 2.4321029238519196e-08,
+          "euler_relative_residual": 8.18323671543992e-08,
+          "thermal_relative_residual": 5.152260159248648e-08
+        },
+        {
+          "mass_relative_residual": 2.79356968787322e-08,
+          "euler_relative_residual": 7.713331193382857e-08,
+          "thermal_relative_residual": 4.685977007107133e-08
+        },
+        {
+          "mass_relative_residual": 2.0942280588689258e-08,
+          "euler_relative_residual": 6.333427509424489e-08,
+          "thermal_relative_residual": 4.970533135466603e-08
+        },
+        {
+          "mass_relative_residual": 3.204669629207024e-08,
+          "euler_relative_residual": 8.190058387801434e-08,
+          "thermal_relative_residual": 5.4470736816365544e-08
+        },
+        {
+          "mass_relative_residual": 2.469958207950907e-08,
+          "euler_relative_residual": 5.886098514718705e-08,
+          "thermal_relative_residual": 1.4233224357004607e-08
+        },
+        {
+          "mass_relative_residual": 3.7263554708231516e-08,
+          "euler_relative_residual": 3.041901656734042e-08,
+          "thermal_relative_residual": 7.033730618207034e-09
+        },
+        {
+          "mass_relative_residual": 4.1737178315280475e-08,
+          "euler_relative_residual": 7.170297363598598e-08,
+          "thermal_relative_residual": 2.6370593246596935e-08
+        },
+        {
+          "mass_relative_residual": 4.1126678023290804e-08,
+          "euler_relative_residual": 4.304511010937778e-08,
+          "thermal_relative_residual": 2.4592184753349633e-08
+        },
+        {
+          "mass_relative_residual": 2.229214383204081e-08,
+          "euler_relative_residual": 7.284408877529202e-08,
+          "thermal_relative_residual": 4.9410177823894215e-08
+        },
+        {
+          "mass_relative_residual": 4.0890990460799524e-08,
+          "euler_relative_residual": 1.1105331701484998e-07,
+          "thermal_relative_residual": 7.742499467576783e-08
+        }
+      ],
+      "long_points": 20,
+      "short_points": 20,
+      "representative": {
+        "V1VC1": 0.6,
+        "mass_flow_kg_s": 0.41699,
+        "total_efficiency": 0.90603,
+        "total_pressure_ratio": 1.74563
+      },
+      "short_rows": [
+        [
+          0.3,
+          0.012853,
+          0.79306,
+          1.03034,
+          0.66424,
+          0.57298,
+          10631.7,
+          0.12143,
+          1.26093,
+          1.22027
+        ],
+        [
+          0.35,
+          0.012175,
+          0.76448,
+          0.95982,
+          0.76006,
+          0.68147,
+          14571.1,
+          0.13991,
+          1.30808,
+          1.27102
+        ],
+        [
+          0.4,
+          0.011602,
+          0.73444,
+          0.89786,
+          0.82427,
+          0.75845,
+          18532.3,
+          0.15758,
+          1.36157,
+          1.32706
+        ],
+        [
+          0.45,
+          0.011092,
+          0.70239,
+          0.84187,
+          0.8659,
+          0.81057,
+          22528.0,
+          0.17434,
+          1.42372,
+          1.39041
+        ],
+        [
+          0.5,
+          0.010629,
+          0.66793,
+          0.79044,
+          0.89083,
+          0.84293,
+          26575.0,
+          0.19009,
+          1.49716,
+          1.46323
+        ],
+        [
+          0.55,
+          0.010205,
+          0.63074,
+          0.74266,
+          0.90321,
+          0.85951,
+          30696.9,
+          0.20473,
+          1.58543,
+          1.54822
+        ],
+        [
+          0.6,
+          0.0098201,
+          0.59044,
+          0.69778,
+          0.90603,
+          0.86336,
+          34929.1,
+          0.21815,
+          1.69365,
+          1.64906
+        ],
+        [
+          0.65,
+          0.0094852,
+          0.5474,
+          0.65592,
+          0.90345,
+          0.85848,
+          39304.7,
+          0.23027,
+          1.82681,
+          1.76825
+        ],
+        [
+          0.7,
+          0.0091917,
+          0.49977,
+          0.61523,
+          0.89508,
+          0.84422,
+          43934.7,
+          0.241,
+          2.00093,
+          1.91611
+        ],
+        [
+          0.75,
+          0.0089393,
+          0.4421,
+          0.57195,
+          0.87844,
+          0.81616,
+          49145.6,
+          0.25025,
+          2.26195,
+          2.1205
+        ],
+        [
+          0.79136,
+          0.0088106,
+          0.34602,
+          0.51005,
+          0.83873,
+          0.74445,
+          56367.5,
+          0.25674,
+          2.88999,
+          2.52085
+        ],
+        [
+          0.79136,
+          0.0088465,
+          0.32416,
+          0.49725,
+          0.82718,
+          0.72325,
+          57618.9,
+          0.25674,
+          3.08487,
+          2.62059
+        ],
+        [
+          0.79136,
+          0.0089141,
+          0.30233,
+          0.48482,
+          0.81457,
+          0.70114,
+          58757.9,
+          0.25674,
+          3.3076,
+          2.72661
+        ],
+        [
+          0.79136,
+          0.0090158,
+          0.2808,
+          0.47285,
+          0.80067,
+          0.6782,
+          59749.3,
+          0.25674,
+          3.56122,
+          2.83886
+        ],
+        [
+          0.79136,
+          0.009154,
+          0.25992,
+          0.46148,
+          0.78511,
+          0.65447,
+          60536.9,
+          0.25674,
+          3.84727,
+          2.95668
+        ],
+        [
+          0.79136,
+          0.0093285,
+          0.24026,
+          0.45093,
+          0.76733,
+          0.62998,
+          61030.2,
+          0.25674,
+          4.1622,
+          3.07815
+        ],
+        [
+          0.79136,
+          0.0095293,
+          0.22289,
+          0.44171,
+          0.74638,
+          0.60494,
+          61074.8,
+          0.25674,
+          4.48646,
+          3.19875
+        ],
+        [
+          0.79136,
+          0.0097126,
+          0.21045,
+          0.43514,
+          0.72045,
+          0.58048,
+          60387.1,
+          0.25674,
+          4.75178,
+          3.30843
+        ],
+        [
+          0.79136,
+          0.0097567,
+          0.20921,
+          0.43449,
+          0.68567,
+          0.55947,
+          58376.0,
+          0.25674,
+          4.77988,
+          3.38378
+        ],
+        [
+          0.79136,
+          0.0097355,
+          0.21116,
+          0.43552,
+          0.67695,
+          0.55573,
+          57712.8,
+          0.25674,
+          4.7358,
+          3.39056
+        ]
+      ]
+    },
+    "turbine-historical": {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/Users/ikunsredemptionmac/Downloads/NASA/restored/tools/run_historical_turbine.py",
+        "--portable-formats",
+        "--library-source",
+        "--formatted-input",
+        "--dump-words",
+        "--input",
+        "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/new-data-20261023T161957063855Z/turbine.inp"
+      ],
+      "exit": 0,
+      "path": "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/historical7094/turbine-20261023T162001254784Z",
+      "runtime": {
+        "command": [
+          "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/historical7094/s709-2.4.4/s709",
+          "-p",
+          "-m7094",
+          "-cibsys.cmd",
+          "r=reader",
+          "p=print",
+          "u=punch",
+          "a1r=ASYS1.BIN",
+          "a2r=ASYS8.BIN",
+          "a3=sysin.bcd",
+          "a4=sysou1.bcd",
+          "a5=sysut1.bin",
+          "a6=sysut3.bin",
+          "a7=sysut2.bin",
+          "a8=syspp1.bin",
+          "a9=sysut4.bin",
+          "a10=sysck2.bin"
+        ],
+        "emulator_status": 0,
+        "program_executed": true,
+        "loading_suppressed": false,
+        "runtime_error": false,
+        "original_source_sha256": "de5bb490d8ac5a2be99b20d82f09c4a57484f46d0d3db8476363148507821293",
+        "source_sha256": "bae1ddcc1c46e7e371b2d9c1e0fbe505b1ea3b11970d62918227829d1c429ae6",
+        "format_change": "G formats to E16.8",
+        "library_source": true,
+        "formatted_input": true,
+        "dump_words": true,
+        "input_sha256": "f7e4aff290e34006bab00a92c1e35c98f34ee14e0f16c74b612729a3f33602d6",
+        "smoke": false,
+        "job_sha256": "9cd2112b9608b4375a686adc7ea563cc6a5604a62c37fc485e3ff1b4374cb0e6",
+        "runtime_sha256": {
+          "s709-2.4.4/s709": "e3d2951e34a79a5c10f545c4128e413d287da364b5c3255744607469c833b35e",
+          "s709-2.4.4/ASYS1.BIN": "6b89a77dcf3279b4d7752c8d63dddd6ff3d0ad4552651f2742ba3f8124a4b815",
+          "s709-2.4.4/ASYS8.BIN": "0bc52c3cb2fce19884b3617e02448fe823b737ea4155e6714ac1d427545f3199",
+          "IBFTC/rtl/fasc.map": "2e7f30e05daf50ddd4bb75b6556c03dbbf9bb0619daf2d201c93cffbb57051fb"
+        }
+      },
+      "coefficients": {
+        "PD": 0.985,
+        "XK": 0.3
+      },
+      "long_points": 20,
+      "short_points": 20,
+      "representative": {
+        "V1VC1": 0.5999999791383743,
+        "mass_flow_kg_s": 0.4169882871210575,
+        "total_efficiency": 0.9060344472527504,
+        "total_pressure_ratio": 1.7456306219100952
+      },
+      "short_rows": [
+        [
+          0.30000000074505806,
+          0.012852590763941407,
+          0.7930640056729317,
+          1.0303420424461365,
+          0.6642407029867172,
+          0.5729844495654106,
+          10631.735107421875,
+          0.12143273372203112,
+          1.2609322667121887,
+          1.220272108912468
+        ],
+        [
+          0.3499999977648258,
+          0.01217498758342117,
+          0.7644788324832916,
+          0.959820494055748,
+          0.7600570917129517,
+          0.68147062510252,
+          14571.064331054688,
+          0.13990885578095913,
+          1.3080806881189346,
+          1.2710180133581161
+        ],
+        [
+          0.3999999947845936,
+          0.011602151091210544,
+          0.7344443276524544,
+          0.8978645503520966,
+          0.8242744579911232,
+          0.7584491819143295,
+          18532.285888671875,
+          0.15758190862834454,
+          1.361573576927185,
+          1.3270632773637772
+        ],
+        [
+          0.44999999180436134,
+          0.011092085158452392,
+          0.7023866400122643,
+          0.8418722227215767,
+          0.8659012243151665,
+          0.8105709403753281,
+          22528.009521484375,
+          0.17434471659362316,
+          1.423717275261879,
+          1.3904107809066772
+        ],
+        [
+          0.4999999888241291,
+          0.010628531221300364,
+          0.6679291501641273,
+          0.7904447019100189,
+          0.8908327296376228,
+          0.8429313153028488,
+          26575.005126953125,
+          0.19009320437908173,
+          1.4971647709608078,
+          1.463231086730957
+        ],
+        [
+          0.5499999821186066,
+          0.010205135680735111,
+          0.6307445392012596,
+          0.7426619157195091,
+          0.903206542134285,
+          0.8595128953456879,
+          30696.881103515625,
+          0.204726817086339,
+          1.5854279100894928,
+          1.5482207387685776
+        ],
+        [
+          0.5999999791383743,
+          0.009820144274272025,
+          0.5904418230056763,
+          0.6977752819657326,
+          0.9060344472527504,
+          0.8633639737963676,
+          34929.0615234375,
+          0.21814897656440735,
+          1.69364695250988,
+          1.6490624696016312
+        ],
+        [
+          0.6499999761581421,
+          0.009485199465416372,
+          0.5474030077457428,
+          0.6559249609708786,
+          0.903451181948185,
+          0.8584777116775513,
+          39304.73486328125,
+          0.230267571285367,
+          1.8268076330423355,
+          1.7682484835386276
+        ],
+        [
+          0.6999999731779099,
+          0.009191700024530292,
+          0.49976712092757225,
+          0.6152284517884254,
+          0.8950768858194351,
+          0.8442219346761703,
+          43934.73095703125,
+          0.2409954071044922,
+          2.0009319484233856,
+          1.9161108136177063
+        ],
+        [
+          0.7499999701976776,
+          0.00893926399294287,
+          0.44209735468029976,
+          0.5719485580921173,
+          0.8784378841519356,
+          0.8161576613783836,
+          49145.55859375,
+          0.25025080144405365,
+          2.261945217847824,
+          2.1204975247383118
+        ],
+        [
+          0.791363425552845,
+          0.008810599334537983,
+          0.34602175280451775,
+          0.5100515186786652,
+          0.8387285992503166,
+          0.744445338845253,
+          56367.51416015625,
+          0.2567404918372631,
+          2.8899917006492615,
+          2.520851790904999
+        ],
+        [
+          0.791363425552845,
+          0.008846476208418608,
+          0.32416245713829994,
+          0.4972503334283829,
+          0.8271837458014488,
+          0.7232535928487778,
+          57618.85107421875,
+          0.2567404918372631,
+          3.0848729610443115,
+          2.6205932796001434
+        ],
+        [
+          0.791363425552845,
+          0.008914072765037417,
+          0.30233410745859146,
+          0.4848192632198334,
+          0.8145739287137985,
+          0.7011358961462975,
+          58757.94873046875,
+          0.2567404918372631,
+          3.3075990080833435,
+          2.726605713367462
+        ],
+        [
+          0.791363425552845,
+          0.009015837800689042,
+          0.280802957713604,
+          0.4728507287800312,
+          0.8006671294569969,
+          0.6781979948282242,
+          59749.26025390625,
+          0.2567404918372631,
+          3.561216026544571,
+          2.8388572335243225
+        ],
+        [
+          0.791363425552845,
+          0.009154028142802417,
+          0.2599242627620697,
+          0.46147534996271133,
+          0.7851092740893364,
+          0.6544746458530426,
+          60536.87158203125,
+          0.2567404918372631,
+          3.8472745418548584,
+          2.9566804468631744
+        ],
+        [
+          0.791363425552845,
+          0.009328488376922905,
+          0.24025755748152733,
+          0.4509253576397896,
+          0.7673342078924179,
+          0.6299842596054077,
+          61030.1650390625,
+          0.2567404918372631,
+          4.162199974060059,
+          3.0781478881835938
+        ],
+        [
+          0.791363425552845,
+          0.009529265924356878,
+          0.22289301827549934,
+          0.44170980900526047,
+          0.7463793903589249,
+          0.6049397066235542,
+          61074.81689453125,
+          0.2567404918372631,
+          4.4864572286605835,
+          3.198752850294113
+        ],
+        [
+          0.791363425552845,
+          0.009712556726299226,
+          0.2104475200176239,
+          0.43514441326260567,
+          0.720449410378933,
+          0.5804794877767563,
+          60387.10595703125,
+          0.2567404918372631,
+          4.751778483390808,
+          3.3084279000759125
+        ],
+        [
+          0.791363425552845,
+          0.009756658226251602,
+          0.20921032689511776,
+          0.4344930090010166,
+          0.6856650710105896,
+          0.5594688504934311,
+          58376.02099609375,
+          0.2567404918372631,
+          4.779878735542297,
+          3.3837837278842926
+        ],
+        [
+          0.791363425552845,
+          0.009735511732287705,
+          0.21115766279399395,
+          0.43551839515566826,
+          0.6769468411803246,
+          0.5557267218828201,
+          57712.837890625,
+          0.2567404918372631,
+          4.735797822475433,
+          3.3905619978904724
+        ]
+      ],
+      "conservation": [
+        {
+          "mass_relative_residual": 4.196143582606681e-08,
+          "euler_relative_residual": 4.901761346329958e-07,
+          "thermal_relative_residual": 4.144129784165134e-07
+        },
+        {
+          "mass_relative_residual": 3.143927365445304e-08,
+          "euler_relative_residual": 3.630911614202471e-07,
+          "thermal_relative_residual": 3.4722181238839014e-07
+        },
+        {
+          "mass_relative_residual": 3.271719235224674e-08,
+          "euler_relative_residual": 2.6324278776459374e-07,
+          "thermal_relative_residual": 2.390154762478451e-07
+        },
+        {
+          "mass_relative_residual": 7.341085928668156e-08,
+          "euler_relative_residual": 1.0592575957327765e-07,
+          "thermal_relative_residual": 7.245526922617204e-08
+        },
+        {
+          "mass_relative_residual": 3.764812476475864e-08,
+          "euler_relative_residual": 3.419141293907917e-08,
+          "thermal_relative_residual": 1.2558515693689015e-08
+        },
+        {
+          "mass_relative_residual": 2.5295123370304145e-08,
+          "euler_relative_residual": 7.212650530488604e-08,
+          "thermal_relative_residual": 2.6328704389618832e-08
+        },
+        {
+          "mass_relative_residual": 3.300058900255317e-09,
+          "euler_relative_residual": 1.0885094368708141e-07,
+          "thermal_relative_residual": 9.235061128204933e-08
+        },
+        {
+          "mass_relative_residual": 1.9935788574646536e-08,
+          "euler_relative_residual": 8.206034905708052e-08,
+          "thermal_relative_residual": 8.645080296211344e-08
+        },
+        {
+          "mass_relative_residual": 2.5604630580433017e-08,
+          "euler_relative_residual": 8.813278389949307e-08,
+          "thermal_relative_residual": 7.280708319567421e-08
+        },
+        {
+          "mass_relative_residual": 3.138558896384273e-09,
+          "euler_relative_residual": 6.478728028303816e-08,
+          "thermal_relative_residual": 7.526706324787313e-08
+        },
+        {
+          "mass_relative_residual": 3.4217619828571484e-08,
+          "euler_relative_residual": 6.721128495951613e-09,
+          "thermal_relative_residual": 8.860362386313615e-11
+        },
+        {
+          "mass_relative_residual": 7.198356010287636e-08,
+          "euler_relative_residual": 1.35774424997344e-08,
+          "thermal_relative_residual": 2.3801459184646423e-08
+        },
+        {
+          "mass_relative_residual": 2.850466043735656e-08,
+          "euler_relative_residual": 2.0071656756512762e-08,
+          "thermal_relative_residual": 2.7952111360912298e-08
+        },
+        {
+          "mass_relative_residual": 9.917183817121719e-08,
+          "euler_relative_residual": 1.3572511276291301e-08,
+          "thermal_relative_residual": 7.681605933873914e-09
+        },
+        {
+          "mass_relative_residual": 5.52311739578072e-08,
+          "euler_relative_residual": 4.038096025718654e-08,
+          "thermal_relative_residual": 4.262113563795788e-08
+        },
+        {
+          "mass_relative_residual": 6.884739127540706e-08,
+          "euler_relative_residual": 1.4709210832412967e-09,
+          "thermal_relative_residual": 2.9798561256479025e-09
+        },
+        {
+          "mass_relative_residual": 8.773228555885715e-08,
+          "euler_relative_residual": 6.8904774662070176e-09,
+          "thermal_relative_residual": 1.934888912051845e-08
+        },
+        {
+          "mass_relative_residual": 1.0867065849968194e-07,
+          "euler_relative_residual": 4.564829966538246e-09,
+          "thermal_relative_residual": 4.2810089048760725e-09
+        },
+        {
+          "mass_relative_residual": 6.218854627542857e-08,
+          "euler_relative_residual": 3.653396728628108e-08,
+          "thermal_relative_residual": 2.994334484966388e-08
+        },
+        {
+          "mass_relative_residual": 1.3126690847613825e-07,
+          "euler_relative_residual": 1.195793628500397e-08,
+          "thermal_relative_residual": 3.385424474583555e-09
+        }
+      ]
+    }
+  },
+  "checks": [
+    {
+      "name": "compressor-native32 completion and finite diagnostics",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "compressor-native32 physical ranges",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "compressor-native32 mass/energy/loss consistency",
+      "pass": true,
+      "detail": "Mass bound follows original 0.001 density iteration tolerance; energy5e-6, loss2e-6. Not experimental accuracy limits."
+    },
+    {
+      "name": "turbine-native32 completion and finite diagnostics",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "turbine-native32 conservation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "turbine-native32 physical ranges and output counts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "compressor-compat27 completion and finite diagnostics",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "compressor-compat27 physical ranges",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "compressor-compat27 mass/energy/loss consistency",
+      "pass": true,
+      "detail": "Mass bound follows original 0.001 density iteration tolerance; energy5e-6, loss2e-6. Not experimental accuracy limits."
+    },
+    {
+      "name": "turbine-compat27 completion and finite diagnostics",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "turbine-compat27 conservation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "turbine-compat27 physical ranges and output counts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "turbine historical completion",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "turbine historical physical ranges and output counts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "turbine historical independent conservation",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "input_changes": {
+    "compressor": {
+      "POP_Pa": 120000,
+      "TOP_K": 305,
+      "N_rpm": 68000,
+      "MUO_Pa_s": 1.872e-05,
+      "AR": 3.2,
+      "VOVCR": [
+        0.4,
+        0.68
+      ]
+    },
+    "turbine": {
+      "P0_Pa": 200000,
+      "T0_K": 1000,
+      "U3_m_s": 225,
+      "XK": 0.3,
+      "PD": 0.985,
+      "MODE": [
+        0,
+        1
+      ],
+      "note": "Forward prediction with specified coefficients; not a successful inverse design or experiment."
+    }
+  },
+  "production_identity": {
+    "restored/compressor_tn_d7487.f": "dc2a7564c29bf75c4c0b98e9b18885d06468d4cfa56b784d32cd59e4b7360f01",
+    "restored/turbine_tn_d8063.f": "80bd0b4604e726fb44614d720a08ddc6db8cf0a11605f53b7801234da8d98fed",
+    "turbine_tn_d8063.f": "de5bb490d8ac5a2be99b20d82f09c4a57484f46d0d3db8476363148507821293",
+    "restored/tools/generate_compat27.py": "1702d585f8fae57989ab453c8bc4ed8a52d8095ca2fa1c56240841300f5b7eb5"
+  },
+  "pass": true
+}

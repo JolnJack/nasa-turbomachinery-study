@@ -1,0 +1,12 @@
+gfortran -std=legacy -fno-automatic -fcheck=all -fbacktrace -ffpe-trap=invalid,zero,overflow -fdefault-real-8 -fdefault-double-8 compressor_tn_d7487.f read_namelist_cards.f90 -o build/modern64/compressor_tn_d7487 >build/logs/compressor_tn_d7487-modern64.txt 2>&1
+gfortran -std=legacy -fno-automatic -fcheck=all -fbacktrace -ffpe-trap=invalid,zero,overflow -fdefault-real-8 -fdefault-double-8 turbine_tn_d8063.f read_namelist_cards.f90 -o build/modern64/turbine_tn_d8063 >build/logs/turbine_tn_d8063-modern64.txt 2>&1
+python3 tests/check_design_interface.py
+{'name': 'native32-SI-total', 'pass': True, 'status': 'matched', 'errors': [8.855042943345381e-08, 1.7119000000009876e-05, 1.535057471269141e-05]}
+{'name': 'native32-SI-static', 'pass': True, 'status': 'matched', 'errors': [1.7710085886690763e-07, 1.1100000000263677e-06, 2.524000289771955e-06]}
+{'name': 'native32-US-total', 'pass': True, 'status': 'matched', 'errors': [3.4951762528656616e-07, 4.125000000021473e-06, 3.4195402298653477e-06]}
+{'name': 'native32-over-capacity', 'pass': True, 'status': 'stator-capacity-boundary-or-exceeded', 'errors': None}
+{'name': 'compat27-SI-total', 'pass': True, 'status': 'matched', 'errors': [5.345927389655003e-08, 9.243667125735655e-06, 8.851974860002443e-06]}
+{'name': 'compat27-SI-static', 'pass': True, 'status': 'matched', 'errors': [5.345927389655003e-08, 7.279753684974466e-06, 5.160756566535696e-07]}
+{'name': 'compat27-US-total', 'pass': True, 'status': 'matched', 'errors': [5.9103705929430816e-08, 1.2422621250118837e-05, 8.190500324634087e-07]}
+{'name': 'compat27-over-capacity', 'pass': True, 'status': 'stator-capacity-boundary-or-exceeded', 'errors': None}
+RESULTS /Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/design-interface-20261023T155951565846Z

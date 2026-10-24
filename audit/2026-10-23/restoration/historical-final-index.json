@@ -1,0 +1,18 @@
+{
+  "created_utc": "2026-10-23T11:55:17.669417+00:00",
+  "formula_first": {
+    "command": "make -C restored test-historical run-historical",
+    "exit": 0,
+    "results": "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/historical-check-20261023T115333837981Z/results.json",
+    "example_output": "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/historical7094/turbine-20261023T115338586137Z/computed-output.txt"
+  },
+  "strict_raw": {
+    "command": "python3 restored/tests/check_historical.py --strict-raw",
+    "exit": 1,
+    "results": "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/historical-check-20261023T115429970630Z/results.json",
+    "reason": "unchanged Table V ETAT=0.90378 conflicts with formula and computed 0.90078"
+  },
+  "modern_numerical_source_changed": false,
+  "modern_reference_result_preserved": "audit/2026-10-23/restoration/reference-20261023T110013961758Z/comparison.json",
+  "original_integrity": "14 originals and 14 baseline copies pass"
+}

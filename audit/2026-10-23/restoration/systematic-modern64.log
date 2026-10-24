@@ -1,0 +1,38 @@
+RESULTS /Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/systematic-20261023T155236137670Z
+PLANNED 1664 remaining 1664
+COMPLETED 100
+COMPLETED 200
+COMPLETED 300
+COMPLETED 400
+COMPLETED 500
+COMPLETED 600
+COMPLETED 700
+COMPLETED 800
+COMPLETED 900
+COMPLETED 1000
+COMPLETED 1100
+COMPLETED 1200
+COMPLETED 1300
+COMPLETED 1400
+COMPLETED 1500
+COMPLETED 1600
+{
+  "planned_runs": 1664,
+  "completed_runs": 1664,
+  "categories": {
+    "compressor/modern64": {
+      "explicit-rejection": 80,
+      "no-performance-output": 379,
+      "consistent-performance": 870
+    },
+    "turbine/modern64": {
+      "consistent-performance": 250,
+      "explicit-rejection": 85
+    }
+  },
+  "timeout_s": 2,
+  "models": [
+    "modern64"
+  ],
+  "notes": "Full declared finite grid, not proof of an infinite continuous domain. All classifications retained; non-performance/rejection is not performance success."
+}

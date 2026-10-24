@@ -1,0 +1,2262 @@
+{
+  "scope": "Printed numeric values only, not bitwise arithmetic identity or full functional certification",
+  "compressor_checked": {
+    "100": {
+      "expected_rows": 12,
+      "actual_rows": 12,
+      "exact_rows": 12,
+      "exact_numeric_cells": 36,
+      "missing_rows": 0,
+      "mismatches": []
+    },
+    "90": {
+      "expected_rows": 12,
+      "actual_rows": 12,
+      "exact_rows": 12,
+      "exact_numeric_cells": 36,
+      "missing_rows": 0,
+      "mismatches": []
+    },
+    "80": {
+      "expected_rows": 9,
+      "actual_rows": 9,
+      "exact_rows": 9,
+      "exact_numeric_cells": 27,
+      "missing_rows": 0,
+      "mismatches": []
+    },
+    "60": {
+      "expected_rows": 9,
+      "actual_rows": 0,
+      "exact_rows": 0,
+      "exact_numeric_cells": 0,
+      "missing_rows": 9,
+      "mismatches": []
+    }
+  },
+  "compressor_existing_output": {
+    "100": {
+      "expected_rows": 12,
+      "actual_rows": 12,
+      "exact_rows": 12,
+      "exact_numeric_cells": 36,
+      "missing_rows": 0,
+      "mismatches": []
+    },
+    "90": {
+      "expected_rows": 12,
+      "actual_rows": 12,
+      "exact_rows": 12,
+      "exact_numeric_cells": 36,
+      "missing_rows": 0,
+      "mismatches": []
+    },
+    "80": {
+      "expected_rows": 9,
+      "actual_rows": 9,
+      "exact_rows": 9,
+      "exact_numeric_cells": 27,
+      "missing_rows": 0,
+      "mismatches": []
+    },
+    "60": {
+      "expected_rows": 9,
+      "actual_rows": 9,
+      "exact_rows": 8,
+      "exact_numeric_cells": 25,
+      "missing_rows": 0,
+      "mismatches": [
+        {
+          "row": 3,
+          "column": "pressure_ratio",
+          "reference": 2.198,
+          "actual": 2.209,
+          "difference": 0.01100000000000012
+        },
+        {
+          "row": 3,
+          "column": "ETAT",
+          "reference": 0.777,
+          "actual": 0.783,
+          "difference": 0.006000000000000005
+        }
+      ]
+    }
+  },
+  "turbine_table_v": {
+    "turbine-mode-1": {
+      "expected_rows": 20,
+      "actual_rows": 10,
+      "exact_rows": 0,
+      "exact_numeric_cells": 22,
+      "missing_rows": 10,
+      "mismatches": [
+        {
+          "row": 1,
+          "column": "NS",
+          "reference": 0.012937,
+          "actual": 0.012936,
+          "difference": -1.000000000001e-06
+        },
+        {
+          "row": 1,
+          "column": "EQ-P5/P0",
+          "reference": 0.79806,
+          "actual": 0.79805,
+          "difference": -9.99999999995449e-06
+        },
+        {
+          "row": 1,
+          "column": "NU",
+          "reference": 1.03221,
+          "actual": 1.0322,
+          "difference": -1.0000000000065512e-05
+        },
+        {
+          "row": 1,
+          "column": "ETAT",
+          "reference": 0.68226,
+          "actual": 0.6822,
+          "difference": -5.999999999994898e-05
+        },
+        {
+          "row": 1,
+          "column": "ETAS",
+          "reference": 0.5886,
+          "actual": 0.58856,
+          "difference": -4.0000000000040004e-05
+        },
+        {
+          "row": 1,
+          "column": "DHTCR",
+          "reference": 10634.9,
+          "actual": 10635.0,
+          "difference": 0.1000000000003638
+        },
+        {
+          "row": 1,
+          "column": "EQ-P0/P5",
+          "reference": 1.25303,
+          "actual": 1.2531,
+          "difference": 7.00000000000145e-05
+        },
+        {
+          "row": 1,
+          "column": "EQ-P0/P5total",
+          "reference": 1.21377,
+          "actual": 1.2138,
+          "difference": 2.999999999997449e-05
+        },
+        {
+          "row": 2,
+          "column": "NS",
+          "reference": 0.012228,
+          "actual": 0.012227,
+          "difference": -9.999999999992654e-07
+        },
+        {
+          "row": 2,
+          "column": "EQ-P5/P0",
+          "reference": 0.76957,
+          "actual": 0.76956,
+          "difference": -9.99999999995449e-06
+        },
+        {
+          "row": 2,
+          "column": "NU",
+          "reference": 0.96036,
+          "actual": 0.96034,
+          "difference": -2.0000000000020002e-05
+        },
+        {
+          "row": 2,
+          "column": "ETAT",
+          "reference": 0.77581,
+          "actual": 0.77576,
+          "difference": -4.999999999999449e-05
+        },
+        {
+          "row": 2,
+          "column": "ETAS",
+          "reference": 0.69588,
+          "actual": 0.69584,
+          "difference": -4.0000000000040004e-05
+        },
+        {
+          "row": 2,
+          "column": "DHTCR",
+          "reference": 14524.7,
+          "actual": 14525.0,
+          "difference": 0.2999999999992724
+        },
+        {
+          "row": 2,
+          "column": "EQ-P0/P5",
+          "reference": 1.29942,
+          "actual": 1.2994,
+          "difference": -1.999999999990898e-05
+        },
+        {
+          "row": 2,
+          "column": "EQ-P0/P5total",
+          "reference": 1.26365,
+          "actual": 1.2637,
+          "difference": 5.0000000000105516e-05
+        },
+        {
+          "row": 3,
+          "column": "EQ-P5/P0",
+          "reference": 0.73962,
+          "actual": 0.73961,
+          "difference": -1.0000000000065512e-05
+        },
+        {
+          "row": 3,
+          "column": "NU",
+          "reference": 0.89744,
+          "actual": 0.89741,
+          "difference": -2.999999999997449e-05
+        },
+        {
+          "row": 3,
+          "column": "ETAT",
+          "reference": 0.83787,
+          "actual": 0.83782,
+          "difference": -4.999999999999449e-05
+        },
+        {
+          "row": 3,
+          "column": "ETAS",
+          "reference": 0.77129,
+          "actual": 0.77125,
+          "difference": -4.0000000000040004e-05
+        },
+        {
+          "row": 3,
+          "column": "DHTCR",
+          "reference": 18435.5,
+          "actual": 18436.0,
+          "difference": 0.5
+        },
+        {
+          "row": 3,
+          "column": "WTHODE",
+          "reference": 0.15804,
+          "actual": 0.15803,
+          "difference": -1.0000000000010001e-05
+        },
+        {
+          "row": 3,
+          "column": "EQ-P0/P5",
+          "reference": 1.35205,
+          "actual": 1.3521,
+          "difference": 5.0000000000105516e-05
+        },
+        {
+          "row": 3,
+          "column": "EQ-P0/P5total",
+          "reference": 1.31874,
+          "actual": 1.3188,
+          "difference": 5.999999999994898e-05
+        },
+        {
+          "row": 4,
+          "column": "EQ-P5/P0",
+          "reference": 0.70763,
+          "actual": 0.70762,
+          "difference": -9.99999999995449e-06
+        },
+        {
+          "row": 4,
+          "column": "NU",
+          "reference": 0.84072,
+          "actual": 0.8407,
+          "difference": -2.0000000000020002e-05
+        },
+        {
+          "row": 4,
+          "column": "ETAT",
+          "reference": 0.8775,
+          "actual": 0.87746,
+          "difference": -3.999999999992898e-05
+        },
+        {
+          "row": 4,
+          "column": "ETAS",
+          "reference": 0.82169,
+          "actual": 0.82166,
+          "difference": -3.0000000000085514e-05
+        },
+        {
+          "row": 4,
+          "column": "DHTCR",
+          "reference": 22379.6,
+          "actual": 22380.0,
+          "difference": 0.4000000000014552
+        },
+        {
+          "row": 4,
+          "column": "EQ-P0/P5",
+          "reference": 1.41317,
+          "actual": 1.4132,
+          "difference": 2.999999999997449e-05
+        },
+        {
+          "row": 4,
+          "column": "EQ-P0/P5total",
+          "reference": 1.38098,
+          "actual": 1.381,
+          "difference": 1.999999999990898e-05
+        },
+        {
+          "row": 5,
+          "column": "NS",
+          "reference": 0.01063,
+          "actual": 0.010629,
+          "difference": -1.000000000001e-06
+        },
+        {
+          "row": 5,
+          "column": "EQ-P5/P0",
+          "reference": 0.67325,
+          "actual": 0.67324,
+          "difference": -1.0000000000065512e-05
+        },
+        {
+          "row": 5,
+          "column": "NU",
+          "reference": 0.78877,
+          "actual": 0.78875,
+          "difference": -2.0000000000020002e-05
+        },
+        {
+          "row": 5,
+          "column": "ETAT",
+          "reference": 0.90064,
+          "actual": 0.9006,
+          "difference": -4.0000000000040004e-05
+        },
+        {
+          "row": 5,
+          "column": "ETAS",
+          "reference": 0.85235,
+          "actual": 0.85231,
+          "difference": -4.0000000000040004e-05
+        },
+        {
+          "row": 5,
+          "column": "EQ-P0/P5",
+          "reference": 1.48533,
+          "actual": 1.4854,
+          "difference": 7.00000000000145e-05
+        },
+        {
+          "row": 5,
+          "column": "EQ-P0/P5total",
+          "reference": 1.45245,
+          "actual": 1.4525,
+          "difference": 4.999999999988347e-05
+        },
+        {
+          "row": 6,
+          "column": "EQ-P5/P0",
+          "reference": 0.63616,
+          "actual": 0.63615,
+          "difference": -9.99999999995449e-06
+        },
+        {
+          "row": 6,
+          "column": "NU",
+          "reference": 0.74065,
+          "actual": 0.74063,
+          "difference": -2.0000000000020002e-05
+        },
+        {
+          "row": 6,
+          "column": "ETAT",
+          "reference": 0.91145,
+          "actual": 0.9114,
+          "difference": -4.999999999999449e-05
+        },
+        {
+          "row": 6,
+          "column": "ETAS",
+          "reference": 0.86735,
+          "actual": 0.86731,
+          "difference": -3.999999999992898e-05
+        },
+        {
+          "row": 6,
+          "column": "DHTCR",
+          "reference": 30438.1,
+          "actual": 30438.0,
+          "difference": -0.09999999999854481
+        },
+        {
+          "row": 6,
+          "column": "WTHODE",
+          "reference": 0.20532,
+          "actual": 0.20531,
+          "difference": -1.0000000000010001e-05
+        },
+        {
+          "row": 6,
+          "column": "EQ-P0/P5",
+          "reference": 1.57192,
+          "actual": 1.572,
+          "difference": 8.000000000008001e-05
+        },
+        {
+          "row": 6,
+          "column": "EQ-P0/P5total",
+          "reference": 1.53575,
+          "actual": 1.5358,
+          "difference": 5.0000000000105516e-05
+        },
+        {
+          "row": 7,
+          "column": "NS",
+          "reference": 0.0098037,
+          "actual": 0.0098034,
+          "difference": -2.999999999999531e-07
+        },
+        {
+          "row": 7,
+          "column": "EQ-P5/P0",
+          "reference": 0.59608,
+          "actual": 0.59606,
+          "difference": -2.0000000000020002e-05
+        },
+        {
+          "row": 7,
+          "column": "NU",
+          "reference": 0.69565,
+          "actual": 0.69563,
+          "difference": -2.0000000000020002e-05
+        },
+        {
+          "row": 7,
+          "column": "ETAT",
+          "reference": 0.91311,
+          "actual": 0.91307,
+          "difference": -3.999999999992898e-05
+        },
+        {
+          "row": 7,
+          "column": "ETAS",
+          "reference": 0.86996,
+          "actual": 0.86992,
+          "difference": -3.999999999992898e-05
+        },
+        {
+          "row": 7,
+          "column": "DHTCR",
+          "reference": 34606.9,
+          "actual": 34607.0,
+          "difference": 0.09999999999854481
+        },
+        {
+          "row": 7,
+          "column": "EQ-P0/P5",
+          "reference": 1.67762,
+          "actual": 1.6777,
+          "difference": 8.000000000008001e-05
+        },
+        {
+          "row": 7,
+          "column": "EQ-P0/P5total",
+          "reference": 1.63416,
+          "actual": 1.6342,
+          "difference": 4.0000000000040004e-05
+        },
+        {
+          "row": 8,
+          "column": "NS",
+          "reference": 0.009464,
+          "actual": 0.0094637,
+          "difference": -2.999999999999531e-07
+        },
+        {
+          "row": 8,
+          "column": "EQ-P5/P0",
+          "reference": 0.55348,
+          "actual": 0.55346,
+          "difference": -2.0000000000020002e-05
+        },
+        {
+          "row": 8,
+          "column": "NU",
+          "reference": 0.65396,
+          "actual": 0.65394,
+          "difference": -2.0000000000020002e-05
+        },
+        {
+          "row": 8,
+          "column": "ETAT",
+          "reference": 0.90984,
+          "actual": 0.9098,
+          "difference": -3.999999999992898e-05
+        },
+        {
+          "row": 8,
+          "column": "ETAS",
+          "reference": 0.86434,
+          "actual": 0.8643,
+          "difference": -4.0000000000040004e-05
+        },
+        {
+          "row": 8,
+          "column": "DHTCR",
+          "reference": 38907.1,
+          "actual": 38908.0,
+          "difference": 0.9000000000014552
+        },
+        {
+          "row": 8,
+          "column": "EQ-P0/P5",
+          "reference": 1.80673,
+          "actual": 1.8068,
+          "difference": 7.00000000000145e-05
+        },
+        {
+          "row": 8,
+          "column": "EQ-P0/P5total",
+          "reference": 1.74969,
+          "actual": 1.7498,
+          "difference": 0.0001100000000000545
+        },
+        {
+          "row": 9,
+          "column": "NS",
+          "reference": 0.0091646,
+          "actual": 0.0091643,
+          "difference": -2.999999999999531e-07
+        },
+        {
+          "row": 9,
+          "column": "EQ-P5/P0",
+          "reference": 0.50642,
+          "actual": 0.50639,
+          "difference": -2.999999999997449e-05
+        },
+        {
+          "row": 9,
+          "column": "NU",
+          "reference": 0.61352,
+          "actual": 0.6135,
+          "difference": -1.999999999990898e-05
+        },
+        {
+          "row": 9,
+          "column": "ETAT",
+          "reference": 0.90378,
+          "actual": 0.90073,
+          "difference": -0.003049999999999997
+        },
+        {
+          "row": 9,
+          "column": "ETAS",
+          "reference": 0.84947,
+          "actual": 0.84942,
+          "difference": -4.999999999999449e-05
+        },
+        {
+          "row": 9,
+          "column": "DHTCR",
+          "reference": 43444.3,
+          "actual": 43445.0,
+          "difference": 0.6999999999970896
+        },
+        {
+          "row": 9,
+          "column": "EQ-P0/P5",
+          "reference": 1.97464,
+          "actual": 1.9747,
+          "difference": 5.999999999994898e-05
+        },
+        {
+          "row": 9,
+          "column": "EQ-P0/P5total",
+          "reference": 1.89244,
+          "actual": 1.8925,
+          "difference": 6.000000000017103e-05
+        },
+        {
+          "row": 10,
+          "column": "NS",
+          "reference": 0.0089057,
+          "actual": 0.0089054,
+          "difference": -2.999999999999531e-07
+        },
+        {
+          "row": 10,
+          "column": "EQ-P5/P0",
+          "reference": 0.4503,
+          "actual": 0.45025,
+          "difference": -4.999999999999449e-05
+        },
+        {
+          "row": 10,
+          "column": "NU",
+          "reference": 0.57117,
+          "actual": 0.57114,
+          "difference": -2.999999999997449e-05
+        },
+        {
+          "row": 10,
+          "column": "ETAT",
+          "reference": 0.88408,
+          "actual": 0.88402,
+          "difference": -5.999999999994898e-05
+        },
+        {
+          "row": 10,
+          "column": "ETAS",
+          "reference": 0.82184,
+          "actual": 0.82178,
+          "difference": -6.0000000000060005e-05
+        },
+        {
+          "row": 10,
+          "column": "DHTCR",
+          "reference": 48495.8,
+          "actual": 48497.0,
+          "difference": 1.1999999999970896
+        },
+        {
+          "row": 10,
+          "column": "EQ-P0/P5",
+          "reference": 2.22075,
+          "actual": 2.221,
+          "difference": 0.00025000000000030553
+        },
+        {
+          "row": 10,
+          "column": "EQ-P0/P5total",
+          "reference": 2.08615,
+          "actual": 2.0863,
+          "difference": 0.0001500000000000945
+        }
+      ]
+    },
+    "turbine-short-extended-limit": {
+      "expected_rows": 20,
+      "actual_rows": 20,
+      "exact_rows": 0,
+      "exact_numeric_cells": 32,
+      "missing_rows": 0,
+      "mismatches": [
+        {
+          "row": 1,
+          "column": "NS",
+          "reference": 0.012937,
+          "actual": 0.012936,
+          "difference": -1.000000000001e-06
+        },
+        {
+          "row": 1,
+          "column": "EQ-P5/P0",
+          "reference": 0.79806,
+          "actual": 0.79805,
+          "difference": -9.99999999995449e-06
+        },
+        {
+          "row": 1,
+          "column": "NU",
+          "reference": 1.03221,
+          "actual": 1.0322,
+          "difference": -1.0000000000065512e-05
+        },
+        {
+          "row": 1,
+          "column": "ETAT",
+          "reference": 0.68226,
+          "actual": 0.6822,
+          "difference": -5.999999999994898e-05
+        },
+        {
+          "row": 1,
+          "column": "ETAS",
+          "reference": 0.5886,
+          "actual": 0.58856,
+          "difference": -4.0000000000040004e-05
+        },
+        {
+          "row": 1,
+          "column": "DHTCR",
+          "reference": 10634.9,
+          "actual": 10635.0,
+          "difference": 0.1000000000003638
+        },
+        {
+          "row": 1,
+          "column": "EQ-P0/P5",
+          "reference": 1.25303,
+          "actual": 1.2531,
+          "difference": 7.00000000000145e-05
+        },
+        {
+          "row": 1,
+          "column": "EQ-P0/P5total",
+          "reference": 1.21377,
+          "actual": 1.2138,
+          "difference": 2.999999999997449e-05
+        },
+        {
+          "row": 2,
+          "column": "NS",
+          "reference": 0.012228,
+          "actual": 0.012227,
+          "difference": -9.999999999992654e-07
+        },
+        {
+          "row": 2,
+          "column": "EQ-P5/P0",
+          "reference": 0.76957,
+          "actual": 0.76956,
+          "difference": -9.99999999995449e-06
+        },
+        {
+          "row": 2,
+          "column": "NU",
+          "reference": 0.96036,
+          "actual": 0.96034,
+          "difference": -2.0000000000020002e-05
+        },
+        {
+          "row": 2,
+          "column": "ETAT",
+          "reference": 0.77581,
+          "actual": 0.77576,
+          "difference": -4.999999999999449e-05
+        },
+        {
+          "row": 2,
+          "column": "ETAS",
+          "reference": 0.69588,
+          "actual": 0.69584,
+          "difference": -4.0000000000040004e-05
+        },
+        {
+          "row": 2,
+          "column": "DHTCR",
+          "reference": 14524.7,
+          "actual": 14525.0,
+          "difference": 0.2999999999992724
+        },
+        {
+          "row": 2,
+          "column": "EQ-P0/P5",
+          "reference": 1.29942,
+          "actual": 1.2994,
+          "difference": -1.999999999990898e-05
+        },
+        {
+          "row": 2,
+          "column": "EQ-P0/P5total",
+          "reference": 1.26365,
+          "actual": 1.2637,
+          "difference": 5.0000000000105516e-05
+        },
+        {
+          "row": 3,
+          "column": "EQ-P5/P0",
+          "reference": 0.73962,
+          "actual": 0.73961,
+          "difference": -1.0000000000065512e-05
+        },
+        {
+          "row": 3,
+          "column": "NU",
+          "reference": 0.89744,
+          "actual": 0.89741,
+          "difference": -2.999999999997449e-05
+        },
+        {
+          "row": 3,
+          "column": "ETAT",
+          "reference": 0.83787,
+          "actual": 0.83782,
+          "difference": -4.999999999999449e-05
+        },
+        {
+          "row": 3,
+          "column": "ETAS",
+          "reference": 0.77129,
+          "actual": 0.77125,
+          "difference": -4.0000000000040004e-05
+        },
+        {
+          "row": 3,
+          "column": "DHTCR",
+          "reference": 18435.5,
+          "actual": 18436.0,
+          "difference": 0.5
+        },
+        {
+          "row": 3,
+          "column": "WTHODE",
+          "reference": 0.15804,
+          "actual": 0.15803,
+          "difference": -1.0000000000010001e-05
+        },
+        {
+          "row": 3,
+          "column": "EQ-P0/P5",
+          "reference": 1.35205,
+          "actual": 1.3521,
+          "difference": 5.0000000000105516e-05
+        },
+        {
+          "row": 3,
+          "column": "EQ-P0/P5total",
+          "reference": 1.31874,
+          "actual": 1.3188,
+          "difference": 5.999999999994898e-05
+        },
+        {
+          "row": 4,
+          "column": "EQ-P5/P0",
+          "reference": 0.70763,
+          "actual": 0.70762,
+          "difference": -9.99999999995449e-06
+        },
+        {
+          "row": 4,
+          "column": "NU",
+          "reference": 0.84072,
+          "actual": 0.8407,
+          "difference": -2.0000000000020002e-05
+        },
+        {
+          "row": 4,
+          "column": "ETAT",
+          "reference": 0.8775,
+          "actual": 0.87746,
+          "difference": -3.999999999992898e-05
+        },
+        {
+          "row": 4,
+          "column": "ETAS",
+          "reference": 0.82169,
+          "actual": 0.82166,
+          "difference": -3.0000000000085514e-05
+        },
+        {
+          "row": 4,
+          "column": "DHTCR",
+          "reference": 22379.6,
+          "actual": 22380.0,
+          "difference": 0.4000000000014552
+        },
+        {
+          "row": 4,
+          "column": "EQ-P0/P5",
+          "reference": 1.41317,
+          "actual": 1.4132,
+          "difference": 2.999999999997449e-05
+        },
+        {
+          "row": 4,
+          "column": "EQ-P0/P5total",
+          "reference": 1.38098,
+          "actual": 1.381,
+          "difference": 1.999999999990898e-05
+        },
+        {
+          "row": 5,
+          "column": "NS",
+          "reference": 0.01063,
+          "actual": 0.010629,
+          "difference": -1.000000000001e-06
+        },
+        {
+          "row": 5,
+          "column": "EQ-P5/P0",
+          "reference": 0.67325,
+          "actual": 0.67324,
+          "difference": -1.0000000000065512e-05
+        },
+        {
+          "row": 5,
+          "column": "NU",
+          "reference": 0.78877,
+          "actual": 0.78875,
+          "difference": -2.0000000000020002e-05
+        },
+        {
+          "row": 5,
+          "column": "ETAT",
+          "reference": 0.90064,
+          "actual": 0.9006,
+          "difference": -4.0000000000040004e-05
+        },
+        {
+          "row": 5,
+          "column": "ETAS",
+          "reference": 0.85235,
+          "actual": 0.85231,
+          "difference": -4.0000000000040004e-05
+        },
+        {
+          "row": 5,
+          "column": "EQ-P0/P5",
+          "reference": 1.48533,
+          "actual": 1.4854,
+          "difference": 7.00000000000145e-05
+        },
+        {
+          "row": 5,
+          "column": "EQ-P0/P5total",
+          "reference": 1.45245,
+          "actual": 1.4525,
+          "difference": 4.999999999988347e-05
+        },
+        {
+          "row": 6,
+          "column": "EQ-P5/P0",
+          "reference": 0.63616,
+          "actual": 0.63615,
+          "difference": -9.99999999995449e-06
+        },
+        {
+          "row": 6,
+          "column": "NU",
+          "reference": 0.74065,
+          "actual": 0.74063,
+          "difference": -2.0000000000020002e-05
+        },
+        {
+          "row": 6,
+          "column": "ETAT",
+          "reference": 0.91145,
+          "actual": 0.9114,
+          "difference": -4.999999999999449e-05
+        },
+        {
+          "row": 6,
+          "column": "ETAS",
+          "reference": 0.86735,
+          "actual": 0.86731,
+          "difference": -3.999999999992898e-05
+        },
+        {
+          "row": 6,
+          "column": "DHTCR",
+          "reference": 30438.1,
+          "actual": 30438.0,
+          "difference": -0.09999999999854481
+        },
+        {
+          "row": 6,
+          "column": "WTHODE",
+          "reference": 0.20532,
+          "actual": 0.20531,
+          "difference": -1.0000000000010001e-05
+        },
+        {
+          "row": 6,
+          "column": "EQ-P0/P5",
+          "reference": 1.57192,
+          "actual": 1.572,
+          "difference": 8.000000000008001e-05
+        },
+        {
+          "row": 6,
+          "column": "EQ-P0/P5total",
+          "reference": 1.53575,
+          "actual": 1.5358,
+          "difference": 5.0000000000105516e-05
+        },
+        {
+          "row": 7,
+          "column": "NS",
+          "reference": 0.0098037,
+          "actual": 0.0098034,
+          "difference": -2.999999999999531e-07
+        },
+        {
+          "row": 7,
+          "column": "EQ-P5/P0",
+          "reference": 0.59608,
+          "actual": 0.59606,
+          "difference": -2.0000000000020002e-05
+        },
+        {
+          "row": 7,
+          "column": "NU",
+          "reference": 0.69565,
+          "actual": 0.69563,
+          "difference": -2.0000000000020002e-05
+        },
+        {
+          "row": 7,
+          "column": "ETAT",
+          "reference": 0.91311,
+          "actual": 0.91307,
+          "difference": -3.999999999992898e-05
+        },
+        {
+          "row": 7,
+          "column": "ETAS",
+          "reference": 0.86996,
+          "actual": 0.86992,
+          "difference": -3.999999999992898e-05
+        },
+        {
+          "row": 7,
+          "column": "DHTCR",
+          "reference": 34606.9,
+          "actual": 34607.0,
+          "difference": 0.09999999999854481
+        },
+        {
+          "row": 7,
+          "column": "EQ-P0/P5",
+          "reference": 1.67762,
+          "actual": 1.6777,
+          "difference": 8.000000000008001e-05
+        },
+        {
+          "row": 7,
+          "column": "EQ-P0/P5total",
+          "reference": 1.63416,
+          "actual": 1.6342,
+          "difference": 4.0000000000040004e-05
+        },
+        {
+          "row": 8,
+          "column": "NS",
+          "reference": 0.009464,
+          "actual": 0.0094637,
+          "difference": -2.999999999999531e-07
+        },
+        {
+          "row": 8,
+          "column": "EQ-P5/P0",
+          "reference": 0.55348,
+          "actual": 0.55346,
+          "difference": -2.0000000000020002e-05
+        },
+        {
+          "row": 8,
+          "column": "NU",
+          "reference": 0.65396,
+          "actual": 0.65394,
+          "difference": -2.0000000000020002e-05
+        },
+        {
+          "row": 8,
+          "column": "ETAT",
+          "reference": 0.90984,
+          "actual": 0.9098,
+          "difference": -3.999999999992898e-05
+        },
+        {
+          "row": 8,
+          "column": "ETAS",
+          "reference": 0.86434,
+          "actual": 0.8643,
+          "difference": -4.0000000000040004e-05
+        },
+        {
+          "row": 8,
+          "column": "DHTCR",
+          "reference": 38907.1,
+          "actual": 38908.0,
+          "difference": 0.9000000000014552
+        },
+        {
+          "row": 8,
+          "column": "EQ-P0/P5",
+          "reference": 1.80673,
+          "actual": 1.8068,
+          "difference": 7.00000000000145e-05
+        },
+        {
+          "row": 8,
+          "column": "EQ-P0/P5total",
+          "reference": 1.74969,
+          "actual": 1.7498,
+          "difference": 0.0001100000000000545
+        },
+        {
+          "row": 9,
+          "column": "NS",
+          "reference": 0.0091646,
+          "actual": 0.0091643,
+          "difference": -2.999999999999531e-07
+        },
+        {
+          "row": 9,
+          "column": "EQ-P5/P0",
+          "reference": 0.50642,
+          "actual": 0.50639,
+          "difference": -2.999999999997449e-05
+        },
+        {
+          "row": 9,
+          "column": "NU",
+          "reference": 0.61352,
+          "actual": 0.6135,
+          "difference": -1.999999999990898e-05
+        },
+        {
+          "row": 9,
+          "column": "ETAT",
+          "reference": 0.90378,
+          "actual": 0.90073,
+          "difference": -0.003049999999999997
+        },
+        {
+          "row": 9,
+          "column": "ETAS",
+          "reference": 0.84947,
+          "actual": 0.84942,
+          "difference": -4.999999999999449e-05
+        },
+        {
+          "row": 9,
+          "column": "DHTCR",
+          "reference": 43444.3,
+          "actual": 43445.0,
+          "difference": 0.6999999999970896
+        },
+        {
+          "row": 9,
+          "column": "EQ-P0/P5",
+          "reference": 1.97464,
+          "actual": 1.9747,
+          "difference": 5.999999999994898e-05
+        },
+        {
+          "row": 9,
+          "column": "EQ-P0/P5total",
+          "reference": 1.89244,
+          "actual": 1.8925,
+          "difference": 6.000000000017103e-05
+        },
+        {
+          "row": 10,
+          "column": "NS",
+          "reference": 0.0089057,
+          "actual": 0.0089054,
+          "difference": -2.999999999999531e-07
+        },
+        {
+          "row": 10,
+          "column": "EQ-P5/P0",
+          "reference": 0.4503,
+          "actual": 0.45025,
+          "difference": -4.999999999999449e-05
+        },
+        {
+          "row": 10,
+          "column": "NU",
+          "reference": 0.57117,
+          "actual": 0.57114,
+          "difference": -2.999999999997449e-05
+        },
+        {
+          "row": 10,
+          "column": "ETAT",
+          "reference": 0.88408,
+          "actual": 0.88402,
+          "difference": -5.999999999994898e-05
+        },
+        {
+          "row": 10,
+          "column": "ETAS",
+          "reference": 0.82184,
+          "actual": 0.82178,
+          "difference": -6.0000000000060005e-05
+        },
+        {
+          "row": 10,
+          "column": "DHTCR",
+          "reference": 48495.8,
+          "actual": 48497.0,
+          "difference": 1.1999999999970896
+        },
+        {
+          "row": 10,
+          "column": "EQ-P0/P5",
+          "reference": 2.22075,
+          "actual": 2.221,
+          "difference": 0.00025000000000030553
+        },
+        {
+          "row": 10,
+          "column": "EQ-P0/P5total",
+          "reference": 2.08615,
+          "actual": 2.0863,
+          "difference": 0.0001500000000000945
+        },
+        {
+          "row": 11,
+          "column": "V1VC1",
+          "reference": 0.79767,
+          "actual": 0.79763,
+          "difference": -4.0000000000040004e-05
+        },
+        {
+          "row": 11,
+          "column": "NS",
+          "reference": 0.008753,
+          "actual": 0.0087529,
+          "difference": -1.0000000000114084e-07
+        },
+        {
+          "row": 11,
+          "column": "EQ-P5/P0",
+          "reference": 0.34555,
+          "actual": 0.34557,
+          "difference": 1.999999999996449e-05
+        },
+        {
+          "row": 11,
+          "column": "NU",
+          "reference": 0.50395,
+          "actual": 0.50396,
+          "difference": 9.99999999995449e-06
+        },
+        {
+          "row": 11,
+          "column": "ETAT",
+          "reference": 0.84101,
+          "actual": 0.84097,
+          "difference": -4.0000000000040004e-05
+        },
+        {
+          "row": 11,
+          "column": "ETAS",
+          "reference": 0.74373,
+          "actual": 0.74371,
+          "difference": -2.0000000000020002e-05
+        },
+        {
+          "row": 11,
+          "column": "DHTCR",
+          "reference": 56375.0,
+          "actual": 56371.0,
+          "difference": -4.0
+        },
+        {
+          "row": 11,
+          "column": "WTHODE",
+          "reference": 0.25838,
+          "actual": 0.25837,
+          "difference": -1.0000000000010001e-05
+        },
+        {
+          "row": 11,
+          "column": "EQ-P0/P5",
+          "reference": 2.89392,
+          "actual": 2.8937,
+          "difference": -0.000220000000000109
+        },
+        {
+          "row": 11,
+          "column": "EQ-P0/P5total",
+          "reference": 2.51398,
+          "actual": 2.5139,
+          "difference": -8.000000000008001e-05
+        },
+        {
+          "row": 12,
+          "column": "V1VC1",
+          "reference": 0.79767,
+          "actual": 0.79763,
+          "difference": -4.0000000000040004e-05
+        },
+        {
+          "row": 12,
+          "column": "NS",
+          "reference": 0.0087904,
+          "actual": 0.0087903,
+          "difference": -1.0000000000114084e-07
+        },
+        {
+          "row": 12,
+          "column": "EQ-P5/P0",
+          "reference": 0.32379,
+          "actual": 0.32381,
+          "difference": 1.999999999996449e-05
+        },
+        {
+          "row": 12,
+          "column": "NU",
+          "reference": 0.49136,
+          "actual": 0.49137,
+          "difference": 9.99999999995449e-06
+        },
+        {
+          "row": 12,
+          "column": "ETAT",
+          "reference": 0.8297,
+          "actual": 0.82965,
+          "difference": -4.999999999999449e-05
+        },
+        {
+          "row": 12,
+          "column": "ETAS",
+          "reference": 0.72255,
+          "actual": 0.72253,
+          "difference": -2.0000000000020002e-05
+        },
+        {
+          "row": 12,
+          "column": "DHTCR",
+          "reference": 57612.4,
+          "actual": 57608.0,
+          "difference": -4.400000000001455
+        },
+        {
+          "row": 12,
+          "column": "WTHODE",
+          "reference": 0.25838,
+          "actual": 0.25837,
+          "difference": -1.0000000000010001e-05
+        },
+        {
+          "row": 12,
+          "column": "EQ-P0/P5",
+          "reference": 3.0884,
+          "actual": 3.0882,
+          "difference": -0.00019999999999997797
+        },
+        {
+          "row": 12,
+          "column": "EQ-P0/P5total",
+          "reference": 2.61149,
+          "actual": 2.6114,
+          "difference": -8.999999999970143e-05
+        },
+        {
+          "row": 13,
+          "column": "V1VC1",
+          "reference": 0.79767,
+          "actual": 0.79763,
+          "difference": -4.0000000000040004e-05
+        },
+        {
+          "row": 13,
+          "column": "NS",
+          "reference": 0.0088588,
+          "actual": 0.0088586,
+          "difference": -2.0000000000054696e-07
+        },
+        {
+          "row": 13,
+          "column": "EQ-P5/P0",
+          "reference": 0.30207,
+          "actual": 0.30209,
+          "difference": 2.0000000000020002e-05
+        },
+        {
+          "row": 13,
+          "column": "ETAT",
+          "reference": 0.81733,
+          "actual": 0.81727,
+          "difference": -5.999999999994898e-05
+        },
+        {
+          "row": 13,
+          "column": "ETAS",
+          "reference": 0.70049,
+          "actual": 0.70046,
+          "difference": -2.999999999997449e-05
+        },
+        {
+          "row": 13,
+          "column": "DHTCR",
+          "reference": 58739.5,
+          "actual": 58735.0,
+          "difference": -4.5
+        },
+        {
+          "row": 13,
+          "column": "WTHODE",
+          "reference": 0.25838,
+          "actual": 0.25837,
+          "difference": -1.0000000000010001e-05
+        },
+        {
+          "row": 13,
+          "column": "EQ-P0/P5",
+          "reference": 3.31047,
+          "actual": 3.3103,
+          "difference": -0.00017000000000022553
+        },
+        {
+          "row": 13,
+          "column": "EQ-P0/P5total",
+          "reference": 2.71498,
+          "actual": 2.7149,
+          "difference": -8.000000000008001e-05
+        },
+        {
+          "row": 14,
+          "column": "V1VC1",
+          "reference": 0.79767,
+          "actual": 0.79763,
+          "difference": -4.0000000000040004e-05
+        },
+        {
+          "row": 14,
+          "column": "NS",
+          "reference": 0.0089605,
+          "actual": 0.0089603,
+          "difference": -2.0000000000054696e-07
+        },
+        {
+          "row": 14,
+          "column": "EQ-P5/P0",
+          "reference": 0.28066,
+          "actual": 0.28067,
+          "difference": 9.99999999995449e-06
+        },
+        {
+          "row": 14,
+          "column": "NU",
+          "reference": 0.46737,
+          "actual": 0.46738,
+          "difference": 1.0000000000010001e-05
+        },
+        {
+          "row": 14,
+          "column": "ETAT",
+          "reference": 0.80367,
+          "actual": 0.80362,
+          "difference": -4.999999999999449e-05
+        },
+        {
+          "row": 14,
+          "column": "ETAS",
+          "reference": 0.67765,
+          "actual": 0.67762,
+          "difference": -2.999999999997449e-05
+        },
+        {
+          "row": 14,
+          "column": "DHTCR",
+          "reference": 59721.8,
+          "actual": 59717.0,
+          "difference": -4.80000000000291
+        },
+        {
+          "row": 14,
+          "column": "WTHODE",
+          "reference": 0.25838,
+          "actual": 0.25837,
+          "difference": -1.0000000000010001e-05
+        },
+        {
+          "row": 14,
+          "column": "EQ-P0/P5",
+          "reference": 3.56308,
+          "actual": 3.5629,
+          "difference": -0.00017999999999984695
+        },
+        {
+          "row": 14,
+          "column": "EQ-P0/P5total",
+          "reference": 2.82441,
+          "actual": 2.8244,
+          "difference": -1.0000000000065512e-05
+        },
+        {
+          "row": 15,
+          "column": "V1VC1",
+          "reference": 0.79767,
+          "actual": 0.79763,
+          "difference": -4.0000000000040004e-05
+        },
+        {
+          "row": 15,
+          "column": "NS",
+          "reference": 0.0090976,
+          "actual": 0.0090974,
+          "difference": -2.0000000000054696e-07
+        },
+        {
+          "row": 15,
+          "column": "EQ-P5/P0",
+          "reference": 0.2599,
+          "actual": 0.25991,
+          "difference": 9.99999999995449e-06
+        },
+        {
+          "row": 15,
+          "column": "NU",
+          "reference": 0.45619,
+          "actual": 0.4562,
+          "difference": 1.0000000000010001e-05
+        },
+        {
+          "row": 15,
+          "column": "ETAT",
+          "reference": 0.78839,
+          "actual": 0.78833,
+          "difference": -6.0000000000060005e-05
+        },
+        {
+          "row": 15,
+          "column": "ETAS",
+          "reference": 0.65409,
+          "actual": 0.65406,
+          "difference": -2.999999999997449e-05
+        },
+        {
+          "row": 15,
+          "column": "DHTCR",
+          "reference": 60504.8,
+          "actual": 60500.0,
+          "difference": -4.80000000000291
+        },
+        {
+          "row": 15,
+          "column": "WTHODE",
+          "reference": 0.25838,
+          "actual": 0.25837,
+          "difference": -1.0000000000010001e-05
+        },
+        {
+          "row": 15,
+          "column": "EQ-P0/P5",
+          "reference": 3.84761,
+          "actual": 3.8475,
+          "difference": -0.00010999999999983245
+        },
+        {
+          "row": 15,
+          "column": "EQ-P0/P5total",
+          "reference": 2.93913,
+          "actual": 2.9392,
+          "difference": 7.00000000000145e-05
+        },
+        {
+          "row": 16,
+          "column": "V1VC1",
+          "reference": 0.79767,
+          "actual": 0.79763,
+          "difference": -4.0000000000040004e-05
+        },
+        {
+          "row": 16,
+          "column": "NS",
+          "reference": 0.0092695,
+          "actual": 0.0092694,
+          "difference": -9.999999999940612e-08
+        },
+        {
+          "row": 16,
+          "column": "EQ-P5/P0",
+          "reference": 0.24037,
+          "actual": 0.24038,
+          "difference": 1.0000000000010001e-05
+        },
+        {
+          "row": 16,
+          "column": "ETAT",
+          "reference": 0.77092,
+          "actual": 0.77086,
+          "difference": -6.0000000000060005e-05
+        },
+        {
+          "row": 16,
+          "column": "ETAS",
+          "reference": 0.62985,
+          "actual": 0.62982,
+          "difference": -2.999999999997449e-05
+        },
+        {
+          "row": 16,
+          "column": "DHTCR",
+          "reference": 61000.7,
+          "actual": 60996.0,
+          "difference": -4.69999999999709
+        },
+        {
+          "row": 16,
+          "column": "WTHODE",
+          "reference": 0.25838,
+          "actual": 0.25837,
+          "difference": -1.0000000000010001e-05
+        },
+        {
+          "row": 16,
+          "column": "EQ-P0/P5",
+          "reference": 4.16021,
+          "actual": 4.1601,
+          "difference": -0.00011000000000027654
+        },
+        {
+          "row": 16,
+          "column": "EQ-P0/P5total",
+          "reference": 3.05727,
+          "actual": 3.0573,
+          "difference": 3.0000000000196536e-05
+        },
+        {
+          "row": 17,
+          "column": "V1VC1",
+          "reference": 0.79767,
+          "actual": 0.79763,
+          "difference": -4.0000000000040004e-05
+        },
+        {
+          "row": 17,
+          "column": "NS",
+          "reference": 0.0094658,
+          "actual": 0.0094657,
+          "difference": -9.999999999940612e-08
+        },
+        {
+          "row": 17,
+          "column": "EQ-P5/P0",
+          "reference": 0.22317,
+          "actual": 0.22318,
+          "difference": 9.999999999982245e-06
+        },
+        {
+          "row": 17,
+          "column": "ETAT",
+          "reference": 0.75035,
+          "actual": 0.75027,
+          "difference": -7.999999999996898e-05
+        },
+        {
+          "row": 17,
+          "column": "ETAS",
+          "reference": 0.6052,
+          "actual": 0.60516,
+          "difference": -3.999999999992898e-05
+        },
+        {
+          "row": 17,
+          "column": "DHTCR",
+          "reference": 61060.3,
+          "actual": 61055.0,
+          "difference": -5.30000000000291
+        },
+        {
+          "row": 17,
+          "column": "WTHODE",
+          "reference": 0.25838,
+          "actual": 0.25837,
+          "difference": -1.0000000000010001e-05
+        },
+        {
+          "row": 17,
+          "column": "EQ-P0/P5",
+          "reference": 4.48087,
+          "actual": 4.4808,
+          "difference": -7.00000000000145e-05
+        },
+        {
+          "row": 17,
+          "column": "EQ-P0/P5total",
+          "reference": 3.1745,
+          "actual": 3.1746,
+          "difference": 9.999999999976694e-05
+        },
+        {
+          "row": 18,
+          "column": "V1VC1",
+          "reference": 0.79767,
+          "actual": 0.79763,
+          "difference": -4.0000000000040004e-05
+        },
+        {
+          "row": 18,
+          "column": "NS",
+          "reference": 0.009642,
+          "actual": 0.0096419,
+          "difference": -9.999999999940612e-08
+        },
+        {
+          "row": 18,
+          "column": "EQ-P5/P0",
+          "reference": 0.21093,
+          "actual": 0.21094,
+          "difference": 9.999999999982245e-06
+        },
+        {
+          "row": 18,
+          "column": "ETAT",
+          "reference": 0.72494,
+          "actual": 0.72486,
+          "difference": -8.000000000008001e-05
+        },
+        {
+          "row": 18,
+          "column": "ETAS",
+          "reference": 0.58139,
+          "actual": 0.58135,
+          "difference": -3.999999999992898e-05
+        },
+        {
+          "row": 18,
+          "column": "DHTCR",
+          "reference": 60411.1,
+          "actual": 60406.0,
+          "difference": -5.099999999998545
+        },
+        {
+          "row": 18,
+          "column": "WTHODE",
+          "reference": 0.25838,
+          "actual": 0.25837,
+          "difference": -1.0000000000010001e-05
+        },
+        {
+          "row": 18,
+          "column": "EQ-P0/P5",
+          "reference": 4.74084,
+          "actual": 4.7408,
+          "difference": -4.000000000026205e-05
+        },
+        {
+          "row": 18,
+          "column": "EQ-P0/P5total",
+          "reference": 3.28122,
+          "actual": 3.2813,
+          "difference": 8.000000000008001e-05
+        },
+        {
+          "row": 19,
+          "column": "V1VC1",
+          "reference": 0.79767,
+          "actual": 0.79763,
+          "difference": -4.0000000000040004e-05
+        },
+        {
+          "row": 19,
+          "column": "ETAT",
+          "reference": 0.69101,
+          "actual": 0.69091,
+          "difference": -9.999999999998899e-05
+        },
+        {
+          "row": 19,
+          "column": "ETAS",
+          "reference": 0.56152,
+          "actual": 0.56146,
+          "difference": -6.0000000000060005e-05
+        },
+        {
+          "row": 19,
+          "column": "DHTCR",
+          "reference": 58490.2,
+          "actual": 58484.0,
+          "difference": -6.19999999999709
+        },
+        {
+          "row": 19,
+          "column": "WTHODE",
+          "reference": 0.25838,
+          "actual": 0.25837,
+          "difference": -1.0000000000010001e-05
+        },
+        {
+          "row": 19,
+          "column": "EQ-P0/P5",
+          "reference": 4.76379,
+          "actual": 4.7638,
+          "difference": 9.999999999621423e-06
+        },
+        {
+          "row": 19,
+          "column": "EQ-P0/P5total",
+          "reference": 3.35536,
+          "actual": 3.3555,
+          "difference": 0.000140000000000029
+        },
+        {
+          "row": 20,
+          "column": "V1VC1",
+          "reference": 0.79767,
+          "actual": 0.79763,
+          "difference": -4.0000000000040004e-05
+        },
+        {
+          "row": 20,
+          "column": "ETAT",
+          "reference": 0.68254,
+          "actual": 0.68245,
+          "difference": -9.00000000000345e-05
+        },
+        {
+          "row": 20,
+          "column": "ETAS",
+          "reference": 0.55811,
+          "actual": 0.55804,
+          "difference": -7.00000000000145e-05
+        },
+        {
+          "row": 20,
+          "column": "DHTCR",
+          "reference": 57857.0,
+          "actual": 57851.0,
+          "difference": -6.0
+        },
+        {
+          "row": 20,
+          "column": "WTHODE",
+          "reference": 0.25838,
+          "actual": 0.25837,
+          "difference": -1.0000000000010001e-05
+        },
+        {
+          "row": 20,
+          "column": "EQ-P0/P5",
+          "reference": 4.71935,
+          "actual": 4.7194,
+          "difference": 4.999999999988347e-05
+        },
+        {
+          "row": 20,
+          "column": "EQ-P0/P5total",
+          "reference": 3.36237,
+          "actual": 3.3625,
+          "difference": 0.00012999999999996348
+        }
+      ]
+    },
+    "turbine-short-tableIII-calibration": {
+      "expected_rows": 20,
+      "actual_rows": 20,
+      "exact_rows": 0,
+      "exact_numeric_cells": 140,
+      "missing_rows": 0,
+      "mismatches": [
+        {
+          "row": 1,
+          "column": "NU",
+          "reference": 1.03221,
+          "actual": 1.0322,
+          "difference": -1.0000000000065512e-05
+        },
+        {
+          "row": 1,
+          "column": "DHTCR",
+          "reference": 10634.9,
+          "actual": 10635.0,
+          "difference": 0.1000000000003638
+        },
+        {
+          "row": 1,
+          "column": "EQ-P0/P5",
+          "reference": 1.25303,
+          "actual": 1.253,
+          "difference": -3.0000000000196536e-05
+        },
+        {
+          "row": 1,
+          "column": "EQ-P0/P5total",
+          "reference": 1.21377,
+          "actual": 1.2138,
+          "difference": 2.999999999997449e-05
+        },
+        {
+          "row": 2,
+          "column": "DHTCR",
+          "reference": 14524.7,
+          "actual": 14525.0,
+          "difference": 0.2999999999992724
+        },
+        {
+          "row": 2,
+          "column": "EQ-P0/P5",
+          "reference": 1.29942,
+          "actual": 1.2994,
+          "difference": -1.999999999990898e-05
+        },
+        {
+          "row": 2,
+          "column": "EQ-P0/P5total",
+          "reference": 1.26365,
+          "actual": 1.2637,
+          "difference": 5.0000000000105516e-05
+        },
+        {
+          "row": 3,
+          "column": "NU",
+          "reference": 0.89744,
+          "actual": 0.89743,
+          "difference": -1.0000000000065512e-05
+        },
+        {
+          "row": 3,
+          "column": "ETAS",
+          "reference": 0.77129,
+          "actual": 0.77128,
+          "difference": -1.0000000000065512e-05
+        },
+        {
+          "row": 3,
+          "column": "DHTCR",
+          "reference": 18435.5,
+          "actual": 18436.0,
+          "difference": 0.5
+        },
+        {
+          "row": 3,
+          "column": "EQ-P0/P5",
+          "reference": 1.35205,
+          "actual": 1.352,
+          "difference": -4.999999999988347e-05
+        },
+        {
+          "row": 3,
+          "column": "EQ-P0/P5total",
+          "reference": 1.31874,
+          "actual": 1.3187,
+          "difference": -4.0000000000040004e-05
+        },
+        {
+          "row": 4,
+          "column": "DHTCR",
+          "reference": 22379.6,
+          "actual": 22380.0,
+          "difference": 0.4000000000014552
+        },
+        {
+          "row": 4,
+          "column": "EQ-P0/P5",
+          "reference": 1.41317,
+          "actual": 1.4132,
+          "difference": 2.999999999997449e-05
+        },
+        {
+          "row": 4,
+          "column": "EQ-P0/P5total",
+          "reference": 1.38098,
+          "actual": 1.381,
+          "difference": 1.999999999990898e-05
+        },
+        {
+          "row": 5,
+          "column": "EQ-P0/P5",
+          "reference": 1.48533,
+          "actual": 1.4853,
+          "difference": -2.999999999997449e-05
+        },
+        {
+          "row": 5,
+          "column": "EQ-P0/P5total",
+          "reference": 1.45245,
+          "actual": 1.4525,
+          "difference": 4.999999999988347e-05
+        },
+        {
+          "row": 6,
+          "column": "DHTCR",
+          "reference": 30438.1,
+          "actual": 30438.0,
+          "difference": -0.09999999999854481
+        },
+        {
+          "row": 6,
+          "column": "EQ-P0/P5",
+          "reference": 1.57192,
+          "actual": 1.5719,
+          "difference": -1.999999999990898e-05
+        },
+        {
+          "row": 6,
+          "column": "EQ-P0/P5total",
+          "reference": 1.53575,
+          "actual": 1.5357,
+          "difference": -4.999999999988347e-05
+        },
+        {
+          "row": 7,
+          "column": "DHTCR",
+          "reference": 34606.9,
+          "actual": 34607.0,
+          "difference": 0.09999999999854481
+        },
+        {
+          "row": 7,
+          "column": "EQ-P0/P5",
+          "reference": 1.67762,
+          "actual": 1.6776,
+          "difference": -1.999999999990898e-05
+        },
+        {
+          "row": 7,
+          "column": "EQ-P0/P5total",
+          "reference": 1.63416,
+          "actual": 1.6342,
+          "difference": 4.0000000000040004e-05
+        },
+        {
+          "row": 8,
+          "column": "DHTCR",
+          "reference": 38907.1,
+          "actual": 38907.0,
+          "difference": -0.09999999999854481
+        },
+        {
+          "row": 8,
+          "column": "EQ-P0/P5",
+          "reference": 1.80673,
+          "actual": 1.8067,
+          "difference": -2.999999999997449e-05
+        },
+        {
+          "row": 8,
+          "column": "EQ-P0/P5total",
+          "reference": 1.74969,
+          "actual": 1.7497,
+          "difference": 1.0000000000065512e-05
+        },
+        {
+          "row": 9,
+          "column": "ETAT",
+          "reference": 0.90378,
+          "actual": 0.90078,
+          "difference": -0.0030000000000000027
+        },
+        {
+          "row": 9,
+          "column": "DHTCR",
+          "reference": 43444.3,
+          "actual": 43444.0,
+          "difference": -0.3000000000029104
+        },
+        {
+          "row": 9,
+          "column": "EQ-P0/P5",
+          "reference": 1.97464,
+          "actual": 1.9746,
+          "difference": -4.0000000000040004e-05
+        },
+        {
+          "row": 9,
+          "column": "EQ-P0/P5total",
+          "reference": 1.89244,
+          "actual": 1.8924,
+          "difference": -3.999999999981796e-05
+        },
+        {
+          "row": 10,
+          "column": "NS",
+          "reference": 0.0089057,
+          "actual": 0.0089056,
+          "difference": -1.0000000000114084e-07
+        },
+        {
+          "row": 10,
+          "column": "DHTCR",
+          "reference": 48495.8,
+          "actual": 48496.0,
+          "difference": 0.19999999999708962
+        },
+        {
+          "row": 10,
+          "column": "EQ-P0/P5",
+          "reference": 2.22075,
+          "actual": 2.2208,
+          "difference": 5.000000000032756e-05
+        },
+        {
+          "row": 10,
+          "column": "EQ-P0/P5total",
+          "reference": 2.08615,
+          "actual": 2.0862,
+          "difference": 4.999999999988347e-05
+        },
+        {
+          "row": 11,
+          "column": "EQ-P0/P5",
+          "reference": 2.89392,
+          "actual": 2.8939,
+          "difference": -2.0000000000131024e-05
+        },
+        {
+          "row": 11,
+          "column": "EQ-P0/P5total",
+          "reference": 2.51398,
+          "actual": 2.514,
+          "difference": 1.9999999999686935e-05
+        },
+        {
+          "row": 12,
+          "column": "DHTCR",
+          "reference": 57612.4,
+          "actual": 57612.0,
+          "difference": -0.4000000000014552
+        },
+        {
+          "row": 12,
+          "column": "EQ-P0/P5total",
+          "reference": 2.61149,
+          "actual": 2.6115,
+          "difference": 1.0000000000065512e-05
+        },
+        {
+          "row": 13,
+          "column": "DHTCR",
+          "reference": 58739.5,
+          "actual": 58740.0,
+          "difference": 0.5
+        },
+        {
+          "row": 13,
+          "column": "EQ-P0/P5",
+          "reference": 3.31047,
+          "actual": 3.3105,
+          "difference": 3.0000000000196536e-05
+        },
+        {
+          "row": 13,
+          "column": "EQ-P0/P5total",
+          "reference": 2.71498,
+          "actual": 2.715,
+          "difference": 1.9999999999686935e-05
+        },
+        {
+          "row": 14,
+          "column": "DHTCR",
+          "reference": 59721.8,
+          "actual": 59722.0,
+          "difference": 0.19999999999708962
+        },
+        {
+          "row": 14,
+          "column": "EQ-P0/P5",
+          "reference": 3.56308,
+          "actual": 3.5631,
+          "difference": 2.0000000000131024e-05
+        },
+        {
+          "row": 14,
+          "column": "EQ-P0/P5total",
+          "reference": 2.82441,
+          "actual": 2.8244,
+          "difference": -1.0000000000065512e-05
+        },
+        {
+          "row": 15,
+          "column": "DHTCR",
+          "reference": 60504.8,
+          "actual": 60505.0,
+          "difference": 0.19999999999708962
+        },
+        {
+          "row": 15,
+          "column": "EQ-P0/P5",
+          "reference": 3.84761,
+          "actual": 3.8476,
+          "difference": -1.0000000000065512e-05
+        },
+        {
+          "row": 15,
+          "column": "EQ-P0/P5total",
+          "reference": 2.93913,
+          "actual": 2.9391,
+          "difference": -3.0000000000196536e-05
+        },
+        {
+          "row": 16,
+          "column": "DHTCR",
+          "reference": 61000.7,
+          "actual": 61001.0,
+          "difference": 0.3000000000029104
+        },
+        {
+          "row": 16,
+          "column": "EQ-P0/P5",
+          "reference": 4.16021,
+          "actual": 4.1602,
+          "difference": -1.0000000000509601e-05
+        },
+        {
+          "row": 16,
+          "column": "EQ-P0/P5total",
+          "reference": 3.05727,
+          "actual": 3.0573,
+          "difference": 3.0000000000196536e-05
+        },
+        {
+          "row": 17,
+          "column": "DHTCR",
+          "reference": 61060.3,
+          "actual": 61060.0,
+          "difference": -0.3000000000029104
+        },
+        {
+          "row": 17,
+          "column": "EQ-P0/P5",
+          "reference": 4.48087,
+          "actual": 4.4809,
+          "difference": 2.9999999999752447e-05
+        },
+        {
+          "row": 18,
+          "column": "DHTCR",
+          "reference": 60411.1,
+          "actual": 60411.0,
+          "difference": -0.09999999999854481
+        },
+        {
+          "row": 18,
+          "column": "EQ-P0/P5",
+          "reference": 4.74084,
+          "actual": 4.7408,
+          "difference": -4.000000000026205e-05
+        },
+        {
+          "row": 18,
+          "column": "EQ-P0/P5total",
+          "reference": 3.28122,
+          "actual": 3.2812,
+          "difference": -1.9999999999686935e-05
+        },
+        {
+          "row": 19,
+          "column": "DHTCR",
+          "reference": 58490.2,
+          "actual": 58490.0,
+          "difference": -0.19999999999708962
+        },
+        {
+          "row": 19,
+          "column": "EQ-P0/P5",
+          "reference": 4.76379,
+          "actual": 4.7638,
+          "difference": 9.999999999621423e-06
+        },
+        {
+          "row": 19,
+          "column": "EQ-P0/P5total",
+          "reference": 3.35536,
+          "actual": 3.3554,
+          "difference": 3.999999999981796e-05
+        },
+        {
+          "row": 20,
+          "column": "EQ-P0/P5",
+          "reference": 4.71935,
+          "actual": 4.7193,
+          "difference": -5.000000000077165e-05
+        },
+        {
+          "row": 20,
+          "column": "EQ-P0/P5total",
+          "reference": 3.36237,
+          "actual": 3.3624,
+          "difference": 3.0000000000196536e-05
+        }
+      ]
+    }
+  },
+  "reference_caveats": [
+    "Table II prints XK=.28699 and PD=.98783, whereas Table V header prints K=.28684 and PD=.98784.",
+    "ETAT at V1VC1=.70000 is transcribed as .90378 as visibly printed; this is an unresolved source discrepancy, not automatically a code defect.",
+    "The printed code uses G13.5 while the reference tables show more significant digits in some columns; raw exact numeric equality includes formatting differences."
+  ]
+}

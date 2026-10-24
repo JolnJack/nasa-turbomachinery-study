@@ -1,0 +1,5 @@
+gfortran -std=legacy -fno-automatic -fcheck=all -fbacktrace -ffpe-trap=invalid,zero,overflow -fdefault-real-16 -ffree-line-length-none compat27/compressor_tn_d7487.f90 read_namelist_cards.f90 -o build/compat27/compressor_tn_d7487 >build/logs/compressor_tn_d7487-compat27.txt 2>&1
+gfortran -std=legacy -fno-automatic -fcheck=all -fbacktrace -ffpe-trap=invalid,zero,overflow -fdefault-real-16 -ffree-line-length-none compat27/turbine_tn_d8063.f90 read_namelist_cards.f90 -o build/compat27/turbine_tn_d8063 >build/logs/turbine_tn_d8063-compat27.txt 2>&1
+gfortran -std=legacy -fno-automatic -fcheck=all -fbacktrace -ffpe-trap=invalid,zero,overflow turbine_tn_d8063.f read_namelist_cards.f90 -o build/native32/turbine_tn_d8063 >build/logs/turbine_tn_d8063-native32.txt 2>&1
+./build/compat27/compressor_tn_d7487 < examples/compressor_original.inp > build/output/compressor.out
+./build/compat27/turbine_tn_d8063 < examples/turbine_original.inp > build/output/turbine.out

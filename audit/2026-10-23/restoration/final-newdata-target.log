@@ -1,0 +1,22 @@
+python3 tests/verify_integrity.py
+PASS: 14 originals, 14 baseline copies, both generated programs and original example inputs
+python3 tools/prepare_historical.py
+Prepared isolated runtime: /Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/historical7094/s709-2.4.4
+python3 tests/try_new_data.py
+PASS compressor-native32 completion and finite diagnostics
+PASS compressor-native32 physical ranges
+PASS compressor-native32 mass/energy/loss consistency
+PASS turbine-native32 completion and finite diagnostics
+PASS turbine-native32 conservation
+PASS turbine-native32 physical ranges and output counts
+PASS compressor-compat27 completion and finite diagnostics
+PASS compressor-compat27 physical ranges
+PASS compressor-compat27 mass/energy/loss consistency
+PASS turbine-compat27 completion and finite diagnostics
+PASS turbine-compat27 conservation
+PASS turbine-compat27 physical ranges and output counts
+PASS turbine historical completion
+PASS turbine historical physical ranges and output counts
+PASS turbine historical independent conservation
+RESULTS /Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/new-data-20261023T121321259138Z
+ALL CONSISTENCY CHECKS True

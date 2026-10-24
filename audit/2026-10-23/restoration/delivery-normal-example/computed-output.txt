@@ -1,0 +1,20 @@
+1                                   NASA RADIAL INFLOW TURBINE COMPUTER PROGRAM
+                                    12.62-CM DIA TURBINE                            
+                                    100 PERCENT SPEED                               
+K GAMMA    1.66670        P0,    0.17237E+06    A1    0.38008E-02  ALPHA-1    72.4700     BETA-4   -56.8600       PD    0.98000    
+      R    99.1976        T0,    1000.00        A3    0.39789E-02      BL1    0.95168        BL4    0.93718        K    0.30000    
+     D3    12.6238         A0    0.12018E-01    A5    0.44543E-02       U3    180.000      U4/U3    0.56776       ZZ    22.0000    
+
+                                                  VELOCITIES AND ANGLES
+ V/VCR)1      0.40000     ALPHA-1      72.4700     V/VCR)3      0.41026     W/WCR)4      0.23781     W/WCR)5      0.23339    
+ VU/VCR)1     0.38142     ALPHA-2      73.2771     VU/VCR)3     0.39278     WU/WCR)4    -0.19912     WX/WCR)5     0.12174    
+ VR/VCR)1     0.12048     ALPHA-3      73.2172     VR/VCR)3     0.11846     WX/WCR)4     0.13001     V/VCR)5      0.16027    
+ V/VCR)0      0.35141E-01 BETA-3      -44.9830     W/WCR)3      0.17049     BETA-4      -56.8600     VU/VCR)5     0.10372    
+ V/VCR)2      0.39827     I-3         -23.7585     WU/WCR)3    -0.12052     BETA-5      -58.5588     VX/VCR)5     0.12219    
+ VR/VCR)2     0.11460     VCR)3        352.133     WR/WCR)3     0.12059     VCR)5        336.651     ALPHA-5      40.3275    
+                                                  OVERALL PERFORMANCE
+ EQ-W         0.15678     EQ-P0,/P5    1.29218     P0,/P5       1.32304     WT/P         0.47385     W            0.25828    
+ EQ-DEL-H     16597.0     ETA-S        0.81185     NU           0.78528     DEL-H/T      21.3275     DEL-H        21327.5    
+ EQ-N         400.385     ETA-T        0.85869     NS           0.10152E-01 N/T          14.3527     W.F.         0.65826    
+ EQ-TOR       62.0610     EQ-P0,/P5,   1.27361     P0,/P5,      1.30190     TOR/P        672.380     TOR          115.897    
+ N            453.871     P            5.50853     WN/DEL       62.7731     T5,          913.997     P5,          0.13240E+06

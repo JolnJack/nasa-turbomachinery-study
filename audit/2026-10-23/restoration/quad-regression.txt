@@ -1,0 +1,74 @@
+PASS compressor 100 safe completion 
+PASS compressor 100 reference triples {'expected': 12, 'actual': 12, 'differences': []}
+PASS compressor 90 safe completion 
+PASS compressor 90 reference triples {'expected': 12, 'actual': 12, 'differences': []}
+PASS compressor 80 safe completion 
+PASS compressor 80 reference triples {'expected': 9, 'actual': 9, 'differences': []}
+PASS compressor 60 safe completion 
+PASS compressor 60 reference triples {'expected': 9, 'actual': 9, 'differences': []}
+PASS AR node continuity 1.2 [[5.75, 0.707], [5.75, 0.707], [5.749, 0.707]]
+PASS AR node continuity 2.0 [[6.417, 0.763], [6.417, 0.762], [6.417, 0.762]]
+PASS AR node continuity 3.0 [[6.55, 0.774], [6.55, 0.774], [6.55, 0.774]]
+PASS AR node continuity 4.0 [[6.582, 0.776], [6.582, 0.776], [6.582, 0.776]]
+PASS AR node continuity 5.0 [[6.58, 0.776], [6.58, 0.776], [6.58, 0.776]]
+PASS turbine 0 safe completion 
+PASS turbine 0 intact titles 
+PASS turbine 0 complete choking scan 20
+PASS turbine 1 safe completion 
+PASS turbine 1 intact titles 
+PASS turbine 1 complete choking scan 20
+PASS turbine 2 safe completion 
+PASS turbine 2 intact titles 
+PASS compressor_tn_d7487 empty EOF 
+PASS compressor_tn_d7487 malformed input fails  INVALID COMPRESSOR NAMELIST
+STOP 1
+
+PASS turbine_tn_d8063 empty EOF 
+PASS turbine_tn_d8063 malformed input fails  INVALID OR TRUNCATED TURBINE INPUT
+STOP 1
+
+PASS compressor_tn_d7487 rejects truncated  INVALID COMPRESSOR NAMELIST
+STOP 1
+
+PASS compressor_tn_d7487 rejects garbage  INVALID COMPRESSOR NAMELIST
+STOP 1
+
+PASS compressor_tn_d7487 rejects wrong-group  INVALID COMPRESSOR NAMELIST
+STOP 1
+
+PASS turbine_tn_d8063 rejects truncated  INVALID OR TRUNCATED TURBINE INPUT
+STOP 1
+
+PASS turbine_tn_d8063 rejects garbage  INVALID OR TRUNCATED TURBINE INPUT
+STOP 1
+
+PASS turbine_tn_d8063 rejects wrong-group  INVALID OR TRUNCATED TURBINE INPUT
+STOP 1
+
+PASS compressor feature SPLT {'points': 12, 'exit': 0}
+PASS compressor readable SPLT 
+PASS compressor feature CURVH {'points': 12, 'exit': 0}
+PASS compressor readable CURVH 
+PASS compressor feature AL1MF {'points': 10, 'exit': 0}
+PASS compressor readable AL1MF 
+PASS compressor partial namelist keeps geometry {'full': 18, 'partial': 18}
+PASS turbine US mode 3 {'points': 20, 'exit': 0}
+PASS turbine US mode 4 {'points': 20, 'exit': 0}
+PASS turbine SI US dimensionless agreement {'max_relative_difference': 4.719429892873661e-05, 'rule': '1e-4 reflects printed 5 significant digits and published unit constants, not NASA reference tolerance'}
+PASS turbine US mode 5 {'points': 1, 'exit': 0}
+PASS turbine static design 
+PASS namelist syntax lowercase 
+PASS namelist syntax slash 
+PASS namelist syntax dollar 
+PASS namelist syntax comment 
+PASS compressor rejects NVOVCR {'exit': 1, 'stderr': ' INVALID COMPRESSOR INPUT DOMAIN\nSTOP 1\n'}
+PASS compressor rejects GAM {'exit': 1, 'stderr': ' INVALID COMPRESSOR INPUT DOMAIN\nSTOP 1\n'}
+PASS compressor rejects VLDRR {'exit': 1, 'stderr': ' INVALID COMPRESSOR INPUT DOMAIN\nSTOP 1\n'}
+PASS compressor rejects AR {'exit': 1, 'stderr': ' INVALID COMPRESSOR INPUT DOMAIN\nSTOP 1\n'}
+PASS turbine rejects MODE {'exit': 1, 'stderr': ' INVALID TURBINE INPUT DOMAIN\nSTOP 1\n'}
+PASS turbine rejects DELV {'exit': 1, 'stderr': ' INVALID TURBINE INPUT DOMAIN\nSTOP 1\n'}
+PASS turbine rejects G {'exit': 1, 'stderr': ' INVALID TURBINE INPUT DOMAIN\nSTOP 1\n'}
+PASS turbine rejects A1 {'exit': 1, 'stderr': ' INVALID TURBINE INPUT DOMAIN\nSTOP 1\n'}
+PASS turbine infeasible design reports failure {'exit': 2, 'stderr': ' DESIGN FLOW EXCEEDS STATOR CAPACITY\nSTOP 2\n'}
+PASS supersonic stator start has nonzero inlet flow {'exit': 0, 'V0VC0': [0.061208, 0.061208], 'stderr': ''}
+RESULTS /Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/run-compat27-quad-20261023T104849843410Z

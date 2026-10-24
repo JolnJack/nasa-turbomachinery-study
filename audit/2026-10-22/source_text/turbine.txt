@@ -1,0 +1,2801 @@
+                                                                                                                        I
+                                                                                                                        Y
+
+
+
+
+NASA T E C H N I C A L N O T E                                                                                D
+
+
+
+                                                                                                            RE
+                                                                               A W L TECHNIC2AL
+                                                                                 KIRTLAND A FB
+
+
+
+
+FORTRAN PROGRAM FOR PREDICTING
+OFF-DESIGN PERFORMANCE OF
+RADIAL-INFLOW TURBINES
+
+Charles A . Wasserbauer and Arthur J. Glassman                                     '       \   I   (   ,
+                                                                                   1   ,
+
+
+
+
+Lewis Resedrcb Center
+Cleveland, Ohio 44135
+
+N A T I O N A L AERONAUTICS A N D SPACE A D M I N I S T R A T I O N   WASHINGTON, D. C.                SEPTEMBER 1975           B
+                                                                                                                        1I
+                                                                                                                            r
+                                                                                                                                    TECH LIBRARY KAFB, NM
+
+
+    .~    ~
+
+
+
+
+1. Report No.
+
+- .N
+   .
+     A S A TN D-8063
+                           .
+                                                     I   .2. Government Accession No.
+                                                                                                                                          0333757
+                                                                                                                 3. Recipient's Catalog No.
+
+4. Title and Subtitle                                                                                            5. Report Date
+    FORTRAN PROGRAM FOR PREDICTING OFF-DE SIGN                                                                      September 1975
+                                                                                                                     ~         ~~
+
+
+
+
+                                                                                                                 6: Performing Organization Code
+    PERFORMANCE O F RADIAL-INFLOW TURBINES
+
+7. Author(s)                                                                                                     8. Performing Organization Report No.
+
+    C h a r l e s A. W a s s e r b a u e r and A r t h u r J. G l a s s m a n                                       E-8368
+                                                                                                                         ~­
+                                     . .                                  ~~                                    10. Work Unit No.
+9. Performing Organization Name and Address
+                                                                                                                    505-04
+    Lewis R e s e a r c h Center
+                                                                                                                11. Contract or Grant No
+    National Aeronautics and Space Administration
+    Cleveland, Ohio 44135                                                                                       13. Type of Report and Period Covered
+                                                                               ~
+
+
+
+
+12. Sponsoring Agency Name and Address
+                                                                                                                    T e c h n i c a l Note
+    National Aeronautics and Space Administration
+                                                                                                                14. Sponsoring Agency Code
+    Washington, D. C. 20546
+5. Supplementary Notes
+
+
+
+
+    -         ..           -   .                 ~
+
+
+
+
+6. Abstract
+
+    The FORTRAN IV p r o g r a m u s e s a one-dimensional solution of flow conditions through the tur­
+    bine along the mean s t r e a m l i n e . The p r o g r a m inputs needed are t h e design-point r e q u i r e m e n t s
+    and turbine geometry. The output includes p e r f o r m a n c e and velocity-diagram p a r a m e t e r s o v e r
+    a r a n g e of s p e e d and p r e s s u r e r a t i o . Computed p e r f o r m a n c e is c o m p a r e d with the e x p e r i m e n t a l
+    d a t a f r o m two radial-inflow t u r b i n e s and with the p e r f o r m a n c e calculated by a p r e v i o u s com­
+    p u t e r p r o g r a m . The flow equations, p r o g r a m listing, and input and output for a s a m p l e problem
+    are given.
+
+
+
+
+                                                                                                      .    .
+7. Key Words (Suggested by Author(s) 1                                             18. Distribution Statement
+    Radial inflow turbine                                                              Unclassified - unlimited
+    Turbine computer p r o g r a m                                                     S T A R Category 07 ( r e v . )
+    Off -design p e r f o r m a n c e
+               .       ~       .-.
+9. Security Classif. (of this report)
+
+                   Unclassified
+                                     ~
+
+
+
+
+                                                     I   20. Security Classif. (of this page)
+                                                                        Unclassified
+                                                                                                                         . .
+                                                                                                                 21. No. of Pages        22. Price'
+
+
+
+
+                               * For sale by the National T e c h n i c a l Information Service, Springfield, Vi r gi ni a 22161
+                  FORTRAN PROGRAM FOR PREDICTING OFF-DESIGN
+                     PERFORMANCE OF RADIAL-INFLOW TURBINES
+                 by C h a r l e s A. Wasserbauer a n d A r t h u r J. Glassman
+                                  Lewis Research Center
+
+                                         SUMMARY
+
+     A FORTRAN IV program for calculating off-design performance of a radial-inflow
+turbine is presented. The program uses a one-dimensional solution of flow conditions
+through the turbine along the mean streamline. The loss model accounts for stator,
+rotor, incidence, and exit losses. Other program features include consideration of
+stator and rotor trailing-edge blockage and computation of performance t o limiting
+loading. Overall turbine geometry and design-point values of efficiency, pressure
+ratio, and mass flow are needed as input information. The output includes perform­
+ance and velocity-diagram parameters for any number of given speeds over a range of
+turbine pressure ratio. Included in this report are the engineering equations, the pro­
+gram listing, and the input information and output listing for a sample turbine problem.
+     The experimental performance of two radial-inflow turbines is compared with the
+results from the computer program presented herein and with those from a previously
+used program. The overall computed results from the program of this report show a
+marked improvement over those from the previously used program and good agreement
+with experimental data.
+
+
+
+                                      INTRODUCTION
+
+     A procedure for predicting the off-design performance of a radial-inflow turbine is
+described in reference 1. This procedure is based on a one-dimensional solution to
+determine the flow conditions through the turbine along the mean streamline. The
+FORTRAN IV computer program for this procedure is given in reference 2. This pro­
+gram u s e s turbine geometry and design-point performance as input and computes the
+performance and velocity-diagram parameters over a range of speed and pressure
+ratio. The results from this program, however, did not correlate as well as desired
+with the experimental results of some subsequently tested turbines.
+     The basic loss-model assumptions used in this program were reexamined t o see if
+alternative assumptions would yield a better correlation with experimental data. Ac­
+cordingly, the computer program described in reference 2 was modified. In addition,
+new features were added t o the program to account for trailing-edge blockage and to
+compute the conditions for pressure ratios at or beyond stator and/or rotor choke.
+These features give more flexibility to the p r o p a m and offer a greater range for off-
+design turbine analysis.
+     This report presents the modified FORTRAN IV program which computes overall
+performance for a radial-inflow turbine. The revised loss assumptions and new pro­
+gram features a r e described. Also included in the report are the engineering equations,
+the program listing, and a complete description of input and output including a sample
+turbine problem. The performance of two radial-inflow turbines (refs. 3 and 4) was
+computed by using the program of this report and that of reference 2. The performance
+predicted by each program is compared with experimental data for the two turbines.
+
+
+
+                                 METHOD OF ANALYSIS
+
+     A one-dimensional solution of flow conditions through the turbine along the mean
+streamline is the basis for this analysis. Two independent variables are assumed for
+each calculated performance point. A value of rotor-inlet-tip speed U3 is chosen,
+and for each speed a range of stator-exit critical-velocity ratios (V/Vcr)   is assumed.
+                                                                            1
+Symbols are defined in appendix A, and a typical turbine with station nomenclature is
+shown in figure 1. The equations used in the program are given in appendix B. The
+computer uses these equations i n essentially the order listed.
+     There a r e .two modes of operation for this program - the design mode and the off-
+design performance mode. Before the off-design performance mode can be used, two
+loss determinants, the stator total-pressure ratio pi/pb and the rotor loss coefficient
+K, must be known. In the design mode the program automatically determines these
+loss determinants at the design point by means of a s e a r c h routine. By repeated itera­
+tions the computer finds a pair of values for pi/pb and K which satisfy the input de­
+sign values of mass flow rate, efficiency, and pressure ratio. These values of pi/pb
+and K are then used in the off-design performance mode. If desired, the values of
+pi/pb and K can be determined from the user's own loss procedures and used in the
+off-design performance mode. The off-design performance mode computes all per­
+formance parameters over the entire range of rotor speeds and stator-exit velocity
+ratios requested.
+
+
+
+2
+                                            Turbine Losses
+
+         The results from the computer program of reference 2 did not correlate well with
+    the experimental results from the turbine tests of references 3 to 6. The three main
+    losses were (1) a stator loss, (2) a n incidence loss, and (3) a rotor loss. It was de­
+    cided to reexamine and modify the models used to represent these losses t o s e e if a
+    better correlation could be obtained.
+         Stator loss. - In reference 1 the loss in kinetic energy a c r o s s the stator is propor­
+    tional to the average kinetic energy i n the blade row and is represented by the equation
+
+
+
+
+    The stator loss coefficient KS is determined from design-point performance and then
+    is assumed to be constant for the off-design calculations.
+          In order to check this assumption, stator loss coefficients were calculated from
+    unpublished data obtained with the turbines of references 3 t o 6. A l l four of these tur­
+    bines had static-pressure taps located just inside the stator trailing edge. Therefore,
+    stator performance could be calculated by using these static-pressure data along with
+    the design stator-exit blade angle and the measured values of mass flow rate, stator-
+    exit area, and total temperature. The calculated stator loss coefficients are given as
+    a function of stator-exit critical-velocity ratio in figure 2. As shown, the stator loss
+    coefficient decreases significantly with increasing velocity ratio over the range of data.
+    Thus, the assumption of a constant stator loss coefficient, as made in reference 1,
+    does not seem t o be valid.
+          Another way t o express stator loss is as the ratio of stator-exit to turbine-inlet
+    total pressure. Figure 3 shows the variation of stator-exit t o turbine-inlet total-
+    pressure ratio with stator-exit velocity ratio as obtained from the data of references 3
+    t o 6. The stator total-pressure ratio for each turbine w a s fairly constant over the
+    range of velocity ratio tested. Total-pressure-ratio level ranged from about 0.98 t o
+    0.99 for most of the data. This examination and analysis indicated that a constant
+    stator total-pressure ratio would be a better model for the stator loss, and thus it was
+    incorporated into the program.
+          Incidence loss. - Minimum incidence loss does not occur at zero incidence angle
+    with respect to the rotor blade, but at some optimum flow angle cp (fig. 4). The cal­
+    culation of the optimum flow angle follows the method of Stanitz (ref. 7). This method
+    w a s used in reference 2 and is described i n appendix B as equations (B8a) to (B8d).
+    The flow angle at the rotor inlet is p3, and the incidence angle is defined as
+
+
+                                                                                                      3
+
+
+
+
+I
+In reference 2 the incidence loss is assumed to be the component of relative velocity
+normal to the angle cp:
+
+                                                  W32 sin2 i3
+                                      Lm =
+                                                          2gJ
+
+     In the program of this report, different variations in loss with positive and negative
+incidence were used, and equation (3) was changed to
+
+
+                                                  W32 sinn ig
+                                      LIN =               zgJ                           (3a)
+
+
+A value of 2 was used for the exponent n for negative incidence. However, for positive
+incidence, a value of 3 f o r the exponent n gave a better correlation with experimental
+data.
+     Rotor loss. - In reference 1 the viscous loss in the rotor is assumed to be propor­
+tional to the average kinetic energy in the blade row as calculated from the equation
+
+                                     2 id -
+                                    w4,           : = Kf2iJwi)
+                                                  w
+                             LR =                                                        (4)
+                                            2gJ
+
+
+At high pressure ratios the level of rotor inlet velocity W3 seemed t o have an exces­
+sive influence on the loss. Using the component of velocity in the direction of the opti­
+mum flow angle gave a better correlation with experimental data. In the present pro­
+gram, therefore, the rotor loss was calculated as
+
+
+
+
+The value of K was approximately 0.3 for all the turbines examined in this report.
+
+
+
+
+4
+
+
+
+                                      ...          .- .         . .   ...
+                                         Trailing-Edge Blockage
+
+            In order t o account for the effect of stator trailing-edge blockage, the analysis of
+       reference 1 assumes a variable station where the flow from the stator is assumed t o
+       occupy the entire cylindrical flow area. Trailing-edge blockage at the rotor exit is not
+       taken into account.
+            The analysis of this report accounts for trailing-edge blockage at both the stator
+       and rotor exits. The effect of blockage for each blade row is specified in t e r m s of the
+       ratio of the flow area just inside to that just outside the blade trailing edge. Figure 5
+       shows the blade-row trailing-edge region, specifically the areas used in the blockage
+       calculation. Both angular momentum and continuity are conserved when the conditions
+       at these stations are calculated.
+
+
+                                         Stator and Rotor Choke
+
+             The program of reference 2 did not compute turbine performance at or beyond the
+       stator and rotor choking points. The program of this report allows turbine performance
+       t o be computed at the stator and rotor choking points and at pressure ratios beyond
+       choking to rotor blade limiting loading. The stator choke point is where (V/Vcr)     = 1.0,
+                                                                                          1
+       which is the point of maximum flow per unit area. For values of (V/Vcr)l      greater than
+       1.0, a new stator-exit flow angle al is computed from the area required to pass the
+       choking mass flow rate.
+           In order to find the rotor choking point, an iteration is required to determine the
+       value of (V/Vcr)l that maximizes flow per unit area at the rotor exit. Conditions up­
+       stream of the rotor exit are then held fixed. A s the velocity ratio (W/Wcr)  is in­
+                                                                                  4
+       creased beyond the choking value, the exit flow angle p4 is adjusted to pass the choking
+       mass flow. The program is terminated at o r close to blade limiting loading, where
+       (Wx/Wcr)   = 1.0.
+                4
+
+
+                   COMPARISON OF COMPUTED AND EXPERIMENTAL RESULTS
+
+            This section compares the experimental results obtained with two radial-inflow
+       turbines t o the results obtained by the analytical procedures described in reference 2
+       and this report. The two radial-inflow turbines are those of references 3 and 4. The
+       results of the comparison are presented in t e r m s of mass flow rate and total and static
+       efficiency variations with pressure ratio and speed.
+
+                                                                                                     5
+
+
+
+I 2.
+                                      Mass Flow Rate
+
+     Calculated and experimental variations of mass flow rate with turbine total- to
+static-pressure ratio for various speeds are compared in figure 6(a) for the reference 3
+turbine and in figure 6(b) for the reference 4 turbine. The data for the reference 4 tur­
+bine are unpublished air data, which were used herein because they covered a wider
+range of pressure ratios than the published argon data. For both turbines, the off-
+design values of mass flow rate computed by using the program of this report showed a
+significantly better correlation with the experimental data, especially at higher pressure
+ratios and lower speeds, than did the values computed by the program of reference 2.
+The poorest correlation between the computed and experimental values was in the region
+near choked flow (fig. 6(b)). In this region, the maximum deviation between computed
+and experimental mass flow rates was reduced from about 9 percent (program of ref. 2)
+to about 321 percent by using the program of this report.
+
+
+
+                                      Total Efficiency
+
+      Calculated and experimental variations of total efficiency with blade- jet speed ratio
+for a number of speeds a r e compared in figure 7(a) for the reference 3 turbine and in
+figure 7(b) for the reference 4 turbine. In figure 7(a) the 90- and 110-percent speed
+lines are not shown in order to avoid overlapping of data. The off-design values of
+total efficiency computed by using the program of this report showed a significantly
+better correlation with the experimental data, especially in the case of the reference 4
+turbine, than did the values computed by the program of reference 2. A s shown in fig­
+u r e 7 (b), the maximum deviation between computed and experimental total efficiencies
+was reduced from about 10 percent (program of ref. 2) to essentially zero by using the
+program of this report.
+
+
+
+                                     Static Efficiency
+
+     Calculated and experimental variations of static efficiency with blade- jet speed
+ratio for a number of speeds a r e compared in figure 8(a) for the reference 3 turbine and
+in figure 8(b) for the reference 4 turbine. Except for blade-jet speed ratios higher than
+the design value, the efficiencies computed by the program of reference 2 for all speeds
+were generally about 2 percentage points lower than experimental values for both tur­
+bines. The efficiencies computed by the program of this report over the same range of
+blade-jet speed ratio generally were within 1 percentage point of the experimental
+values.
+6
+     The overall improvement in the correlation of calculated values of mass flow rate
+and efficiency with experimental data indicates that the turbine loss assumptions used
+in this report provide a better model than those used in reference 2.
+
+
+
+                                   FORTRAN PROGRAM
+
+                                      Program Input
+
+     The program input consists of two title, or heading, cards followed by the required
+physical data and option indicators in NAME LIST format. The information contained i n
+columns 1 to 60 of the title cards is printed as two lines of heading on the output listing.
+The two title cards, even if left blank, must be the first two cards in the data package.
+Two additional title cards must precede each different case being run in the same data
+package.
+     The physical data and option indicators a r e input in data records having the
+NAMELIST name IN. All necessary physical data and option indicators must be inputted
+for the first case in the data package. For succeeding cases in the same data package,
+only those items being changed need be inputted.
+     Options. - There a r e three s e t s of options that must be specified by the input. All
+three a r e specified by the variable MODE as described in the input variable list. The
+first option is the choice of units, SI o r U. S. customary, to be used for input and output.
+The particular unit to be used for each variable is included in the input variable list.
+     The second option is the choice of a mode of operation: either the design mode o r
+the off-design performance mode. The design mode is used to automatically determine
+the stator total-pressure ratio and rotor loss coefficient that yield design flow and effi­
+ciency at the design pressure ratio. The input variable ITEST, as described in the input
+variable list, is used to specify whether total efficiency and total- t o total-pressure
+ratio or static efficiency and total- to static-pressure ratio a r e used as the design
+values being matched. The off-design performance mode is used t o compute the per­
+formance over the desired ranges of speed and pressure ratio.
+     The third option provides for the choice of long or short output for the off-design
+performance mode. Long output is always given for the design mode. The long output
+includes complete velocity-diagram information in t e r m s of critical-velocity ratios and
+angles, actual and equivalent overall performance parameters, and dimensionless de­
+sign parameters. The short output includes only certain of the equivalent performance
+and dimensionless design parameters. The exact output provided is described in the
+section Description of Output.
+         - variables. - The input variables comprising NAMELIST IN are as follows:
+     Input
+
+
+                                                                                            7
+AL1     stator-exit blade angle, al, deg
+A0      area at turbine inlet (scroll inlet), Ao, m2; ft2
+A1      area upstream of stator exit (circumferential area inside blade trailing edge),
+              m2; ft2
+          A ~ ,
+A3      area upstream of rotor inlet (circumferential area outside blade leading edge),
+              m2; ft2
+          A ~ ,
+A5      area downstream of rotor exit (annular area outside blade trailing edge), A5,
+          m2; ft2
+BL1     blockage factor at stator exit, ratio of area inside blade passage to area out­
+          side blade passage (fig. 5)
+BL4     blockage factor at rotor exit, ratio of area inside blade passage to a r e a out­
+          side blade passage (fig. 5 )
+B4      rotor-exit blade angle, p,,   deg
+DE LV   incremental value of stator -exit critical-velocity ratio (v/v,,)
+                                                                            1
+DE LY   incremental value of rotor-exit critical-velocity ratio (W/Wc,)         used after
+                                                                            4
+          rotor choke
+D2      stator-exit diameter, D2, cm; in.
+D3      rotor-inlet diameter, D3, cm; in.
+E TAD   specified design value of static efficiency qs or total efficiency qt (see
+          ITEST)
+G       ratio of specific heat at constant pressure to specific heat at constant volume,
+          Y
+ITEST   specifies which design values a r e used for PDSGN and ETAD:
+          if ITEST=l, total- to static-pressure ratio pb/p5 and static efficiency qs
+             are used
+          if ITEST=2, total- to total-pressure ratio pb/pj and total efficiency qt
+             are used
+MODE    specifies which program option is used:
+          MODE=O yields the off-design performance mode in SI units and with long
+            output
+          MODEA yields the off-design performance mode in SI units and with short
+            output
+          MODE=2 yields the design mode in SI units
+
+
+8
+             MODE =3 yields the off-design performance mode in U. S. customary units
+              and with long output
+             MODE=4 yields the off-design performance mode in U. S. customary units
+              and with short output
+             MODE =5 yields the design mode in U. S. customary units
+PD        stator total-pressure ratio, pi/pb
+PDSGN     specified design total- to total-pressure ratio p g p b or total- to static-
+            pressure ratio pb/p5 (see ITEST)
+PO        inlet total pressure, pb, N/m2; psfa
+R         gas constant, R, J/ (kg)(K ); f t- lb/( lb )(OR )
+TO        inlet total temperature, ~      b K;, OR
+u3        rotor-inlet tip speed, U3, m/sec; ft/sec
+u4u3      ratio of rotor-exit mean speed to rotor-inlet tip speed, U4/U3 (Rotor-exit
+            mean speed must correspond to rotor-exit mean velocity diagram. It is
+            recommended that this be at the area-mean radius if no better value is
+            available. )
+VMAX      final value of stator-exit critical-velocity ratio (v/v,,)
+                                                                       1
+v1        initial value of stator-exit c ritical-ve locity ratio (v/vCr)
+                                                                       1
+WD        design value of mass flow rate, w, kg/sec; lb/sec
+XK        rotor loss coefficient, K
+YMAX      final value of rotor-exit critical-velocity ratio (w/wC,)
+                                                                       4
+zz        number of blades at rotor inlet
+
+     Sample input. - Input sheets with the data used in computing the performance for
+the reference 3 turbine (figs. 6(a), 7(a), and 8(a))a r e shown in tables I and II. Selected
+output obtained with this input is presented and described in the next section. Table I
+is for the design mode. Table 11 is for the off-design performance mode for speeds of
+100, 110, 90, 70, 50, and 30 percent of design. Each line of the input form shown in
+tables I and 11represents one data card. The first two cards are the mandatory title
+cards, which can contain any desired message. The next four cards contain the turbine
+physical data and option indicators. The design-point quantities ETAD, PDSGN, and
+WD are included for the design mode (table I). The loss coefficients XK and PD deter­
+mined by the design-mode calculation are included in the off-design-mode (table II) data.
+Additional data sets may follow the first data set, as they do in table 11, and need only
+
+
+                                                                                           9
+include those values that differ from previous case data. A s shown in table 11, only the
+speed is changed for the next five cases.
+
+
+
+                                   Description of Output
+
+     The design-mode output for the input of table I is shown in table ItI. The top line of
+output is a program identification title that is automatically printed. The next two lines
+are the title card messages. The following three lines a r e the input variable values.
+The symbolism used to identify the output values is defined in t e r m s of the engineering
+symbols in the list at the end of this section. Printed next are the computed values of
+stator total-pressure ratio and rotor loss coefficient followed by the design values of
+mass flow rate, efficiency, and pressure ratio.
+     The remainder of the output in table 111 is divided into two parts. In the section
+VELOCITIES AND ANGLES, all the absolute and relative critical-velocity ratios and
+angles at various stations throughout the turbine are listed for the design stator-exit
+critical-velocity ratio. The section OVERALL PERFORMANCE gives all the perform­
+ance parameters computed by the program.
+     Off-design performance mode output is shown in tables IV and V. Table IV shows
+the long output and presents the first three points obtained by using the input of table II.
+Table V shows the short output that would be obtained from the first data s e t of table 11
+if MODE=l. The first six lines in both tables a r e the same as for the design-mode
+output. The remainder of the output in table IV gives the velocities, angles, and overall
+performance in the same format as previously described for the design-mode output.
+In table V the output is limited to certain of the overall performance parameters useful
+for defining the overall performance map.
+     A list of the variable names as used for the output and t h e i r corresponding engi­
+neering symbols is given in the following table:
+
+
+
+
+10
+               Variable       :ngineerinl      Variable    Tngineering   Variable    Engineering
+                name           symbol           name        symbol        name         symbol
+                          -
+
+           ALPHA- 1                            E TA- T                   VCR)3
+                                  cyl
+           ALPHA-2                             GAMMA                     V/VCR )3
+                                 cy2
+           ALPHA-3                             I- 3                      VR/VCR )3
+                                 cr3
+           ALPHA-5                             K
+                                 "5                                      VU/VCR)3
+           A0                             N
+                                 AO
+           A1                             NS                             VCR)5
+                                 A1
+           A3                             N/T                            V/VCR)5
+                                 A3
+           A5                    A5       NU                             VU/VCR)5
+           BETA- 3                        P
+                                 p3                                      VX/VCR)5
+           BETA-4                p4       P D
+           BETA- 5                        PO,                            W
+                                 05
+           BL1                            PO, /P5                        W. F.
+                                 B1
+           BL4                   B4       P O , /P5,                     WN/DE L
+           DEL- H                Ah'      R                              WT/P
+           DE L- H/T           ~ h l / ~ bTOR
+           DESIGN ETA-S        qs, des    TOR/P                          W/WCR)3
+           DESIGN ETA-T
+                                                                         WR/WCR)3
+           DESIGN PO, /P5                      TO,
+           DE SIGN PO, /P5,                    u3                        WU/WCR)3
+           DESIGN WT- FLOV                     u4u3                      W/WCR)4
+           D3                     D3           V/VCR)O
+                                                                         WU/WCR)4
+           EQ-DE L- H            Ah'           V/VCR)l
+                                   eq
+           EQ-N                                                          WX/WCR)4
+                                               VR/VCR)1
+           EQ-PO, /P5,                                                   W/WCR)5
+           EQ-PO, /P5                          VU/VCR )1
+                                                                         WX/WCR)5
+           EQ-TOR                              V/VCR )2
+           EQ-W                   W                                      zz
+                                      eq       VR/VCR)Z
+           ETA- S                 7s
+                                           -
+
+
+
+
+                                                    Me s sage s
+
+         If there is no solution for a particular turbine case in the design mode, a message
+                   -                                              -
+    will be printed "NO SOLUTION FOR THIS CASE CHECK A l , BL1, AL1 OR B4,
+    BL4. '' This will happen when the program cannot select values for the loss determi­
+    nants pi/pb and K that will satisfy the design input values of mass flow, efficiency,
+    and pressure ratio.
+         In the off-design performance mode for conditions beyond choking t o blade limiting
+    loading, a message will be printed after the last computed performance point "LAST             -
+    CASE IS APPROXIMATE LIMITING LOADING CASE. "
+
+
+
+                                                                                                       11
+
+
+
+I
+                                              MAIN PROGRAM
+
+                                          FORTRAN Variables
+
+     The FORTRAN variables used in the main program are defined in the following
+table in terms of the engineering symbols, where available, or by descriptive termi­
+nology:
+
+
+
+
+     Variable      Engineering        Variable      Engineering         Variable            Engineering
+      name           symbol            name           symbol             name                 symbol
+
+     AB                 v             DE LHOT         Ah'/Tb            FC                    cos i3
+     ALX               "1             DELL       incremental value      FP             integration variable
+     AL1               "1                          of (W/Wcr       l4   FS
+                                                                        F1
+                                                                                              s i n i3
+                                                                                       integration variable
+     AL2               "2             DE LTA             6
+     AL3               "3                                               G                            Y
+                                      DE LV      incremental value
+     AL5               "5                                               GIV             temporary s t o r age
+     AX         temporary storage                  of (V/Vcr),          GR                           g
+     A0                               DE LV1     incremental value      G1
+                       A0                                                                         Y+ 1
+     A1               A1                           of (V/Vcr)l          G2                        Y - 1
+     A3                A3             DE LY      incremental value      G3                 (Y   - l ) / ( Y + 1)
+     A5                A5                                               G4                      Y / ( Y + 1)
+                                                    of (w/wcr)
+     BL1               B1             DHIDS
+                                                                        G5                      Y/(Y   - 1)
+     BL4                                                       s
+                       B4             DHIDT                             HA
+     BX         temporary storage                            t
+                                      DHTCR           Ah'/@,,           HB
+     B3                 P3            D2
+     B4                                                   D2            H1              temporary storage
+                        04            D3
+     B4X                                                  D3            I                 index variable
+                        P4            ELAM                WF
+     B5                                                                 IND        integer variable controlling
+                        P5            E PS                E
+     CAPQ              W/P5                                                           logical sequence in
+                                      E QPRS
+     CASE        variable for title                                                   CONTIN
+                   message            E QPRT                            IT                index variable
+     COSALl           cos el          EQTOR                             JTEST      integer variable controlling
+     COSAL2           cos a2          ET         temporary storage                   proper input in GETK
+     COSAL3           cos a3          E TAD                                          and SEEKPR
+                                                 vs,des   Or %,des
+     COSBJ            cos P3          ETAS                              J                 index variable
+                                                          17,
+     COSB4            cos P4          E TAT                             K                 index variable
+                                                          qt
+     cx         temporary storage     EX         temporary storage      L                 index variable
+     DE LH             Ah'            F          integration variable   M                 index variable
+
+
+
+
+12
+                                                                                  I111111111   I   I       I    111.   I       I1111IIIIIIII.IIIIIIIIII.1.       I   I I 11111   I1 I   I1   I    I1   1 1 1 1
+111111    I II1111 I 111111111.11.~     11111111 111111111.1111-11        I
+
+
+
+
+                                                                                                                           ~
+
+
+
+
+         Variable                       Engineering                           Tariable                 Engineering                   Variable                  Engineering
+          name                            symbol                               name                      symbol                       name                       symbol
+
+         MODE               iteger variable controlling                       2x                       (pV/p 'Vcr)o                  VRVC2
+                             all program options                                                                                     vRvc3
+                                                                              21                       (TYT;)~/~
+         NAlME              fariable for title message
+                                                                              3                                 R                    VU3T
+         NCOUNT                   index variable
+                                                                              3 H05                            p5                    vu4vc3
+         P                               P
+         PD
+                                                                              3H05P                            pi                    vwc 1
+                                      pi/pb
+                                                                              3H05RT                      @/P')5                     vwc2
+         PDSGN              (Pb/P5)des Or (Pb/p8des
+                                                                               3CAPQ                  (w1/P5)1/2                     vwc3
+         PR                 :emporary storage (pres-
+                                                                               SINAL1                   s i n al                     vwc5
+                              sure ratio)
+                                                                               SINAL2                   s i n a2
+         PRS                              WP5)                                                                                       vuwc4
+                                                    eq                         SINAL3                   sin a3
+         PVCR                             (p'VcrIl                             3INB3                    s i n p3                     vuwc5
+         PVK                               GO/P'),,                           4"                        s i n p4                     vx                  temporary storage
+         PV1                                                                  5"                        s i n p5                                           of variable VlVC 1
+                                        (pV/p'Vcr)l
+                                                                               35                  temporary storage
+         PV2                            (PV/P'Vcr)                                                                                   vxvc5                     (Vx/Vcr)5
+                                                              2               STHETA                      ('cr)1/2
+         PWC 3                          (PW/P 'W,,)                                                                                  vovco                       (V/Vcr),
+                                                                3             r                         0.01745329
+         PWC4                             (p ' 1WCr)4                         THETCI                                                 v1                      initial value of
+                                                                                                            'cr
+         Pwvc3                                                                TOL                         0.00001                                              (V/Vcr)
+                                      (p1'Wcr/p1Vcr)3
+         Pw4
+                                                                              TOP                              r /Pb                 VlVCl                      (V/Vcr ),
+                                       (Pw/P"wcr)4                            TOR                                I?
+                                                                                                                                     v2vc2
+         pw4Pw:                  W'Wcr, 4/P''WC,,                    3)       TO                             TO
+         PO                                                                   T3T3                       (T''/T')3                   V3TU3
+                                                Pb
+         P3P3                                 P?/Pi                           T4T3                        TF/T$                      v3vc3
+         P4P3ID                           (Pw;)id                             T4T4                        T~/T;
+                                                                                                                                     v5vc5
+         P4P4ID                                                               u3           u3
+                                           (p;j/p;j)i,                                                                               v5wc5
+                                                                              u4u3       u4/u3
+         P5                                   pi                              vc~vca (Vcr,d v c r , 0)                               wc4wc
+         P5PO                               Pj/Pb                             VCR        'cry o                                      WCR3
+         P5POG                             /p' )(Y-1)/Y
+                                          5 0                                 VCR5       'cr, 5                                      wcvc3
+         P5POP                              P5/Pb                             VK           1.0
+                                                                                                                                     WD
+         P5POPG                         (p /pl)(Y-l)/Y                        V W   maximum value oj
+                                          5 0                                                                                        WK
+         P5P5                              (P'/P95                                                     V/Vcr)l                       WNODE
+         P5P5P                              (P/P')5                           VRVCl                                                  wRwc3
+                                                                                                        (Vr/Vcr)l
+         Q                            temporary storage
+
+
+
+
+                                                                                                                                                                                             13
+                              Variable        Engineering       Variable        Engineering
+                               name             symbol           name             symbol
+
+                              WTHODE                            XDE L        index variable on
+                             WTOP                                              estimated ve­
+                             WU3T                                              locity in
+                                                                               CONTIN
+                             w w c 3
+                                                                XI3                   i3
+                             wuwc3                              XJ                   J
+
+                             wuwc4                              XK                   K
+                             wuwc5                              XN                   N
+                                                                XNOT
+                             wxwc 4
+                                                                XNOT H
+                             wxwc5                              XNS
+                             w1                                 XNU                   U
+
+                             w3vc3                              x1           iteration variable
+                                                                                for velocity
+                             w3wc3
+                                                                Y            ntegration variable
+                             w3wc4                                             for velocity
+                             w4wc4                              YCAL         temporary storage
+                                                                YGIV         temporary storage
+                             VJ5WC5
+                                                                YMAX          (W/Wcr)47 max
+                             X
+                                                                Z                  Pb/ls5
+                                                                zz                   zz
+                                                                z1                 Pb/Pj
+                                                                         -
+
+
+
+
+                                                 Program Listing
+
+C            A FORTRAN I V COMPUTER PROGRAM T O P R E D I C T D E S I G N AND OFF
+c            D E S I G N PERFORMANCE OF A R A D I A L I N F L O W TURi31NE
+C
+C                          I N T E R N A T I O N A L SYSTEM OF U N I T S
+C            MODE=O.       I M P L I E S O F F - D E S I G N PERFORMANCE MODE W I T H F U L L O U T P U T -
+C            MODE=l,       I M P L I E S O F F - D E S I G N PERFORMANCE MODE W I T H SHORT OUTPUT.
+C            MODE=29       I M P L I E S D E S I G N MODE TO D E T E R M I N E THE VALUE OF K AND PD-
+C
+C                         Ue S o CUSTOMARY U N I T S
+C            MODE=3.      I M P L I E S OFF-DES I G N PERFORMANCE MODE W I T H F U L L OUTPUTo
+C            MODE=4,      I M P L I E S O F F - D E S I G N PERFORMANCE MODE W I T H SH!YRT OUTPUT.
+C            MODE-5,      I M P L I E S D E S I G N MODE TO D E T E R M I N E THE VALUE OF K AND PDo
+C
+       D I M E N S I O N NAMF( l O ) r C A S E ( 10)
+       NAMEL I S T / I N / G f PO ,TO , A O * A l , A 3 9 A 5 9 0 3 9 A L l p B 4 , B L l vBL4,PDSGNv I T E S T .
+      1’J3.U4U3.R       rV1.DELV .VMAX*XK* WD s Z Z . MODE. PO. ETAD.DELY s YMAX 902
+       SUBR ( X # G I = ( l o - ( G 10 1 / I G + l - ) * X * X ) * * ( l o / (G-1- J ) * X
+     1 R E A D ( 59 100) (NAME (I)        91=lrl0)
+       RE AD( 5 9 100) (CASE t I)I=l               10)
+       P.EAD(59 I N )
+       URITE(bs200)N4ME*CASE
+       LJR I T E ( 6.400 ) G . PO. A 1 9 AL 1 9 6 4 9PD ,R 9 TO ( A 3 9 B L 1 , B L 4 9 XK ,039 A 0 A5, U 3
+
+14
+           1u4u3, z z
+            I F ( YODE*EQs 1.OP.MODE.EQ.         4 ) HR I TF( 6.6661
+            D E L V l = @ELV
+            ALX=AL 1
+            t34X=84
+            T=m@1745329
+            TOL=.33331
+            A L 1=T* AL 1
+            B 4=T* R 4
+            C?SALl=C@S(ALl)
+            SINALL=SIN(ALl)
+            C c ) S B 4 = C O S ( 84)
+            S IN84=SIN( 84)
+            X J = 778.029
+            GP = 32.1741
+            IT= 1
+            J= 1
+            K= 1
+            L=l
+            M=l
+            w= 1
+            VX=O.
+            XDEL=. 1
+            Gl=G+lo
+            G2=G-1.
+            G3=G2 / G 1
+            G4= G / G l
+            G5= G I G 2
+    C                           B E G 1 N STATOR A N A L Y S I S
+    C
+-           I F ( MODEoEQ. 30 CR O MODE EQ. 4. OR. VODE. EO- 5 b GO T O 2
+            VCR=SQRT ( 2 .*G4*R*             TO)
+            PVCR= PO*SQRT( 2.*G4/PL/T3)
+            GO TO 3
+          2 VCR= SQRT( 2**G4*GR*R*TO)
+            PVCR= PO*SPRT( Z.*G4*GR/R                /TO)
+          3 VlVCl=Vl
+         9 CONTINUE
+            IF(VlVCloGT.1.)               G O TO 1 5
+            N C OUNT =O
+            IF(MODE.EQ.OoOR.YODE.Ea.                 1.OR. YODE.EO.3.OR.      kl0DE0FQ.41   GO T O 10
+            PD=loO
+         4 K=l
+            S S=WD/ PVCR / A l / C O S A L l / P D
+            v 1vc 1=0 5
+         5 x= V l V C l
+            F = SUBR(X,G) - S S
+            F P = IF+SS)/X-2.*X*X/Gl*I               lo-G3*X*X)**(l.     /G2-1.)
+            V l V C l = X-F/FP
+            IF(ABS((VlVCl-X)/VlVCl)~LT*TOL)                      GO TO 10
+            G O TO 5
+        1 5 VK=1.
+            P VK=SUBP.t V K 9 G 1
+                                *
+            W K=C 0 S ( A L X*T 1 P VK *A 1*P VCR *PD
+            P V l = S U B R ( V l V C 1, G I
+                                           *
+            C 0 S A L 1=WK / t A 1*P D* P V 1 P VC R I
+            A L l = A C D S ( COSAL 1)
+            SINAL1=SIN( AL1)
+            GO TO 13
+
+                                                                                                        15
+
+
+I
+     10 P V l = S U B R ( V 1VC 1t G I
+        W l=PVl*Al*PVC~.*COSALl*PD
+        V O V C O = V l V t 1/60
+        QX=PV1*Al/AO*COSALl*PD
+     12 x = vovco
+        F=SUBR ( XI G ) -OX
+        F P = 1 f +QX) / X - 2 o * X * X / G l * ( lo-G3*X*X)**   ( 1 0 /G2-10 1
+        VOVCO= X - F / F P
+        IF(ABS( (VOVCO-X)/VlVCl)oLToTOL)                       GO TO 13
+        GO TO 12
+     13 V U V C l = V l V C l * S I N A L 1
+        VRVCl=VlVCl*CC!SAL 1
+           vuvc2=vuvc 1
+C                                     S T A T O R E X I T COND I T I O N S
+C
+         Q=PVl*COSALl *ELL
+         x = V l V c 1/30
+     6 1 F = ( l o - G 3 * ( X*X+VUVC2**2         I**( 1 0 /G2)*X-Q
+         Fl=<F+Q)/X
+         FP=-2o*X*X/Gl*Fl**(               1 0 /G2-10 ) + F 1
+         X l=X-F/FP
+         I F t A B S ( ( X 1-X 1 / X 11 -TOL     62 62.63
+     63 x = x 1
+         GO TO 6 1
+     6 2 VR VC2=X
+         V2VC2=SQRT (VRVC2**2+VUVC2**2)
+         P V 2 = S U B 4 ( V 2 V C 2 t G)
+         C D S A L 2 = VR VC 2 / V 2VC 2
+         AL2=ACOS( C O S A L 2 b
+         S I N A L 2 = S I N( A L 2 1
+C                                 F R E E STREAM SPACE COND I T 1 ONS
+C
+           VUVC3=VUVC 2 * D 2 / D 3
+           O= P V 2 * C O S A L 2 * 0 2 / 0 3
+           X=VUVC3/5.
+     2 2 F=< l o - G 3 * t X * X + V U V C 3 * * 2 )
+                                                   )**(lo  /G2)*X-Q
+        Fl=(F+O)/X
+        FP=-2o*X*X/Gl*Fl**(                 1 0 /G2-10 ) + F 1
+        X 1=X-F / F P
+        I F ( A B S I (X1-X ) / X l ) - T O L )   20 9 209 2 1
+     21 x-Xl
+        GO TO 22
+     20 V 3 V C 3 = SQRT ( VUVC3* *2+X*X)
+        COSAL 3 = X / V 3 V C 3
+        AL3=ACOS<COSAL 3)
+        S INAL3=S?N I A L 3 1
+        VRVC3=X
+C                              ROTOR INLET C O N D I T I O N S
+C
+                                                                            )**2 1 )
+          T 3 T 3 = ( 1oO-G3*< ~ O O * U ~ * V U V C ~ / V C R - ( U ~ / V C R
+          WCVC3= SORT 4 T 3 T 3)
+          WUVC3=VUVC3-U3/VCR
+          w UWC3 = WUVC 3 / WC vc 3
+          W3VC3=SQRT I WUVC3**2+VRVC3**2                 1
+          w3wc 3=w3vc3/wcvc3
+          WRWC3=SQRT (W3WC3**2-WUWC3**2                       1
+          P3P3=T3T3**(G5)
+          P WVC3=T3T3**< G 1 / 2 o / G 2 )
+          S I NB 3= WUWC 3 / W 3 WC 3
+
+16
+        B3=ASIN(SINB3)
+        COSB3=COS [ 83 1
+        V 3 T U 3 = 10- 1 0 98 / z z
+        VU3T=V3TU3*U3
+        WU3T= V U 3 T - U 3
+        A B = A T A N ( t WU3T/VCR ) / V f ? V C 3 )
+        X ?3=83-AB
+        FS =SIY(XI3)
+        FC =COS(Xi3)
+        WCP 3= WCVC3*VCR
+        T 4 T 3 = 1m-G3* ( U3 / WC R 3 1    **    2* t 1.-U 4U3** 2)
+        WC4WC 3 = S Q R T ( T 4 T 3 )
+        Y 3 HC4=W3WC 3/wc 4 H C 3
+        P U 4PW 3 = T 4 T 3** ( 1 / G 3 / 2 e 1
+        PWC3=SUBR(W3WC3,G)
+        Y G I V = P W C 3 * ( A 3 / A 5 / B L 4 1 * ( C O S B 3 / C O S B 4 ) /PW4PW3
+        I F ~ Y O D E o E O e 2 o O R o M O D E o � O o 5X~K = o 1
+C                                   ROTOR ANALYS I S
+C
+        Y= 03
+    3 1 IND=1
+    3 2 NCOUNT=NCOUNT+l
+                        *
+        C X =W 3 W C 4 * 2* ( X K *F C **         **
+                                                 2+ F S      21
+         I F ( 8 3 0 G T e A 8 1 C X=W 3WC 4**2* ( XK*F C**2+F S**3 1
+        A X = XK*Y*Y+CX
+        R X = 1o-G3*Y*Y
+        EX= f l e - G 3 * ( A X / B X ) ) * * G 5
+        YCAL=SUBR ( Y * G ) *EX
+                                                                         -
+        I F ( I N D e GEe 6 m A N D o A B S ( ( Y C 4 L-YG I V 1 /YC AL 1 L E T O L 1 GO T 0 8’3
+        C A L L CONT I N ( Y. YCA L. I ND sM. YG I V s XDEL )
+        I F ( I N D o L T m l 0 ) GO TO 32
+C               I N D = l D I N D I C A T E S CHOKED FLOW
+        I F t I N D m E Q o 1 0 ) G O TO 33
+C               I N D = 1 1 I N D I C A T E S NO S O L U T I O N I S FOUND I N 133 I T E R A T I O N S
+        !F ( I NDm EQe 111 WR I TE ( 6,2743 1
+        I F < NCr)UNToGEe 1000 1 WRI T 5 ( 6 * 2 0 50)
+    3 3 V 1VC 1= V l V C 1 - D E L V
+    3 4 DELV= DELV/2m
+        V 1 V t 1= V l V C l + D E L V
+        N=2
+        GO T O 9
+    35 I T = 2
+        GC TO 82
+    80 I F ( M f l D E m E O e 2 m 0 R e Y O D E . E O . 5 )   G F TO 82
+        I F ( 4 8 S ( ( V l V C l - V X ) / V l V C l ) m L T e T O L ) GO T O 35
+        VX=VlVCl
+        I F ( N o E O m 2 ) G 9 T O 34
+    8 2 W4WC4= Y
+        PW4= SUBR(Y,G)
+        P 4 P 4 ID=YGIV/PH4
+        P WC 4 =PVCR *P D* P WV C 3* P W4P W3*P4 P 4 1D
+    8 5 CONTINUE
+        W UWC4=W4WC4*S I N B 4
+        w x WC4= W4WC4*CF 584
+        H A = WXWC4
+        I F ( H A o C f e 1 o ) GO T O 5 6
+        P=PW4* C O S B 4 * B L 4
+        X=W4WC 4/3 e
+
+
+                                                                                                         17
+     70 F = ( ~ o - G ~ * ( X * X + W U W C ~ * * ~ ) ) * * ( ~ O / G ~ ) * X - Q
+        Fl=(F+Q)/X
+        FP=-2o*X/Gl*Fl**<                2o-G)*X+Fl
+        Xl=X-F/FP
+        IF(ABS((Xl-X)/Xl)-TOL)                      71971972
+     72 X=X1
+        GO TO 70
+C                                 ROTOR E X I T C O N D I T I O N S
+C
+     7 1 WXWC5=X
+           w5wc5=x*x+wuwc4** 2
+           W5WC5=SQRT( WSWC5)
+           SINRS=WUWC4/W5WCS
+           VUWC4=1. / W C V C 3 * U 4 U 3 * U 3 / V C R / W C 4WC3+ WUWC4
+           vu wc 5 = vuw c 4
+           v 5wc 5 = v u w c 5**2+x* x
+          V 5WC 5 = SQRT I V5WC 5)
+          T~TQ=~O+G~*(VUWC~**~-WUWC~**~)
+           Q 1 = SORT( T 4 T 4
+          VXVC 5=WXWC 5 /Q 1
+          VU VC 5 = VUW C 5 / Q 1
+          V5VC5=V5WC 5/Q1
+          AL5= 1 / T * A S I N ( V W C 5 / V 5 V C 5
+          R 5 = l /T*A S I N ( S I N 6 5 )
+          w uwc5=wuwc 4
+          V U4VC 3=WU WC4*WC 4WC3* WC VC 3 +U4U 3 * U 3 / VC R
+          T 5TO= 1 0 - 2 o * G 3 / V C R * ( U 3 * V U V C 3 - U 4 U 3 * U 3 * V U 4 V C 3 )
+          TS= T O * T 5 T O
+          VCR5 = V C R * S Q R T ( T 5 T O )
+          P5P5 = T4T4**(G5)
+          P4P3IO = T4f3**(G5)
+          P 5 P O = PO*P3P3*P4P3IO*PbP41D*P5P5
+          P5=PO*PSPO
+          P5P5P = (lo-G3*(V5VC5**2)                       )**(G5)
+          P5POP = P 5 P O * P 5 P 5 P
+          VC5VCO = ( V C R 5 / V C R ) * * 2
+          P 5 P O G = P 5 P O * * < G2 /G)
+          P5POPG = PSPOP**( G 2 / G )
+          Z = lo/P5PO
+          2 1 = l./PSPOP
+          Hl=lo-VCSVCO
+          E T A S = H 1/ ( l * - P 5 P OP G
+          E T A T = H l / ( 1o-PSPOG)
+C                                   A U T O M A T I C D E T F R M I N A T I O N OF XK AND PD
+C
+        I F ( M O D E o E Q o O o O R o M O D E o E Q o l o O R . MODE. EQo3oOR. M O D E o E Q o 4 )   GO T 3 43
+        ET= ETAS
+        I F <I T E S T o E Q . 2 )      ET= E T A T
+        IF(KoEQ.5)              GO TO 30
+        CALL GETK(XK*ET.ETAD.K)
+        IF( ( E T A D - E T ) o G T . o 1) GO TO 90
+        GO TO 3 1
+     30 P R = Z l
+        I F ( ITESToEQ.2)              PR=Z
+        IF(L.EQ.5)            GO TO 40
+        CALL S E E K P R ( P D S G N * P R . P D * L )
+        GO TO 4
+
+
+
+18
+C                                EXTRA OUTPUT C A L C U L A T I O N S
+C
+    40 C O N T I N U E
+         IF~H~DEoEQo3oOP~MODEo�Qo4oOR~                      YODEoEQ.5)             GO T O 41
+         T H E TC R=G4* R*TO / 48 24 70 3 6
+         STHETA = SQRT( THETCR)
+         DELTA=P0/1013250
+         X N@TH= 1000* U 3 / 30 14159 /D 3 / STH E TA
+         XN= XNOTH*STHETA
+         D H T C R = H l * 4 8 2 4 7 o 36 / G 3
+         D EL H= DHTCR *THE TCR
+         OHIDS = ( lo-P5POPG)*G5*R*TQ
+         O H I D T = ( 1o-PSPOG ) * G 5 * R * T O
+         EQPRS = l o / ( I o - D H 1 D S / 2 8 9 4 8 4 0 2 / T H E T C R ) * * 3 0 5
+         E Q P R T = l o / ( l o - D H IDt/28948402/THETCR)**305
+         XNU=U3/SQRT(2o*DHIDS)
+         UTOP= W l * l O O o * * Z * S Q P T ( TO) / P 3
+         TOR= D E L H * W l * 9 0 5 4 9 2 7 4 / X N
+         TOP= T O R * l o E + 0 6 / P O
+         ELAM = DElH/U3**2
+         RHO5P = P 5 P O * P O / V C R 5 * * 2 * 2 o * G 4
+         P = DELH*W1/1000o
+         GO TO 43
+    4 1 THETCR=G4*R*T0/1614104357
+        STHETA = SQRT ( T H E T C R )
+        DELTA=P0/2116022
+        XNOTH=720o*U3/3o14159/D3/STHETA
+        XN= XNOTH*STHFTA
+        DHTCQ=H1*1614104357/G3/XJ
+        DELH=DHTCR*THETCR
+        DHIDS = ( lo-PSPOPG)*G5*R*TO/XJ
+        O H I D T = ( lo-PSPOG )*GS*R*TO/XJ
+        EQPRS = 10/ ( 1 o - D H I O S / 1 2 4 0 4 8 0 8 / T H E T C R ) * * 3 r 5
+        EQPRT = 10/ ( 1 o - D H I D T / l 2 4 o 4 8 0 8 / T H E T C R )**305
+        X N U = U 3 / S Q R T ( 2. *GF?*XJ*DHI D S )
+        WTOP=W l * S Q R T ( T O   )*  1440 / P O
+        T O R = D E L H * W l / 10 1 2 1 6 4 E - O 5 / X N
+        TOP= T O R * 1 4 4 o / P O
+        E L A Y = DELH*GR*XJ / U 3 * * 2
+        RH05P = P5PO*PO*Zo*GR*G4/VCR5**2
+        P = DELH*Ul*XJ/55Oo
+    43 PRS= l o / E Q P R S
+        EPS=( G 1 / 2 0 )**I G 5 ) * 0 7 3 9 5 9 4 5 / G
+        Y T H O D E = W l * STHETA*EPS / D E L T A
+        E QTOR= TOR *EPS /DE L T A
+        WNODE=WTHODE*XNOTH
+        D E L HUT=DE L H/TO
+        XNOT- X N / S Q R T ( TO)
+        RH05RT = P5P5P**( l o / G )
+        R H 0 5 = RHO5RT*RHO5P
+        CAPQ = W l / R H 0 5
+        SCAPO = S Q R T t C A P Q )
+        IF~MODEO~QO~OOROMODEOEQO                                    EQ.5)
+                                                                 ~O~R
+                                                              MODE.     ~       GO T O 42
+        XNS=XN*o 1 0 4 7 2 * S C A P Q / ( D H I D T * * o 7 5 )
+        G O TO 45
+    42 X NS=XN* SC APQ / ( ( X J *DH I D T )      **      c 75)
+    45 C O N T r N U E
+
+
+
+                                                                                               19
+C                                 C O M P L E T E W R I T E OUT
+C
+             IF(IToEQ.3)            GO TO 44
+            A L 1=AL l / T
+            A L 2 = A L 2/T
+            X I 3 = XI3/T
+            A L 3 = A L 3/T
+            B3=B3/T
+            B4=04/T
+      44 C O N T I N U E
+             I F ( MOD E E Q 1 OR MODE E P o 4 1 WR I TE
+         E T A S . DHtCR.WTHODEoEPPRS.EPPRT
+             IF~~ODEoEQoOoORo~ODE~EQ                           GOo 3TO~ 46
+            I F ( MODEoEQo 1 o O R o M O D E o E Q o 4 ) GO TO 4 8
+           UR ITEC 6 . 5 0 9 ) PD*XK.WO
+            I F ( I f E S T o E Q o l ) W R I T E ( 6 r 5 2 5 ) E T A D PDSGN
+            I F ( I T E S T O E O O ~ )WR I T E ( 6 9 5 2 6 ) E T A D - P D S G N
+      46 C O N T I N U E
+           W R I T E 4 6 1 5 0 0 ) V l V t l p A L 1 , V3VC3,W4WC4, WSWC5,VUVC 1, AL2, VUVC3, WUcIC4,
+         1WXWC5 VRVC 1* A L 3 * V R V C 3 s WXWC4. V S V C 5 VOVCO 83 s W 3WC3 s 8 4 - VUVC 5. V 2 V C 2
+         2X I 3 W UWC 3 B 5 V X K 5, VRVCZ VCR 9 W RWC3 t VC R 5 A L 5
+           WRITE( 69501) WTHODEtEQPRS, 2 1 , WTOP rW1, DHTCR, ETAS t X N U tDELHOT, DELH,
+         1XNOTH. E T A T * X N S s X M Q T * E L A H e E Q T O R eEQPRT.2 * T O P s T @ R * X N s P. WYODE. 1 5 . P 5
+           I F ~ H O D E ~ E Q ~ 2 o O R o M O D E o E QGO      o 5 ~TO 5 1
+      48 C O N T I N U E
+           I F C W X W C 4 o E Q o l o b GO TO 59
+           IF(JoEQ.2)            GO T O 57
+           I F ( I T o G E o 2 ) GO TO 55
+          A L 1 = A L X*T
+          B 4 = B 4 X *T
+          V l V C l = V l V C l+DELV
+          I F C V l V C l r G T o V M A X ) GO TO 5 1
+          GO TO 9
+     51 A L l = A L X
+          DELV= D E L V l
+          B4= B 4 X
+          GO TO 1
+     55 I f = 3
+          G I V=Y G I V*CO S ( 84 X* T )
+          Y = Y+DELY
+          I F t Y o G T o Y M A X ) GO TO 5 1
+     53 W4WC4= V
+          PW4= S U B R < Y s G )
+          AX= XK*Y*Y+CX
+          B X = 1o-G3*Y*Y
+         P4P4ID= t 1o-G3*(AX/BX)                       )**G5
+         C OSB4= G I V / ( PW4*P4P4I D 1
+          B4= ACOS(COSB4)
+         B+= - 8 4
+         COSB4= C O S I B 4 )
+         SINB4= SINCB4)
+          B4= B 4 / T
+          IF(JoEQ.2)            GO T O 58
+         GO TO 85
+     5 6 I F ( J o E Q o 2 ) GO T O 57
+         Y= Y - D E L Y
+         D E L L = D E L Y /50
+         J= 2
+     57 Y= Y+DELL
+         GO TO 53
+
+20
+     5 8 HB- W4WC4*COSB4
+         IF(ABS((HB-HA)/HA               )oLToo02)         GO TO 5 9
+         DELL= DELL120
+         GO T O 85
+     5 9 W R I T E ( 69600)
+         GO T O 5 1
+     90 W R I T E < 6 * 3 0 0 )
+         GO TO 1
+         STOP
+C                                      FORMAT STATEMENTS
+C
+
+ERROR MESSAGE NUMBER                        1
+   100 FORMAT( 1 0 A 6 )
+   2 0 0 F O R M A T ( 1H1r 3 5 X t 4 3 H N A S A R A D I A L INFLOW T U R B I N E COMPUTER PROGRAM/
+         124X. 1 0 A 6 / 2 4 X * l O A 6 )
+   300 F O R M A T ( / l O X t 5 4 H N O S O L U T I O N F O R T H I S C A S E
+         1BL4)
+                                                                                    -           CHECK A l t B L l p A L l OR 84,
+
+   400 F D R M A T ( 7 H K G A M M A s 2 X * G 1 3 o 5 * 7 H             P O * * Z X * G 1 3 . 5 -6H             A l e 2X.Gl3.50
+         12x9 7 H A L P H A - 1 9 2 X r G 130597H B E T A - 4 r 2 X tG13.5 95H                         PDp2X,G1305/
+        27H              RtZXtG13.5r7H                    TO, 9 2 X , G 1 3 0 5 * 6 H              A 3 * 2 X * 6130 5 2 X
+        37H           BL 1 * 2 X * 6130 5 * 7 H           EL49 2 X s G 1 3 0 5 * 5 H              K.ZXtG13.5              /
+        47 H           D 3 r 2 X v G 1 3 0 597H              AD, 2 X t G 1 3 0 5t6H                A 5 t 2 X 6130 5 9 2 X 9
+        57H             U3.2X.613.         5*7H U / / U 3 ~ 2 X * G 1 3 . 5 * 5 H               ZZ*ZX*G13*5 1
+   5 0 0 FORMAT( / 5 O X t Z l H V E L O C I T I E S A N D ANGLES/
+         112H V / V C R ) 1            rG13.59 1 X t l l H A L P H A - 1                t G 1 3 0 59 1 X 1l H V / V C R ) 3      1
+        AG13.5*1X*llHW/WCR                 14           G 140 5 1 X s 1lHW/ WC R) 5                       *G1305/
+        212H V U / V C R ) l           tG1305p 1XvllHALPHA-2                            ~G13o5tlX~llHVU/VCR)3 9
+        A613059 lXtllHWU/WCR)4                        t G 1 3 . 5 ~ lX,llHWX/WCR)S                        ,G1305/
+        312H V R / V C R ) l           *G1305* LXellHALPHA-3                            sGl305. l K s l l H V R / V t R ) 3
+        AG13.5~ lXt11HWX/WCR)4                        tG1305tlXtllHV/VCR)S                                tG1305/
+        412H V / V C R ) O             t G 1305 9 1 X 11HBE TA-3                          G13. 5 - 1 X 1lHW/WCP.) 3
+        AG1305*1X* 11HBETA-4                          * G 1305 1 X s 1l H V U / V C R 15                 r G 1 3 0 5/
+        512H V / V C R ) 2             t G1305plXt1lHI-3                                9 6130 5 9 1 X 11lHWU/WCR 1 3            9
+        AG13o5~1X*llHBETA-5                           -6130 5 1 X * 1l H V X / V C R 15                  s G l 3 0 5/
+        612H V R / V C R ) 2           tG130591X1llHVCR)3                               rG13.59 l X t l l H W R / W C R ) 3      f
+
+        AG13.5rlXpllHVCR)S                            t G 1305 t 1 X t 1l HA L PH A-5                    rG13.5)
+   50 1 F O R M A T ( S O X * 1 9 H O V E R A L L PERFORMANCE/
+        112H EO-W                      T G1 3 0 5 t l X t l l H E 0-POI / P 5           t G13. 5 9 1 X 9 1 l H P O t / P 5
+        B G 1 3 . 5 ~ 1 X t 11HWT/P                   rG1305,LX,llHW                                     t GP3.5/
+        212H EO-DEL-H                  *G 1 3 0 5 * 1 X * 1 1 H E l A - S               *G13.5*1X.llHNU
+        BGl3o5rlX~llHDEL-H/T                          rG13.5~ ZXtllHDEL-H                                tGl305/
+        312H EO-N                      * G 1305 * 1 X * 1 1 H E TA-T                    * G 1 3 * 5 * 1X.l l H N S
+        BG13.5.       lX.llHN/T                       -6130 5 9 1 X t 11HU.F.                            tG1305/
+        412H EO-TOR                    s G 130 5 r 1 X 8 11HE 0-PO, /P5 I t 613.5 9 1 X 9 1l H P O p /P5 9
+        BG13.5*1X*llHTOR/P                            *61305*1X*llHTOR                                   *G1305/
+        512H N                         tG1305tlXtllHP                                   tG13.5tlX,llHUN/DEL
+        BG 1305 t 1 X t 1 1 H T 5 t                   t G 1 3 0 5 t 1 X t 1l H P 5 t                     T 613.5)
+   5 0 5 FORMAT( 10G13.5)
+   5 0 9 F ORMAT 1 3 X t ZHPD, G 15. 61 1 4 X t 1 H K t 6150 6 / l X t 14HDE SI GN UT-FLOW p 615.6 )
+   5 2 5 FORMAT ( 3 X 9 1ZHDE S I GN ET A- S 9 G 15 0612 X, 13HDE S I G N PO / P5 G 15 6 1
+   526 FORMAT(3X.lZHDESIGN                     ETA-T *G15.6/1X*14HDESIGN                              Pop/P5rtG1506)
+   630 F O R M A T ( / l O X t 4 1 H L A S T C A S E I S A P P R O X I M A T E L I M I T I N G L O A D I N G )
+  666 F O R M A T ( 7 H K V l V C 1 * 8 X * 2 H N S * l l X s 9 H E O - P 5 / P ~ * * 4 X * 2 H N U ~ l l X ~ 4 H E T A T ~ 9 X ~
+        l 4 H E T A S -9%. SHDHTCR t 8 X t6HWTHODE r 7 X r9HEO-PO r / P 5 t 4 X 9 1 0 H E Q - P O t / P 5 t 1
+ 2 0 4 0 FORMAT( 1 0 X t 4 4 H N O S O L U T I O N C O U L D BE FOUND I N 100 I T E R A T I O N S )
+ 2050 F O R M A T ( l O X * 6 9 H I T E R A T I O N PROCEDURE H A D T O BE R E S T A R T E D TO A V O I D NEG
+        L A T I V E TEHPERATURE/15Xt67HRESTART PROCEDURE WAS ABORTED A F T E R 1000
+        Z T O T A L NUMBER O F I T E R A T I O N S )
+          END
+
+                                                                                                                                     21
+                               Subroutine GETK (XK, ETA, ETAD, K)
+
+     Subroutine GETK varies the value of the loss coefficient K by false positioning
+until the design value of efficiency is met.
+
+XK         rotor loss coefficient, K
+ETA        computed value of efficiency from main program
+ETAD      design value of qt or qs
+K         indicator used in method of false positioning
+
+      SUBROUTINE GETK(XK.ETA.ETAO*K             1
+      GO T!J ( 1 0 0 ~ 1 0 1 ) , K
+1nCI X K 1 = X K
+      D I F l = ETA-ETAD
+      K=2
+      XK= XK+o005
+      RETURN
+1 0 1 XK2= XK
+      D I F 2 = ETA-?TAD
+      I F ( D I F 2*D I F 1 1 104 t 103 9 132
+1 3 2 X K l = XK2
+      X K = XK+m035
+     DIF1= D I F 2
+      9 ETUP N
+1 0 3 X K = XK2
+      K= 5
+      RETURN
+1 C 4 X K = -(XK2-XKl)/(DIF2-DIFl~*DIFl+XKl
+     Y=5
+     RETURN
+     END
+
+
+
+
+                             Subroutine SEEKPR (PDSGN, PR, PD, L)
+
+     Subroutine SEEKPR varies the value of the stator total-pressure ratio pi/pb by
+false positioning until all design specifications are met.
+
+PDSGN       design value of pb/pk      or pb/p5
+PR          computed value of turbine pressure ratio from main program
+PD          value of stator total-pressure ratio pi/pb
+L           indicator used in method of false positioning
+
+
+
+
+22
+   S U B R O U T I N E SEEKPR ( P D S G N e P R * P D . L )
+   GO T F ( 1 0 9 1 1 ) , L
+10 P D I = P D
+   D I F l = PR-PDSGN
+    L=2
+    PD=PO-e005
+    RETURN
+11 P D Z = P D
+    D I F 2 = PR-PDSGN
+    I F ( D I F Z * D I F l ) 1 4 9 13912
+1 2 PDl=PDZ
+    P D=P D- e 005
+    DIFl= DIF2
+    RETURN
+13 P D = P D 2
+    L= 5
+    RETURN
+1 4 PD= - ( P D 2 - P D 1 ) / ( D I F 2 - D I F l ) * D I F l * P D l
+    L= 5
+    RETURN
+    END
+
+
+
+                         Subroutine CONTIN (XEST, YCALC, IND, J Z , YGIV, XDEL)
+
+    Subroutine CONTIN is a curve-fitting routine which is described in detail in refer­
+ence 8. It is used to determine the rotor-exit velocity ratio value needed to satisfy
+continuity at the rotor exit.
+
+XEST            value of estimated velocity Y
+YCALC            mass flow parameter based on estimated velocity
+IND             index to control next iteration in CONTIN and to indicate w-an a chokec -flow
+                  solution has been found
+JZ              index variable
+YGIV            input mass flow parameter
+XDEL             maximum permitted change in estimated velocity Y per iteration
+
+             S U B R O U T I N E CONT I N ( X E S T *YCALC. I ND. J Z * YG IV *XOE L )
+C
+C - - C O N T I N C A L C U L A T E S AN E S T I f l A T E OF THE R E L A T I V E FLOW V E L O C I T Y
+C--F@R USE I N T H E V E L O C I T Y G R A D I E N T EQUATION,
+C
+           D I H E N S ION X ( 3) Y ( 3)
+           NCALL = N C A L L * l
+           IF ( I N D o N E ~ l ~ A N D o N C A L L e G T o l ~ O
+                                                                GO) TO 160
+           G O TO ~ 1 0 ~ 3 0 ~ ~ 0 ~ 5 0 ~ 6 0 ~ . I1N10 0 ~ 1 5 O )
+
+
+
+
+                                                                                                         23
+ C--F    IRST CALL
+        10 N C A L L = 1
+              X O R I G = XES?
+               I F ( Y C A L C o G T o Y G I V o A N D o J Z o E Q o l ) GO TO 20
+               IND = 2
+              Y ( 1 ) = YCALC
+              X ( 1 ) = 0.
+              XEST = XEST+XDEL
+              RETURN
+        20 I N D = 3
+              Y < 3 ) = YCALC
+              X ( 3 ) = 0.
+              XEST = XEST-XDEL
+              RETURN
+ C--SECOND C A L L
+       30 I N D = 4
+              Y ( 2 ) = YCALC
+              X ( 2 ) = XEST-XORIG
+              XEST = XEST+XDEL
+              RETURN
+       40 I N D = 5
+             Y t 2 ) = YCALC
+             X ( 2 ) = XEST-XQRIG
+              XEST = XEST-XDEL
+
+C--THIRD
+             RETURN
+                    OR L A T E R C A L L
+       5 0 Y ( 3 ) = YCALC
+                                          -      F I N D S U B S O N I C OR S U P E R S O N I C S O L U T I O N
+
+             XC3)         XEST-XORIG
+             GO TO 70
+       60 Y t 1 ) = Y C A L C
+             X ( 1 ) = XEST-XORIG
+       70 IF ~ Y G I V o L T o A M I N l ~ Y ~ l ~ r Y ( 2                  GO~ ~       (120,130)
+                                                                                TOY ~ 3 ~      ~ ~    rJZ
+       80 I N D = 6
+             CALL PABC(X,Y,APAtBPBtCPC)
+             D I S C R = BP6**2-4o*APA*(CPC-YGIV)
+             I F ( D I S C R o L T o O o ) GO T O 140
+             I F ( A B S ( 4000 *AP A* (CPC-YG I V 110 L E OB P B**2 1 GO TO 90
+             XEST = -BPB-SIGN( S Q R T ( D I S C R ) * A P A )
+             I F ( JZoEQo l o A N D o A P A o G T o O o AND. Y( 3 ) G T o Y ( 1) 1 XE ST = -BPB+
+           lSQRT( D ISCR 1
+             I F t J L o E Q o 2 o A N D o A P A o L T o O o ~ XEST = -BPB-SORT(DISCR)
+             XEST = X E S T / Z o / A P A
+             GO TC! 100
+       90 IF ~ J Z o E O o 2 o A N D o B P B o G T o O o ~      GO TO 130
+             ACB2 = APA/BPB*(CPC-YGIV)/BP8
+             I F ( A B S ( A C B 2 ) o L E o 1.E-8)        ACB2=0o
+             X E S T = -( CPC-YG I V b / B P B * ( 1o + A C 8 2 + 2 0 * A C B 2 * * 2 )
+     100 I F ( X E S T o G T o X ( 3 ) ) GO T O 130
+             I F U X E S T o L T o X ( 1 ) ) GO T O 120
+             XEST = XEST+XORIG
+
+C--FOURTH
+             RETURN
+                     OR L A T E R C A L L  -
+    110 I F ( X E S T - X O R I G o G T o X ( 3 ) )
+                                                   NOT CHOKED
+                                                        GO TO 130
+             IF(XESf-XORIGoLToX(1))                     GO TO 120
+             Y t 2 ) = YCALC
+             X ( 2 ) = XEST-XORIG
+             GO TO 70
+C - o T H I R D OR L A T E R C A L L
+C--BUT
+                                         -       SOLUTION E X I S T S T
+               R I G H T OR L E F T S H I F T R E Q U I R E D
+   120 IND = 5
+
+24
+C--LFFT      SHIFT
+         KEST = X( l l - X D E L + X O R I G
+         XOSHFT = XEST-XORIG
+         X O R I G = XEST
+         V(3) = Y(2)
+         X ( 3 ) = X(Z)-XOSHFT
+         Y(2) = Y(1)
+         Y ( 2 ) = 1(( 1 ) - X f l S H F T
+         R E TUP. N
+   130 I N D = 4
+C--R I G H T S H I F T
+         XEST = X(3)+XDEL+XflPJG
+         XOSHFT = XEST-XORIG
+         XORIG = XFST
+         Y(1) = Y(2)
+         K( 1 ) = X ( Z j - X O S H F T
+         Y(2) = Y43)
+         X(2) = X(3)-X9SHFT
+         RETURN
+C--THIRD       OR L A T E R C A L L  -
+   140 X E S T = - B P B / Z . / A P A
+                                             APPEARS           B E CHOKED
+
+         IND = 7
+         I F ( X E S T e L f m X ( 1 ) ) GO T O 1 2 0
+         IF(XEST.GTeX(3))                  GO T D 130
+         XEST = XEST+XOKIG
+         P ETURN
+C--FOURTH        OR LATER C A L L     -       P R O S h B L Y CHOKED
+   1 5 0 I F ( Y C A L C o G E m Y G I V ) G O TO 110
+         I N 0 = 10
+         RETURN
+C--NC S O L U T I O N F W N D I N 100 I T E R A T I O N S
+   165 I N D = 11
+         RETURN
+         END
+
+
+
+
+                                         Subroutine PABC (X, Y, A, B, C)
+
+     Subroutine PABC calculates the coefficients A, B, and C of the parabola
+       2
+y = Ax + Bx + C passing through three given X, Y points supplied by subroutine
+CONTIN.
+
+
+
+
+                                                                                 25
+         SUBRCIUTINF PARC(X ,Y,A,R,C)
+C
+C--PASC    C4LCUL4TES C O E F F I C I E N T S A * B + C OF THE P A R b R Q L 4
+C--Y=A*X**Z+B*X+Ct            P A S S I N G THROUGH THF G I V c N X t Y P Q I N T S
+C
+        DIMENSIUY X ( 3 ) v Y ( 3 )
+        C 1 = X(3)-X(1)
+        c2 = (Y(2)-Y(L))/(X(Z)-X(l))
+        A = ( C l * C Z - Y ( 3) + Y ( 1 ) 1 / C L / ( X ( 2 ) - X ( 3 ) )
+        B = C 2 - ( X ( 1 ) + X ( 2) )*A
+        C = Y(l)-XCl)*B-X(1)**2*4
+        RFTURN
+        END
+
+
+Lewis Research Center,
+     National Aeronautics and Space Administration,
+         Cleveland, Ohio, June 17, 1975,
+                505-04.
+
+
+
+
+26
+             . .. ..... ...-..._   ..,
+I   .-
+
+
+
+
+                                                        APPENDIX A
+
+
+                                                          SYMBOLS
+
+         A                area, m2; f t2
+         B                blockage factor
+
+         c1               dimensional constant, 200; 7 2 0 / ~
+
+         c2               dimensional constant, 1; 360/n
+
+         c3               dimensional constant, 1000; 550
+         D                diameter, cm; in.
+         g                conversion constant, 1; 32.1741 ft/sec 2
+         Ah'              specific turbine work, J/kg; Btu/lb
+
+         A hid, s
+                          ideal turbine work based on inlet-total- to exit-static-pressure ratio, J/kg;
+                            Btu/lb
+
+                   t      ideal turbine work based on inlet-total- to exit-total-pressure ratio, J/kg;
+                            Btu/lb
+         i                incidence angle, deg
+         J                mechanical equivalent of heat, 1; 778.029 ft-lb/Btu
+         K                rotor loss coefficient, dimensionless
+
+         KS               stator loss coefficient, dimensionless (ref. 1)
+         L                kinetic energy loss, J/kg; Btu/lb
+         N                turbine speed, rad/sec; rpm
+                          specific speed, dimensionless; rpm (ft3/4)/sec 1/2
+         NS
+         n                incidence loss exponent
+         P                power, kW; hp
+         P                pressure, N/m2; psfa
+         R                gas constant, J/(kg)(K); (ft- lb)/(lb)(OR)
+         T                absolute temperature, K; OR
+         U                blade speed, m/sec; ft/sec
+         V                absolute velocity of gas, m/sec; ft/sec
+         W                gas velocity relative to rotor, m/sec; ft/sec
+
+                                                                                                          27
+
+
+I
+WF    work factor, eq. (B38)
+W     mass flow rate, kg/sec; lb/sec
+zz    number of rotor blades at rotor inlet
+a!    absolute gas angle (angle between absolute velocity vector and meridional plane,
+        positive when tangential velocity component is in direction of wheel velocity),
+        deg
+P     relative gas angle (angle between velocity vector relative t o wheel and meridional
+        plane, same sign convention as for a!), deg
+r     torque, N-m; in.-lb
+
+Y     ratio of specific heat at constant pressure to specific heat at constant volume
+6     ratio of turbine inlet total pressure to U. S. standard atmospheric pressure,
+        eq. (B22)
+E     function of y used in relating parameters t o those using air inlet conditions at
+        U. S. standard sea-level conditions, eq. (B23)
+
+7s    efficiency based on ratio of inlet total to exit static pressure
+
+qt    efficiency based on ratio of inlet total to exit total pressure
+
+'cr   squared ratio of critical velocity at turbine inlet t o critical velocity at U. S.
+        standard atmospheric temperature, eq. (B21)
+U     blade-jet speed ratio, eq. (B37)
+
+P     gas density, kg/m3; lb/ft3
+
+rp    optimum rotor flow angle, deg
+Subscripts:
+cr    condition corresponding to V/Vcr = 1
+des   design
+
+eq    air equivalent (U. S. standard sea level) values
+id    ideal
+IN    incidence
+max maximum
+opt   optimum
+R     rotor
+r     radial component
+
+
+
+
+                                                                                            I
+        stator
+        tangential component, positive when in direction of wheel velocity
+        meridional component, component in plane containing axis of rotation
+        station at turbine inlet
+        station immediately upstream of stator exit
+        station immediately downstream of stator exit
+        station immediately upstream of rotor inlet
+        station immediately upstream of rotor exit
+        station immediately downstream of rotor exit
+    Superscripts:
+    '   absolute total state
+    "
+        total state relative to rotor
+    *   U. S. standard sea-level a i r conditions (temperature, 288.15 K (518.67' R);
+          pressure, 101 325 N/m 2 (2116.22 psfa), specific-heat ratio, 1.4; gas constant,
+          287.04 J/(kg)(K) (53.35 (ft-lb)/(lb)(OR))
+
+
+
+
+                                                                                            29
+
+
+I
+                                        APPENDIX B
+
+
+                              EQUATIONS USED IN PROGRAM
+
+     The analytical procedure involves a step-by-step solution of the flow conditions
+through the turbine along a mean line. Thus, at the rotor exit, the flow conditions and
+velocity diagrams a r e those at the mean radius, which could be a flow mean or an a r e a
+mean. The two independent variables that are fixed for any given calculation point a r e
+the rotor-inlet-tip speed ratio (U/V ) and the stator-exit critical-velocity ratio
+                                     cr 3
+(V/Vcr)l.   The analytical procedure and the equations used are outlined in the following
+paragraphs.
+
+
+
+                                       Stator Analysis
+
+     The total temperature is assumed to be constant for the first four stations. Thus,
+
+
+
+
+The mass flow per unit area is expressed as
+
+
+
+
+For an input value of pi/pb and the assumed value of (V/Vcr)       , the continuity relation
+                                                                  1
+at station 0 is
+
+
+
+
+Equation ( B l ) is substituted into equation (B2), which can then be solved iteratively for
+
+
+
+
+30
+      The mass flow rate is then computed as
+
+
+                              w   =2(("), (p'Vcr)OA1             C O S al
+                                     Pb P'V,,
+
+
+where (p'Vcr),   is evaluated from the known inlet conditions of pb and Tb by using
+
+                                                p' =- P'
+                                                     RT '
+
+and
+
+
+
+
+For values of V/Vc, greater than 1.0, the choking value of mass flow rate is used t o
+calculate a new stator-exit flow angle:
+
+
+
+
+                                                            (P'Vcr)0A1
+                                           Pb P'V,,
+
+
+      At station 1 the geometry of the velocity diagram gives
+
+
+
+
+                                      (2)1                  cos a1
+
+
+
+      Station 2 conditions are determined by assuming that (p'Vcr)                  and since
+                                                                      1 = (p'Vcr) 2
+D2 = D1, (Vu/Vcr)l    = (V,/Vcr)2.      The continuity relation between stations 1 and 2 is
+written as
+
+
+
+
+                                                                                            31
+where
+
+
+                                            B1 =-*1
+                                                 A2
+
+and
+
+
+
+
+The geometry of the velocity diagram gives
+
+
+
+
+and
+
+
+
+
+                                     'Y2   = c o s- 1 -
+
+
+
+
+Equations (B5a) to (B5e) are solved iteratively to determine (Vr/Vcr)       , (V/Vcr) , and
+                                                                        2           2
+@2.
+      The conditions at station 3 are determined by assuming that
+
+
+
+
+32
+and
+
+
+
+
+The continuity relation between stations 2 and 3 is given as
+
+
+
+
+where
+
+
+
+
+             ($-Leos
+                                                               1Ay-1)
+
+                           a 3 = [ - 4 3 + ( 4 ;3                   (%)3                 (B6c)
+
+
+
+From the geometry of the velocity diagrams,
+
+
+
+
+and
+
+
+
+
+                                    CY3   = c o s- 1 ­
+
+
+                                               (el3
+Equations (B6a) to (B6e) are solved iteratively to determine (Vr/Vcr)       , (V/Vcr) , and
+                                                                        3            3
+@3*
+
+
+                                                                                              33
+                                       Rotor Analysis
+
+     The relations between relative and absolute parameters at the rotor inlet are given
+by the following four equations:
+
+                                  f-
+
+
+
+
+The velocity-diagram geometry gives
+
+
+
+
+34
+                                     p3 =sin-1
+
+
+
+
+    The optimum rotor-inlet flow angle q is calculated as follows:
+
+
+                                   vu,3,0Pt = 1                     1.98
+                                       u3                             zz
+
+
+                                 vu, 3, opt = u3            ( vu, 3, opt
+                                                                 u3                )
+                                           -
+                                *u, 3, opt - vu, 3, opt - u3
+
+
+
+
+The rotor incidence angle is
+
+                                           i3 = P 3 - 40
+
+Since the rotor mean radius decreases from inlet t o exit, there is a relative total-
+temperature drop expressible by the following equation:
+
+
+
+                                                                                        (BlOa)
+
+
+
+This allows the following rotor-exit parameters to be calculated:
+
+
+
+
+                                                                                           35
+
+
+                                      ,,   ....., , . , - .... . - . -__
+                                                                       ..... ...             .   .. -
+         lllll
+
+
+     0
+
+
+
+
+                                                                                        (Blob)
+
+
+
+
+                                          -- 4
+                                        -Wcr,                                           (Bloc)
+                                         Wcr, 3
+
+
+
+
+    The rotor-exit conditions are calculated by using the continuity equation between sta­
+    tions 3 and 4
+
+
+
+
+    which is written as
+
+
+
+
+    where A4 = B4A5.
+         Everything on the right side of equation (B11) is known except py/p;, id, which is
+    the relative total pressure recovery for the rotor. It can be expressed as follows:
+
+
+
+
+    36
+
+
+
+~                ....                                                      I1 1111111
+Equation (Bl) is substituted, in terms of relative quantities, into equation (B11). And
+the values of (W/Wcr)    and p;/p;   id are determined by an iteration procedure with
+                        4            ?
+
+equations (B11) and (B12). After the rotor choke point, conditions upstream of the
+rotor exit are held fixed. A s the velocity ratio (W/WCr)* is increased beyond the
+choking value, the exit flow angle   p4 is adjusted by the following equation:
+
+
+
+                                                                                     (B13a)
+
+
+                                     pb., id     (p"Wcr)3   \p''wcr&
+
+
+The velocity-diagram geometry gives
+
+
+                                                                                     (B13b)
+
+
+
+
+                                                                                     (B13c)
+
+
+
+      Station 5 conditions a r e determined by assuming that (p"Wc,)  = (p1'WCr) and
+                                                                    4           5
+(Wu/Wcr)4    = (Wu/Wcr),.   The continuity relation between stations 4 and 5 is given as
+
+
+                                                                                     (B14a)
+
+
+
+where
+
+
+                                               B4 = -A4                              (B14b)
+                                                     A5
+
+and
+
+
+
+
+                                                                                           37
+                                                                                     (B14c)
+
+
+
+
+The geometry of the velocity diagram gives
+
+
+
+                                                                                     (B14d)
+
+
+
+
+                                                                                     (B14e)
+
+
+
+
+Equations (B14a) t o (B14e) are solved iteratively to determine the values of (Wx/Wcr)5,
+
+(W/Wcr)5, and ~ 5 '
+     The relations between absolute and relative parameters at the rotor exit a r e given
+by
+
+
+                                                                                    (B15a)
+
+
+
+where
+
+
+                                                                                    (B15b)
+
+
+
+
+                                                                                    (B15c)
+
+
+
+
+38
+and
+
+
+
+                                                                                           (B15d)
+
+
+
+With the assumption that (Vu/Wcr)       = (VU/Wcr)       and (Wx/Wcr )5 = (Vx/Wcr)5y the
+                                    4                5
+geometry of the velocity diagram gives
+
+
+                                                                                           (B16a)
+
+
+
+
+                                                                                           (B16b)
+
+
+
+
+                                                                                           (B16c)
+
+
+
+
+                                             -1
+                                     a5 = sin                                              (B16d)
+
+
+
+
+                               Overall Turbine Perf o r mance
+
+      The turbine overall total-temperature ratio is given by
+
+
+                                                                                       (B17a)
+
+
+
+
+                                                                                              39
+where
+
+
+                                                                              (B17b)
+
+
+
+and the critical velocity at the turbine exit is
+
+
+                                            IT: \l12 .
+                                                                              (B17c)
+
+
+The overall turbine total- to total-pressure ratio is given by the equation
+
+
+
+
+The total- to static-pressure ratio at the turbine exit is obtained from
+
+
+
+                                                                              (B19a)
+
+
+
+
+The overall turbine total- to static-pressure ratio is then
+
+
+                                                                              (B19b)
+
+
+
+The turbine total and static efficiencies are obtained from
+
+
+
+
+                                                                              (B20a)
+
+
+
+
+40
+                                                   1-­
+                                                                                 (B20b)
+
+
+
+
+     The following equations define the additional performance parameters which appear
+in the output listing:
+
+
+                                                         RTZ)
+                                        - Y + l
+                                    'cr ­
+                                           (R
+                                            2 T~*
+                                               Y + l
+
+
+
+                                           6 =- Pb
+                                                   P'*
+
+
+                             E =   0.7395945 (y-   _   _ ; l y - 1 )
+                                                           I
+
+
+
+
+                                       Y
+
+
+
+
+                             Ahhq =   (*J-- R Tb
+                                                    'cr
+                                                             (1-   z)
+                                               C2Jw Ah' E
+                                           -                   -
+                                    req -           N          6
+
+
+
+
+                                                                                    41
+     Ahid,   =
+
+
+
+
+                 Ah' = AhHq OCr
+
+
+
+
+                                6
+                   r=r          ­
+                            eq E
+
+
+
+
+                  W F =-
+                           gJ Ah'
+
+
+
+
+                   P = Ah' WJ
+                           c3
+
+42
+                         ,   .   ....   ..   .,,..... . .   . ...   -
+I
+
+
+
+
+    WT       w (T b )
+    -=
+    P            Pb
+
+    DEL-H -
+          --Ah'
+         T          Tb
+    -N=         N
+             (Tb)l12
+
+
+        TOR - r
+        ---
+          P         Pb
+
+
+
+    Tk = Tb(Z)
+
+
+
+
+    Pk =pb(;)
+
+
+
+
+                                                     43
+                                     REFERENCES
+
+1. Futral, Samuel M., Jr.; and Wasserbauer, Charles A. : Off-Design Performance
+    Prediction with Experimental Verification for a Radial-Inflow Turbine. NASA TN
+     D-2621, 1965.
+2. Todd, Carroll A. ; and Futral, Samuel M . , Jr. : A FORTRAN IV Program t o Esti­
+    mate the Off-Design Performance of Radial-Inflow Turbines. NASA TN D-5059,
+    1969.
+3. Nusbaum, William J. ; and Kofskey, Milton G. : Cold Performance Evaluation of
+    4.97-Inch Radial-Inflow Turbine Designed for Single-Shaft Brayton Cycle Space
+    Power System. NASA T N D-5090, 1969.
+4. Wasserbauer, Charles A. ; Kofskey, Milton G. ; and Nusbaum, William J. : Cold
+    Performance Evaluation of a 4.59-Inch Radial-Inflow Turbine Designed for a
+    Brayton-Cycle Space Power System. NASA TN D-3260, 1966.
+5. Kofskey, Milton G. ; and Wasserbauer, Charles A. : Experimental Evaluation of a
+    3.50-Inch Radial-Inflow Turbine Designed for a 10-Kilowatt Space Power System.
+    NASA TN D-5550, 1969.
+6. Kofskey, Milton G. ; and Holeski, Donald E. : Cold Performance Evaluation of a
+    6.02-Inch Radial Inflow Turbine Designed for a 10-Kilowatt Shaft Output Brayton
+    Cycle Space Power Generation System. NASA TN D-2987, 1966.
+7 . Stanitz, J. D. : Some Theoretical Aerodynamic Investigations of Impellers in Radial-
+     and Mixed-Flow Centrifugal Compressors. ASME Trans., vol. 74, no. 4, May
+     1952, pp. 473-497.
+8. Katsanis, Theodore; and McNally, William D. : FORTRAN Program for Calculating
+    Velocities and Streamlines on the Hub-Shroud Mid-channel Flow Surface of a n
+    Axial- or Mixed- Flow Turbomachine. II - Programmer's Manual. NASA TN
+    D-7344, 1974.
+
+
+
+
+44
+                                                                      TABLE I.             - SAMPLE INPUT MIR DESIGN MODE
+
+
+
+
+                                                                                        , ! , : : : ! : ! ' : '
+                                                                                                                              I .
+                                                                                                                                '   :
+                                                                                                                                        ,
+                                                                                                                                        .   :
+                                                                                                                                                .   , . * . ,        , , , , ,                                              , , , . . , ,
+                                                                                                           I                                                                                                                    ,   I   .---
+--_c__                           'i                                                                                           -----+t+-+4--4---~Lt+---+                                                                      : :    , :        :   .
+                                                                                                               .   ,.---e                                                                              - : : , : ,           : : : . . . :
+
+                                  I
+-1 2 5 L 5   6   1 8 9 lo' II 12 I3 IL I5 I6 I1 I8 I9 20 PI 22 23 ZL 25 26 27 2 1 29 30 31 32 33 3L 35 36 I 7 38 39 LO LI 42 L3 Lb L5 L6 01 I 8 19 50 51 52 53 5 L 5 5 56 57 58 59 60 bI 62 6361.65 66 6 1 68 69 70 ll 72 13 1L 75 16 11 18 19 I O
+
+NASA-C-836       IREV. 9-14-591
+                                                         TABU3 II. - SAMPIS INPUT FOR OFF-DESIGN PERFORMANCE MODE
+
+
+
+
+- - : : : : :
+
+__c-                 :   :   :   :   :
+                                         :
+
+                                         :
+                                             ;
+
+                                             '
+                                                 .
+
+                                                 :
+                                                     :
+
+                                                     :
+                                                         :
+
+                                                         '
+                                                             :
+
+                                                             I
+                                                                 :
+
+                                                                 .
+                                                                     ,
+
+                                                                     :
+                                                                         :
+
+                                                                         :
+                                                                             :
+
+                                                                             :
+                                                                                 :
+
+
+                                                                                 ,
+                                                                                     '
+
+
+                                                                                     ,
+                                                                                         :
+
+
+                                                                                         .
+                                                                                             :
+
+
+                                                                                             :
+                                                                                                 ,
+
+
+                                                                                                 i
+                                                                                                         ,
+
+                                                                                                         :
+                                                                                                             :
+
+                                                                                                             .
+                                                                                                                 :
+
+                                                                                                                 :
+                                                                                                                     :
+
+                                                                                                                     :
+                                                                                                                         :
+
+                                                                                                                         :
+                                                                                                                             :
+
+                                                                                                                             :
+                                                                                                                                 :
+
+                                                                                                                                 :
+                                                                                                                                      :
+
+                                                                                                                                      :
+                                                                                                                                          :
+
+                                                                                                                                          :
+                                                                                                                                              :
+
+                                                                                                                                              :
+                                                                                                                                                  :
+
+                                                                                                                                                  :
+                                                                                                                                                      .
+
+                                                                                                                                                      :
+                                                                                                                                                          :
+
+                                                                                                                                                          :
+                                                                                                                                                              :
+
+                                                                                                                                                              :
+                                                                                                                                                                  :
+
+                                                                                                                                                                  .
+                                                                                                                                                                      :
+
+                                                                                                                                                                      ,
+                                                                                                                                                                          :
+
+                                                                                                                                                                          :
+                                                                                                                                                                              :
+
+                                                                                                                                                                              :
+                                                                                                                                                                                  :
+
+                                                                                                                                                                                  :
+                                                                                                                                                                                      :
+
+                                                                                                                                                                                      :
+                                                                                                                                                                                          --
+                                                                                                                                                                                          I
+                                                                                                                                                                                                 -
+                                                                                                                                                                                            I : : : :
+                                                                                                                                                                                              .   :   -
+                                                                                                                                                                                                        --.       .                                                                       ,~
+
+
+
+t - u - c - : i : : I                    :   :       +--iX-.:::                      :       .       :   :   :   :   :   I   !   ,-   : : ! :                         : : : : :           .   !       '       !       :   I   :   :   :   '   !   !   I   :   :   '   !   :   .   :   :        :
+
+
+
+ I 2 3 4 5      6 7 8 9 IO I1 12 I3 14 15 16 17 18 I9 20 21 22 2 3 2L 25 26 27 28 29 30 31 32 33 3 4 3 5 36 31 38 39 LO 41 42 L3 L445 Lb L7 L0 L9 50 51 52 53 5455 56 51 58 59 LO 61 62 6366 65 66 h7 bB 69 7 0 71 72 73 74 75 7 6 17 7B 79 BO
+-L
+                                                                 TABLE III.   - OUTPUT FOR DESIGN MODE
+                                                  NASA RAOIAL INFLOW TURBINE COMPUTER PROGRAM
+                                                  12062-CM D I A TURBINE
+                                                  100 PERCENT SPEED
+
+ GAMMA        1.66670              PO,       0*17237E+06         A1      0.38008E-02   ALPHA-1   72.4700     BETA-4     -56.8600         PD   5’l030009OC07
+      R       99.1976              TO,       1144.44             A3      0.39789E-02       EL1   0095168         BL4     0-93718          K   500000000009
+     03       12.6238               A0       0.12018E-01         A5      0.44543E-02        U3   237.952      U 4lU 3     0 056776       22    22.0000
+                PO      0.987836
+                 K      0.286840
+DESIGN UT-FLOW          0.338790
+  DESIGN ETA-T          0.913000
+DESIGN POs/P5.          1.740000
+
+                                                                      VELOCITIES AN0 ANGLES
+V/VCR)l          0.60480         ALPHA- 1            72.4700           VIVCR) 3     0.62055     WlWCRI4     0.42154       WlWCR 15       0.41351
+VUIVCR) 1        0.57671         ALPHA-2             7 3 02895         VU/VCR)3     0.59389     WU/WCR)4   -0 352 97      WXIWCR) 5      3. 21541
+VRIVCR) 1        9.18217         ALPHA-3             73.1421           VR/VCR)3     0017996     WX/WCR)4     0023045      V l V C R 15   0.22205
+V/VC R ) 3       0.49333E-0    1 BETA-3             -11.8554           W/UCR)3      0.19253     BETA-4     -56.8600       VU/VCR 15      0.37859E-01
+V/UCR)Z          0.60214         1-3                  5.67598          WU/WCR)3    -0039554E-31 BETA-5     -58.6058       VX/VCR)S       9-21880
+VR/ VCR 1 2      00-11314        VCR ) 3              376.707          YR/WCR 13    0.18842     VCR)5        340.824      ALPHA-5        9.81656
+                                                                      OVERALL PERFORMANCE
+EO-W             0.22000           EO-PO, I P S      1.68890           Po ,/P5      1.79477     WT/P        0.66492       U              0.33879
+EO-DEL-H         35013.4           E TA-S            0.86975           NU           0.69152     DEL-HIT     4489930       DEL-H          51491.8
+EP-N             494.764           ETA-T             0.91298           NS           0097688E-02 N/T         17.7359       U.F.           . 90941
+                                                                                                                                         0
+EO-TOR           148.673                 ,
+                                   E a-PO PS         1064445           PO ,/P5,     1.73997     TORlP       1610.76       TOR            277.644
+N                599.999           P                 17.4449           UN/OEL       108.849     T5.         936.801       p51            99064.4
+                                           TABLE IV. - LONG OUTPUT FOR OFF-DESIGN PERFORMANCE MODE
+
+                                            NASA RADIAL INFLOW TURBINE COMPUTER PROGRAM
+                                            12.62-CM O I A TURBINE
+                                            100 PERCENT SPEED
+
+G UUA         1.66 7 0                   817237E+06          A1       0038008E-02    ALPHA-1      72.4700        BETA-4      -56.8600          PD        0.98784
+      R       99.1976        TO,        1144.44              A3       0.39789E-92        B L1     0.95168           8L4       0.93718           K        3.28684
+     03       12.6238         A0        0.12018E-01          A5       0044543E-02         U3      2370952         U4/U3        0.56776         22        22.001)o
+
+                                                              VELOCITIES AND ANGLES
+V/VCR)l          0030000      ALPHA-1          72.4700         VIVCR) 3        0.30765     W/UCR)4             0.18127     W /WCR ) 5          00 17792
+VUIVCR) 1        0028607      ALPHA-2          73.2733         W J l V C R )3  0.29459     WU/WCPl4          -0.15 179     WX/WCR)5            00 92B32E-01
+VR/VCR) 1        0090362E-3 1 ALPHA-3          7302404         V R I V C R )3  0-88714E-01 WXlUCR)4            @*99100F-01 V / V C R ) 5       0.23649
+V/VCR)O          0.27291E-0 1 BETA-3          -75.2549         W/WCR) 3        0.34739     BETA-4            -56.8600      VU/VCP)5            0.21762
+V/VCR)2          0.29871      1-3             -42.6024         WU /WCR ) 3    -0 3359 5    BETA-5            -58.5503      VX/VCR ) 5          Oe92548E-01
+VR/VCRl 2        0085970E-01 VCRB3              376.707        WR/WCR)3        0.88418E-01 VCR)5               366.180     ALPHA- 5            66 -9618
+                                                              OVERALL PERFORMANCE
+�9-W             0.12178     �9-PO, IPS        1. 25303        PO,/PS          1.27858     U TlP              0.36807          W               0.18754
+�9-DEL-H         10634.9     ETA-S             0.58860         Nu              1.03221     DEL-Y/T            13.6661          DEL-H           15 64000
+E9-N             494.764     ETA-T             0.68226         NS              0012937E-01 N/T                17.7359          W.F.            0. 27622
+Ea-TOR           24.9971     EQ-P0,/PS,        1021377         POilP51         1 23436     T O R /P           270.823          TOR             46 68 15
+N                599.999     P                 2.93309         WNIDEL          60.2536     T5.                1 0 8 10 3 7     P5.             0 0 13964�+06
+
+                                                                  VELOCITIES AN0 ANGLES
+V/VtR)l          . 35000
+                 0           ALPHA-1            72.4700            V/VCR)3      0.35895         UlUCR ) 4        002 1500      W/WCR)5         0.21102
+VUlVCR ) 1       0.33375     ALPHA-2            73.2751            VU /VCR ) 3  3.34368         WU/WCR)4     -9. LBO03         WX/WCP)5        3. ii0n9
+VR/VCR) 1        0. 10542    ALPHA-3            73.2298            VR /VCR ) 3  0.10357         UXlWCR ) 4     0.11 754        V l V C R )5    0.22218
+V/VCR)O          0031446E-01 BETA-3           -70.2194             W/UCR) 3     0 0 30739       BETA-4       -56.8600          VU/VCR ) 5      00 19303
+V/VCR)2          0.34849     1-3              -41.4568             WlWCR )3    -0.28926         BETA-5       - 58.5551         VXIVCR)5        0.11002
+VRIVCR) 2        0.10029     VCR 13             376.707            WR/WCR)3      9.10403        VCRIS          3620253         ALPHA-5         6 0 03183
+                                                                  OVERALL PERFORMANCE
+�9-W             0.14031      EO-PO1 /P5       1. 29942            PO 1/P5       1.33130        WT/P             0.42407       W               0021607
+�9- 0 EL- H      14524.7      ETA-S            0.69588             Nu            0 960 3 6      DEL-HIT          18.6645       DEL-H           2 1 360.4
+EQ-N             494.764      ETA-T            0.77581             NS            0.12228E -01   N/T              1707359       W.F.            9.37725
+�9-TOR           39.3343      EQ-POpIPS,       1. 26365            Po D/P5*      1.29061        TOR/P            426.155       TOR             73.4559
+N                599.999      P                4.61538             W/DEL         69.4213        T51              1058 3 0      p5,             0 0 1 3 3 5 6 E t 06
+
+                                                                  VELOCITIES AND ANGLES
+V/VCR)L          0.40000     ALPHA-1            72.4700            V/VCR)3      0.41026        WlWCR 14        0 2 5 0 08       W/WCR)5        0 0 24544
+VUIVCR) 1        0038142     ALPHA-2            7 3 - 2772         W/VCR)3      0.39278        WU/WCR 14     -0020941           UX/WCR)S       0.12802
+VRIVCR) 1        0012048     ALPHA-3            73.2172            VRIVCRI3     0.11846        WX /WCR ) 4     0 0 13672        V l V C R 15   0.21080
+V/VCRIO          0035422E-01 BETA-3           -63.6238             WIUCR) 3      0.26994       BETA-4        -56.8600           VU/VCR)5       3. 16728
+V/VCR)2          0.39827     1-3              -37.9869             WUlWCR ) 3  -0.24184        BETA-5        -58.5610           VX/VCR)S       00 12827
+VR/VCR)2         0. 11460    VCR)3              376.707            WRlWCR ) 3    0 0 11993     VCR) 5          358. 262         ALPHA-5        52-5177
+                                                                  OVERALL PERFORUANCE
+�9-W             0.15804      EO-PO,/PS        1.35205             W.IP5         1.39174       WTlP              0.47763        W              0 0 24337
+�9-DEL-H         18435.5      ETA-S            0.77129             NU            0.89744       DEL-HIT           23.6900        DEL-H          27111.8
+�9-N             494.764      ETA-T            0.83781             NS            0.11633E- .Ol N/T               17.7359        W.F.           0 0 47883
+�9-TOR           5602318      EO-PO./PS.       1.31874             POsIP5.       1.35341       TOR/P             609.226        TOR            LO 50012
+N                599.999      P                6. 59807            WN/DEL        78.1904       T51               1035.11        P51            0. 12736E+06
+                                           TABLE V.      - SHORT OUTPUT FOR OFF-DESIGN PERFORMANCE MODE
+                                               NASA RADIAL INFLOW TURBINE COMPUTER PROGRAM
+                                               12-62-CH O I A TURBINE
+                                               100 PERCENT SPEED
+
+GAHM          1 66t            PO*        17237E+06        A1    0 3 80 08 E- 0 2   ALPH -1     72.4700     BETA-4   -56.8600                PD    0098784
+     R        99.1976          TO,      1144.44            A3    0 039789 E-02          L!i 1   9.95168        8L4     0.93718                K    3. 2 8684
+    03        12.6238           A0      0*12018E-O1        A5    0.44543 E-02              u3   237.952      U4/U3     0.56776               LL    22.0000
+
+VlVCl             NS              E 0-P 5/Po   ,    Nu           ETA1               ETAS          OHTCR       WTHOOE             EO-PO,/PS        E 0-PO 9 /P5   ,
+ 0.30000          0. 12937E- 01   0.79806           1.03221      0.68226            0.58860       10634.9     0.12178            1025303          1021377
+ 0.35OOO          0. 12228E-01    0 7 69 57         0.96036      0.77581            0.69588       14524.7     0014031            1.29942          1.26365
+ 0- 40000         0.11633E-01     0.73962          0.89744       0.8 37 87          0.77129       18435.5     0.15804            1.35205          1. 3 1874
+ 00 45000         0.11106E-01     0.70763          0.84072       0 87750            0082169       22379.6     0.17485            1.41317          1.38098
+ 0050000          0.10630E-01     0.61325          0.78877       0.90064            0.85235       26373.0     0.19064            1.48533          1045245
+0.55000           0. 10196E- 01   0.63616          0.74065       0.91145            0.86735       30438.1     0.20532            1.57192          1.53 575
+0.60030           0 9803 7E- 02   0.59608          0. 69565      0.91311            0.86996       34606.9     0.21 878           1.677 62         1.63416
+0.65000           0.94640E-02     0 5 5348         0.65396       0.90984            0086434       38907.1     0.23093            1.80673          1.74969
+ 0. TO00 0        0091646E-02     0.50642          0.61352       0.90378            0.84947       43444.3     0.24169            1. 97464         1.89244
+ 0.75000          0. 89057E-02    0.45030          0. 5711 7     0 8 8408           0.82184       48495.8     0.25097            2022075          2.08615
+0.7976 7          0 0 87530E-02   0 - 34555        0.50395       0.84101            0.74373       56375.0     Om25838            2.89392          20 51398
+0.79767           0.87904E-02     0.32379          0.49136       0.82970            0.72255       57612.4     0.25838            3.08840          2. 61149
+0.79767           0.88588E-02     0030207          0.47914       0.81733            0.70049       58739.5     0.25838            3.31047          2071498
+0.7976 7          0.89605E-02     0. 28066         0.46737       0.80367            0.67765       59721.8     0.25838            3.56308          2.82441
+0.79767           0090976E-02     0.25990          0045619       0.78839            0.65409       60504.8     0.25838            3084761          2.93913
+0. 79767          0.92695E-02     0.24037          0.44584       0- 7 7092          0 0 62985     61000.7     0.25 838           4.16021          3 05 727
+0. 79767          0.9465 8E- 02   0.22317          0.43681       0.75035            0.60520       61063.3     0025838            4.48087          3.17450
+0.79767           0. 96420E-02    0.21093           0.43043      0.72494            0.58139       60411.1     0.25838            4.74084          3.28122
+0.79767           0 0 96773E-02   0.20992          0.42990       0 06910 1          0.56152       58490.2     0.25838            4076379          3035536
+0.79767           0.96545E- 02    0.21189          0.43093       0.68254            0.55811       57857.0     0.25838            4.7 1935         3- 36237
+
+             LAST CASE I S APPROXIMATE L IM I TI N G LOADING
+                              Figure 1. - Turbine stator and rotor
+
+
+
+
+                                                                          T ur bi ne of
+                                                                          reference­
+                                                                      0           3
+                                                                      0           4
+
+
+
+
+     m
+     Y
+
+
+
+
+                                                               1                  -           A
+         .3              .4                .5                 .6                      .7              .a
+                               Stator-exit critical-velocity ratio, (v/vcr)
+                                                                              1
+                    -
+          Figure 2. Variation of stator loss coefficient w i th stator-exit critical-velocity ratio
+            for design speed.
+
+
+
+
+50
+
+
+
+
+                                                                                                           I
+                                       T u r b i ne of
+                                       reference­
+                                  0          3
+                                  0         4
+                                  0         5
+                                  A         6
+    1.00
+
+
+
+
+    .96                       I                          I    -   -
+
+       .3                    .4                          .5          .6                       .7                .a
+                                      Stator-exit critical-velocity ratio, ( v/vcr )
+                                                                                       1
+            Figure 3. - V a r i a t i o n of stator total-pressure ratio w i th stator-exit critical-velocity
+              ratio for design speed.
+
+
+
+
+                         Figure 4. - Rotor blade incidence nomenclature.
+
+
+
+
+                                                 Trai Iing-edge
+                                                 thickness
+
+
+
+
+                                                                                          1
+                  Blockage                                -Area        inside blade passage
+
+
+
+                                                  -Area           outside blade passage
+                  Figure 5. - Trailing-edge blockage for a typical blade row.
+
+
+                                                                                                                     51
+
+
+
+I
+                   ' '/lO0                      Design
+
+            E"
+                    1. 5           1.6
+                                       I           I,
+                                                  1.7
+                                                                   1
+                                                                   1.8      1.9
+                                                                                 I               I
+                                                                                               2. 0
+                                                                                                                 I
+                                                                                                                2. 1
+                                Inlet-total- to exit-static-pressure ratio, pblp5
+                                                           (a) Reference 3 turbine.
+     .-c
+      m
+     2     140­
+     n
+     L
+     0
+     c
+     c
+     a,
+     2                                                                                   n                             n
+     x 130­                                                                                                                      0
+     a,
+     c
+     2                                                                                                                           100
+     I
+     -
+     0
+     c
+     VI
+     VI
+           120-
+     2
+
+           li0­
+
+                                                                                                 Experimental, for
+                                                                                              percent of design speed­
+           1M) -
+                                                                                         0                 110
+                                                                                         0                 1M)
+                                                                                         0                  90
+                                                                                         D                  70
+           90 -                                                                          n                  60
+                                                                                         a                 50
+                                                                                         \                 30
+
+
+
+
+           "1/ [
+                                                                                         0                 20
+           80 -
+                                                                                              Calculated, t h i s report
+                                                                               ______         Calculated, reference 2
+
+
+
+
+                           I Des,ign
+           60                               I                  I                     I                I                     I           I
+            1.0        1.4                 1.8                 2. 2              2.6                 3.0                   3.4         3.8
+                                             Inlet -total - to exit -static-p ressu r e rat io, pbl p5
+                                                           (b) Reference 4 turbine.
+                               Fiqiire 6. - Comparison of calculated and experimental mass flow rates.
+
+
+
+
+52
+                                                                  Experimental, for
+                                                               percent of design speed­
+                                                    0                    100
+                                                    D                     70
+                                                    0                     60
+                                                    a                     50
+                                                    P                     30
+                                                    0             20
+                                                       Calculated, t h i s report
+                                                - ---- Calculated, reference 2
+
+
+                                                        Design
+
+                  I            I            I                                 I            d
+                         (a) Reference 3 turbine.
+
+
+
+
+                                                        Design
+                                                           I
+    I
+   .3
+                 I
+                .4
+                              I
+                             .5
+                                           I
+                                          .6
+                                                          i
+                                                          .7
+                                                                          I                d
+                                                                         .8           .9   1. 0
+                         Blade-jet speed ratio, u
+                        (b) Reference 4 turbine.
+Figure 8. - Comparison of calculated and experimental static efficiencies.
+
+
+
+                                                                                                  53
+                                                                                Experimental, for
+                                                                              percent of design speed­
+                                                                   0            r        100
+                                                                   D                      70
+                                                                   0                      60
+                                                                   a                      50
+                                                                   v                      30
+                                                                   0                      20
+                                                                              Calculated, t h i s repori
+                                                              __----Calculated, reference 2
+
+
+
+                                                                       Design
+                                                                          I
+
+
+     .3
+                                                              I-          II               L--lL                -J
+                                            (a) Reference 3 turbine.
+     .9­
+
+
+
+     .a­
+
+
+     .7­
+
+
+
+     .6­
+
+
+                     /
+     .5­
+
+
+
+
+                         1-   ~   -.I            I            1                             I              I          I
+           1   .2      .3           .4          .5            .6          .7               .8              .9        1.0
+                                            Blade-jet speed ratio, u
+                                            (b) Reference 4 turbine.
+
+                    Figure 7. - Comparison of calculated and experimental total efficiencies.
+
+
+
+54                                                                                              NASA-Langley, 1975         E -8368
+NATIONAL AERONAUTICS A N D SPACE ADMINISTRATION
+            WASHINGTON, D.C. 2 0 5 4 6
+                     _ _ .                                                                  POSTAGE AND FEES P A I D
+                                                                                         N A T I O N A L AERONAUTICS A N D
+               O F F I C I A L BUSINESS                                                      SPACE A D M I N I S T R A T I O N
+           PENALTY F O R PRIVATE USE 1300   S P E C I A L FOURTH-CLASS R A T E                           451
+                                                                                                                                 USMAIL
+                                                               BOOK
+
+
+
+
+                   925 001 C 1 U           k 7 5 C 9 1 9 SO'39r33D.S
+                   C E F T OF T H E 4'IR FO5CF
+                   F F WEAPONS L q E C F l T O F Y
+                   FT'IM: T F C H N I C A L L 1 P f ; k f Y ( S U L )
+                   KIF'ZLAFU'I: A F V N M 8 7 1 1 7
+
+
+
+
+                                                                                     POSTMASTER :              If Undeliverable (Section 158
+                                                                                                               Postill Bfnnnal) Do Not Return
+
+
+
+
+                                "The aeronautical and space activities of the United States shall be
+                                                                .
+                             conducted so as t o contribute . . t o the expansion of human knowl­
+                             edge of phenomena in the atmosphere and space. T h e Administration
+                             shall provide for the widest practicable and appropriate dissemination
+                             of i?zformatio?z concerning its activities and the results thereof."
+                                           -NATIONAL AERONAUTICS           AND SPACE ACT OF 1958
+
+
+
+        NASA SCIENTIFIC AND TECHNICAL PUBLICATIONS
+            TECHNICAL REPORTS: Scientific and                       TECHNICAL TRANSLATIONS: Information
+            technical information considered important,             published in a foreign language considered
+            complete, and a lasting contribution to existing        to merit NASA distribution in English.
+            knowledge.
+            TECHNICAL NOTES: Information less broad                 SPEC1A.L PUBLICATIONS: Information
+            in scope but nevertheless of importance as a            derived from or of value to NASA activities.
+            contribution to existing knowledge.                     Publications include final reports of major
+                                                                    projects, monographs, data compilations,
+            TECHNICAL MEMORANDUMS:
+                                                                    handbooks, sourcebooks, and special
+            Information receiving limited distribution
+                                                                    bibliographies.
+            because of preliminary data, security classifica­
+            tion, or other reasons. Also includes conference
+                                                                    TECHNOLOGY UTILIZATION
+            proceedings with either limited or unlimired
+                                                                    PUBLICATIONS: Information on technology
+            distribution.
+                                  -                                 used by NASA that may be of particular
+            CONTRACTOR REPORTS: Scientific and                      interest in commercial and other-non-aerospace
+            technical information generated under a NASA            applications. Publications include Tech Briefs,
+            contract or grant and considered an important           Technology Utilization Reports and
+            contribution to existing knowledge.                     Technology Surveys.
+
+
+                    Details on the availabilify of these publications m a y b e obtained from:
+
+                             SCIENTIFIC AND TECHNICAL INFORMATION OFFICE
+    NATIONAL                 AERONAUTICS                    AND         SPACE          ADMINISTRATION
+                                              Washington, D.C. 20546
+

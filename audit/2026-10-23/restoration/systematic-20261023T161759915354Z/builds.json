@@ -1,0 +1,112 @@
+[
+  {
+    "program": "compressor",
+    "model": "native32",
+    "command": [
+      "/opt/homebrew/bin/gfortran",
+      "-std=legacy",
+      "-fno-automatic",
+      "-fcheck=all",
+      "-ffpe-trap=invalid,zero,overflow",
+      "-fbacktrace",
+      "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/systematic-20261023T161759915354Z/compressor-native32/scan.f",
+      "/Users/ikunsredemptionmac/Downloads/NASA/restored/read_namelist_cards.f90",
+      "-o",
+      "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/systematic-20261023T161759915354Z/compressor-native32/program"
+    ],
+    "sha256": "5839a7351c1a64afbd321a74bc0581e406b2c21d85d651dea292845a9f367f2b"
+  },
+  {
+    "program": "compressor",
+    "model": "compat27",
+    "command": [
+      "/opt/homebrew/bin/gfortran",
+      "-std=legacy",
+      "-fno-automatic",
+      "-fcheck=all",
+      "-ffpe-trap=invalid,zero,overflow",
+      "-fbacktrace",
+      "-fdefault-real-16",
+      "-ffree-line-length-none",
+      "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/systematic-20261023T161759915354Z/compressor-compat27/scan.f90",
+      "/Users/ikunsredemptionmac/Downloads/NASA/restored/read_namelist_cards.f90",
+      "-o",
+      "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/systematic-20261023T161759915354Z/compressor-compat27/program"
+    ],
+    "sha256": "6130177b2cb1c5b7bf6dfb12ed35ae38761cc241ea43458b138445355133b7e3"
+  },
+  {
+    "program": "compressor",
+    "model": "modern64",
+    "command": [
+      "/opt/homebrew/bin/gfortran",
+      "-std=legacy",
+      "-fno-automatic",
+      "-fcheck=all",
+      "-ffpe-trap=invalid,zero,overflow",
+      "-fbacktrace",
+      "-fdefault-real-8",
+      "-fdefault-double-8",
+      "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/systematic-20261023T161759915354Z/compressor-modern64/scan.f",
+      "/Users/ikunsredemptionmac/Downloads/NASA/restored/read_namelist_cards.f90",
+      "-o",
+      "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/systematic-20261023T161759915354Z/compressor-modern64/program"
+    ],
+    "sha256": "5839a7351c1a64afbd321a74bc0581e406b2c21d85d651dea292845a9f367f2b"
+  },
+  {
+    "program": "turbine",
+    "model": "native32",
+    "command": [
+      "/opt/homebrew/bin/gfortran",
+      "-std=legacy",
+      "-fno-automatic",
+      "-fcheck=all",
+      "-ffpe-trap=invalid,zero,overflow",
+      "-fbacktrace",
+      "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/systematic-20261023T161759915354Z/turbine-native32/scan.f",
+      "/Users/ikunsredemptionmac/Downloads/NASA/restored/read_namelist_cards.f90",
+      "-o",
+      "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/systematic-20261023T161759915354Z/turbine-native32/program"
+    ],
+    "sha256": "c68fac39fc9b0415d78e6c5b8a71f288c7993a25f931c971835ac5673669b205"
+  },
+  {
+    "program": "turbine",
+    "model": "compat27",
+    "command": [
+      "/opt/homebrew/bin/gfortran",
+      "-std=legacy",
+      "-fno-automatic",
+      "-fcheck=all",
+      "-ffpe-trap=invalid,zero,overflow",
+      "-fbacktrace",
+      "-fdefault-real-16",
+      "-ffree-line-length-none",
+      "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/systematic-20261023T161759915354Z/turbine-compat27/scan.f90",
+      "/Users/ikunsredemptionmac/Downloads/NASA/restored/read_namelist_cards.f90",
+      "-o",
+      "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/systematic-20261023T161759915354Z/turbine-compat27/program"
+    ],
+    "sha256": "7358e31c88f109f1ed9d9df5bfb8c86a39fe74cd714f4507c758ebca76b4df6d"
+  },
+  {
+    "program": "turbine",
+    "model": "modern64",
+    "command": [
+      "/opt/homebrew/bin/gfortran",
+      "-std=legacy",
+      "-fno-automatic",
+      "-fcheck=all",
+      "-ffpe-trap=invalid,zero,overflow",
+      "-fbacktrace",
+      "-fdefault-real-8",
+      "-fdefault-double-8",
+      "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/systematic-20261023T161759915354Z/turbine-modern64/scan.f",
+      "/Users/ikunsredemptionmac/Downloads/NASA/restored/read_namelist_cards.f90",
+      "-o",
+      "/Users/ikunsredemptionmac/Downloads/NASA/audit/2026-10-23/restoration/systematic-20261023T161759915354Z/turbine-modern64/program"
+    ],
+    "sha256": "c68fac39fc9b0415d78e6c5b8a71f288c7993a25f931c971835ac5673669b205"
+  }
+]
