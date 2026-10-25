@@ -6,7 +6,7 @@
 
 新增完整网格扫描、64位工程构建及独立逆设计搜索器；实际通过、拒绝、无输出及失败分类见 [SCAN_RESULTS.md](../restored/SCAN_RESULTS.md)。旧搜索仍保留作对照，不能把新搜索结果称为旧算法完全相同。
 
-当前修复版位于 [restored/README.md](../restored/README.md)，验证报告位于 [VALIDATION.md](../restored/VALIDATION.md)。originals/ 中旧代码、可执行文件和 Makefile 是保留的原件，不代表修复版。
+当前修复版位于 [restored/README.md](../restored/README.md)，验证报告位于 [VALIDATION.md](../restored/VALIDATION.md)。最终验收结论见 [ACCEPTANCE_REPORT.md](../restored/ACCEPTANCE_REPORT.md)（2026-10-25：不通过）。originals/ 中旧代码、可执行文件和 Makefile 是保留的原件，不代表修复版。
 
 - 修复版已完成内存/输入/区间/扫描/标题等问题修复；61项功能检查通过，含新发现的逆设计失败后阻止无效状态沿用。
 - 27位算术兼容版压气机470个参考打印值全部相同。
